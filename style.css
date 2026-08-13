@@ -545,7 +545,7 @@ header img{
 
 .slide.ativo {
     opacity: 1;
-    visibility: visible;
+    visibility: visible; 
 }
 
 
