@@ -746,3 +746,531 @@ header img{
 
     transform:translateY(-3px);
 }
+
+
+
+
+
+
+/* ========================= */
+/* ENCONTRE O QUE PRECISA */
+/* ========================= */
+
+
+.encontre {
+    position: relative;
+    overflow: hidden;
+
+
+    padding: 75px 30px 85px;
+
+
+    background: #f8fbff;
+}
+
+
+/* ========================= */
+/* MANCHAS DE FUNDO */
+/* ========================= */
+
+
+.mancha {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(2px);
+    opacity: 0.75;
+    pointer-events: none;
+}
+
+
+.mancha-azul {
+    width: 420px;
+    height: 300px;
+    background: #b9d5ff;
+    top: -120px;
+    left: -100px;
+    transform: rotate(-20deg);
+}
+
+
+.mancha-roxa {
+    width: 350px;
+    height: 250px;
+    background: #d8c9ff;
+    right: -100px;
+    top: 120px;
+    transform: rotate(25deg);
+}
+
+
+.mancha-verde {
+    width: 300px;
+    height: 220px;
+    background: #c2ead7;
+    bottom: -100px;
+    left: 40%;
+    transform: rotate(-15deg);
+}
+
+
+
+
+/* ========================= */
+/* CONTEÚDO */
+/* ========================= */
+
+
+.encontre-conteudo {
+    position: relative;
+
+
+    z-index: 2;
+
+
+    max-width: 1050px;
+
+
+    margin: auto;
+}
+
+
+
+
+/* ========================= */
+/* TÍTULO */
+/* ========================= */
+
+
+.titulo-encontre {
+    display: flex;
+
+
+    align-items: center;
+    justify-content: center;
+
+
+    gap: 16px;
+}
+
+
+.titulo-encontre h2 {
+    margin: 0;
+
+
+    color: #183f7a;
+
+
+    font-size: 32px;
+
+
+    font-weight: 700;
+}
+
+
+.linha-titulo {
+    width: 42px;
+    height: 3px;
+
+
+    background: #4d86d9;
+
+
+    border-radius: 20px;
+}
+
+
+
+
+/* ========================= */
+/* TEXTO */
+/* ========================= */
+
+
+.texto-encontre {
+    max-width: 620px;
+
+
+    margin: 13px auto 45px;
+
+
+    text-align: center;
+
+
+    color: #687386;
+
+
+    font-size: 15px;
+
+
+    line-height: 1.6;
+}
+
+
+
+
+/* ========================= */
+/* OPÇÕES */
+/* ========================= */
+
+
+.opcoes-ajuda {
+    display: grid;
+
+
+    grid-template-columns: repeat(2, 1fr);
+
+
+    gap: 18px;
+
+
+    max-width: 900px;
+
+
+    margin: auto;
+}
+
+
+
+
+/* ========================= */
+/* CARD */
+/* ========================= */
+
+
+.opcao-ajuda {
+    position: relative;
+
+
+    min-height: 145px;
+
+
+    padding: 25px 28px;
+
+
+    background: rgba(255, 255, 255, 0.88);
+
+
+    border: 1px solid rgba(220, 228, 240, 0.9);
+
+
+    border-radius: 22px;
+
+
+    display: flex;
+
+
+    align-items: center;
+
+
+    gap: 20px;
+
+
+    text-decoration: none;
+
+
+    color: #333;
+
+
+    box-shadow:
+        0 8px 25px rgba(32, 68, 115, 0.06);
+
+
+    backdrop-filter: blur(6px);
+
+
+    overflow: hidden;
+
+
+    transition: 0.3s ease;
+}
+
+
+
+
+/* detalhe colorido lateral */
+
+
+.opcao-ajuda::before {
+    content: "";
+
+
+    position: absolute;
+
+
+    left: 0;
+    top: 22px;
+    bottom: 22px;
+
+
+    width: 4px;
+
+
+    border-radius: 0 10px 10px 0;
+}
+
+
+
+
+/* HOVER */
+
+
+.opcao-ajuda:hover {
+    transform: translateY(-5px);
+
+
+    box-shadow:
+        0 15px 35px rgba(32, 68, 115, 0.11);
+
+
+    background: #ffffff;
+}
+
+
+
+
+/* ========================= */
+/* NÚMERO */
+/* ========================= */
+
+
+.numero-opcao {
+    position: absolute;
+
+
+    right: 20px;
+    top: 15px;
+
+
+    font-size: 12px;
+
+
+    font-weight: 600;
+
+
+    color: #b8c3d3;
+}
+
+
+
+
+/* ========================= */
+/* ÍCONE */
+/* ========================= */
+
+
+.icone-opcao {
+    width: 58px;
+    height: 58px;
+
+
+    min-width: 58px;
+
+
+    border-radius: 17px;
+
+
+    display: flex;
+
+
+    align-items: center;
+    justify-content: center;
+
+
+    font-size: 24px;
+
+
+    transition: 0.3s;
+}
+
+
+.opcao-ajuda:hover .icone-opcao {
+    transform: scale(1.08) rotate(-3deg);
+}
+
+
+
+
+/* ========================= */
+/* TEXTO DO CARD */
+/* ========================= */
+
+
+.texto-opcao {
+    padding-right: 20px;
+}
+
+
+.texto-opcao h3 {
+    margin: 0 0 6px;
+
+
+    color: #1c427b;
+
+
+    font-size: 18px;
+}
+
+
+.texto-opcao p {
+    margin: 0;
+
+
+    max-width: 320px;
+
+
+    color: #707987;
+
+
+    font-size: 13px;
+
+
+    line-height: 1.5;
+}
+
+
+
+
+/* ========================= */
+/* LINK */
+/* ========================= */
+
+
+.texto-opcao span {
+    display: inline-flex;
+
+
+    align-items: center;
+
+
+    gap: 7px;
+
+
+    margin-top: 12px;
+
+
+    color: #2872c7;
+
+
+    font-size: 13px;
+
+
+    font-weight: 600;
+
+
+    transition: 0.25s;
+}
+
+
+.opcao-ajuda:hover .texto-opcao span {
+    gap: 11px;
+}
+
+
+
+
+/* ========================= */
+/* AZUL */
+/* ========================= */
+
+
+.opcao-azul::before {
+    background: #2878cf;
+}
+
+
+.opcao-azul .icone-opcao {
+    background: #e8f2ff;
+    color: #2878cf;
+}
+
+
+
+
+/* ========================= */
+/* ROXO */
+/* ========================= */
+
+
+.opcao-roxa::before {
+    background: #8064c7;
+}
+
+
+.opcao-roxa .icone-opcao {
+    background: #f0ecff;
+    color: #8064c7;
+}
+
+
+
+
+/* ========================= */
+/* VERDE */
+/* ========================= */
+
+
+.opcao-verde::before {
+    background: #48a77a;
+}
+
+
+.opcao-verde .icone-opcao {
+    background: #e8f7ef;
+    color: #48a77a;
+}
+
+
+
+
+/* ========================= */
+/* VERMELHO */
+/* ========================= */
+
+
+.opcao-vermelha::before {
+    background: #d85b5b;
+}
+
+
+.opcao-vermelha .icone-opcao {
+    background: #fff0f0;
+    color: #d85b5b;
+}
+
+
+
+
+/* ========================= */
+/* RESPONSIVIDADE */
+/* ========================= */
+
+
+@media (max-width: 700px) {
+
+
+    .encontre {
+        padding: 55px 20px 65px;
+    }
+
+
+    .titulo-encontre h2 {
+        font-size: 26px;
+    }
+
+
+    .linha-titulo {
+        width: 25px;
+    }
+
+
+    .opcoes-ajuda {
+        grid-template-columns: 1fr;
+    }
+
+
+    .opcao-ajuda {
+        min-height: 130px;
+    }
+
+
+}
