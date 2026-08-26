@@ -1274,3 +1274,1078 @@ header img{
 
 
 }
+
+/* ================================================= */
+/* SEÇÃO ENCONTRE O QUE PRECISA */
+/* ================================================= */
+
+.encontre {
+    position: relative;
+    width: 100%;
+    min-height: 850px;
+    padding: 100px 40px 110px;
+    background: #f8fbff;
+    overflow: hidden;
+}
+
+
+/* ================================================= */
+/* ELEMENTOS DECORATIVOS */
+/* ================================================= */
+
+.decoracao {
+    position: absolute;
+    pointer-events: none;
+}
+
+.decoracao-circulo {
+    width: 220px;
+    height: 220px;
+    border: 1px solid rgba(31, 111, 235, 0.12);
+    border-radius: 50%;
+    top: 70px;
+    left: -80px;
+}
+
+.decoracao-circulo-menor {
+    width: 90px;
+    height: 90px;
+    border: 2px solid rgba(106, 76, 180, 0.12);
+    border-radius: 50%;
+    bottom: 100px;
+    right: 80px;
+}
+
+.decoracao-quadrado {
+    width: 90px;
+    height: 90px;
+    border: 1px solid rgba(31, 111, 235, 0.10);
+    transform: rotate(45deg);
+    top: 150px;
+    right: -35px;
+}
+
+.ponto {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+}
+
+.ponto-1 {
+    background: #287be5;
+    top: 170px;
+    left: 8%;
+}
+
+.ponto-2 {
+    background: #8055d6;
+    top: 310px;
+    right: 9%;
+}
+
+.ponto-3 {
+    background: #4bb987;
+    bottom: 180px;
+    left: 12%;
+}
+
+
+/* ================================================= */
+/* CONTEÚDO */
+/* ================================================= */
+
+.encontre-conteudo {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* ================================================= */
+/* TÍTULO */
+/* ================================================= */
+
+.titulo-encontre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    margin-bottom: 22px;
+}
+
+.titulo-encontre h2 {
+    margin: 0;
+    text-align: center;
+    color: #174a87;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -1px;
+}
+
+.titulo-encontre h2 span {
+    color: #3688ed;
+}
+
+.linha-titulo {
+    width: 34px;
+    height: 2px;
+    background: #287be5;
+    border-radius: 10px;
+}
+
+
+/* ================================================= */
+/* TEXTO DO TÍTULO */
+/* ================================================= */
+
+.texto-encontre {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    text-align: center;
+    color: #667896;
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 400;
+}
+
+
+/* ================================================= */
+/* CARDS */
+/* ================================================= */
+
+.opcoes-ajuda {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    width: 100%;
+}
+
+
+/* ================================================= */
+/* CARD INDIVIDUAL */
+/* ================================================= */
+
+.opcao-ajuda {
+    position: relative;
+    min-height: 390px;
+    padding: 32px;
+    background: #ffffff;
+    border: 1px solid #dce7f5;
+    border-radius: 24px;
+    overflow: hidden;
+    text-decoration: none;
+    box-shadow: 0 12px 35px rgba(31, 73, 125, 0.07);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.opcao-ajuda:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(31, 73, 125, 0.13);
+}
+
+
+/* ================================================= */
+/* BARRA LATERAL */
+/* ================================================= */
+
+.opcao-ajuda::before {
+    content: "";
+    position: absolute;
+    top: 25px;
+    bottom: 25px;
+    left: 0;
+    width: 4px;
+    border-radius: 0 5px 5px 0;
+}
+
+.opcao-azul::before {
+    background: #287be5;
+}
+
+.opcao-roxa::before {
+    background: #8055d6;
+}
+
+.opcao-verde::before {
+    background: #45b987;
+}
+
+
+/* ================================================= */
+/* NÚMERO SUPERIOR */
+/* ================================================= */
+
+.numero-opcao {
+    position: absolute;
+    top: 28px;
+    right: 30px;
+
+    font-size: 13px;
+    font-weight: 700;
+    color: #aebed3;
+}
+
+
+/* ================================================= */
+/* ÍCONE */
+/* ================================================= */
+
+.icone-opcao {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 17px;
+    margin-bottom: 28px;
+
+    font-size: 23px;
+}
+
+.opcao-azul .icone-opcao {
+    background: #e9f2ff;
+    color: #287be5;
+}
+
+.opcao-roxa .icone-opcao {
+    background: #f1eaff;
+    color: #8055d6;
+}
+
+.opcao-verde .icone-opcao {
+    background: #e8f8f0;
+    color: #35a977;
+}
+
+
+/* ================================================= */
+/* CATEGORIA */
+/* ================================================= */
+
+.categoria-opcao {
+    margin-bottom: 10px;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.opcao-azul .categoria-opcao {
+    color: #287be5;
+}
+
+.opcao-roxa .categoria-opcao {
+    color: #8055d6;
+}
+
+.opcao-verde .categoria-opcao {
+    color: #35a977;
+}
+
+
+/* ================================================= */
+/* TEXTO DOS CARDS */
+/* ================================================= */
+
+.texto-opcao {
+    position: relative;
+    z-index: 2;
+}
+
+.texto-opcao h3 {
+    margin: 0 0 14px;
+
+    color: #174a87;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.texto-opcao p {
+    margin: 0 0 28px;
+
+    color: #71819a;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.texto-opcao span {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.opcao-azul .texto-opcao span {
+    color: #287be5;
+}
+
+.opcao-roxa .texto-opcao span {
+    color: #8055d6;
+}
+
+.opcao-verde .texto-opcao span {
+    color: #35a977;
+}
+
+.texto-opcao span i {
+    transition: transform 0.25s ease;
+}
+
+.opcao-ajuda:hover .texto-opcao span i {
+    transform: translateX(5px);
+}
+
+
+/* ================================================= */
+/* NÚMERO GRANDE NO FUNDO */
+/* ================================================= */
+
+.numero-fundo {
+    position: absolute;
+    right: -8px;
+    bottom: -28px;
+
+    font-size: 150px;
+    line-height: 1;
+    font-weight: 700;
+
+    color: rgba(35, 92, 155, 0.045);
+
+    pointer-events: none;
+}
+
+
+/* ================================================= */
+/* FAIXA DE DESTAQUE */
+/* ================================================= */
+
+.frase-destaque {
+    position: relative;
+
+    width: 72%;
+    min-height: 180px;
+
+    margin: 55px auto 0;
+    padding: 38px 55px;
+
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    background: #174f8c;
+    border-radius: 26px;
+
+    overflow: hidden;
+
+    box-shadow: 0 18px 45px rgba(23, 79, 140, 0.18);
+}
+
+
+/* ================================================= */
+/* ASPAS */
+/* ================================================= */
+
+.aspas {
+    position: relative;
+    z-index: 2;
+
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    color: #7fc1ff;
+    font-size: 19px;
+
+    flex-shrink: 0;
+}
+
+
+/* ================================================= */
+/* TEXTO DA FRASE */
+/* ================================================= */
+
+.frase-conteudo {
+    position: relative;
+    z-index: 2;
+}
+
+.frase-conteudo p {
+    margin: 0 0 12px;
+
+    color: #ffffff;
+
+    font-size: 20px;
+    line-height: 1.45;
+    font-weight: 600;
+}
+
+.frase-conteudo span {
+    color: #8dc5ff;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+
+/* ================================================= */
+/* DETALHE DA FAIXA */
+/* ================================================= */
+
+.detalhe-frase {
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    right: -50px;
+    bottom: -90px;
+
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 50%;
+}
+
+.detalhe-frase::before {
+    content: "";
+
+    position: absolute;
+
+    width: 120px;
+    height: 120px;
+
+    top: 29px;
+    left: 29px;
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 50%;
+}
+
+
+/* ================================================= */
+/* RESPONSIVIDADE */
+/* ================================================= */
+
+@media (max-width: 950px) {
+
+    .opcoes-ajuda {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .opcao-ajuda {
+        min-height: 330px;
+    }
+
+    .frase-destaque {
+        width: 90%;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .encontre {
+        padding: 70px 20px 80px;
+    }
+
+    .titulo-encontre {
+        gap: 12px;
+    }
+
+    .titulo-encontre h2 {
+        font-size: 30px;
+    }
+
+    .linha-titulo {
+        width: 20px;
+    }
+
+    .texto-encontre {
+        font-size: 14px;
+        margin-bottom: 40px;
+    }
+
+    .opcao-ajuda {
+        min-height: 320px;
+        padding: 27px;
+    }
+
+    .frase-destaque {
+        width: 100%;
+        padding: 30px;
+        gap: 17px;
+    }
+
+    .frase-conteudo p {
+        font-size: 17px;
+    }
+
+}
+
+/* ================================================= */
+/* SEÇÃO INFORMAÇÃO */
+/* ================================================= */
+
+.informacao {
+    position: relative;
+    width: 100%;
+    padding: 110px 0 120px;
+    background: #f8fbff;
+    overflow: hidden;
+}
+
+
+/* ================================================= */
+/* DETALHES DECORATIVOS */
+/* ================================================= */
+
+.detalhe {
+    position: absolute;
+    pointer-events: none;
+}
+
+.detalhe-circulo {
+    width: 150px;
+    height: 150px;
+    border: 1px solid rgba(38, 119, 226, 0.12);
+    border-radius: 50%;
+    left: -70px;
+    top: 80px;
+}
+
+.detalhe-quadrado {
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgba(116, 83, 214, 0.10);
+    transform: rotate(45deg);
+    right: -45px;
+    top: 150px;
+}
+
+.detalhe-ponto {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #8db8f0;
+    left: 7%;
+    top: 300px;
+}
+
+
+/* ================================================= */
+/* CONTEÚDO */
+/* ================================================= */
+
+.informacao-conteudo {
+    width: 90%;
+    max-width: 1150px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+
+/* ================================================= */
+/* TÍTULO */
+/* ================================================= */
+
+.titulo-informacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    margin-bottom: 22px;
+}
+
+.titulo-informacao h2 {
+    margin: 0;
+    text-align: center;
+    font-size: 38px;
+    line-height: 1.15;
+    font-weight: 700;
+    color: #164a88;
+}
+
+.titulo-informacao h2 span {
+    display: block;
+    color: #164a88;
+}
+
+.titulo-informacao h2 strong {
+    display: block;
+    color: #327fe0;
+    font-weight: 700;
+}
+
+.linha-titulo {
+    width: 32px;
+    height: 2px;
+    background: #2878df;
+    flex-shrink: 0;
+}
+
+
+/* ================================================= */
+/* TEXTO */
+/* ================================================= */
+
+.texto-informacao {
+    max-width: 800px;
+    margin: 0 auto 65px;
+    text-align: center;
+    color: #657897;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* ================================================= */
+/* CARDS */
+/* ================================================= */
+
+.cards-informacao {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
+
+
+/* ================================================= */
+/* CARD INDIVIDUAL */
+/* ================================================= */
+
+.card-informacao {
+    position: relative;
+    min-height: 330px;
+    padding: 32px;
+    background: #ffffff;
+    border: 1px solid #dce7f5;
+    border-radius: 22px;
+    text-decoration: none;
+    overflow: hidden;
+
+    box-shadow: 0 12px 35px rgba(29, 70, 115, 0.06);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.card-informacao:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(29, 70, 115, 0.11);
+}
+
+
+/* ================================================= */
+/* BARRA COLORIDA */
+/* ================================================= */
+
+.card-informacao::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 25px;
+    bottom: 25px;
+    width: 4px;
+    border-radius: 0 5px 5px 0;
+}
+
+.card-azul::before {
+    background: #287fe4;
+}
+
+.card-roxo::before {
+    background: #8056d9;
+}
+
+.card-verde::before {
+    background: #38ae7b;
+}
+
+
+/* ================================================= */
+/* NÚMERO */
+/* ================================================= */
+
+.numero-card {
+    position: absolute;
+    top: 25px;
+    right: 28px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #a8bad1;
+}
+
+
+/* ================================================= */
+/* ÍCONE */
+/* ================================================= */
+
+.icone-card {
+    width: 58px;
+    height: 58px;
+    border-radius: 17px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 25px;
+}
+
+.icone-card i {
+    font-size: 24px;
+}
+
+.card-azul .icone-card {
+    background: #e9f2ff;
+    color: #287fe4;
+}
+
+.card-roxo .icone-card {
+    background: #f1ebff;
+    color: #8056d9;
+}
+
+.card-verde .icone-card {
+    background: #e8f8f0;
+    color: #38ae7b;
+}
+
+
+/* ================================================= */
+/* CATEGORIA */
+/* ================================================= */
+
+.categoria-card {
+    display: block;
+    margin-bottom: 10px;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.card-azul .categoria-card {
+    color: #287fe4;
+}
+
+.card-roxo .categoria-card {
+    color: #8056d9;
+}
+
+.card-verde .categoria-card {
+    color: #38ae7b;
+}
+
+
+/* ================================================= */
+/* TEXTO DOS CARDS */
+/* ================================================= */
+
+.conteudo-card h3 {
+    margin: 0 0 12px;
+
+    font-size: 23px;
+    line-height: 1.25;
+    color: #164a88;
+}
+
+.conteudo-card p {
+    max-width: 430px;
+    margin: 0 0 25px;
+
+    color: #71829c;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* ================================================= */
+/* LINK DOS CARDS */
+/* ================================================= */
+
+.link-card {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.card-azul .link-card {
+    color: #287fe4;
+}
+
+.card-roxo .link-card {
+    color: #8056d9;
+}
+
+.card-verde .link-card {
+    color: #38ae7b;
+}
+
+.link-card i {
+    transition: transform 0.2s ease;
+}
+
+.card-informacao:hover .link-card i {
+    transform: translateX(4px);
+}
+
+
+/* ================================================= */
+/* CARD 04 - EMERGÊNCIA */
+/* ================================================= */
+
+.card-emergencia-centro {
+    width: 70%;
+    max-width: 700px;
+    margin: 32px auto 0;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: 28px;
+
+    padding: 30px 40px;
+
+    background: #ffffff;
+    border: 1px solid #f0dfe0;
+    border-radius: 22px;
+
+    box-shadow: 0 12px 35px rgba(29, 70, 115, 0.06);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.card-emergencia-centro:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 40px rgba(29, 70, 115, 0.11);
+}
+
+.card-emergencia-centro::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 20px;
+    bottom: 20px;
+    width: 4px;
+    background: #df5b61;
+    border-radius: 0 5px 5px 0;
+}
+
+.card-emergencia-centro .numero-card {
+    top: 22px;
+    right: 25px;
+}
+
+.icone-emergencia {
+    width: 65px;
+    height: 65px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 18px;
+    background: #fff0f1;
+    color: #df5b61;
+}
+
+.icone-emergencia i {
+    font-size: 27px;
+}
+
+.categoria-emergencia {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #df5b61;
+}
+
+.card-emergencia-centro h3 {
+    margin: 0 0 7px;
+
+    font-size: 21px;
+    color: #164a88;
+}
+
+.card-emergencia-centro p {
+    margin: 0 0 12px;
+
+    color: #71829c;
+    font-size: 14px;
+}
+
+.card-emergencia-centro a {
+    color: #df5b61;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.card-emergencia-centro a i {
+    margin-left: 5px;
+}
+
+
+/* ================================================= */
+/* FRASE DE DESTAQUE */
+/* ================================================= */
+
+.frase-informacao {
+    width: 55%;
+    max-width: 650px;
+    min-height: 180px;
+
+    margin: 70px 0 0;
+
+    padding: 35px 40px;
+
+    position: relative;
+    overflow: hidden;
+
+    background: #20538c;
+    border-radius: 24px;
+
+    box-shadow: 0 18px 40px rgba(29, 70, 115, 0.14);
+}
+
+.aspas {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-size: 48px;
+    line-height: 30px;
+    font-weight: 700;
+
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.frase-informacao p {
+    max-width: 470px;
+
+    margin: 0 0 15px;
+
+    color: #ffffff;
+
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 600;
+}
+
+.assinatura {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    color: #9fc2eb;
+}
+
+.circulo-frase {
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    right: -45px;
+    bottom: -75px;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+}
+
+
+/* ================================================= */
+/* RESPONSIVIDADE */
+/* ================================================= */
+
+@media (max-width: 800px) {
+
+    .titulo-informacao {
+        gap: 12px;
+    }
+
+    .titulo-informacao h2 {
+        font-size: 30px;
+    }
+
+    .cards-informacao {
+        grid-template-columns: 1fr;
+    }
+
+    .card-emergencia-centro {
+        width: auto;
+    }
+
+    .frase-informacao {
+        width: auto;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .informacao {
+        padding: 80px 0;
+    }
+
+    .titulo-informacao .linha-titulo {
+        display: none;
+    }
+
+    .titulo-informacao h2 {
+        font-size: 27px;
+    }
+
+    .card-informacao {
+        min-height: 300px;
+        padding: 28px;
+    }
+
+    .card-emergencia-centro {
+        flex-direction: column;
+        align-items: flex-start;
+        width: auto;
+        padding: 30px;
+    }
+
+    .frase-informacao {
+        padding: 30px;
+    }
+
+}
