@@ -1,582 +1,376 @@
-```html
 <!-- ========================= -->
 <!-- ARQUIVO: index.html -->
 <!-- ========================= -->
 
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
+
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta name="description"
         content="Plataforma Anchor para denúncias, apoio psicológico e informações de emergência.">
-
     <meta name="author" content="Equipe Anchor">
-
     <meta name="keywords"
         content="denúncia, ajuda, emergência, apoio psicológico, segurança">
-
     <title>Anchor</title>
-
     <link rel="icon" href="img/logo-anchor.png">
-
     <link rel="stylesheet" href="style.css">
-
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect"
         href="https://fonts.gstatic.com"
         crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-
-    <!-- Font Awesome -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
 </head>
 
 
 <body>
 
 
-<!-- ================================================= -->
-<!-- CABEÇALHO -->
-<!-- ================================================= -->
-
 <header>
-
     <a href="index.html" class="logo">
-
         <img src="img/logo-anchor.png" alt="Logo Anchor">
-
     </a>
-
-
     <div class="pesquisa">
-
         <span class="lupa">🔍︎</span>
-
         <input
             type="text"
             placeholder="Como podemos ajudar?"
         >
-
     </div>
-
-
     <div class="acoes">
-
         <button id="menu-btn">
             ☰
         </button>
-
         <button id="entrar-btn">
             Entrar
         </button>
-
     </div>
-
 </header>
+
+
+
 
 
 
 <!-- ================================================= -->
 <!-- MENU PRINCIPAL -->
 <!-- ================================================= -->
-
 <nav class="navbar">
-
     <a href="index.html">
         Home
     </a>
-
     <a href="denuncia.html">
         Fazer denúncia
     </a>
-
     <a href="#">
         Acompanhar denúncia
     </a>
-
     <a href="ajuda-psicologica.html">
         Ajuda Psicológica
     </a>
-
     <a href="tipos-denuncia.html">
         Tipos de denúncia
     </a>
-
     <a href="sobre.html">
         Sobre
     </a>
-
     <a href="#">
         Contato
     </a>
-
     <a href="#">
         Perfil
     </a>
-
 </nav>
+
+
+
 
 
 
 <!-- ================================================= -->
 <!-- MENU LATERAL -->
 <!-- ================================================= -->
-
 <div id="menu-lateral" class="menu-lateral">
-
     <div class="faixa-azul">
     </div>
-
-
     <div class="conteudo-menu">
-
         <a href="index.html">
             Home
         </a>
-
         <a href="denuncia.html">
             Denúncias
         </a>
-
         <a href="#">
             Acompanhar
         </a>
-
         <a href="#">
             Notícias
         </a>
-
         <a href="#">
             Perfil
         </a>
-
         <hr>
-
         <a href="#">
             Informações
         </a>
-
         <a href="#">
             Contato
         </a>
-
         <a href="sobre.html">
             Sobre nós
         </a>
-
     </div>
-
 </div>
+
+
+
 
 
 
 <!-- ================================================= -->
 <!-- EMERGÊNCIA -->
 <!-- ================================================= -->
-
 <section class="emergencia" id="emergencia">
-
-
     <h2>
         Emergência
     </h2>
-
-
     <p>
         Precisa de ajuda imediata? Conte conosco.
     </p>
-
-
     <div class="cards-emergencia">
-
-
         <!-- 190 -->
         <a href="emergencia.html"
            class="botao-emergencia">
-
             <i class="fa-solid fa-shield-halved policia"></i>
-
             <h3>
                 190
             </h3>
-
             <span>
                 Emergência
             </span>
-
         </a>
-
-
         <!-- 181 -->
         <a href="emergencia181.html"
            class="botao-emergencia">
-
             <i class="fa-solid fa-phone-volume denuncia"></i>
-
             <h3>
                 181
             </h3>
-
             <span>
                 Denúncias
             </span>
-
         </a>
-
-
         <!-- 192 -->
         <a href="emergencia192.html"
            class="botao-emergencia">
-
             <i class="fa-solid fa-truck-medical samu"></i>
-
             <h3>
                 192
             </h3>
-
             <span>
                 SAMU
             </span>
-
         </a>
-
-
     </div>
-
 </section>
+
+
+
 
 
 
 <!-- ================================================= -->
 <!-- CARROSSEL -->
 <!-- ================================================= -->
-
 <section class="carrossel">
-
-
     <!-- ========================= -->
     <!-- BANNER 1 -->
     <!-- ========================= -->
-
     <div class="slide ativo">
-
         <img
             src="img/banner-denuncie.png"
             alt="Denuncie"
         >
-
-
         <div class="banner-botoes">
-
             <a href="denuncia.html"
                class="btn-denuncia">
-
                 Fazer denúncia
-
             </a>
-
-
             <a href="denuncia.html"
                class="btn-vermais">
-
                 Ver mais
-
             </a>
-
         </div>
-
     </div>
-
-
-
     <!-- ========================= -->
     <!-- BANNER 2 -->
     <!-- ========================= -->
-
     <div class="slide">
-
         <img
             src="img/banner-domestica.png"
             alt="Violência doméstica"
         >
-
-
         <div class="banner-botoes">
-
             <a href="denuncia.html"
                class="btn-denuncia">
-
                 Fazer denúncia
-
             </a>
-
-
             <a href="violencia-domestica.html"
                class="btn-vermais">
-
                 Ver mais
-
             </a>
-
         </div>
-
     </div>
-
-
-
     <!-- ========================= -->
     <!-- BANNER 3 -->
     <!-- ========================= -->
-
     <div class="slide">
-
         <img
             src="img/banner-homofobia.png"
             alt="Homofobia"
         >
-
-
         <div class="banner-botoes">
-
             <a href="denuncia.html"
                class="btn-denuncia">
-
                 Fazer denúncia
-
             </a>
-
-
             <a href="homofobia.html"
                class="btn-vermais">
-
                 Ver mais
-
             </a>
-
         </div>
-
     </div>
-
-
-
     <!-- ========================= -->
     <!-- BANNER 4 -->
     <!-- ========================= -->
-
     <div class="slide">
-
         <img
             src="img/banner-conscientizacao.png"
             alt="Conscientização"
         >
-
-
         <div class="banner-botoes">
-
             <a href="denuncia.html"
                class="btn-denuncia">
-
                 Fazer denúncia
-
             </a>
-
-
             <a href="conscientizacao.html"
                class="btn-vermais">
-
                 Ver mais
-
             </a>
-
         </div>
-
     </div>
-
-
-
     <!-- ========================= -->
     <!-- BANNER 5 -->
     <!-- ========================= -->
-
     <div class="slide">
-
         <img
             src="img/banner-intolerancia.png"
             alt="Intolerância religiosa"
         >
-
-
         <div class="banner-botoes">
-
             <a href="denuncia.html"
                class="btn-denuncia">
-
                 Fazer denúncia
-
             </a>
-
-
             <a href="intolerancia-religiosa.html"
                class="btn-vermais">
-
                 Ver mais
-
             </a>
-
         </div>
-
     </div>
-
-
-
     <!-- ========================= -->
     <!-- BANNER 6 -->
     <!-- ========================= -->
-
     <div class="slide">
-
         <img
             src="img/banner-racismo.png"
             alt="Racismo"
         >
-
-
         <div class="banner-botoes">
-
             <a href="denuncia.html"
                class="btn-denuncia">
-
                 Fazer denúncia
-
             </a>
-
-
             <a href="racismo.html"
                class="btn-vermais">
-
                 Ver mais
-
             </a>
-
         </div>
-
     </div>
-
-
-
     <!-- ========================= -->
     <!-- BANNER 7 -->
     <!-- ========================= -->
-
     <div class="slide">
-
         <img
             src="img/banner-xenofobia.png"
             alt="Xenofobia"
         >
-
-
         <div class="banner-botoes">
-
-            <a href="denuncia.html"
+          <a href="denuncia.html"
                class="btn-denuncia">
-
                 Fazer denúncia
-
             </a>
-
-
             <a href="xenofobia.html"
                class="btn-vermais">
-
                 Ver mais
-
-            </a>
-
+        </a>
         </div>
-
     </div>
-
-
-
     <!-- ========================= -->
     <!-- BANNER 8 -->
     <!-- ========================= -->
-
     <div class="slide">
-
         <img
             src="img/banner-psicologica.png"
             alt="Ajuda psicológica"
         >
-
-
         <div class="banner-botoes">
-
             <a href="denuncia.html"
                class="btn-denuncia">
-
                 Fazer denúncia
-
             </a>
-
-
             <a href="ajuda-psicologica.html"
                class="btn-vermais">
-
                 Ver mais
-
             </a>
-
         </div>
-
     </div>
-
-
-
     <!-- ========================= -->
     <!-- BANNER 9 -->
     <!-- ========================= -->
-
     <div class="slide">
-
         <img
             src="img/banner-abuso.png"
             alt="Abuso sexual"
         >
-
-
         <div class="banner-botoes">
-
             <a href="denuncia.html"
                class="btn-denuncia">
-
                 Fazer denúncia
-
             </a>
-
-
             <a href="abuso-sexual.html"
                class="btn-vermais">
 
+
                 Ver mais
+
 
             </a>
 
+
         </div>
 
+
     </div>
+
+
+
 
 
 
@@ -584,7 +378,9 @@
     <!-- BANNER 10 -->
     <!-- ========================= -->
 
+
     <div class="slide">
+
 
         <img
             src="img/banner-animais.png"
@@ -592,26 +388,40 @@
         >
 
 
+
+
         <div class="banner-botoes">
+
 
             <a href="denuncia.html"
                class="btn-denuncia">
 
+
                 Fazer denúncia
 
+
             </a>
+
+
 
 
             <a href="maus-tratos-animais.html"
                class="btn-vermais">
 
+
                 Ver mais
+
 
             </a>
 
+
         </div>
 
+
     </div>
+
+
+
 
 
 
@@ -619,7 +429,9 @@
     <!-- BANNER 11 -->
     <!-- ========================= -->
 
+
     <div class="slide">
+
 
         <img
             src="img/banner-idosos.png"
@@ -627,26 +439,40 @@
         >
 
 
+
+
         <div class="banner-botoes">
+
 
             <a href="denuncia.html"
                class="btn-denuncia">
 
+
                 Fazer denúncia
 
+
             </a>
+
+
 
 
             <a href="maus-tratos-idosos.html"
                class="btn-vermais">
 
+
                 Ver mais
+
 
             </a>
 
+
         </div>
 
+
     </div>
+
+
+
 
 
 
@@ -654,7 +480,9 @@
     <!-- BANNER 12 -->
     <!-- ========================= -->
 
+
     <div class="slide">
+
 
         <img
             src="img/banner-odio.png"
@@ -662,26 +490,40 @@
         >
 
 
+
+
         <div class="banner-botoes">
+
 
             <a href="denuncia.html"
                class="btn-denuncia">
 
+
                 Fazer denúncia
 
+
             </a>
+
+
 
 
             <a href="crimes-odio.html"
                class="btn-vermais">
 
+
                 Ver mais
+
 
             </a>
 
+
         </div>
 
+
     </div>
+
+
+
 
 
 
@@ -689,7 +531,9 @@
     <!-- BANNER 13 -->
     <!-- ========================= -->
 
+
     <div class="slide">
+
 
         <img
             src="img/banner-infantil.png"
@@ -697,26 +541,40 @@
         >
 
 
+
+
         <div class="banner-botoes">
+
 
             <a href="denuncia.html"
                class="btn-denuncia">
 
+
                 Fazer denúncia
 
+
             </a>
+
+
 
 
             <a href="abuso-infantil.html"
                class="btn-vermais">
 
+
                 Ver mais
+
 
             </a>
 
+
         </div>
 
+
     </div>
+
+
+
 
 
 
@@ -724,7 +582,9 @@
     <!-- BANNER 14 -->
     <!-- ========================= -->
 
+
     <div class="slide">
+
 
         <img
             src="img/banner-assedio.png"
@@ -732,26 +592,40 @@
         >
 
 
+
+
         <div class="banner-botoes">
+
 
             <a href="denuncia.html"
                class="btn-denuncia">
 
+
                 Fazer denúncia
 
+
             </a>
+
+
 
 
             <a href="assedio.html"
                class="btn-vermais">
 
+
                 Ver mais
+
 
             </a>
 
+
         </div>
 
+
     </div>
+
+
+
 
 
 
@@ -759,7 +633,9 @@
     <!-- BANNER 15 -->
     <!-- ========================= -->
 
+
     <div class="slide">
+
 
         <img
             src="img/banner-bullying.png"
@@ -767,26 +643,40 @@
         >
 
 
+
+
         <div class="banner-botoes">
+
 
             <a href="denuncia.html"
                class="btn-denuncia">
 
+
                 Fazer denúncia
 
+
             </a>
+
+
 
 
             <a href="bullying.html"
                class="btn-vermais">
 
+
                 Ver mais
+
 
             </a>
 
+
         </div>
 
+
     </div>
+
+
+
 
 
 
@@ -794,7 +684,9 @@
     <!-- BANNER 16 -->
     <!-- ========================= -->
 
+
     <div class="slide">
+
 
         <img
             src="img/banner-crimes.png"
@@ -802,26 +694,40 @@
         >
 
 
+
+
         <div class="banner-botoes">
+
 
             <a href="denuncia.html"
                class="btn-denuncia">
 
+
                 Fazer denúncia
 
+
             </a>
+
+
 
 
             <a href="crimes-virtuais.html"
                class="btn-vermais">
 
+
                 Ver mais
+
 
             </a>
 
+
         </div>
 
+
     </div>
+
+
+
 
 
 
@@ -829,14 +735,20 @@
     <!-- SETA ESQUERDA -->
     <!-- ========================= -->
 
+
     <button
         class="seta esquerda"
         id="anterior"
         type="button">
 
+
         <i class="fa-solid fa-chevron-left"></i>
 
+
     </button>
+
+
+
 
 
 
@@ -844,44 +756,56 @@
     <!-- SETA DIREITA -->
     <!-- ========================= -->
 
+
     <button
         class="seta direita"
         id="proximo"
         type="button">
 
+
         <i class="fa-solid fa-chevron-right"></i>
 
+
     </button>
+
+
+
 
 
 
     <!-- ========================= -->
     <!-- INDICADORES -->
     <!-- ========================= -->
+<div class="indicadores">
 
-    <div class="indicadores">
 
-        <span class="indicador ativo"></span>
+    <span class="indicador ativo"></span>
 
-        <span class="indicador"></span>
-        <span class="indicador"></span>
-        <span class="indicador"></span>
-        <span class="indicador"></span>
-        <span class="indicador"></span>
-        <span class="indicador"></span>
-        <span class="indicador"></span>
-        <span class="indicador"></span>
-        <span class="indicador"></span>
-        <span class="indicador"></span>
-        <span class="indicador"></span>
-        <span class="indicador"></span>
-        <span class="indicador"></span>
-        <span class="indicador"></span>
 
-    </div>
+    <span class="indicador"></span>
+    <span class="indicador"></span>
+    <span class="indicador"></span>
+    <span class="indicador"></span>
+    <span class="indicador"></span>
+    <span class="indicador"></span>
+    <span class="indicador"></span>
+    <span class="indicador"></span>
+    <span class="indicador"></span>
+    <span class="indicador"></span>
+    <span class="indicador"></span>
+    <span class="indicador"></span>
+    <span class="indicador"></span>
+    <span class="indicador"></span>
+    <span class="indicador"></span>
+
+
+</div>
 
 
 </section>
+
+
+
 
 
 
@@ -889,50 +813,76 @@
 <!-- ENCONTRE O QUE PRECISA -->
 <!-- ================================================= -->
 
+
 <section
     class="encontre"
     id="encontre">
 
 
+
+
     <!-- MANCHAS DE FUNDO -->
+
 
     <div class="mancha mancha-azul"></div>
 
+
     <div class="mancha mancha-roxa"></div>
+
 
     <div class="mancha mancha-verde"></div>
 
 
 
+
+
+
     <!-- CONTEÚDO -->
+
 
     <div class="encontre-conteudo">
 
 
+
+
         <!-- TÍTULO -->
+
 
         <div class="titulo-encontre">
 
+
             <span class="linha-titulo"></span>
+
 
             <h2>
                 Encontre o que precisa
             </h2>
 
+
             <span class="linha-titulo"></span>
+
 
         </div>
 
 
 
+
+
+
         <!-- TEXTO -->
 
+
         <p class="texto-encontre">
+
 
             Informação, orientação e apoio para você não precisar enfrentar
             uma situação sozinho.
 
+
         </p>
+
+
+
 
 
 
@@ -940,16 +890,22 @@
         <!-- CARDS -->
         <!-- ================================================= -->
 
+
         <div class="opcoes-ajuda">
+
+
 
 
             <!-- ========================= -->
             <!-- CARD 01 -->
             <!-- ========================= -->
 
+
             <a
                 href="denuncia.html"
                 class="opcao-ajuda opcao-azul">
+
+
 
 
                 <div class="numero-opcao">
@@ -957,50 +913,69 @@
                 </div>
 
 
+
+
                 <div class="icone-opcao">
 
+
                     <i class="fa-solid fa-file-circle-exclamation"></i>
+
 
                 </div>
 
 
+
+
                 <div class="texto-opcao">
+
 
                     <h3>
                         Fazer uma denúncia
                     </h3>
 
 
+
+
                     <p>
+
 
                         Saiba como denunciar e encontre orientações
                         para realizar sua denúncia.
 
+
                     </p>
+
+
 
 
                     <span>
 
+
                         Acessar
+
 
                         <i class="fa-solid fa-arrow-right"></i>
 
+
                     </span>
+
 
                 </div>
 
 
+
+
             </a>
-
-
-
-            <!-- ========================= -->
+ <!-- ========================= -->
             <!-- CARD 02 -->
             <!-- ========================= -->
+
 
             <a
                 href="tipos-denuncia.html"
                 class="opcao-ajuda opcao-roxa">
+
+
 
 
                 <div class="numero-opcao">
@@ -1008,40 +983,69 @@
                 </div>
 
 
+
+
                 <div class="icone-opcao">
 
+
                     <i class="fa-solid fa-layer-group"></i>
+
 
                 </div>
 
 
+
+
                 <div class="texto-opcao">
+
 
                     <h3>
                         Tipos de denúncia
                     </h3>
 
 
+
+
                     <p>
+
 
                         Conheça diferentes situações de violência
                         e saiba como identificá-las.
 
+
                     </p>
+
+
 
 
                     <span>
 
+
                         Conhecer
 
+
+
+
+
+
+
+
+           
                         <i class="fa-solid fa-arrow-right"></i>
 
+
                     </span>
+
 
                 </div>
 
 
+
+
             </a>
+
+
+
 
 
 
@@ -1049,9 +1053,12 @@
             <!-- CARD 03 -->
             <!-- ========================= -->
 
+
             <a
                 href="ajuda-psicologica.html"
                 class="opcao-ajuda opcao-verde">
+
+
 
 
                 <div class="numero-opcao">
@@ -1059,40 +1066,64 @@
                 </div>
 
 
+
+
                 <div class="icone-opcao">
 
+
                     <i class="fa-solid fa-hand-holding-heart"></i>
+
 
                 </div>
 
 
+
+
                 <div class="texto-opcao">
+
 
                     <h3>
                         Encontre apoio
                     </h3>
 
 
+
+
+
+
                     <p>
+
 
                         Encontre informações e caminhos para buscar
                         ajuda quando precisar.
 
+
                     </p>
+
+
 
 
                     <span>
 
+
                         Encontrar apoio
+
 
                         <i class="fa-solid fa-arrow-right"></i>
 
+
                     </span>
+
 
                 </div>
 
 
+
+
             </a>
+
+
+
 
 
 
@@ -1100,9 +1131,12 @@
             <!-- CARD 04 -->
             <!-- ========================= -->
 
+
             <a
                 href="#emergencia"
                 class="opcao-ajuda opcao-vermelha">
+
+
 
 
                 <div class="numero-opcao">
@@ -1110,296 +1144,649 @@
                 </div>
 
 
+
+
                 <div class="icone-opcao">
 
+
                     <i class="fa-solid fa-shield-halved"></i>
+
+
+
 
                 </div>
 
 
+
+
                 <div class="texto-opcao">
+
 
                     <h3>
                         Emergência
                     </h3>
 
 
+
+
                     <p>
+
 
                         Acesse rapidamente os principais números
                         de emergência.
 
+
                     </p>
+
+
 
 
                     <span>
 
+
                         Ver emergências
+
 
                         <i class="fa-solid fa-arrow-right"></i>
 
+
                     </span>
+
 
                 </div>
 
 
+
+
             </a>
+
+
 
 
         </div>
         <!-- FIM DOS CARDS -->
 
 
+
+
     </div>
     <!-- FIM DO CONTEÚDO -->
 
 
+
+
 </section>
+
+
+
 <!-- FIM DA SEÇÃO ENCONTRE -->
 
 
-           <!-- ========================= -->
+
+
+<!-- ================================================= -->
 <!-- SEÇÃO: INFORMAÇÃO -->
-<!-- ========================= -->
+<!-- ================================================= -->
+
 
 <section class="informacao" id="informacao">
 
-    <!-- DETALHES DECORATIVOS -->
-    <div class="detalhe detalhe-circulo"></div>
-    <div class="detalhe detalhe-quadrado"></div>
-    <div class="detalhe detalhe-ponto"></div>
+
+    <!-- ELEMENTOS DECORATIVOS -->
+
+
+    <div class="info-decor decor-circulo"></div>
+    <div class="info-decor decor-linha"></div>
+    <div class="info-ponto ponto-esquerdo"></div>
+    <div class="info-ponto ponto-direito"></div>
+
+
+
 
     <div class="informacao-conteudo">
 
-        <!-- TÍTULO -->
-        <div class="titulo-informacao">
 
-            <span class="linha-titulo"></span>
+        <!-- ========================= -->
+        <!-- CABEÇALHO -->
+        <!-- ========================= -->
+
+
+        <div class="informacao-cabecalho">
+
+
+            <span class="informacao-label">
+                CONHECIMENTO
+            </span>
+
 
             <h2>
-                <span>Informação que pode fazer</span>
+                Informação que pode fazer
                 <strong>diferença</strong>
             </h2>
 
-            <span class="linha-titulo"></span>
+
+            <p>
+                Conhecimento também é uma forma de proteção.
+                Encontre informações para entender seus direitos,
+                reconhecer situações de violência e saber onde buscar ajuda.
+            </p>
+
 
         </div>
 
+        
 
-        <!-- TEXTO -->
-        <p class="texto-informacao">
-            Conhecimento também é uma forma de proteção.
-            Encontre informações para entender seus direitos,
-            reconhecer situações de violência e saber onde buscar ajuda.
-        </p>
+
+
 
 
         <!-- ========================= -->
-<!-- CARDS -->
-<!-- ========================= -->
-
-<div class="cards-informacao">
+        <!-- PAINEL DE INFORMAÇÕES -->
+        <!-- ========================= -->
 
 
-    <!-- ========================= -->
-    <!-- CARD 01 - DIREITOS -->
-    <!-- ========================= -->
+        <div class="lista-informacoes">
 
-    <a href="#" class="card-informacao card-azul">
 
-        <div class="numero-card">
-            01
+
+
+            <!-- ========================= -->
+            <!-- 01 - DIREITOS -->
+            <!-- ========================= -->
+
+
+            <a href="#" class="item-informacao info-azul">
+
+
+                <div class="info-numero">
+                    01
+                </div>
+
+
+                <div class="info-icone">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                </div>
+
+
+                <div class="info-categoria">
+                    DIREITOS
+                </div>
+
+
+                <div class="info-texto">
+
+
+                    <h3>
+                        Conheça seus direitos
+                    </h3>
+
+
+                    <p>
+                        Entenda direitos básicos e saiba onde procurar
+                        orientação quando precisar.
+                    </p>
+
+
+                </div>
+
+
+                <div class="info-seta">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+
+
+            </a>
+
+
+
+
+
+
+            <!-- ========================= -->
+            <!-- 02 - ORIENTAÇÃO -->
+            <!-- ========================= -->
+
+
+            <a href="#" class="item-informacao info-roxo">
+
+
+                <div class="info-numero">
+                    02
+                </div>
+
+
+                <div class="info-icone">
+                    <i class="fa-solid fa-comments"></i>
+                </div>
+
+
+                <div class="info-categoria">
+                    ORIENTAÇÃO
+                </div>
+
+
+                <div class="info-texto">
+
+
+                    <h3>
+                        Saiba como pedir ajuda
+                    </h3>
+
+
+                    <p>
+                        Encontre caminhos seguros para buscar apoio
+                        e orientação diante de uma situação difícil.
+                    </p>
+
+
+                </div>
+
+
+                <div class="info-seta">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+
+
+            </a>
+
+
+
+
+
+
+            <!-- ========================= -->
+            <!-- 03 - PREVENÇÃO -->
+            <!-- ========================= -->
+
+
+            <a href="#" class="item-informacao info-verde">
+
+
+                <div class="info-numero">
+                    03
+                </div>
+
+
+                <div class="info-icone">
+                    <i class="fa-solid fa-shield-heart"></i>
+                </div>
+
+
+                <div class="info-categoria">
+                    PREVENÇÃO
+                </div>
+
+
+                <div class="info-texto">
+
+
+                    <h3>
+                        Informação gera proteção
+                    </h3>
+
+
+                    <p>
+                        Reconhecer sinais de violência, conhecer formas
+                        de prevenção e saber onde encontrar apoio pode
+                        ajudar a transformar situações.
+                    </p>
+
+
+                </div>
+
+
+                <div class="info-seta">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+
+
+            </a>
+
+
+
+
+
+
+            <!-- ========================= -->
+            <!-- 04 - SEGURANÇA -->
+            <!-- ========================= -->
+
+
+            <a href="#" class="item-informacao info-vermelho">
+
+
+                <div class="info-numero">
+                    04
+                </div>
+
+
+                <div class="info-icone">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+
+
+                <div class="info-categoria">
+                    SEGURANÇA
+                </div>
+
+
+                <div class="info-texto">
+
+
+                    <h3>
+                        Proteja-se no ambiente digital
+                    </h3>
+
+
+                    <p>
+                        Aprenda a reconhecer riscos na internet e descubra
+                        formas de proteger seus dados e sua segurança.
+                    </p>
+
+
+                </div>
+
+
+                <div class="info-seta">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+
+
+            </a>
+
+
+
+
         </div>
 
-        <div class="icone-card">
-            <i class="fa-solid fa-scale-balanced"></i>
-        </div>
-
-        <span class="categoria-card">
-            DIREITOS
-        </span>
-
-        <div class="conteudo-card">
-
-            <h3>
-                Conheça seus direitos
-            </h3>
-
-            <p>
-                Entenda direitos básicos e saiba onde procurar
-                orientação quando precisar.
-            </p>
-
-            <span class="link-card">
-                Saiba mais
-                <i class="fa-solid fa-arrow-right"></i>
-            </span>
-
-        </div>
-
-    </a>
 
 
 
-    <!-- ========================= -->
-    <!-- CARD 02 - ORIENTAÇÃO -->
-    <!-- ========================= -->
-
-    <a href="#" class="card-informacao card-roxo">
-
-        <div class="numero-card">
-            02
-        </div>
-
-        <div class="icone-card">
-            <i class="fa-solid fa-comments"></i>
-        </div>
-
-        <span class="categoria-card">
-            ORIENTAÇÃO
-        </span>
-
-        <div class="conteudo-card">
-
-            <h3>
-                Saiba como pedir ajuda
-            </h3>
-
-            <p>
-                Encontre caminhos seguros para buscar apoio
-                e orientação diante de uma situação difícil.
-            </p>
-
-            <span class="link-card">
-                Encontrar apoio
-                <i class="fa-solid fa-arrow-right"></i>
-            </span>
-
-        </div>
-
-    </a>
-
-
-
-    <!-- ========================= -->
-    <!-- CARD 03 - PREVENÇÃO -->
-    <!-- ========================= -->
-
-    <a href="#" class="card-informacao card-verde">
-
-        <div class="numero-card">
-            03
-        </div>
-
-        <div class="icone-card">
-            <i class="fa-solid fa-shield-heart"></i>
-        </div>
-
-        <span class="categoria-card">
-            PREVENÇÃO
-        </span>
-
-        <div class="conteudo-card">
-
-            <h3>
-                Informação gera proteção
-            </h3>
-
-            <p>
-                Reconhecer sinais de violência, conhecer formas
-                de prevenção e saber onde encontrar apoio pode
-                ajudar a transformar situações.
-            </p>
-
-            <span class="link-card">
-                Conhecer mais
-                <i class="fa-solid fa-arrow-right"></i>
-            </span>
-
-        </div>
-
-    </a>
-
-
-
-    <!-- ========================= -->
-    <!-- CARD 04 - SEGURANÇA DIGITAL -->
-    <!-- ========================= -->
-
-    <a href="#" class="card-informacao card-azul">
-
-        <div class="numero-card">
-            04
-        </div>
-
-        <div class="icone-card">
-            <i class="fa-solid fa-shield-halved"></i>
-        </div>
-
-        <span class="categoria-card">
-            SEGURANÇA
-        </span>
-
-        <div class="conteudo-card">
-
-            <h3>
-                Proteja-se no ambiente digital
-            </h3>
-
-            <p>
-                Aprenda a reconhecer riscos na internet e descubra
-                formas de proteger seus dados e sua segurança.
-            </p>
-
-            <span class="link-card">
-                Saiba como se proteger
-                <i class="fa-solid fa-arrow-right"></i>
-            </span>
-
-        </div>
-
-    </a>
-
-
-</div>
-
-<!-- FIM DOS CARDS -->
 
 
         <!-- ========================= -->
-        <!-- FRASE DE DESTAQUE -->
+        <!-- FRASE FINAL -->
         <!-- ========================= -->
+
 
         <div class="frase-informacao">
 
-            <span class="aspas">
-                “
-            </span>
 
-            <p>
-                Informação é o primeiro passo para saber
-                onde buscar ajuda.
-            </p>
+            <div class="aspas-info">
+                <i class="fa-solid fa-quote-left"></i>
+            </div>
 
-            <span class="assinatura">
-                ANCHOR
-            </span>
 
-            <div class="circulo-frase"></div>
+            <div class="frase-info-texto">
+
+
+                <p>
+                    Informação é o primeiro passo para saber
+                    onde buscar ajuda.
+                </p>
+
+
+                <span>
+                    ANCHOR
+                </span>
+
+
+            </div>
+
+
+            <div class="frase-info-circulo"></div>
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- SEÇÃO: ÚLTIMAS NOTÍCIAS -->
+<!-- ================================================= -->
+
+
+<section class="ultimas-noticias" id="ultimas-noticias">
+
+
+    <div class="noticias-conteudo">
+
+
+        <!-- ========================= -->
+        <!-- CABEÇALHO -->
+        <!-- ========================= -->
+
+
+        <div class="cabecalho-noticias">
+
+
+            <div class="titulo-noticias">
+
+
+                <span class="linha-noticias"></span>
+
+
+                <div>
+                    <span class="subtitulo-noticias">
+                        FIQUE POR DENTRO
+                    </span>
+
+
+                    <h2>
+                        Últimas notícias
+                    </h2>
+                </div>
+
+
+            </div>
+
+
+            <a href="#" class="ver-todas-noticias">
+                Ver todas
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+
+        </div>
+
+
+
+
+        <!-- ========================= -->
+        <!-- CONTEÚDO DAS NOTÍCIAS -->
+        <!-- ========================= -->
+
+
+        <div class="noticias-grid">
+
+
+<!-- ========================= -->
+<!-- NOTÍCIA PRINCIPAL -->
+<!-- ========================= -->
+
+<article class="noticia-principal">
+
+    <div class="imagem-noticia-principal">
+
+        <img
+            src="img/noticia-violencia.png"
+            alt="Como identificar sinais de violência"
+        >
+
+        <span class="categoria-noticia">
+            DESTAQUE
+        </span>
+
+    </div>
+
+
+    <div class="conteudo-noticia-principal">
+
+        <span class="data-noticia">
+            27 AGO • 2026
+        </span>
+
+        <h3>
+            Como identificar sinais de violência
+            e quando buscar ajuda
+        </h3>
+
+        <p>
+            A violência nem sempre deixa marcas visíveis.
+            Saiba reconhecer diferentes formas de violência
+            e entenda como agir diante dessas situações.
+        </p>
+
+        <a href="noticia-violencia.html" class="ler-noticia">
+            Ler notícia
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+</article>
+
+
+
+
+
+
+            <!-- ========================= -->
+            <!-- NOTÍCIAS SECUNDÁRIAS -->
+            <!-- ========================= -->
+
+
+            <div class="noticias-secundarias">
+
+
+
+
+                <!-- NOTÍCIA 02 -->
+
+
+                <article class="noticia-secundaria">
+
+
+                    <div class="imagem-noticia">
+
+
+                        <img
+                            src="img/noticia-02.png"
+                            alt="Informação sobre direitos"
+                        >
+
+
+                    </div>
+
+
+
+
+                    <div class="conteudo-noticia">
+
+
+                        <span class="categoria-pequena">
+                            DIREITOS
+                        </span>
+
+
+                        <span class="data-noticia">
+                            24 AGO • 2026
+                        </span>
+
+
+                        <h3>
+                            Conhecer seus direitos
+                            também é uma forma de proteção
+                        </h3>
+
+
+                        <a href="#" class="ler-noticia">
+                            Ler notícia
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+
+                    </div>
+
+
+                </article>
+
+
+
+
+
+
+                <!-- NOTÍCIA 03 -->
+
+
+                <article class="noticia-secundaria">
+
+
+                    <div class="imagem-noticia">
+
+
+                        <img
+                            src="img/noticia-03.png"
+                            alt="Orientação e segurança"
+                        >
+
+
+                    </div>
+
+
+
+
+                    <div class="conteudo-noticia">
+
+
+                        <span class="categoria-pequena">
+                            ORIENTAÇÃO
+                        </span>
+
+
+                        <span class="data-noticia">
+                            22 AGO • 2026
+                        </span>
+
+
+                        <h3>
+                            Onde buscar ajuda quando
+                            você precisar
+                        </h3>
+
+
+                        <a href="#" class="ler-noticia">
+                            Ler notícia
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+
+                    </div>
+
+
+                </article>
+
+
+
+
+            </div>
+
 
         </div>
 
 
     </div>
 
+
 </section>
 
-  
-
-        
-
-             
-              
 
 
 
@@ -1409,10 +1796,14 @@
 <!-- JAVASCRIPT -->
 <!-- ================================================= -->
 
+
 <script src="script.js"></script>
 
 
+
+
 </body>
+
 
 </html>
 ```
