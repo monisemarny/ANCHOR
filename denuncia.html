@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fazer denúncia | Anchor</title>
+
+    <link rel="icon" href="img/logo-anchor.png">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="denuncia.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+<main class="pagina-denuncia">
+
+    <!-- CABEÇALHO -->
+    <section class="cabecalho-denuncia">
+
+        <div>
+            <span class="subtitulo-denuncia">
+                CANAL DE DENÚNCIAS
+            </span>
+
+            <h1>
+                Realize sua denúncia
+            </h1>
+
+            <p>
+                Preencha as informações abaixo para registrar sua denúncia.
+                Seus dados serão tratados com segurança e responsabilidade.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- ÁREA DO FORMULÁRIO -->
+    <section class="area-formulario">
+
+        <!-- ETAPAS -->
+        <div class="etapas-formulario">
+
+            <div class="etapa ativa">
+
+                <span>1</span>
+
+                <div>
+                    <strong>Dados iniciais</strong>
+                    <small>Informações sobre a denúncia</small>
+                </div>
+
+            </div>
+
+
+            <div class="linha-etapa"></div>
+
+
+            <div class="etapa">
+
+                <span>2</span>
+
+                <div>
+                    <strong>Detalhes</strong>
+                    <small>Descreva o ocorrido</small>
+                </div>
+
+            </div>
+
+
+            <div class="linha-etapa"></div>
+
+
+            <div class="etapa">
+
+                <span>3</span>
+
+                <div>
+                    <strong>Revisão</strong>
+                    <small>Confira suas informações</small>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CONTEÚDO PRINCIPAL + LATERAL -->
+        <div class="conteudo-formulario">
+
+
+            <!-- =========================================
+                 FORMULÁRIO PRINCIPAL
+            ========================================== -->
+
+            <div class="formulario-principal">
+
+
+                <!-- DESTINATÁRIO -->
+                <div class="bloco-formulario">
+
+                    <div class="titulo-bloco">
+
+                        <div class="icone-bloco">
+                            <i class="fa-solid fa-building"></i>
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                Destinatário
+                            </h2>
+
+                            <p>
+                                Selecione o órgão responsável por receber sua denúncia.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <label for="destinatario">
+                        Órgão responsável
+                    </label>
+
+
+                    <select
+                        id="destinatario"
+                        name="destinatario"
+                    >
+
+                        <option value="">
+                            Selecione um órgão...
+                        </option>
+
+                        <option value="autoridade">
+                            Autoridade competente
+                        </option>
+
+                        <option value="ministerio-publico">
+                            Ministério Público
+                        </option>
+
+                        <option value="delegacia">
+                            Delegacia
+                        </option>
+
+                        <option value="outro">
+                            Outro órgão responsável
+                        </option>
+
+                    </select>
+
+
+                    <!-- OUTRO ÓRGÃO -->
+                    <div
+                        class="campo campo-outro"
+                        id="campoOutroOrgao"
+                        style="display: none;"
+                    >
+
+                        <label for="outroOrgao">
+                            Informe qual órgão
+                        </label>
+
+                        <input
+                            type="text"
+                            id="outroOrgao"
+                            name="outroOrgao"
+                            placeholder="Digite o nome do órgão responsável"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- TIPO DE DENÚNCIA -->
+                <div class="bloco-formulario">
+
+                    <div class="titulo-bloco">
+
+                        <div class="icone-bloco">
+                            <i class="fa-solid fa-tag"></i>
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                Tipo de denúncia
+                            </h2>
+
+                            <p>
+                                Selecione o tipo que melhor descreve a situação.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="tipos-denuncia">
+
+
+                        <!-- VIOLÊNCIA DOMÉSTICA -->
+                        <label class="card-tipo">
+
+                            <input
+                                type="radio"
+                                name="tipo"
+                                value="violencia-domestica"
+                            >
+
+                            <span class="icone-tipo">
+                                <i class="fa-solid fa-house"></i>
+                            </span>
+
+                            <span>
+                                Violência doméstica
+                            </span>
+
+                        </label>
+
+
+                        <!-- BULLYING -->
+                        <label class="card-tipo">
+
+                            <input
+                                type="radio"
+                                name="tipo"
+                                value="bullying"
+                            >
+
+                            <span class="icone-tipo">
+                                <i class="fa-solid fa-user-group"></i>
+                            </span>
+
+                            <span>
+                                Bullying
+                            </span>
+
+                        </label>
+
+
+                        <!-- CYBERBULLYING -->
+                        <label class="card-tipo">
+
+                            <input
+                                type="radio"
+                                name="tipo"
+                                value="cyberbullying"
+                            >
+
+                            <span class="icone-tipo">
+                                <i class="fa-solid fa-laptop"></i>
+                            </span>
+
+                            <span>
+                                Cyberbullying
+                            </span>
+
+                        </label>
+
+
+                        <!-- RACISMO -->
+                        <label class="card-tipo">
+
+                            <input
+                                type="radio"
+                                name="tipo"
+                                value="racismo"
+                            >
+
+                            <span class="icone-tipo">
+                                <i class="fa-solid fa-scale-balanced"></i>
+                            </span>
+
+                            <span>
+                                Racismo
+                            </span>
+
+                        </label>
+
+
+                        <!-- HOMOFOBIA -->
+                        <label class="card-tipo">
+
+                            <input
+                                type="radio"
+                                name="tipo"
+                                value="homofobia"
+                            >
+
+                            <span class="icone-tipo">
+                                <i class="fa-solid fa-heart"></i>
+                            </span>
+
+                            <span>
+                                Homofobia
+                            </span>
+
+                        </label>
+
+
+                        <!-- XENOFOBIA -->
+                        <label class="card-tipo">
+
+                            <input
+                                type="radio"
+                                name="tipo"
+                                value="xenofobia"
+                            >
+
+                            <span class="icone-tipo">
+                                <i class="fa-solid fa-earth-americas"></i>
+                            </span>
+
+                            <span>
+                                Xenofobia
+                            </span>
+
+                        </label>
+
+
+                        <!-- ABUSO -->
+                        <label class="card-tipo">
+
+                            <input
+                                type="radio"
+                                name="tipo"
+                                value="abuso"
+                            >
+
+                            <span class="icone-tipo">
+                                <i class="fa-solid fa-hand"></i>
+                            </span>
+
+                            <span>
+                                Abuso
+                            </span>
+
+                        </label>
+
+
+                        <!-- OUTRO -->
+                        <label class="card-tipo">
+
+                            <input
+                                type="radio"
+                                name="tipo"
+                                value="outro"
+                            >
+
+                            <span class="icone-tipo">
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </span>
+
+                            <span>
+                                Outro
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- OUTRO TIPO -->
+                <div
+                    class="campo campo-outro"
+                    id="campoOutroTipo"
+                    style="display: none;"
+                >
+
+                    <label for="outroTipo">
+                        Informe o tipo de denúncia
+                    </label>
+
+                    <input
+                        type="text"
+                        id="outroTipo"
+                        name="outroTipo"
+                        placeholder="Digite o tipo de denúncia"
+                    >
+
+                </div>
+
+
+                <!-- LOCAL DA OCORRÊNCIA -->
+                <div class="bloco-formulario">
+
+                    <div class="titulo-bloco">
+
+                        <div class="icone-bloco">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                Local da ocorrência
+                            </h2>
+
+                            <p>
+                                Informe onde a situação aconteceu.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ESTADO + CIDADE -->
+                    <div class="campos-duplos">
+
+    <div class="campo">
+
+        <label for="estado">Estado</label>
+
+        <select id="estado" name="estado">
+            <option value="">Selecione o estado</option>
+            <option value="sp">São Paulo</option>
+            <option value="rj">Rio de Janeiro</option>
+            <option value="mg">Minas Gerais</option>
+            <option value="pr">Paraná</option>
+            <option value="outro">Outro</option>
+        </select>
+
+        <div class="campo campo-outro" id="campoOutroEstado" style="display: none;">
+
+            <label for="outroEstado">Informe qual estado</label>
+
+            <input
+                type="text"
+                id="outroEstado"
+                name="outroEstado"
+                placeholder="Digite o estado"
+            >
+
+        </div>
+
+    </div>
+
+
+    <div class="campo">
+
+        <label for="cidade">Cidade</label>
+
+        <input
+            type="text"
+            id="cidade"
+            placeholder="Digite a cidade"
+        >
+
+    </div>
+
+</div>
+
+                    <!-- LOCAL ESPECÍFICO -->
+                    <div class="campo">
+
+                        <label for="local">
+                            Local específico
+                        </label>
+
+                        <input
+                            type="text"
+                            id="local"
+                            name="local"
+                            placeholder="Ex.: escola, rua, estabelecimento..."
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- BOTÕES -->
+                <div class="acoes-formulario">
+
+                    <button
+                        type="button"
+                        class="btn-cancelar"
+                    >
+                        Cancelar
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="btn-continuar"
+                    >
+
+                        Continuar
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================================
+                 LATERAL DIREITA
+            ========================================== -->
+
+            <aside class="lateral-denuncia">
+
+
+                <!-- SEGURANÇA -->
+                <div class="card-seguranca">
+
+                    <div class="icone-seguranca">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Suas informações estão protegidas
+                    </h3>
+
+
+                    <p>
+                        As informações fornecidas serão tratadas com
+                        responsabilidade e utilizadas apenas para a finalidade
+                        da denúncia.
+                    </p>
+
+                </div>
+
+
+                <!-- DICAS -->
+                <div class="card-dica">
+
+                    <div class="titulo-dica">
+
+                        <i class="fa-regular fa-lightbulb"></i>
+
+                        <h3>
+                            Dicas importantes
+                        </h3>
+
+                    </div>
+
+
+                    <!-- DICA 1 -->
+                    <div class="dica">
+
+                        <strong>
+                            Seja objetivo
+                        </strong>
+
+                        <p>
+                            Informe os fatos de forma clara e direta.
+                        </p>
+
+                    </div>
+
+
+                    <!-- DICA 2 -->
+                    <div class="dica">
+
+                        <strong>
+                            Não invente informações
+                        </strong>
+
+                        <p>
+                            Forneça somente informações que você conhece.
+                        </p>
+
+                    </div>
+
+
+                    <!-- DICA 3 -->
+                    <div class="dica">
+
+                        <strong>
+                            Guarde informações importantes
+                        </strong>
+
+                        <p>
+                            Fotos, documentos ou outros registros podem
+                            ajudar na análise da denúncia.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- AJUDA -->
+                <div class="card-ajuda">
+
+                    <i class="fa-solid fa-circle-question"></i>
+
+
+                    <div>
+
+                        <strong>
+                            Precisa de ajuda?
+                        </strong>
+
+
+                        <p>
+                            Consulte nossas orientações antes de realizar
+                            uma denúncia.
+                        </p>
+
+
+                        <a href="como-denunciar.html">
+
+                            Como denunciar
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

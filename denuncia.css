@@ -1,0 +1,782 @@
+/* =====================================================
+   PÁGINA DE DENÚNCIA
+===================================================== */
+
+.pagina-denuncia {
+    background: #f5f8fc;
+    min-height: 100vh;
+    padding-bottom: 80px;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* =====================================================
+   CABEÇALHO
+===================================================== */
+
+.cabecalho-denuncia {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 55px 30px 35px;
+    box-sizing: border-box;
+}
+
+.subtitulo-denuncia {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #1769c2;
+}
+
+.cabecalho-denuncia h1 {
+    margin: 8px 0 10px;
+    font-size: 34px;
+    font-weight: 600;
+    color: #17365d;
+}
+
+.cabecalho-denuncia p {
+    max-width: 650px;
+    margin: 0;
+    color: #65758b;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   ÁREA DO FORMULÁRIO
+===================================================== */
+
+.area-formulario {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   ETAPAS
+===================================================== */
+
+.etapas-formulario {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.etapa {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 180px;
+}
+
+.etapa span {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+
+    background: #e2e8f0;
+    color: #64748b;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    flex-shrink: 0;
+}
+
+.etapa.ativa span {
+    background: #1769c2;
+    color: white;
+}
+
+.etapa strong {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #253b53;
+}
+
+.etapa small {
+    display: block;
+    margin-top: 2px;
+    color: #8a98a9;
+    font-size: 11px;
+}
+
+.linha-etapa {
+    height: 1px;
+    flex: 1;
+    background: #dbe3ec;
+    margin: 0 15px;
+}
+
+
+/* =====================================================
+   CONTEÚDO PRINCIPAL + LATERAL
+===================================================== */
+
+.conteudo-formulario {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) 290px;
+
+    gap: 24px;
+
+    align-items: start;
+}
+
+
+/* =====================================================
+   FORMULÁRIO PRINCIPAL
+===================================================== */
+
+.formulario-principal {
+    width: 100%;
+    min-width: 0;
+
+    box-sizing: border-box;
+
+    background: white;
+
+    border: 1px solid #e1e7ef;
+
+    border-radius: 14px;
+
+    padding: 28px;
+
+    box-shadow: 0 5px 20px rgba(25, 54, 93, 0.06);
+
+    grid-column: 1;
+    grid-row: 1;
+}
+
+
+/* =====================================================
+   BLOCOS DO FORMULÁRIO
+===================================================== */
+
+.bloco-formulario {
+    padding-bottom: 28px;
+    margin-bottom: 28px;
+
+    border-bottom: 1px solid #edf1f5;
+}
+
+.bloco-formulario:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+
+/* =====================================================
+   TÍTULOS DOS BLOCOS
+===================================================== */
+
+.titulo-bloco {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+}
+
+.icone-bloco {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 9px;
+
+    background: #edf5ff;
+    color: #1769c2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+.titulo-bloco h2 {
+    margin: 0 0 4px;
+
+    font-size: 17px;
+    font-weight: 600;
+
+    color: #1d3048;
+}
+
+.titulo-bloco p {
+    margin: 0;
+
+    font-size: 12px;
+
+    color: #8290a1;
+}
+
+
+/* =====================================================
+   CAMPOS
+===================================================== */
+
+.pagina-denuncia label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    color: #33465d;
+}
+
+.pagina-denuncia select,
+.pagina-denuncia input {
+    width: 100%;
+    height: 44px;
+
+    box-sizing: border-box;
+
+    padding: 0 13px;
+
+    border: 1px solid #d8e0e9;
+
+    border-radius: 8px;
+
+    background: white;
+
+    color: #33465d;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 13px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.pagina-denuncia select:focus,
+.pagina-denuncia input:focus {
+    border-color: #1769c2;
+
+    box-shadow: 0 0 0 3px rgba(23, 105, 194, 0.08);
+}
+
+.campo {
+    margin-top: 16px;
+}
+
+
+/* =====================================================
+   CAMPOS DUPLOS
+===================================================== */
+
+.campos-duplos {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+
+/* =====================================================
+   CAMPO OUTRO
+===================================================== */
+
+.campo-outro {
+    width: 100%;
+    margin-top: 16px;
+}
+
+.campo-outro label {
+    margin-bottom: 7px;
+}
+
+.campo-outro input {
+    width: 100%;
+}
+
+
+/* =====================================================
+   TIPOS DE DENÚNCIA
+===================================================== */
+
+.tipos-denuncia {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 10px;
+}
+
+
+.card-tipo {
+    position: relative;
+
+    min-height: 78px;
+
+    padding: 12px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #dce4ed;
+
+    border-radius: 9px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.card-tipo input {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+.card-tipo:hover {
+    border-color: #1769c2;
+
+    background: #f8fbff;
+}
+
+.card-tipo:has(input:checked) {
+    border-color: #1769c2;
+
+    background: #eef6ff;
+
+    box-shadow: inset 0 0 0 1px #1769c2;
+}
+
+.icone-tipo {
+    color: #1769c2;
+
+    font-size: 16px;
+}
+
+.card-tipo > span:last-child {
+    font-size: 11px;
+
+    font-weight: 600;
+
+    color: #33465d;
+}
+
+.bloco-formulario:has(.tipos-denuncia) {
+    margin-bottom: 45px;
+}
+
+/* =====================================================
+   LATERAL DIREITA
+===================================================== */
+
+.lateral-denuncia {
+    width: 290px;
+    min-width: 290px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    align-self: start;
+
+    box-sizing: border-box;
+
+    grid-column: 2;
+    grid-row: 1;
+}
+
+
+/* =====================================================
+   CARD SEGURANÇA
+===================================================== */
+
+.card-seguranca {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    background: #edf6ff;
+
+    border: 1px solid #d6eaff;
+
+    border-radius: 12px;
+
+    padding: 20px;
+}
+
+.icone-seguranca {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 9px;
+
+    background: #dceeff;
+
+    color: #1769c2;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 12px;
+}
+
+.card-seguranca h3 {
+    margin: 0 0 7px;
+
+    color: #244363;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.card-seguranca p {
+    margin: 0;
+
+    color: #64778c;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   CARD DICAS
+===================================================== */
+
+.card-dica {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    background: white;
+
+    border: 1px solid #e0e6ed;
+
+    border-radius: 12px;
+
+    padding: 20px;
+}
+
+.titulo-dica {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 15px;
+}
+
+.titulo-dica i {
+    color: #1769c2;
+}
+
+.titulo-dica h3 {
+    margin: 0;
+
+    color: #263b52;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.dica {
+    padding: 12px 0;
+
+    border-top: 1px solid #edf1f5;
+}
+
+.dica strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #3b4e64;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+.dica p {
+    margin: 0;
+
+    color: #7b8999;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   CARD AJUDA
+===================================================== */
+
+.card-ajuda {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    gap: 12px;
+
+    padding: 17px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e1e7ee;
+
+    border-radius: 12px;
+}
+
+.card-ajuda > i {
+    color: #1769c2;
+
+    font-size: 18px;
+
+    margin-top: 2px;
+
+    flex-shrink: 0;
+}
+
+.card-ajuda strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #34475c;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+.card-ajuda p {
+    margin: 0 0 8px;
+
+    color: #7b8999;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+}
+
+.card-ajuda a {
+    color: #1769c2;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    font-weight: 600;
+}
+
+.card-ajuda a i {
+    margin-left: 4px;
+}
+
+
+/* =====================================================
+   BOTÕES
+===================================================== */
+
+.acoes-formulario {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 25px;
+
+    padding-top: 22px;
+
+    border-top: 1px solid #edf1f5;
+}
+
+.btn-cancelar,
+.btn-continuar {
+    height: 42px;
+
+    padding: 0 20px;
+
+    border-radius: 8px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.btn-cancelar {
+    background: white;
+
+    color: #65758b;
+
+    border: 1px solid #d8e0e9;
+}
+
+.btn-cancelar:hover {
+    background: #f6f8fa;
+}
+
+.btn-continuar {
+    border: none;
+
+    background: #1769c2;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.btn-continuar:hover {
+    background: #12569f;
+
+    transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   RESPONSIVO
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .conteudo-formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .formulario-principal {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .lateral-denuncia {
+        width: 100%;
+        min-width: 0;
+
+        grid-column: 1;
+        grid-row: auto;
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 15px;
+    }
+
+    .card-ajuda {
+        grid-column: span 2;
+    }
+
+    .tipos-denuncia {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* =====================================================
+   CELULAR
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .cabecalho-denuncia {
+        padding: 35px 18px 25px;
+    }
+
+    .area-formulario {
+        padding: 0 18px;
+    }
+
+    .cabecalho-denuncia h1 {
+        font-size: 28px;
+    }
+
+    .etapas-formulario {
+        display: none;
+    }
+
+    .formulario-principal {
+        padding: 20px;
+    }
+
+    .campos-duplos {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .tipos-denuncia {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .lateral-denuncia {
+        display: flex;
+
+        width: 100%;
+        min-width: 0;
+    }
+
+    .card-ajuda {
+        grid-column: auto;
+    }
+}
+
+/* Espaço antes de "Local da ocorrência" */
+.formulario-principal > .bloco-formulario:nth-child(4) {
+    margin-top: 35px;
+}
