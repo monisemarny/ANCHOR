@@ -649,6 +649,204 @@
 
 </main>
 
+<!-- ETAPA 2 - DETALHES -->
+<div class="etapa-conteudo" id="etapa2" style="display: none;">
+
+    <div class="bloco-formulario">
+
+        <div class="titulo-bloco">
+            <div class="icone-bloco">
+                <i class="fa-solid fa-file-lines"></i>
+            </div>
+
+            <div>
+                <h2>Conte o que aconteceu</h2>
+                <p>
+                    Descreva a situação com o máximo de detalhes que conseguir.
+                    Essas informações ajudam a compreender melhor a ocorrência.
+                </p>
+            </div>
+        </div>
+
+        <div class="campo">
+            <label for="descricao">O que aconteceu?</label>
+
+            <textarea
+                id="descricao"
+                name="descricao"
+                rows="7"
+                placeholder="Descreva o que aconteceu..."
+            ></textarea>
+        </div>
+
+    </div>
+
+
+    <div class="bloco-formulario">
+
+        <div class="titulo-bloco">
+            <div class="icone-bloco">
+                <i class="fa-regular fa-calendar"></i>
+            </div>
+
+            <div>
+                <h2>Quando aconteceu?</h2>
+                <p>Informe quando a situação ocorreu.</p>
+            </div>
+        </div>
+
+        <div class="campos-duplos">
+
+            <div class="campo">
+                <label for="dataOcorrencia">Data</label>
+
+                <input
+                    type="date"
+                    id="dataOcorrencia"
+                    name="dataOcorrencia"
+                >
+            </div>
+
+            <div class="campo">
+                <label for="horaOcorrencia">
+                    Horário aproximado
+                </label>
+
+                <input
+                    type="time"
+                    id="horaOcorrencia"
+                    name="horaOcorrencia"
+                >
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="bloco-formulario">
+
+        <div class="titulo-bloco">
+            <div class="icone-bloco">
+                <i class="fa-solid fa-users"></i>
+            </div>
+
+            <div>
+                <h2>Pessoas envolvidas</h2>
+                <p>
+                    Informe quem estava envolvido na situação, se souber.
+                </p>
+            </div>
+        </div>
+
+        <div class="campo">
+            <label for="envolvidos">
+                Quem estava envolvido?
+            </label>
+
+            <textarea
+                id="envolvidos"
+                name="envolvidos"
+                rows="4"
+                placeholder="Descreva quem estava envolvido na situação..."
+            ></textarea>
+        </div>
+
+    </div>
+
+
+    <div class="bloco-formulario">
+
+        <div class="titulo-bloco">
+            <div class="icone-bloco">
+                <i class="fa-solid fa-eye"></i>
+            </div>
+
+            <div>
+                <h2>Testemunhas</h2>
+                <p>Havia outras pessoas que presenciaram o ocorrido?</p>
+            </div>
+        </div>
+
+        <div class="opcoes-sim-nao">
+
+            <label class="opcao-sim-nao">
+                <input
+                    type="radio"
+                    name="testemunhas"
+                    value="sim"
+                >
+
+                <span>
+                    <i class="fa-solid fa-check"></i>
+                    Sim
+                </span>
+            </label>
+
+            <label class="opcao-sim-nao">
+                <input
+                    type="radio"
+                    name="testemunhas"
+                    value="nao"
+                >
+
+                <span>
+                    <i class="fa-solid fa-xmark"></i>
+                    Não
+                </span>
+            </label>
+
+        </div>
+
+        <div class="campo campo-testemunhas" id="campoTestemunhas">
+
+            <label for="descricaoTestemunhas">
+                Informe, se souber
+            </label>
+
+            <textarea
+                id="descricaoTestemunhas"
+                name="descricaoTestemunhas"
+                rows="3"
+                placeholder="Nome ou outras informações sobre as testemunhas..."
+            ></textarea>
+
+        </div>
+
+    </div>
+
+
+    <div class="bloco-formulario">
+
+        <div class="titulo-bloco">
+            <div class="icone-bloco">
+                <i class="fa-solid fa-plus"></i>
+            </div>
+
+            <div>
+                <h2>Informações adicionais</h2>
+                <p>
+                    Acrescente qualquer informação que considere importante.
+                </p>
+            </div>
+        </div>
+
+        <div class="campo">
+            <label for="informacoesAdicionais">
+                Deseja acrescentar alguma informação?
+            </label>
+
+            <textarea
+                id="informacoesAdicionais"
+                name="informacoesAdicionais"
+                rows="4"
+                placeholder="Digite aqui alguma informação adicional..."
+            ></textarea>
+        </div>
+
+    </div>
+
+</div>
 
 <script src="script.js"></script>
 

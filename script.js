@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const menuBtn = document.getElementById("menu-btn");
     const menuLateral = document.getElementById("menu-lateral");
 
-    // Verifica se o menu existe na página
     if (!menuBtn || !menuLateral) {
         return;
     }
@@ -83,13 +82,19 @@ if (
 
     function mostrarSlide(indice) {
 
-        slides.forEach(slide => {
+        slides.forEach(function (slide) {
+
             slide.classList.remove("ativo");
+
         });
 
-        indicadores.forEach(indicador => {
+
+        indicadores.forEach(function (indicador) {
+
             indicador.classList.remove("ativo");
+
         });
+
 
         slides[indice].classList.add("ativo");
         indicadores[indice].classList.add("ativo");
@@ -97,6 +102,7 @@ if (
         slideAtual = indice;
 
     }
+
 
 
     // =================================================
@@ -108,12 +114,15 @@ if (
         slideAtual++;
 
         if (slideAtual >= slides.length) {
+
             slideAtual = 0;
+
         }
 
         mostrarSlide(slideAtual);
 
     }
+
 
 
     // =================================================
@@ -125,12 +134,15 @@ if (
         slideAtual--;
 
         if (slideAtual < 0) {
+
             slideAtual = slides.length - 1;
+
         }
 
         mostrarSlide(slideAtual);
 
     }
+
 
 
     // =================================================
@@ -148,6 +160,7 @@ if (
     }
 
 
+
     // =================================================
     // PARAR CARROSSEL
     // =================================================
@@ -157,6 +170,7 @@ if (
         clearInterval(intervalo);
 
     }
+
 
 
     // =================================================
@@ -174,6 +188,7 @@ if (
     });
 
 
+
     // =================================================
     // BOTÃO ANTERIOR
     // =================================================
@@ -187,6 +202,7 @@ if (
         iniciarCarrossel();
 
     });
+
 
 
     // =================================================
@@ -206,6 +222,7 @@ if (
         });
 
     });
+
 
 
     // =================================================
@@ -232,6 +249,7 @@ if (
     }
 
 
+
     // =================================================
     // INICIAR
     // =================================================
@@ -241,6 +259,8 @@ if (
     iniciarCarrossel();
 
 }
+
+
 
 // ==================================================
 // DENÚNCIA - ANCHOR
@@ -267,6 +287,14 @@ const etapas = document.querySelectorAll(".etapa");
 
 
 // ==================================================
+// ETAPAS DO FORMULÁRIO
+// ==================================================
+
+const etapa1 = document.getElementById("etapa1");
+const etapa2 = document.getElementById("etapa2");
+
+
+// ==================================================
 // ETAPA ATUAL
 // ==================================================
 
@@ -284,13 +312,17 @@ if (destinatario) {
         if (this.value === "outro") {
 
             if (campoOutroOrgao) {
+
                 campoOutroOrgao.style.display = "block";
+
             }
 
         } else {
 
             if (campoOutroOrgao) {
+
                 campoOutroOrgao.style.display = "none";
+
             }
 
         }
@@ -298,6 +330,7 @@ if (destinatario) {
     });
 
 }
+
 
 
 // ==================================================
@@ -311,13 +344,17 @@ tiposDenuncia.forEach(function (tipo) {
         if (this.value === "outro") {
 
             if (campoOutroTipo) {
+
                 campoOutroTipo.style.display = "block";
+
             }
 
         } else {
 
             if (campoOutroTipo) {
+
                 campoOutroTipo.style.display = "none";
+
             }
 
         }
@@ -325,6 +362,7 @@ tiposDenuncia.forEach(function (tipo) {
     });
 
 });
+
 
 
 // ==================================================
@@ -338,13 +376,17 @@ if (estado) {
         if (this.value === "outro") {
 
             if (campoOutroEstado) {
+
                 campoOutroEstado.style.display = "block";
+
             }
 
         } else {
 
             if (campoOutroEstado) {
+
                 campoOutroEstado.style.display = "none";
+
             }
 
         }
@@ -352,6 +394,47 @@ if (estado) {
     });
 
 }
+
+
+
+// ==================================================
+// TESTEMUNHAS - ETAPA 2
+// ==================================================
+
+const testemunhas = document.querySelectorAll(
+    'input[name="testemunhas"]'
+);
+
+const campoTestemunhas = document.getElementById(
+    "campoTestemunhas"
+);
+
+
+testemunhas.forEach(function (opcao) {
+
+    opcao.addEventListener("change", function () {
+
+        if (
+            this.value === "sim" &&
+            campoTestemunhas
+        ) {
+
+            campoTestemunhas.classList.add("visivel");
+
+        } else {
+
+            if (campoTestemunhas) {
+
+                campoTestemunhas.classList.remove("visivel");
+
+            }
+
+        }
+
+    });
+
+});
+
 
 
 // ==================================================
@@ -366,6 +449,7 @@ if (btnCancelar) {
             "Deseja cancelar a denúncia? Os dados preenchidos serão perdidos."
         );
 
+
         if (confirmar) {
 
             window.location.href = "index.html";
@@ -377,6 +461,32 @@ if (btnCancelar) {
 }
 
 
+
+// ==================================================
+// BOTÃO VOLTAR
+// ==================================================
+
+const btnVoltar = document.querySelector(".btn-voltar");
+
+
+if (btnVoltar) {
+
+    btnVoltar.addEventListener("click", function () {
+
+        if (etapaAtual === 2) {
+
+            etapaAtual = 1;
+
+            atualizarEtapa();
+
+        }
+
+    });
+
+}
+
+
+
 // ==================================================
 // BOTÃO CONTINUAR
 // ==================================================
@@ -385,16 +495,24 @@ if (btnContinuar) {
 
     btnContinuar.addEventListener("click", function () {
 
+
         // ------------------------------------------
         // ETAPA 1 → ETAPA 2
         // ------------------------------------------
 
         if (etapaAtual === 1) {
 
-            // Verifica órgão
-            if (destinatario && destinatario.value === "") {
 
-                alert("Selecione o órgão responsável.");
+            // Verifica órgão
+            if (
+                destinatario &&
+                destinatario.value === ""
+            ) {
+
+                alert(
+                    "Selecione o órgão responsável."
+                );
+
                 destinatario.focus();
 
                 return;
@@ -402,7 +520,8 @@ if (btnContinuar) {
             }
 
 
-            // Se escolheu "Outro", verifica se informou qual
+
+            // Verifica "Outro órgão"
             if (
                 destinatario &&
                 destinatario.value === "outro" &&
@@ -412,12 +531,16 @@ if (btnContinuar) {
                 const inputOutroOrgao =
                     campoOutroOrgao.querySelector("input");
 
+
                 if (
                     inputOutroOrgao &&
                     inputOutroOrgao.value.trim() === ""
                 ) {
 
-                    alert("Informe qual é o órgão responsável.");
+                    alert(
+                        "Informe qual é o órgão responsável."
+                    );
+
                     inputOutroOrgao.focus();
 
                     return;
@@ -427,21 +550,27 @@ if (btnContinuar) {
             }
 
 
+
             // Verifica tipo de denúncia
             const tipoSelecionado =
-                document.querySelector('input[name="tipo"]:checked');
+                document.querySelector(
+                    'input[name="tipo"]:checked'
+                );
 
 
             if (!tipoSelecionado) {
 
-                alert("Selecione o tipo de denúncia.");
+                alert(
+                    "Selecione o tipo de denúncia."
+                );
 
                 return;
 
             }
 
 
-            // Se escolheu "Outro", verifica se informou qual
+
+            // Verifica "Outro tipo"
             if (
                 tipoSelecionado.value === "outro" &&
                 campoOutroTipo
@@ -450,12 +579,16 @@ if (btnContinuar) {
                 const inputOutroTipo =
                     campoOutroTipo.querySelector("input");
 
+
                 if (
                     inputOutroTipo &&
                     inputOutroTipo.value.trim() === ""
                 ) {
 
-                    alert("Informe qual é o tipo de denúncia.");
+                    alert(
+                        "Informe qual é o tipo de denúncia."
+                    );
+
                     inputOutroTipo.focus();
 
                     return;
@@ -465,10 +598,17 @@ if (btnContinuar) {
             }
 
 
-            // Verifica estado
-            if (estado && estado.value === "") {
 
-                alert("Selecione o estado.");
+            // Verifica estado
+            if (
+                estado &&
+                estado.value === ""
+            ) {
+
+                alert(
+                    "Selecione o estado."
+                );
+
                 estado.focus();
 
                 return;
@@ -476,7 +616,8 @@ if (btnContinuar) {
             }
 
 
-            // Se escolheu "Outro", verifica qual estado
+
+            // Verifica "Outro estado"
             if (
                 estado &&
                 estado.value === "outro" &&
@@ -486,12 +627,16 @@ if (btnContinuar) {
                 const inputOutroEstado =
                     campoOutroEstado.querySelector("input");
 
+
                 if (
                     inputOutroEstado &&
                     inputOutroEstado.value.trim() === ""
                 ) {
 
-                    alert("Informe qual é o estado.");
+                    alert(
+                        "Informe qual é o estado."
+                    );
+
                     inputOutroEstado.focus();
 
                     return;
@@ -499,6 +644,7 @@ if (btnContinuar) {
                 }
 
             }
+
 
 
             // Vai para etapa 2
@@ -509,17 +655,67 @@ if (btnContinuar) {
         }
 
 
+
         // ------------------------------------------
         // ETAPA 2 → ETAPA 3
         // ------------------------------------------
 
         else if (etapaAtual === 2) {
 
+
+            // Verifica descrição
+            const descricao =
+                document.getElementById("descricao");
+
+
+            if (
+                descricao &&
+                descricao.value.trim() === ""
+            ) {
+
+                alert(
+                    "Descreva o que aconteceu antes de continuar."
+                );
+
+                descricao.focus();
+
+                return;
+
+            }
+
+
+
+            // Verifica data
+            const dataOcorrencia =
+                document.getElementById(
+                    "dataOcorrencia"
+                );
+
+
+            if (
+                dataOcorrencia &&
+                dataOcorrencia.value === ""
+            ) {
+
+                alert(
+                    "Informe a data da ocorrência."
+                );
+
+                dataOcorrencia.focus();
+
+                return;
+
+            }
+
+
+
+            // Continua para revisão
             etapaAtual = 3;
 
             atualizarEtapa();
 
         }
+
 
 
         // ------------------------------------------
@@ -539,11 +735,17 @@ if (btnContinuar) {
 }
 
 
+
 // ==================================================
 // ATUALIZAR ETAPAS
 // ==================================================
 
 function atualizarEtapa() {
+
+
+    // ------------------------------------------
+    // INDICADORES
+    // ------------------------------------------
 
     etapas.forEach(function (etapa, index) {
 
@@ -554,6 +756,7 @@ function atualizarEtapa() {
         if (numeroEtapa === etapaAtual) {
 
             etapa.classList.add("ativa");
+
             etapa.classList.remove("concluida");
 
         }
@@ -563,6 +766,7 @@ function atualizarEtapa() {
         else if (numeroEtapa < etapaAtual) {
 
             etapa.classList.remove("ativa");
+
             etapa.classList.add("concluida");
 
         }
@@ -572,6 +776,7 @@ function atualizarEtapa() {
         else {
 
             etapa.classList.remove("ativa");
+
             etapa.classList.remove("concluida");
 
         }
@@ -579,9 +784,66 @@ function atualizarEtapa() {
     });
 
 
-    // ==================================================
-    // ALTERA O BOTÃO CONTINUAR
-    // ==================================================
+
+    // ------------------------------------------
+    // MOSTRAR / ESCONDER ETAPAS
+    // ------------------------------------------
+
+    if (etapa1) {
+
+        if (etapaAtual === 1) {
+
+            etapa1.style.display = "block";
+
+        } else {
+
+            etapa1.style.display = "none";
+
+        }
+
+    }
+
+
+
+    if (etapa2) {
+
+        if (etapaAtual === 2) {
+
+            etapa2.style.display = "block";
+
+        } else {
+
+            etapa2.style.display = "none";
+
+        }
+
+    }
+
+
+
+    // ------------------------------------------
+    // BOTÃO VOLTAR
+    // ------------------------------------------
+
+    if (btnVoltar) {
+
+        if (etapaAtual === 2) {
+
+            btnVoltar.style.display = "inline-flex";
+
+        } else {
+
+            btnVoltar.style.display = "none";
+
+        }
+
+    }
+
+
+
+    // ------------------------------------------
+    // TEXTO DO BOTÃO CONTINUAR
+    // ------------------------------------------
 
     if (btnContinuar) {
 
@@ -602,9 +864,9 @@ function atualizarEtapa() {
 }
 
 
+
 // ==================================================
 // INICIALIZAÇÃO
 // ==================================================
 
 atualizarEtapa();
-

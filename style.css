@@ -3,12 +3,9 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-
-
 /* ========================= */
 /* HEADER */
 /* ========================= */
-
 header {
     background: linear-gradient(to right, #0d47a1, #1976d2);
     padding: 20px 30px;
@@ -17,27 +14,21 @@ header {
     justify-content: space-between;
 }
 
-
 /* LOGO */
-
 .logo {
     display: flex;
     align-items: center;
     text-decoration: none;
 }
-
 header img {
     width: 70px;
     filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, .25));
 }
 
-
 /* PESQUISA */
-
 .pesquisa {
     position: relative;
 }
-
 .pesquisa input {
     width: 600px;
     padding: 14px 20px 14px 70px;
@@ -46,7 +37,6 @@ header img {
     font-size: 16px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
-
 .lupa {
     position: absolute;
     left: 20px;
@@ -56,17 +46,12 @@ header img {
     color: #838282;
 }
 
-
 /* ÁREA DOS BOTÕES */
-
 .acoes {
     display: flex;
     gap: 30px;
 }
-
-
 /* MENU E ENTRAR */
-
 #menu-btn,
 #entrar-btn {
     height: 50px;
@@ -77,9 +62,7 @@ header img {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
-
 /* MENU */
-
 #menu-btn {
     width: 70px;
     background: white;
@@ -87,9 +70,7 @@ header img {
     color: #696969;
 }
 
-
 /* ENTRAR */
-
 #entrar-btn {
     width: 110px;
     background: linear-gradient(to right, #5b9dff, #3c82f6);
@@ -98,20 +79,16 @@ header img {
     font-size: 16px;
 }
 
-
 /* HOVER */
-
 #menu-btn:hover,
 #entrar-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.30);
 }
 
-
 /* ========================= */
 /* MENU DROPDOWN */
 /* ========================= */
-
 .menu-lateral {
     position: absolute;
     top: 85px;
@@ -125,18 +102,14 @@ header img {
     z-index: 1000;
     border-left: 7px solid #073f77;
 }
-
 .menu-lateral.ativo {
     display: block;
 }
 
-
 /* LINKS */
-
 .conteudo-menu {
     padding: 8px 0;
 }
-
 .conteudo-menu a {
     display: block;
     padding: 12px 18px;
@@ -145,25 +118,21 @@ header img {
     font-weight: 500;
     transition: all 0.25s ease;
 }
-
 .conteudo-menu a:hover {
     background: #eef4ff;
     color: #1976d2;
     border-left: 4px solid #64b5f6;
     padding-left: 24px;
 }
-
 .conteudo-menu hr {
     margin: 6px 15px;
     border: none;
     border-top: 1px solid #e0e0e0;
 }
 
-
 /* ========================= */
 /* NAVBAR */
 /* ========================= */
-
 .navbar {
     height: 50px;
     background: white;
@@ -173,7 +142,6 @@ header img {
     gap: 45px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
 }
-
 .navbar a {
     position: relative;
     text-decoration: none;
@@ -181,11 +149,9 @@ header img {
     font-weight: 500;
     transition: .3s;
 }
-
 .navbar a:hover {
     color: #1976d2;
 }
-
 .navbar a::after {
     content: "";
     position: absolute;
@@ -197,41 +163,34 @@ header img {
     border-radius: 10px;
     transition: .3s;
 }
-
 .navbar a:hover::after {
     width: 100%;
 }
 
-
 /* ========================= */
 /* EMERGÊNCIA */
 /* ========================= */
-
 .emergencia {
     margin-top: 35px;
     padding: 40px 20px 70px;
     text-align: center;
     background: #f5f9ff;
 }
-
 .emergencia h2 {
     font-size: 34px;
     color: #154c97;
     margin-bottom: 10px;
 }
-
 .emergencia p {
     color: #666;
     margin-bottom: 45px;
 }
-
 .cards-emergencia {
     display: flex;
     justify-content: center;
     gap: 25px;
     flex-wrap: wrap;
 }
-
 .botao-emergencia {
     width: 180px;
     height: 170px;
@@ -247,28 +206,23 @@ header img {
     box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
     transition: .25s;
 }
-
 .botao-emergencia:hover {
     transform: translateY(-6px);
     box-shadow: 0 12px 28px rgba(0, 0, 0, .15);
     border-color: #1976d2;
 }
-
 .botao-emergencia i {
     font-size: 42px;
     margin-bottom: 18px;
     transition: .25s;
 }
-
 .botao-emergencia:hover i {
     transform: scale(1.15);
 }
-
 .botao-emergencia h3 {
     margin: 0;
     font-size: 34px;
 }
-
 .botao-emergencia span {
     margin-top: 8px;
     font-size: 15px;
