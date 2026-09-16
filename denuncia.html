@@ -30,10 +30,14 @@
 
 <main class="pagina-denuncia">
 
+    <!-- ========================= -->
     <!-- CABEÇALHO -->
+    <!-- ========================= -->
+
     <section class="cabecalho-denuncia">
 
         <div>
+
             <span class="subtitulo-denuncia">
                 CANAL DE DENÚNCIAS
             </span>
@@ -46,15 +50,22 @@
                 Preencha as informações abaixo para registrar sua denúncia.
                 Seus dados serão tratados com segurança e responsabilidade.
             </p>
+
         </div>
 
     </section>
 
 
+    <!-- ========================= -->
     <!-- ÁREA DO FORMULÁRIO -->
+    <!-- ========================= -->
+
     <section class="area-formulario">
 
+        <!-- ========================= -->
         <!-- ETAPAS -->
+        <!-- ========================= -->
+
         <div class="etapas-formulario">
 
             <div class="etapa ativa">
@@ -101,7 +112,10 @@
         </div>
 
 
+        <!-- ========================= -->
         <!-- CONTEÚDO PRINCIPAL + LATERAL -->
+        <!-- ========================= -->
+
         <div class="conteudo-formulario">
 
 
@@ -112,395 +126,767 @@
             <div class="formulario-principal">
 
 
-                <!-- DESTINATÁRIO -->
-                <div class="bloco-formulario">
+                <!-- ========================= -->
+                <!-- ETAPA 1 -->
+                <!-- ========================= -->
 
-                    <div class="titulo-bloco">
+                <div id="etapa1">
 
-                        <div class="icone-bloco">
-                            <i class="fa-solid fa-building"></i>
+
+                    <!-- DESTINATÁRIO -->
+
+                    <div class="bloco-formulario">
+
+                        <div class="titulo-bloco">
+
+                            <div class="icone-bloco">
+                                <i class="fa-solid fa-building"></i>
+                            </div>
+
+                            <div>
+
+                                <h2>
+                                    Destinatário
+                                </h2>
+
+                                <p>
+                                    Selecione o órgão responsável por receber sua denúncia.
+                                </p>
+
+                            </div>
+
                         </div>
 
-                        <div>
 
-                            <h2>
-                                Destinatário
-                            </h2>
+                        <label for="destinatario">
+                            Órgão responsável
+                        </label>
 
-                            <p>
-                                Selecione o órgão responsável por receber sua denúncia.
-                            </p>
+
+                        <select
+                            id="destinatario"
+                            name="destinatario"
+                        >
+
+                            <option value="">
+                                Selecione um órgão...
+                            </option>
+
+                            <option value="autoridade">
+                                Autoridade competente
+                            </option>
+
+                            <option value="ministerio-publico">
+                                Ministério Público
+                            </option>
+
+                            <option value="delegacia">
+                                Delegacia
+                            </option>
+
+                            <option value="outro">
+                                Outro órgão responsável
+                            </option>
+
+                        </select>
+
+
+                        <!-- OUTRO ÓRGÃO -->
+
+                        <div
+                            class="campo campo-outro"
+                            id="campoOutroOrgao"
+                            style="display: none;"
+                        >
+
+                            <label for="outroOrgao">
+                                Informe qual órgão
+                            </label>
+
+                            <input
+                                type="text"
+                                id="outroOrgao"
+                                name="outroOrgao"
+                                placeholder="Digite o nome do órgão responsável"
+                            >
 
                         </div>
 
                     </div>
 
 
-                    <label for="destinatario">
-                        Órgão responsável
-                    </label>
+                    <!-- ========================= -->
+                    <!-- TIPO DE DENÚNCIA -->
+                    <!-- ========================= -->
+
+                    <div class="bloco-formulario">
+
+                        <div class="titulo-bloco">
+
+                            <div class="icone-bloco">
+                                <i class="fa-solid fa-tag"></i>
+                            </div>
+
+                            <div>
+
+                                <h2>
+                                    Tipo de denúncia
+                                </h2>
+
+                                <p>
+                                    Selecione o tipo que melhor descreve a situação.
+                                </p>
+
+                            </div>
+
+                        </div>
 
 
-                    <select
-                        id="destinatario"
-                        name="destinatario"
-                    >
-
-                        <option value="">
-                            Selecione um órgão...
-                        </option>
-
-                        <option value="autoridade">
-                            Autoridade competente
-                        </option>
-
-                        <option value="ministerio-publico">
-                            Ministério Público
-                        </option>
-
-                        <option value="delegacia">
-                            Delegacia
-                        </option>
-
-                        <option value="outro">
-                            Outro órgão responsável
-                        </option>
-
-                    </select>
+                        <div class="tipos-denuncia">
 
 
-                    <!-- OUTRO ÓRGÃO -->
+                            <!-- VIOLÊNCIA DOMÉSTICA -->
+
+                            <label class="card-tipo">
+
+                                <input
+                                    type="radio"
+                                    name="tipo"
+                                    value="violencia-domestica"
+                                >
+
+                                <span class="icone-tipo">
+                                    <i class="fa-solid fa-house"></i>
+                                </span>
+
+                                <span>
+                                    Violência doméstica
+                                </span>
+
+                            </label>
+
+
+                            <!-- BULLYING -->
+
+                            <label class="card-tipo">
+
+                                <input
+                                    type="radio"
+                                    name="tipo"
+                                    value="bullying"
+                                >
+
+                                <span class="icone-tipo">
+                                    <i class="fa-solid fa-user-group"></i>
+                                </span>
+
+                                <span>
+                                    Bullying
+                                </span>
+
+                            </label>
+
+
+                            <!-- CYBERBULLYING -->
+
+                            <label class="card-tipo">
+
+                                <input
+                                    type="radio"
+                                    name="tipo"
+                                    value="cyberbullying"
+                                >
+
+                                <span class="icone-tipo">
+                                    <i class="fa-solid fa-laptop"></i>
+                                </span>
+
+                                <span>
+                                    Cyberbullying
+                                </span>
+
+                            </label>
+
+
+                            <!-- RACISMO -->
+
+                            <label class="card-tipo">
+
+                                <input
+                                    type="radio"
+                                    name="tipo"
+                                    value="racismo"
+                                >
+
+                                <span class="icone-tipo">
+                                    <i class="fa-solid fa-scale-balanced"></i>
+                                </span>
+
+                                <span>
+                                    Racismo
+                                </span>
+
+                            </label>
+
+
+                            <!-- HOMOFOBIA -->
+
+                            <label class="card-tipo">
+
+                                <input
+                                    type="radio"
+                                    name="tipo"
+                                    value="homofobia"
+                                >
+
+                                <span class="icone-tipo">
+                                    <i class="fa-solid fa-heart"></i>
+                                </span>
+
+                                <span>
+                                    Homofobia
+                                </span>
+
+                            </label>
+
+
+                            <!-- XENOFOBIA -->
+
+                            <label class="card-tipo">
+
+                                <input
+                                    type="radio"
+                                    name="tipo"
+                                    value="xenofobia"
+                                >
+
+                                <span class="icone-tipo">
+                                    <i class="fa-solid fa-earth-americas"></i>
+                                </span>
+
+                                <span>
+                                    Xenofobia
+                                </span>
+
+                            </label>
+
+
+                            <!-- ABUSO -->
+
+                            <label class="card-tipo">
+
+                                <input
+                                    type="radio"
+                                    name="tipo"
+                                    value="abuso"
+                                >
+
+                                <span class="icone-tipo">
+                                    <i class="fa-solid fa-hand"></i>
+                                </span>
+
+                                <span>
+                                    Abuso
+                                </span>
+
+                            </label>
+
+
+                            <!-- OUTRO -->
+
+                            <label class="card-tipo">
+
+                                <input
+                                    type="radio"
+                                    name="tipo"
+                                    value="outro"
+                                >
+
+                                <span class="icone-tipo">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </span>
+
+                                <span>
+                                    Outro
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- OUTRO TIPO -->
+
                     <div
                         class="campo campo-outro"
-                        id="campoOutroOrgao"
+                        id="campoOutroTipo"
                         style="display: none;"
                     >
 
-                        <label for="outroOrgao">
-                            Informe qual órgão
+                        <label for="outroTipo">
+                            Informe o tipo de denúncia
                         </label>
 
                         <input
                             type="text"
-                            id="outroOrgao"
-                            name="outroOrgao"
-                            placeholder="Digite o nome do órgão responsável"
+                            id="outroTipo"
+                            name="outroTipo"
+                            placeholder="Digite o tipo de denúncia"
                         >
 
                     </div>
 
-                </div>
 
+                    <!-- ========================= -->
+                    <!-- LOCAL DA OCORRÊNCIA -->
+                    <!-- ========================= -->
 
-                <!-- TIPO DE DENÚNCIA -->
-                <div class="bloco-formulario">
+                    <div class="bloco-formulario">
 
-                    <div class="titulo-bloco">
+                        <div class="titulo-bloco">
 
-                        <div class="icone-bloco">
-                            <i class="fa-solid fa-tag"></i>
+                            <div class="icone-bloco">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+
+                            <div>
+
+                                <h2>
+                                    Local da ocorrência
+                                </h2>
+
+                                <p>
+                                    Informe onde a situação aconteceu.
+                                </p>
+
+                            </div>
+
                         </div>
 
-                        <div>
 
-                            <h2>
-                                Tipo de denúncia
-                            </h2>
+                        <!-- ESTADO + CIDADE -->
 
-                            <p>
-                                Selecione o tipo que melhor descreve a situação.
-                            </p>
+                        <div class="campos-duplos">
+
+
+                            <div class="campo">
+
+                                <label for="estado">
+                                    Estado
+                                </label>
+
+                                <select
+                                    id="estado"
+                                    name="estado"
+                                >
+
+                                    <option value="">
+                                        Selecione o estado
+                                    </option>
+
+                                    <option value="sp">
+                                        São Paulo
+                                    </option>
+
+                                    <option value="rj">
+                                        Rio de Janeiro
+                                    </option>
+
+                                    <option value="mg">
+                                        Minas Gerais
+                                    </option>
+
+                                    <option value="pr">
+                                        Paraná
+                                    </option>
+
+                                    <option value="outro">
+                                        Outro
+                                    </option>
+
+                                </select>
+
+
+                                <!-- OUTRO ESTADO -->
+
+                                <div
+                                    class="campo campo-outro"
+                                    id="campoOutroEstado"
+                                    style="display: none;"
+                                >
+
+                                    <label for="outroEstado">
+                                        Informe qual estado
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="outroEstado"
+                                        name="outroEstado"
+                                        placeholder="Digite o estado"
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="campo">
+
+                                <label for="cidade">
+                                    Cidade
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="cidade"
+                                    name="cidade"
+                                    placeholder="Digite a cidade"
+                                >
+
+                            </div>
 
                         </div>
 
-                    </div>
 
+                        <!-- LOCAL ESPECÍFICO -->
 
-                    <div class="tipos-denuncia">
+                        <div class="campo">
 
-
-                        <!-- VIOLÊNCIA DOMÉSTICA -->
-                        <label class="card-tipo">
-
-                            <input
-                                type="radio"
-                                name="tipo"
-                                value="violencia-domestica"
-                            >
-
-                            <span class="icone-tipo">
-                                <i class="fa-solid fa-house"></i>
-                            </span>
-
-                            <span>
-                                Violência doméstica
-                            </span>
-
-                        </label>
-
-
-                        <!-- BULLYING -->
-                        <label class="card-tipo">
+                            <label for="local">
+                                Local específico
+                            </label>
 
                             <input
-                                type="radio"
-                                name="tipo"
-                                value="bullying"
+                                type="text"
+                                id="local"
+                                name="local"
+                                placeholder="Ex.: escola, rua, estabelecimento..."
                             >
 
-                            <span class="icone-tipo">
-                                <i class="fa-solid fa-user-group"></i>
-                            </span>
-
-                            <span>
-                                Bullying
-                            </span>
-
-                        </label>
-
-
-                        <!-- CYBERBULLYING -->
-                        <label class="card-tipo">
-
-                            <input
-                                type="radio"
-                                name="tipo"
-                                value="cyberbullying"
-                            >
-
-                            <span class="icone-tipo">
-                                <i class="fa-solid fa-laptop"></i>
-                            </span>
-
-                            <span>
-                                Cyberbullying
-                            </span>
-
-                        </label>
-
-
-                        <!-- RACISMO -->
-                        <label class="card-tipo">
-
-                            <input
-                                type="radio"
-                                name="tipo"
-                                value="racismo"
-                            >
-
-                            <span class="icone-tipo">
-                                <i class="fa-solid fa-scale-balanced"></i>
-                            </span>
-
-                            <span>
-                                Racismo
-                            </span>
-
-                        </label>
-
-
-                        <!-- HOMOFOBIA -->
-                        <label class="card-tipo">
-
-                            <input
-                                type="radio"
-                                name="tipo"
-                                value="homofobia"
-                            >
-
-                            <span class="icone-tipo">
-                                <i class="fa-solid fa-heart"></i>
-                            </span>
-
-                            <span>
-                                Homofobia
-                            </span>
-
-                        </label>
-
-
-                        <!-- XENOFOBIA -->
-                        <label class="card-tipo">
-
-                            <input
-                                type="radio"
-                                name="tipo"
-                                value="xenofobia"
-                            >
-
-                            <span class="icone-tipo">
-                                <i class="fa-solid fa-earth-americas"></i>
-                            </span>
-
-                            <span>
-                                Xenofobia
-                            </span>
-
-                        </label>
-
-
-                        <!-- ABUSO -->
-                        <label class="card-tipo">
-
-                            <input
-                                type="radio"
-                                name="tipo"
-                                value="abuso"
-                            >
-
-                            <span class="icone-tipo">
-                                <i class="fa-solid fa-hand"></i>
-                            </span>
-
-                            <span>
-                                Abuso
-                            </span>
-
-                        </label>
-
-
-                        <!-- OUTRO -->
-                        <label class="card-tipo">
-
-                            <input
-                                type="radio"
-                                name="tipo"
-                                value="outro"
-                            >
-
-                            <span class="icone-tipo">
-                                <i class="fa-solid fa-ellipsis"></i>
-                            </span>
-
-                            <span>
-                                Outro
-                            </span>
-
-                        </label>
+                        </div>
 
                     </div>
 
                 </div>
 
 
-                <!-- OUTRO TIPO -->
+                <!-- ========================= -->
+                <!-- ETAPA 2 - DETALHES -->
+                <!-- ========================= -->
+
                 <div
-                    class="campo campo-outro"
-                    id="campoOutroTipo"
+                    class="etapa-conteudo"
+                    id="etapa2"
                     style="display: none;"
                 >
 
-                    <label for="outroTipo">
-                        Informe o tipo de denúncia
-                    </label>
 
-                    <input
-                        type="text"
-                        id="outroTipo"
-                        name="outroTipo"
-                        placeholder="Digite o tipo de denúncia"
-                    >
+                    <!-- CONTE O QUE ACONTECEU -->
 
-                </div>
+                    <div class="bloco-formulario">
 
+                        <div class="titulo-bloco">
 
-                <!-- LOCAL DA OCORRÊNCIA -->
-                <div class="bloco-formulario">
+                            <div class="icone-bloco">
+                                <i class="fa-solid fa-file-lines"></i>
+                            </div>
 
-                    <div class="titulo-bloco">
+                            <div>
 
-                        <div class="icone-bloco">
-                            <i class="fa-solid fa-location-dot"></i>
+                                <h2>
+                                    Conte o que aconteceu
+                                </h2>
+
+                                <p>
+                                    Descreva a situação com o máximo de detalhes que conseguir.
+                                    Essas informações ajudam a compreender melhor a ocorrência.
+                                </p>
+
+                            </div>
+
                         </div>
 
-                        <div>
 
-                            <h2>
-                                Local da ocorrência
-                            </h2>
+                        <div class="campo">
 
-                            <p>
-                                Informe onde a situação aconteceu.
-                            </p>
+                            <label for="descricao">
+                                O que aconteceu?
+                            </label>
+
+                            <textarea
+                                id="descricao"
+                                name="descricao"
+                                rows="7"
+                                placeholder="Descreva o que aconteceu..."
+                            ></textarea>
 
                         </div>
 
                     </div>
 
 
-                    <!-- ESTADO + CIDADE -->
-                    <div class="campos-duplos">
+                    <!-- QUANDO ACONTECEU -->
 
-    <div class="campo">
+                    <div class="bloco-formulario">
 
-        <label for="estado">Estado</label>
+                        <div class="titulo-bloco">
 
-        <select id="estado" name="estado">
-            <option value="">Selecione o estado</option>
-            <option value="sp">São Paulo</option>
-            <option value="rj">Rio de Janeiro</option>
-            <option value="mg">Minas Gerais</option>
-            <option value="pr">Paraná</option>
-            <option value="outro">Outro</option>
-        </select>
+                            <div class="icone-bloco">
+                                <i class="fa-regular fa-calendar"></i>
+                            </div>
 
-        <div class="campo campo-outro" id="campoOutroEstado" style="display: none;">
+                            <div>
 
-            <label for="outroEstado">Informe qual estado</label>
+                                <h2>
+                                    Quando aconteceu?
+                                </h2>
 
-            <input
-                type="text"
-                id="outroEstado"
-                name="outroEstado"
-                placeholder="Digite o estado"
-            >
+                                <p>
+                                    Informe quando a situação ocorreu.
+                                </p>
 
-        </div>
+                            </div>
 
-    </div>
+                        </div>
 
 
-    <div class="campo">
+                        <div class="campos-duplos">
 
-        <label for="cidade">Cidade</label>
 
-        <input
-            type="text"
-            id="cidade"
-            placeholder="Digite a cidade"
-        >
+                            <div class="campo">
 
-    </div>
+                                <label for="dataOcorrencia">
+                                    Data
+                                </label>
 
-</div>
+                                <input
+                                    type="date"
+                                    id="dataOcorrencia"
+                                    name="dataOcorrencia"
+                                >
 
-                    <!-- LOCAL ESPECÍFICO -->
-                    <div class="campo">
+                            </div>
 
-                        <label for="local">
-                            Local específico
-                        </label>
 
-                        <input
-                            type="text"
-                            id="local"
-                            name="local"
-                            placeholder="Ex.: escola, rua, estabelecimento..."
+                            <div class="campo">
+
+                                <label for="horaOcorrencia">
+                                    Horário aproximado
+                                </label>
+
+                                <input
+                                    type="time"
+                                    id="horaOcorrencia"
+                                    name="horaOcorrencia"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PESSOAS ENVOLVIDAS -->
+
+                    <div class="bloco-formulario">
+
+                        <div class="titulo-bloco">
+
+                            <div class="icone-bloco">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+
+                            <div>
+
+                                <h2>
+                                    Pessoas envolvidas
+                                </h2>
+
+                                <p>
+                                    Informe quem estava envolvido na situação, se souber.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="campo">
+
+                            <label for="envolvidos">
+                                Quem estava envolvido?
+                            </label>
+
+                            <textarea
+                                id="envolvidos"
+                                name="envolvidos"
+                                rows="4"
+                                placeholder="Descreva quem estava envolvido na situação..."
+                            ></textarea>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- TESTEMUNHAS -->
+
+                    <div class="bloco-formulario">
+
+                        <div class="titulo-bloco">
+
+                            <div class="icone-bloco">
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+
+                            <div>
+
+                                <h2>
+                                    Testemunhas
+                                </h2>
+
+                                <p>
+                                    Havia outras pessoas que presenciaram o ocorrido?
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="opcoes-sim-nao">
+
+
+                            <label class="opcao-sim-nao">
+
+                                <input
+                                    type="radio"
+                                    name="testemunhas"
+                                    value="sim"
+                                >
+
+                                <span>
+                                    <i class="fa-solid fa-check"></i>
+                                    Sim
+                                </span>
+
+                            </label>
+
+
+                            <label class="opcao-sim-nao">
+
+                                <input
+                                    type="radio"
+                                    name="testemunhas"
+                                    value="nao"
+                                >
+
+                                <span>
+                                    <i class="fa-solid fa-xmark"></i>
+                                    Não
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+                        <div
+                            class="campo campo-testemunhas"
+                            id="campoTestemunhas"
                         >
 
+                            <label for="descricaoTestemunhas">
+                                Informe, se souber
+                            </label>
+
+                            <textarea
+                                id="descricaoTestemunhas"
+                                name="descricaoTestemunhas"
+                                rows="3"
+                                placeholder="Nome ou outras informações sobre as testemunhas..."
+                            ></textarea>
+
+                        </div>
+
                     </div>
+
+
+                    <!-- INFORMAÇÕES ADICIONAIS -->
+
+                    <div class="bloco-formulario">
+
+                        <div class="titulo-bloco">
+
+                            <div class="icone-bloco">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+
+                            <div>
+
+                                <h2>
+                                    Informações adicionais
+                                </h2>
+
+                                <p>
+                                    Acrescente qualquer informação que considere importante.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="campo">
+
+                            <label for="informacoesAdicionais">
+                                Deseja acrescentar alguma informação?
+                            </label>
+
+                            <textarea
+                                id="informacoesAdicionais"
+                                name="informacoesAdicionais"
+                                rows="4"
+                                placeholder="Digite aqui alguma informação adicional..."
+                            ></textarea>
+
+                        </div>
+
+                    </div>
+
 
                 </div>
 
 
+                <!-- ========================= -->
                 <!-- BOTÕES -->
+                <!-- ========================= -->
+
                 <div class="acoes-formulario">
+
 
                     <button
                         type="button"
                         class="btn-cancelar"
                     >
                         Cancelar
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="btn-voltar"
+                        style="display: none;"
+                    >
+
+                        <i class="fa-solid fa-arrow-left"></i>
+
+                        Voltar
+
                     </button>
 
 
@@ -517,6 +903,7 @@
 
                 </div>
 
+
             </div>
 
 
@@ -528,19 +915,16 @@
 
 
                 <!-- SEGURANÇA -->
+
                 <div class="card-seguranca">
 
                     <div class="icone-seguranca">
-
                         <i class="fa-solid fa-shield-halved"></i>
-
                     </div>
-
 
                     <h3>
                         Suas informações estão protegidas
                     </h3>
-
 
                     <p>
                         As informações fornecidas serão tratadas com
@@ -552,6 +936,7 @@
 
 
                 <!-- DICAS -->
+
                 <div class="card-dica">
 
                     <div class="titulo-dica">
@@ -566,6 +951,7 @@
 
 
                     <!-- DICA 1 -->
+
                     <div class="dica">
 
                         <strong>
@@ -580,6 +966,7 @@
 
 
                     <!-- DICA 2 -->
+
                     <div class="dica">
 
                         <strong>
@@ -594,6 +981,7 @@
 
 
                     <!-- DICA 3 -->
+
                     <div class="dica">
 
                         <strong>
@@ -611,6 +999,7 @@
 
 
                 <!-- AJUDA -->
+
                 <div class="card-ajuda">
 
                     <i class="fa-solid fa-circle-question"></i>
@@ -621,7 +1010,6 @@
                         <strong>
                             Precisa de ajuda?
                         </strong>
-
 
                         <p>
                             Consulte nossas orientações antes de realizar
@@ -641,7 +1029,9 @@
 
                 </div>
 
+
             </aside>
+
 
         </div>
 
@@ -649,204 +1039,10 @@
 
 </main>
 
-<!-- ETAPA 2 - DETALHES -->
-<div class="etapa-conteudo" id="etapa2" style="display: none;">
 
-    <div class="bloco-formulario">
-
-        <div class="titulo-bloco">
-            <div class="icone-bloco">
-                <i class="fa-solid fa-file-lines"></i>
-            </div>
-
-            <div>
-                <h2>Conte o que aconteceu</h2>
-                <p>
-                    Descreva a situação com o máximo de detalhes que conseguir.
-                    Essas informações ajudam a compreender melhor a ocorrência.
-                </p>
-            </div>
-        </div>
-
-        <div class="campo">
-            <label for="descricao">O que aconteceu?</label>
-
-            <textarea
-                id="descricao"
-                name="descricao"
-                rows="7"
-                placeholder="Descreva o que aconteceu..."
-            ></textarea>
-        </div>
-
-    </div>
-
-
-    <div class="bloco-formulario">
-
-        <div class="titulo-bloco">
-            <div class="icone-bloco">
-                <i class="fa-regular fa-calendar"></i>
-            </div>
-
-            <div>
-                <h2>Quando aconteceu?</h2>
-                <p>Informe quando a situação ocorreu.</p>
-            </div>
-        </div>
-
-        <div class="campos-duplos">
-
-            <div class="campo">
-                <label for="dataOcorrencia">Data</label>
-
-                <input
-                    type="date"
-                    id="dataOcorrencia"
-                    name="dataOcorrencia"
-                >
-            </div>
-
-            <div class="campo">
-                <label for="horaOcorrencia">
-                    Horário aproximado
-                </label>
-
-                <input
-                    type="time"
-                    id="horaOcorrencia"
-                    name="horaOcorrencia"
-                >
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <div class="bloco-formulario">
-
-        <div class="titulo-bloco">
-            <div class="icone-bloco">
-                <i class="fa-solid fa-users"></i>
-            </div>
-
-            <div>
-                <h2>Pessoas envolvidas</h2>
-                <p>
-                    Informe quem estava envolvido na situação, se souber.
-                </p>
-            </div>
-        </div>
-
-        <div class="campo">
-            <label for="envolvidos">
-                Quem estava envolvido?
-            </label>
-
-            <textarea
-                id="envolvidos"
-                name="envolvidos"
-                rows="4"
-                placeholder="Descreva quem estava envolvido na situação..."
-            ></textarea>
-        </div>
-
-    </div>
-
-
-    <div class="bloco-formulario">
-
-        <div class="titulo-bloco">
-            <div class="icone-bloco">
-                <i class="fa-solid fa-eye"></i>
-            </div>
-
-            <div>
-                <h2>Testemunhas</h2>
-                <p>Havia outras pessoas que presenciaram o ocorrido?</p>
-            </div>
-        </div>
-
-        <div class="opcoes-sim-nao">
-
-            <label class="opcao-sim-nao">
-                <input
-                    type="radio"
-                    name="testemunhas"
-                    value="sim"
-                >
-
-                <span>
-                    <i class="fa-solid fa-check"></i>
-                    Sim
-                </span>
-            </label>
-
-            <label class="opcao-sim-nao">
-                <input
-                    type="radio"
-                    name="testemunhas"
-                    value="nao"
-                >
-
-                <span>
-                    <i class="fa-solid fa-xmark"></i>
-                    Não
-                </span>
-            </label>
-
-        </div>
-
-        <div class="campo campo-testemunhas" id="campoTestemunhas">
-
-            <label for="descricaoTestemunhas">
-                Informe, se souber
-            </label>
-
-            <textarea
-                id="descricaoTestemunhas"
-                name="descricaoTestemunhas"
-                rows="3"
-                placeholder="Nome ou outras informações sobre as testemunhas..."
-            ></textarea>
-
-        </div>
-
-    </div>
-
-
-    <div class="bloco-formulario">
-
-        <div class="titulo-bloco">
-            <div class="icone-bloco">
-                <i class="fa-solid fa-plus"></i>
-            </div>
-
-            <div>
-                <h2>Informações adicionais</h2>
-                <p>
-                    Acrescente qualquer informação que considere importante.
-                </p>
-            </div>
-        </div>
-
-        <div class="campo">
-            <label for="informacoesAdicionais">
-                Deseja acrescentar alguma informação?
-            </label>
-
-            <textarea
-                id="informacoesAdicionais"
-                name="informacoesAdicionais"
-                rows="4"
-                placeholder="Digite aqui alguma informação adicional..."
-            ></textarea>
-        </div>
-
-    </div>
-
-</div>
+<!-- ========================= -->
+<!-- JAVASCRIPT -->
+<!-- ========================= -->
 
 <script src="script.js"></script>
 

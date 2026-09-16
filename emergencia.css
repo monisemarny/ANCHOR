@@ -301,3 +301,55 @@
 .pagina-192 .dica i {
     color: #e53935;
 }
+
+/* ========================= */
+/* BREADCRUMB / VOLTAR HOME */
+/* ========================= */
+ 
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 30px;
+    box-sizing: border-box;
+}
+ 
+.btn-voltar {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 8px;
+
+    color: #455468 !important;
+    text-decoration: none !important;
+ 
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+ 
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+ 
+.btn-voltar:hover {
+    color: #1976d2 !important;
+}
+ 
+.btn-voltar i {
+    font-size: 14px;
+}
+
+.divisor {
+    color: #b7c0cc;
+    font-size: 18px;
+}
+ 
+.pagina-atual {
+    color: #455468;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+ 
