@@ -902,3 +902,225 @@
     }
 
 }
+
+/* ========================= */
+/* ANEXOS / POSSÍVEIS PROVAS */
+/* ========================= */
+
+.titulo-anexos {
+    cursor: pointer;
+    position: relative;
+}
+
+.texto-titulo-anexos {
+    flex: 1;
+}
+
+.seta-anexos {
+    margin-left: auto;
+    color: #8b98a8;
+    font-size: 14px;
+    transition: 0.25s ease;
+}
+
+.bloco-anexos.aberto .seta-anexos {
+    transform: rotate(180deg);
+}
+
+
+/* CONTEÚDO DOS ANEXOS */
+
+.conteudo-anexos {
+    display: none;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid #e8edf3;
+}
+
+.bloco-anexos.aberto .conteudo-anexos {
+    display: block;
+}
+
+
+/* DESCRIÇÃO */
+
+.descricao-anexos {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    padding: 16px;
+
+    background: #f5f9ff;
+    border: 1px solid #e1ebf7;
+    border-radius: 12px;
+
+    margin-bottom: 20px;
+}
+
+.descricao-anexos > i {
+    color: #1976d2;
+    font-size: 19px;
+    margin-top: 2px;
+}
+
+.descricao-anexos strong {
+    display: block;
+    color: #26364a;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.descricao-anexos p {
+    margin: 0;
+    color: #718096;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* OPÇÕES */
+
+.opcoes-anexos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+
+/* CARD */
+
+.card-anexo {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 130px;
+
+    padding: 18px 12px;
+
+    background: white;
+
+    border: 1px solid #dce4ed;
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    text-align: center;
+
+    transition: 0.2s ease;
+}
+
+.card-anexo:hover {
+    border-color: #1976d2;
+    background: #f8fbff;
+    transform: translateY(-2px);
+}
+
+.card-anexo input[type="file"] {
+    display: none;
+}
+
+
+/* ÍCONE */
+
+.icone-anexo {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 10px;
+
+    border-radius: 12px;
+
+    background: #eef6ff;
+    color: #1976d2;
+
+    font-size: 19px;
+}
+
+.card-anexo strong {
+    color: #344054;
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+.card-anexo span {
+    color: #98a2b3;
+    font-size: 11px;
+}
+
+
+/* ARQUIVOS SELECIONADOS */
+
+.arquivos-selecionados {
+    margin-top: 18px;
+}
+
+.arquivo-selecionado {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 10px 12px;
+
+    margin-bottom: 8px;
+
+    background: #f8fafc;
+    border: 1px solid #e5eaf0;
+    border-radius: 10px;
+
+    color: #475467;
+    font-size: 13px;
+}
+
+.arquivo-selecionado i {
+    color: #1976d2;
+}
+
+.arquivo-selecionado strong {
+    font-weight: 500;
+}
+
+
+/* AVISO */
+
+.aviso-anexos {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    margin: 18px 0 0;
+
+    color: #8a96a6;
+    font-size: 12px;
+}
+
+.aviso-anexos i {
+    color: #1976d2;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 800px) {
+
+    .opcoes-anexos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .opcoes-anexos {
+        grid-template-columns: 1fr;
+    }
+
+}

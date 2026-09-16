@@ -870,3 +870,77 @@ function atualizarEtapa() {
 // ==================================================
 
 atualizarEtapa();
+
+/* ========================= */
+/* ANEXOS DA DENÚNCIA */
+/* ========================= */
+
+const blocoAnexos = document.querySelector(".bloco-anexos");
+const abrirAnexos = document.querySelector("#abrirAnexos");
+
+const arquivosSelecionados =
+    document.querySelector("#arquivosSelecionados");
+
+if (blocoAnexos && abrirAnexos) {
+
+    abrirAnexos.addEventListener("click", function () {
+
+        blocoAnexos.classList.toggle("aberto");
+
+    });
+
+}
+
+
+/* ========================= */
+/* MOSTRAR ARQUIVOS ESCOLHIDOS */
+/* ========================= */
+
+const camposAnexos = document.querySelectorAll(
+    '.card-anexo input[type="file"]'
+);
+
+if (camposAnexos.length && arquivosSelecionados) {
+
+    camposAnexos.forEach(function (campo) {
+
+        campo.addEventListener("change", function () {
+const arquivos = Array.from(campo.files);
+
+            arquivos.forEach(function (arquivo) {
+
+                const item = document.createElement("div");
+
+                item.className = "arquivo-selecionado";
+
+                let icone = "fa-file";
+
+                if (arquivo.type.startsWith("image/")) {
+                    icone = "fa-image";
+                }
+                else if (arquivo.type.startsWith("video/")) {
+                    icone = "fa-video";
+                }
+                else if (arquivo.type.startsWith("audio/")) {
+                    icone = "fa-microphone";
+                }
+                else if (
+                    arquivo.type === "application/pdf"
+                ) {
+                    icone = "fa-file-pdf";
+                }
+
+                item.innerHTML = `
+                    <i class="fa-solid ${icone}"></i>
+                    <strong>${arquivo.name}</strong>
+                `;
+
+                arquivosSelecionados.appendChild(item);
+
+            });
+
+        });
+
+    });
+
+}
