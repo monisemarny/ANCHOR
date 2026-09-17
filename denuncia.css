@@ -1123,4 +1123,358 @@
         grid-template-columns: 1fr;
     }
 
+} 
+
+/* ========================================================= */
+/* IDENTIFICAÇÃO DO DENUNCIANTE */
+/* ========================================================= */
+
+.opcoes-identificacao {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 22px;
+}
+
+.opcao-identificacao {
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+
+.opcao-identificacao input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.conteudo-opcao-identificacao {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    min-height: 110px;
+    padding: 18px;
+    background: #ffffff;
+    border: 1px solid #dce4ed;
+    border-radius: 14px;
+    transition: 0.2s ease;
+}
+
+.opcao-identificacao:hover .conteudo-opcao-identificacao {
+    border-color: #1976d2;
+    background: #f8fbff;
+    transform: translateY(-2px);
+}
+
+.opcao-identificacao input:checked + .conteudo-opcao-identificacao {
+    border-color: #1976d2;
+    background: #f1f7ff;
+    box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.08);
+}
+
+.icone-identificacao {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #eef6ff;
+    color: #1976d2;
+    font-size: 18px;
+}
+
+.conteudo-opcao-identificacao strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #26364a;
+    font-size: 14px;
+}
+
+.conteudo-opcao-identificacao small {
+    display: block;
+    color: #7b8797;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+
+/* ========================================================= */
+/* TEXTOS OPCIONAIS */
+/* ========================================================= */
+
+.texto-opcional {
+    margin: 8px 0 0;
+    color: #8a96a6;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+
+/* ========================================================= */
+/* FICHA DE REVISÃO */
+/* ========================================================= */
+
+.resumo-denuncia {
+    margin-top: 24px;
+}
+
+.cabecalho-resumo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px;
+    margin-bottom: 22px;
+    background: #f5f9ff;
+    border: 1px solid #dfebf8;
+    border-radius: 14px;
+}
+
+.icone-resumo-principal {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #1976d2;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.cabecalho-resumo h3 {
+    margin: 0 0 4px;
+    color: #26364a;
+    font-size: 16px;
+}
+
+.cabecalho-resumo p {
+    margin: 0;
+    color: #7b8797;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+
+/* ========================================================= */
+/* SEÇÕES DA FICHA */
+/* ========================================================= */
+
+.secao-resumo {
+    padding: 20px 0;
+    border-bottom: 1px solid #e8edf3;
+}
+
+.secao-resumo:first-of-type {
+    padding-top: 0;
+}
+
+.secao-resumo:last-of-type {
+    border-bottom: none;
+}
+
+.titulo-secao-resumo {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 14px;
+}
+
+.titulo-secao-resumo i {
+    color: #1976d2;
+    font-size: 15px;
+}
+
+.titulo-secao-resumo h3 {
+    margin: 0;
+    color: #344054;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+
+/* ========================================================= */
+/* LINHAS DA FICHA */
+/* ========================================================= */
+
+.linha-resumo {
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    gap: 15px;
+    padding: 8px 0;
+}
+
+.rotulo-resumo {
+    color: #8a96a6;
+    font-size: 12px;
+}
+
+.valor-resumo {
+    color: #344054;
+    font-size: 13px;
+    font-weight: 500;
+    word-break: break-word;
+}
+
+
+
+/* ========================================================= */
+/* DESTAQUE DA DENÚNCIA ANÔNIMA */
+/* ========================================================= */
+
+.resumo-destaque {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px 16px;
+    background: #f5f9ff;
+    border: 1px solid #dfebf8;
+    border-radius: 12px;
+}
+
+.resumo-destaque > i {
+    color: #1976d2;
+    margin-top: 2px;
+}
+
+.resumo-destaque strong {
+    display: block;
+    margin-bottom: 3px;
+    color: #344054;
+    font-size: 13px;
+}
+
+.resumo-destaque p {
+    margin: 0;
+    color: #7b8797;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+
+/* ========================================================= */
+/* TEXTO GRANDE DA FICHA */
+/* ========================================================= */
+
+.texto-resumo {
+    padding: 14px 16px;
+    background: #f8fafc;
+    border: 1px solid #e7ebf0;
+    border-radius: 10px;
+    color: #475467;
+    font-size: 13px;
+    line-height: 1.7;
+    word-break: break-word;
+}
+
+
+
+/* ========================================================= */
+/* ARQUIVOS NA REVISÃO */
+/* ========================================================= */
+
+.lista-arquivos-resumo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.arquivo-resumo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 13px;
+    background: #f8fafc;
+    border: 1px solid #e5eaf0;
+    border-radius: 10px;
+}
+
+.arquivo-resumo i {
+    color: #1976d2;
+}
+
+.arquivo-resumo span {
+    color: #475467;
+    font-size: 12px;
+    word-break: break-all;
+}
+
+.nenhum-arquivo {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 12px 14px;
+    background: #f8fafc;
+    border: 1px solid #e5eaf0;
+    border-radius: 10px;
+    color: #8a96a6;
+    font-size: 12px;
+}
+
+
+
+/* ========================================================= */
+/* AVISO FINAL DA REVISÃO */
+/* ========================================================= */
+
+.aviso-revisao {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 22px;
+    padding: 14px 16px;
+    background: #f5f9ff;
+    border: 1px solid #dfebf8;
+    border-radius: 11px;
+}
+
+.aviso-revisao > i {
+    color: #1976d2;
+    margin-top: 2px;
+}
+
+.aviso-revisao p {
+    margin: 0;
+    color: #718096;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+
+/* ========================================================= */
+/* RESPONSIVO */
+/* ========================================================= */
+
+@media (max-width: 800px) {
+
+    .opcoes-identificacao {
+        grid-template-columns: 1fr;
+    }
+
+    .linha-resumo {
+        grid-template-columns: 1fr;
+        gap: 3px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .conteudo-opcao-identificacao {
+        padding: 15px;
+    }
+
+    .cabecalho-resumo {
+        align-items: flex-start;
+    }
+
 }

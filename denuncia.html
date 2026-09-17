@@ -165,9 +165,221 @@
                 <div id="etapa1">
 
 
-                    <!-- ========================= -->
+                    <!-- ================================================= -->
+                    <!-- IDENTIFICAÇÃO DO DENUNCIANTE -->
+                    <!-- ================================================= -->
+
+                    <div class="bloco-formulario">
+
+                        <div class="titulo-bloco">
+
+                            <div class="icone-bloco">
+
+                                <i class="fa-solid fa-user-shield"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <h2>
+                                    Como você deseja realizar a denúncia?
+                                </h2>
+
+                                <p>
+                                    Escolha se deseja se identificar ou fazer uma denúncia anônima.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="opcoes-identificacao">
+
+
+                            <!-- IDENTIFICADA -->
+
+                            <label class="opcao-identificacao">
+
+                                <input
+                                    type="radio"
+                                    name="tipoIdentificacao"
+                                    value="identificada"
+                                >
+
+                                <span class="conteudo-opcao-identificacao">
+
+                                    <span class="icone-identificacao">
+
+                                        <i class="fa-solid fa-user"></i>
+
+                                    </span>
+
+                                    <span>
+
+                                        <strong>
+                                            Quero me identificar
+                                        </strong>
+
+                                        <small>
+                                            Você poderá informar seus dados para contato.
+                                        </small>
+
+                                    </span>
+
+                                </span>
+
+                            </label>
+
+
+
+                            <!-- ANÔNIMA -->
+
+                            <label class="opcao-identificacao">
+
+                                <input
+                                    type="radio"
+                                    name="tipoIdentificacao"
+                                    value="anonima"
+                                >
+
+                                <span class="conteudo-opcao-identificacao">
+
+                                    <span class="icone-identificacao">
+
+                                        <i class="fa-solid fa-user-secret"></i>
+
+                                    </span>
+
+                                    <span>
+
+                                        <strong>
+                                            Quero fazer uma denúncia anônima
+                                        </strong>
+
+                                        <small>
+                                            Seus dados de identificação não serão informados no formulário.
+                                        </small>
+
+                                    </span>
+
+                                </span>
+
+                            </label>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- ================================================= -->
+                    <!-- DADOS DO DENUNCIANTE -->
+                    <!-- ================================================= -->
+
+                    <div
+                        id="campoIdentificacao"
+                        style="display: none;"
+                    >
+
+                        <div class="bloco-formulario">
+
+                            <div class="titulo-bloco">
+
+                                <div class="icone-bloco">
+
+                                    <i class="fa-solid fa-address-card"></i>
+
+                                </div>
+
+
+                                <div>
+
+                                    <h2>
+                                        Seus dados
+                                    </h2>
+
+                                    <p>
+                                        Informe seus dados apenas se tiver escolhido se identificar.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="campo">
+
+                                <label for="nomeDenunciante">
+                                    Nome
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="nomeDenunciante"
+                                    name="nomeDenunciante"
+                                    placeholder="Digite seu nome"
+                                >
+
+                            </div>
+
+
+
+                            <div class="campos-duplos">
+
+                                <div class="campo">
+
+                                    <label for="emailDenunciante">
+                                        E-mail
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        id="emailDenunciante"
+                                        name="emailDenunciante"
+                                        placeholder="seuemail@exemplo.com"
+                                    >
+
+                                </div>
+
+
+
+                                <div class="campo">
+
+                                    <label for="telefoneDenunciante">
+                                        Telefone
+                                    </label>
+
+                                    <input
+                                        type="tel"
+                                        id="telefoneDenunciante"
+                                        name="telefoneDenunciante"
+                                        placeholder="(00) 00000-0000"
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <p class="texto-opcional">
+                                E-mail e telefone são opcionais.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ================================================= -->
                     <!-- DESTINATÁRIO -->
-                    <!-- ========================= -->
+                    <!-- ================================================= -->
 
                     <div class="bloco-formulario">
 
@@ -508,6 +720,168 @@
                             name="outroTipo"
                             placeholder="Digite o tipo de denúncia"
                         >
+
+                    </div>
+
+
+
+                    <!-- ================================================= -->
+                    <!-- PESSOA AFETADA -->
+                    <!-- ================================================= -->
+
+                    <div class="bloco-formulario">
+
+
+                        <div class="titulo-bloco">
+
+                            <div class="icone-bloco">
+
+                                <i class="fa-solid fa-person"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <h2>
+                                    Pessoa afetada
+                                </h2>
+
+                                <p>
+                                    Essas informações são opcionais e podem ajudar a identificar a situação.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="campo">
+
+                            <label for="quemSofreu">
+                                Quem sofreu a situação?
+                            </label>
+
+                            <select
+                                id="quemSofreu"
+                                name="quemSofreu"
+                            >
+
+                                <option value="">
+                                    Prefiro não informar
+                                </option>
+
+                                <option value="eu">
+                                    Eu
+                                </option>
+
+                                <option value="outra-pessoa">
+                                    Outra pessoa
+                                </option>
+
+                                <option value="nao-sei">
+                                    Não sei informar
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <div class="campos-duplos">
+
+                            <div class="campo">
+
+                                <label for="nomeVitima">
+                                    Nome da pessoa afetada
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="nomeVitima"
+                                    name="nomeVitima"
+                                    placeholder="Se souber, informe o nome"
+                                >
+
+                            </div>
+
+
+
+                            <div class="campo">
+
+                                <label for="idadeVitima">
+                                    Idade aproximada
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="idadeVitima"
+                                    name="idadeVitima"
+                                    min="0"
+                                    max="120"
+                                    placeholder="Ex.: 16"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="campo">
+
+                            <label for="relacaoVitima">
+                                Relação com você
+                            </label>
+
+                            <select
+                                id="relacaoVitima"
+                                name="relacaoVitima"
+                            >
+
+                                <option value="">
+                                    Prefiro não informar
+                                </option>
+
+                                <option value="propria-pessoa">
+                                    Sou a própria pessoa afetada
+                                </option>
+
+                                <option value="filho">
+                                    Filho(a)
+                                </option>
+
+                                <option value="familiar">
+                                    Familiar
+                                </option>
+
+                                <option value="amigo">
+                                    Amigo(a)
+                                </option>
+
+                                <option value="colega">
+                                    Colega
+                                </option>
+
+                                <option value="aluno">
+                                    Aluno(a)
+                                </option>
+
+                                <option value="outra">
+                                    Outra relação
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <p class="texto-opcional">
+                            Você pode deixar essas informações em branco caso não saiba ou não queira informar.
+                        </p>
+
 
                     </div>
 
@@ -1198,7 +1572,9 @@
                     style="display: none;"
                 >
 
+
                     <div class="bloco-formulario">
+
 
                         <div class="titulo-bloco">
 
@@ -1216,7 +1592,7 @@
                                 </h2>
 
                                 <p>
-                                    Confira as informações preenchidas antes de enviar.
+                                    Confira todas as informações antes de enviar.
                                 </p>
 
                             </div>
@@ -1224,12 +1600,17 @@
                         </div>
 
 
-                        <p style="color: #65758b; font-size: 13px; line-height: 1.6;">
-                            Revise os dados informados nas etapas anteriores.
-                            Em seguida, você poderá enviar sua denúncia.
-                        </p>
+
+                        <!-- FICHA GERADA PELO JAVASCRIPT -->
+
+                        <div
+                            class="resumo-denuncia"
+                            id="resumoDenuncia"
+                        ></div>
+
 
                     </div>
+
 
                 </div>
 
