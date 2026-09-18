@@ -1,0 +1,1359 @@
+/* ================================================= */
+/* ACOMPANHAR DENÚNCIA - ANCHOR */
+/* ================================================= */
+
+
+/* ================================================= */
+/* CONFIGURAÇÕES GERAIS */
+/* ================================================= */
+
+.pagina-acompanhar {
+    min-height: 100vh;
+    background: #f7f9fc;
+    color: #26364a;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* ================================================= */
+/* CABEÇALHO */
+/* ================================================= */
+
+.cabecalho-acompanhar {
+    width: 100%;
+    background: linear-gradient(135deg, #0d47a1, #1976d2);
+    padding: 55px 30px 60px;
+    color: white;
+}
+
+.conteudo-cabecalho-acompanhar {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.subtitulo-acompanhar {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    opacity: 0.85;
+}
+
+.cabecalho-acompanhar h1 {
+    margin: 0 0 10px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.cabecalho-acompanhar p {
+    max-width: 650px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.88);
+}
+
+
+/* ================================================= */
+/* ÁREA PRINCIPAL */
+/* ================================================= */
+
+.area-acompanhar {
+    width: 100%;
+    max-width: 1180px;
+    margin: -25px auto 60px;
+    padding: 0 25px;
+    position: relative;
+}
+
+
+/* ================================================= */
+/* CARD DE CONSULTA */
+/* ================================================= */
+
+.card-consulta {
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+    background: white;
+    border: 1px solid #e3e9f0;
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 8px 25px rgba(35, 55, 80, 0.07);
+}
+
+.icone-consulta {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+    background: #edf5ff;
+    color: #1976d2;
+    font-size: 21px;
+}
+
+.conteudo-consulta {
+    flex: 1;
+}
+
+.conteudo-consulta h2 {
+    margin: 0 0 5px;
+    color: #26364a;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.conteudo-consulta p {
+    margin: 0;
+    color: #718096;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* ================================================= */
+/* FORMULÁRIO DE CONSULTA */
+/* ================================================= */
+
+.form-consulta {
+    display: flex;
+    align-items: flex-end;
+    gap: 14px;
+    margin-top: 22px;
+}
+
+.campo-consulta {
+    flex: 1;
+}
+
+.campo-consulta label {
+    display: block;
+    margin-bottom: 7px;
+    color: #344054;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.input-codigo {
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+
+    background: #fff;
+    border: 1px solid #d8e0e9;
+    border-radius: 10px;
+
+    transition: 0.2s ease;
+}
+
+.input-codigo i {
+    margin-left: 15px;
+    color: #98a2b3;
+    font-size: 14px;
+}
+
+.input-codigo input {
+    width: 100%;
+    height: 100%;
+
+    padding: 0 14px 0 9px;
+
+    border: none;
+    outline: none;
+    background: transparent;
+
+    color: #26364a;
+    font-family: inherit;
+    font-size: 13px;
+}
+
+.input-codigo input::placeholder {
+    color: #a0aab8;
+}
+
+.input-codigo:focus-within {
+    border-color: #1976d2;
+    box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.09);
+}
+
+
+/* ================================================= */
+/* BOTÃO CONSULTAR */
+/* ================================================= */
+
+.btn-consultar {
+    height: 48px;
+    padding: 0 22px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #1976d2;
+    color: white;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.btn-consultar:hover {
+    background: #125fae;
+    transform: translateY(-1px);
+    box-shadow: 0 5px 14px rgba(25, 118, 210, 0.22);
+}
+
+.btn-consultar:active {
+    transform: translateY(0);
+}
+
+
+/* ================================================= */
+/* AVISO DA CONSULTA */
+/* ================================================= */
+
+.aviso-consulta {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+
+    margin-top: 13px;
+
+    color: #8995a5;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.aviso-consulta i {
+    margin-top: 2px;
+    color: #1976d2;
+}
+
+
+/* ================================================= */
+/* RESULTADO DO ACOMPANHAMENTO */
+/* ================================================= */
+
+.resultado-acompanhamento {
+    margin-top: 25px;
+}
+
+
+/* ================================================= */
+/* TOPO DO RESULTADO */
+/* ================================================= */
+
+.topo-resultado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    padding: 28px 30px;
+
+    background: white;
+
+    border: 1px solid #e3e9f0;
+    border-radius: 16px 16px 0 0;
+    border-bottom: none;
+}
+
+.subtitulo-resultado {
+    display: block;
+    margin-bottom: 7px;
+
+    color: #1976d2;
+
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.topo-resultado h2 {
+    margin: 0 0 6px;
+
+    color: #26364a;
+
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.topo-resultado p {
+    margin: 0;
+
+    color: #7a8797;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* ================================================= */
+/* CÓDIGO DA DENÚNCIA */
+/* ================================================= */
+
+.codigo-resultado {
+    min-width: 220px;
+
+    padding: 15px 18px;
+
+    background: #f5f9ff;
+    border: 1px solid #dceaff;
+    border-radius: 12px;
+}
+
+.codigo-resultado span {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #718096;
+    font-size: 10px;
+}
+
+.codigo-resultado strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #1976d2;
+    font-size: 21px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.codigo-resultado small {
+    display: block;
+
+    color: #8b98a8;
+    font-size: 9px;
+    line-height: 1.4;
+}
+
+
+/* ================================================= */
+/* CARD DE STATUS */
+/* ================================================= */
+
+.card-status {
+    background: white;
+
+    padding: 26px 30px 30px;
+
+    border: 1px solid #e3e9f0;
+    border-top: 1px solid #edf1f5;
+
+    box-shadow: 0 5px 18px rgba(35, 55, 80, 0.04);
+}
+
+.titulo-secao-status h3 {
+    margin: 0 0 4px;
+
+    color: #26364a;
+
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.titulo-secao-status p {
+    margin: 0;
+
+    color: #788697;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* ================================================= */
+/* PROGRESSO DA DENÚNCIA */
+/* ================================================= */
+
+.progresso-denuncia {
+    display: flex;
+    align-items: flex-start;
+
+    margin-top: 30px;
+    width: 100%;
+}
+
+.status-etapa {
+    width: 125px;
+    min-width: 125px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+.icone-status {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #d8dee7;
+    border-radius: 50%;
+
+    background: white;
+    color: #8995a5;
+
+    font-size: 14px;
+
+    transition: 0.25s ease;
+}
+
+.status-etapa strong {
+    margin-top: 9px;
+
+    color: #667385;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.status-etapa small {
+    margin-top: 3px;
+
+    color: #98a2b3;
+
+    font-size: 9px;
+    line-height: 1.35;
+}
+
+
+/* ================================================= */
+/* STATUS ATIVO */
+/* ================================================= */
+
+.status-etapa.ativa .icone-status {
+    background: #1976d2;
+    border-color: #1976d2;
+    color: white;
+
+    box-shadow: 0 0 0 5px rgba(25, 118, 210, 0.10);
+}
+
+.status-etapa.ativa strong {
+    color: #1976d2;
+}
+
+
+/* ================================================= */
+/* STATUS CONCLUÍDO */
+/* ================================================= */
+
+.status-etapa.concluida .icone-status {
+    background: #1976d2;
+    border-color: #1976d2;
+    color: white;
+}
+
+.status-etapa.concluida strong {
+    color: #344054;
+}
+
+
+/* ================================================= */
+/* LINHAS DO STATUS */
+/* ================================================= */
+
+.linha-status {
+    flex: 1;
+
+    height: 1px;
+
+    margin-top: 21px;
+
+    background: #dce2e9;
+}
+
+.linha-status.ativa {
+    background: #1976d2;
+}
+
+
+/* ================================================= */
+/* CONTEÚDO INFERIOR */
+/* ================================================= */
+
+.conteudo-acompanhamento {
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) 300px;
+
+    gap: 20px;
+
+    margin-top: 20px;
+
+    align-items: start;
+}
+
+
+/* ================================================= */
+/* CARD DE ATUALIZAÇÕES */
+/* ================================================= */
+
+.card-atualizacoes {
+    background: white;
+
+    border: 1px solid #e3e9f0;
+    border-radius: 14px;
+
+    padding: 25px;
+
+    box-shadow: 0 5px 18px rgba(35, 55, 80, 0.04);
+}
+
+.titulo-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icone-titulo {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #edf5ff;
+    color: #1976d2;
+
+    font-size: 15px;
+}
+
+.titulo-card h3 {
+    margin: 0 0 2px;
+
+    color: #26364a;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.titulo-card p {
+    margin: 0;
+
+    color: #8995a5;
+
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+
+/* ================================================= */
+/* LINHA DO TEMPO */
+/* ================================================= */
+
+.linha-tempo {
+    position: relative;
+
+    margin-top: 27px;
+    padding-left: 20px;
+}
+
+
+/* LINHA VERTICAL */
+
+.linha-tempo::before {
+    content: "";
+
+    position: absolute;
+
+    left: 16px;
+    top: 15px;
+    bottom: 20px;
+
+    width: 1px;
+
+    background: #dfe5ec;
+}
+
+
+/* ================================================= */
+/* ITEM DA LINHA DO TEMPO */
+/* ================================================= */
+
+.item-tempo {
+    position: relative;
+
+    display: flex;
+    gap: 17px;
+
+    padding-bottom: 27px;
+}
+
+.item-tempo:last-child {
+    padding-bottom: 0;
+}
+
+
+/* ================================================= */
+/* MARCADOR */
+/* ================================================= */
+
+.marcador-tempo {
+    position: relative;
+    z-index: 2;
+
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #d9e0e8;
+    border-radius: 50%;
+
+    background: white;
+
+    color: #8b98a8;
+
+    font-size: 11px;
+}
+
+.item-tempo.atual .marcador-tempo {
+    border-color: #1976d2;
+    background: #1976d2;
+    color: white;
+
+    box-shadow: 0 0 0 4px rgba(25, 118, 210, 0.09);
+}
+
+
+/* ================================================= */
+/* ITEM PENDENTE */
+/* ================================================= */
+
+.item-tempo.pendente {
+    opacity: 0.65;
+}
+
+
+/* ================================================= */
+/* CONTEÚDO DA TIMELINE */
+/* ================================================= */
+
+.conteudo-tempo {
+    flex: 1;
+
+    padding-top: 2px;
+}
+
+.cabecalho-tempo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.cabecalho-tempo strong {
+    color: #344054;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.cabecalho-tempo span {
+    color: #98a2b3;
+
+    font-size: 9px;
+    white-space: nowrap;
+}
+
+.conteudo-tempo p {
+    margin: 5px 0 0;
+
+    color: #7a8797;
+
+    font-size: 10px;
+    line-height: 1.55;
+}
+
+
+/* ================================================= */
+/* COLUNA LATERAL */
+/* ================================================= */
+
+.lateral-acompanhamento {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+/* ================================================= */
+/* CARD PRAZO */
+/* ================================================= */
+
+.card-prazo {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+
+    padding: 20px;
+
+    background: #e8f1ff;
+
+    border: 1px solid #c7dcff;
+    border-radius: 14px;
+}
+
+.icone-prazo {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.65);
+    color: #1976d2;
+
+    font-size: 17px;
+}
+
+.card-prazo span {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #58708d;
+
+    font-size: 10px;
+}
+
+.card-prazo strong {
+    display: block;
+
+    color: #1976d2;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.card-prazo p {
+    margin: 4px 0 0;
+
+    color: #718096;
+
+    font-size: 9px;
+    line-height: 1.4;
+}
+
+
+/* ================================================= */
+/* CARD DE AÇÕES */
+/* ================================================= */
+
+.card-acoes {
+    padding: 21px;
+
+    background: white;
+
+    border: 1px solid #e3e9f0;
+    border-radius: 14px;
+
+    box-shadow: 0 5px 18px rgba(35, 55, 80, 0.04);
+}
+
+.card-acoes > .titulo-card {
+    margin-bottom: 17px;
+}
+
+
+/* ================================================= */
+/* BOTÕES DE AÇÃO */
+/* ================================================= */
+
+.acao-acompanhamento {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px;
+
+    margin-top: 9px;
+
+    background: white;
+
+    border: 1px solid #e0e5eb;
+    border-radius: 10px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.acao-acompanhamento:hover {
+    background: #f8fbff;
+    border-color: #bfd8f5;
+}
+
+.icone-acao {
+    width: 31px;
+    height: 31px;
+    min-width: 31px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background: #edf5ff;
+    color: #1976d2;
+
+    font-size: 12px;
+}
+
+.texto-acao {
+    flex: 1;
+}
+
+.texto-acao strong {
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: #475467;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.texto-acao small {
+    display: block;
+
+    color: #98a2b3;
+
+    font-size: 8px;
+    line-height: 1.4;
+}
+
+.seta-acao {
+    color: #a1acb9;
+    font-size: 10px;
+}
+
+
+/* ================================================= */
+/* ÁREA DE APOIO */
+/* ================================================= */
+
+.card-apoio-acompanhamento {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 20px;
+    padding: 17px 20px;
+
+    background: #f2eaff;
+
+    border: 1px solid #d8bfff;
+    border-radius: 13px;
+}
+
+.icone-apoio {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    color: #7b16e8;
+    background: rgba(255, 255, 255, 0.55);
+
+    font-size: 18px;
+}
+
+.texto-apoio {
+    flex: 1;
+}
+
+.texto-apoio strong {
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: #6814bd;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.texto-apoio p {
+    margin: 0;
+
+    color: #6f6380;
+
+    font-size: 9px;
+    line-height: 1.45;
+}
+
+.btn-apoio {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 10px 15px;
+
+    background: #7314dc;
+    color: white;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 9px;
+    font-weight: 500;
+
+    transition: 0.2s ease;
+}
+
+.btn-apoio:hover {
+    background: #5f0fba;
+    transform: translateY(-1px);
+}
+
+
+/* ================================================= */
+/* MENSAGEM DE ERRO */
+/* ================================================= */
+
+.mensagem-erro-consulta {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 13px;
+
+    margin-top: 20px;
+    padding: 17px 20px;
+
+    background: #fff7f7;
+
+    border: 1px solid #f1d1d1;
+    border-radius: 12px;
+}
+
+.icone-erro {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: #fdeaea;
+    color: #d64545;
+
+    font-size: 15px;
+}
+
+.mensagem-erro-consulta strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #a83a3a;
+
+    font-size: 12px;
+}
+
+.mensagem-erro-consulta p {
+    margin: 0;
+
+    color: #8d6868;
+
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+
+/* ================================================= */
+/* INFORMAÇÃO SOBRE CÓDIGO */
+/* ================================================= */
+
+.informacao-codigo {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 13px;
+
+    margin-top: 20px;
+    padding: 19px 21px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e3e8ef;
+    border-radius: 13px;
+}
+
+.icone-informacao {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: #edf5ff;
+    color: #1976d2;
+
+    font-size: 14px;
+}
+
+.informacao-codigo h3 {
+    margin: 0 0 4px;
+
+    color: #475467;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.informacao-codigo p {
+    max-width: 850px;
+
+    margin: 0;
+
+    color: #8a96a6;
+
+    font-size: 9px;
+    line-height: 1.55;
+}
+
+
+/* ================================================= */
+/* RESPONSIVIDADE */
+/* ================================================= */
+
+
+/* TABLETS */
+
+@media (max-width: 900px) {
+
+    .conteudo-acompanhamento {
+        grid-template-columns: 1fr;
+    }
+
+    .lateral-acompanhamento {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+
+}
+
+
+/* TABLET MENOR */
+
+@media (max-width: 700px) {
+
+    .cabecalho-acompanhar {
+        padding: 45px 22px 55px;
+    }
+
+    .cabecalho-acompanhar h1 {
+        font-size: 27px;
+    }
+
+    .area-acompanhar {
+        padding: 0 16px;
+    }
+
+    .card-consulta {
+        padding: 22px;
+    }
+
+    .form-consulta {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-consultar {
+        width: 100%;
+    }
+
+    .topo-resultado {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .codigo-resultado {
+        width: 100%;
+    }
+
+    .progresso-denuncia {
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+
+    .status-etapa {
+        min-width: 105px;
+    }
+
+    .lateral-acompanhamento {
+        grid-template-columns: 1fr;
+    }
+
+    .card-apoio-acompanhamento {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .texto-apoio {
+        min-width: calc(100% - 55px);
+    }
+
+    .btn-apoio {
+        width: 100%;
+        margin-left: 53px;
+    }
+
+}
+
+
+/* CELULAR */
+
+@media (max-width: 500px) {
+
+    .cabecalho-acompanhar {
+        padding: 38px 18px 48px;
+    }
+
+    .cabecalho-acompanhar h1 {
+        font-size: 24px;
+    }
+
+    .cabecalho-acompanhar p {
+        font-size: 12px;
+    }
+
+    .area-acompanhar {
+        margin-top: -18px;
+        padding: 0 12px;
+    }
+
+    .card-consulta {
+        gap: 14px;
+        padding: 18px;
+    }
+
+    .icone-consulta {
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
+        font-size: 17px;
+    }
+
+    .conteudo-consulta h2 {
+        font-size: 17px;
+    }
+
+    .conteudo-consulta p {
+        font-size: 11px;
+    }
+
+    .topo-resultado {
+        padding: 21px;
+    }
+
+    .card-status {
+        padding: 21px;
+    }
+
+    .card-atualizacoes {
+        padding: 20px;
+    }
+
+    .cabecalho-tempo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3px;
+    }
+
+    .card-apoio-acompanhamento {
+        padding: 16px;
+    }
+
+    .btn-apoio {
+        margin-left: 0;
+    }
+
+}
+
+.voltar-acompanhar {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 18px 20px;
+    box-sizing: border-box;
+}
+
+.voltar-acompanhar a {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: #1559a8;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.voltar-acompanhar a:hover {
+    color: #0d47a1;
+    transform: translateX(-3px);
+}
+
+.voltar-acompanhar i {
+    font-size: 14px;
+}
+
+/* ==========================================================
+   DETALHES DA DENÚNCIA
+   ========================================================== */
+
+.detalhes-denuncia {
+    display: none;
+}
+
+.detalhes-denuncia.aberto {
+    display: block;
+    animation: aparecerDetalhes 0.25s ease;
+}
+
+@keyframes aparecerDetalhes {
+
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* ==========================================================
+   MENSAGEM DE DENÚNCIA CONCLUÍDA
+   ========================================================== */
+
+.mensagem-concluida {
+    display: none;
+    align-items: center;
+    gap: 18px;
+
+    margin-top: 20px;
+    padding: 20px 22px;
+
+    background: #eef8f1;
+    border: 1px solid #b9e2c5;
+    border-radius: 14px;
+
+    animation: aparecerConcluida 0.3s ease;
+}
+
+.mensagem-concluida.aberta {
+    display: flex;
+}
+
+.icone-concluida {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: #d8f1df;
+    border-radius: 50%;
+
+    color: #218838;
+    font-size: 22px;
+}
+
+.texto-concluida h3 {
+    margin: 0 0 5px;
+
+    color: #1d6f35;
+    font-size: 17px;
+}
+
+.texto-concluida p {
+    margin: 0;
+
+    color: #496052;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+@keyframes aparecerConcluida {
+
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}

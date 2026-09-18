@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Acompanhar denúncia | Anchor</title>
+
+    <link
+        rel="icon"
+        href="img/logo-anchor.png"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="acompanhar.css"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+<div class="voltar-acompanhar">
+    <a href="index.html">
+        <i class="fa-solid fa-arrow-left"></i>
+        Voltar para Home
+    </a>
+</div> 
+
+
+
+<!-- ================================================= -->
+<!-- PÁGINA -->
+<!-- ================================================= -->
+
+<main class="pagina-acompanhar">
+
+
+    <!-- ================================================= -->
+    <!-- CABEÇALHO DA PÁGINA -->
+    <!-- ================================================= -->
+
+    <section class="cabecalho-acompanhar">
+
+        <div class="conteudo-cabecalho-acompanhar">
+
+            <span class="subtitulo-acompanhar">
+                ACOMPANHAMENTO
+            </span>
+
+            <h1>
+                Acompanhe sua denúncia
+            </h1>
+
+            <p>
+                Consulte o andamento da sua denúncia de forma segura
+                e acompanhe as atualizações do atendimento.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================================= -->
+    <!-- ÁREA PRINCIPAL -->
+    <!-- ================================================= -->
+
+    <section class="area-acompanhar">
+
+
+        <!-- ================================================= -->
+        <!-- CONSULTA DA DENÚNCIA -->
+        <!-- ================================================= -->
+
+        <div class="card-consulta">
+
+            <div class="icone-consulta">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+            </div>
+
+
+            <div class="conteudo-consulta">
+
+                <h2>
+                    Consulte sua denúncia
+                </h2>
+
+                <p>
+                    Digite o código recebido ao realizar sua denúncia
+                    para consultar o andamento.
+                </p>
+
+
+                <div class="form-consulta">
+
+                    <div class="campo-consulta">
+
+                        <label for="codigoDenuncia">
+                            Código da denúncia
+                        </label>
+
+                        <div class="input-codigo">
+
+                            <i class="fa-solid fa-hashtag"></i>
+
+                            <input
+                                type="text"
+                                id="codigoDenuncia"
+                                name="codigoDenuncia"
+                                placeholder="Ex.: A12345"
+                                maxlength="20"
+                                autocomplete="off"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="btn-consultar"
+                        id="btnConsultar"
+                    >
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        Acompanhar denúncia
+
+                    </button>
+
+                </div>
+
+
+                <div class="aviso-consulta">
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    <span>
+                        O código da denúncia é informado após o registro.
+                        Guarde-o para consultar futuras atualizações.
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================================================= -->
+        <!-- RESULTADO -->
+        <!-- ================================================= -->
+
+        <div
+            class="resultado-acompanhamento"
+            id="resultadoAcompanhamento"
+            style="display: none;"
+        >
+
+
+            <!-- ================================================= -->
+            <!-- CABEÇALHO DO RESULTADO -->
+            <!-- ================================================= -->
+
+            <div class="topo-resultado">
+
+                <div>
+
+                    <span class="subtitulo-resultado">
+                        DENÚNCIA ENCONTRADA
+                    </span>
+
+                    <h2>
+                        Acompanhamento da denúncia
+                    </h2>
+
+                    <p>
+                        Confira abaixo o status e as atualizações
+                        da sua denúncia.
+                    </p>
+
+                </div>
+
+
+                <div class="codigo-resultado">
+
+                    <span>
+                        Código da denúncia
+                    </span>
+
+                    <strong id="codigoExibido">
+                        #A12345
+                    </strong>
+
+                    <small>
+                        Guarde este código para acompanhar o andamento.
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================================================= -->
+            <!-- STATUS ATUAL -->
+            <!-- ================================================= -->
+
+            <div class="card-status">
+
+                <div class="titulo-secao-status">
+
+                    <div>
+
+                        <h3>
+                            Status atual
+                        </h3>
+
+                        <p id="descricaoStatus">
+                            Sua denúncia foi recebida e está aguardando análise.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================================================= -->
+                <!-- PROGRESSO -->
+                <!-- ================================================= -->
+
+                <div class="progresso-denuncia">
+
+
+                    <!-- RECEBIDA -->
+
+                    <div
+                        class="status-etapa ativa"
+                        data-status="recebida"
+                    >
+
+                        <div class="icone-status">
+
+                            <i class="fa-solid fa-check"></i>
+
+                        </div>
+
+                        <strong>
+                            Recebida
+                        </strong>
+
+                        <small>
+                            Denúncia recebida
+                        </small>
+
+                    </div>
+
+
+                    <div class="linha-status">
+                    </div>
+
+
+                    <!-- EM ANÁLISE -->
+
+                    <div
+                        class="status-etapa"
+                        data-status="analise"
+                    >
+
+                        <div class="icone-status">
+
+                            <i class="fa-solid fa-clipboard-list"></i>
+
+                        </div>
+
+                        <strong>
+                            Em análise
+                        </strong>
+
+                        <small>
+                            Verificação das informações
+                        </small>
+
+                    </div>
+
+
+                    <div class="linha-status">
+                    </div>
+
+
+                    <!-- EM INVESTIGAÇÃO -->
+
+                    <div
+                        class="status-etapa"
+                        data-status="investigacao"
+                    >
+
+                        <div class="icone-status">
+
+                            <i class="fa-solid fa-magnifying-glass"></i>
+
+                        </div>
+
+                        <strong>
+                            Em investigação
+                        </strong>
+
+                        <small>
+                            Apuração da denúncia
+                        </small>
+
+                    </div>
+
+
+                    <div class="linha-status">
+                    </div>
+
+
+                    <!-- CONCLUÍDA -->
+
+                    <div
+                        class="status-etapa"
+                        data-status="concluida"
+                    >
+
+                        <div class="icone-status">
+
+                            <i class="fa-solid fa-flag-checkered"></i>
+
+                        </div>
+
+                        <strong>
+                            Concluída
+                        </strong>
+
+                        <small>
+                            Atendimento finalizado
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+<div class="mensagem-concluida" id="mensagemConcluida">
+
+    <div class="icone-concluida">
+        <i class="fa-solid fa-circle-check"></i>
+    </div>
+
+    <div class="texto-concluida">
+        <h3>Denúncia concluída</h3>
+
+        <p>
+            A análise da denúncia foi finalizada.
+            As informações registradas continuam disponíveis
+            para consulta por meio do código da denúncia.
+        </p>
+    </div>
+
+</div>
+
+
+            <!-- ================================================= -->
+            <!-- CONTEÚDO INFERIOR -->
+            <!-- ================================================= -->
+
+            <div class="conteudo-acompanhamento">
+
+
+                <!-- ================================================= -->
+                <!-- ATUALIZAÇÕES -->
+                <!-- ================================================= -->
+
+                <div class="card-atualizacoes">
+
+                    <div class="titulo-card">
+
+                        <div class="icone-titulo">
+
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Atualizações da denúncia
+                            </h3>
+
+                            <p>
+                                Histórico do andamento da sua denúncia.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- LINHA DO TEMPO -->
+
+                    <div
+                        class="linha-tempo"
+                        id="linhaTempo"
+                    >
+
+                        <!--
+                            O JavaScript irá preencher
+                            as atualizações aqui.
+                        -->
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================================================= -->
+                <!-- COLUNA LATERAL -->
+                <!-- ================================================= -->
+
+                <aside class="lateral-acompanhamento">
+
+
+                    <!-- ================================================= -->
+                    <!-- PRAZO -->
+                    <!-- ================================================= -->
+
+                    <div class="card-prazo">
+
+                        <div class="icone-prazo">
+
+                            <i class="fa-regular fa-clock"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Prazo estimado de resposta
+                            </span>
+
+                            <strong id="prazoResposta">
+                                Até 7 dias úteis
+                            </strong>
+
+                            <p>
+                                Contados a partir da data de recebimento.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ================================================= -->
+                    <!-- AÇÕES -->
+                    <!-- ================================================= -->
+
+                    <div class="card-acoes">
+
+                        <div class="titulo-card">
+
+                            <div class="icone-titulo">
+
+                                <i class="fa-solid fa-list-check"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    Ações disponíveis
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- ATUALIZAR -->
+
+                        <button
+                            type="button"
+                            class="acao-acompanhamento"
+                            id="btnAtualizar"
+                        >
+
+                            <span class="icone-acao">
+
+                                <i class="fa-solid fa-rotate"></i>
+
+                            </span>
+
+
+                            <span class="texto-acao">
+
+                                <strong>
+                                    Atualizar status
+                                </strong>
+
+                                <small>
+                                    Verifique se há novas atualizações.
+                                </small>
+
+                            </span>
+
+
+                            <i class="fa-solid fa-chevron-right seta-acao"></i>
+
+                        </button>
+
+
+
+                        <!-- DETALHES -->
+
+                        <button
+                            type="button"
+                            class="acao-acompanhamento"
+                            id="btnDetalhes"
+                        >
+
+                            <span class="icone-acao">
+
+                                <i class="fa-regular fa-file-lines"></i>
+
+                            </span>
+
+
+                            <span class="texto-acao">
+
+                                <strong>
+                                    Ver detalhes da denúncia
+                                </strong>
+
+                                <small>
+                                    Consulte as informações cadastradas.
+                                </small>
+
+                            </span>
+
+
+                            <i class="fa-solid fa-chevron-right seta-acao"></i>
+
+                        </button>
+
+                    </div>
+
+
+                </aside>
+
+            </div>
+
+
+
+            <!-- ================================================= -->
+            <!-- DETALHES -->
+            <!-- ================================================= -->
+
+            <div
+                class="detalhes-denuncia"
+                id="detalhesDenuncia"
+            >
+
+                <div class="titulo-card">
+
+                    <div class="icone-titulo">
+
+                        <i class="fa-regular fa-file-lines"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Detalhes da denúncia
+                        </h3>
+
+                        <p>
+                            Informações registradas no momento da denúncia.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="detalhes-grid">
+
+                    <div class="detalhe-item">
+
+                        <span>
+                            Tipo
+                        </span>
+
+                        <strong id="detalheTipo">
+                            Violência doméstica
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detalhe-item">
+
+                        <span>
+                            Local
+                        </span>
+
+                        <strong id="detalheLocal">
+                            São Paulo - SP
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detalhe-item">
+
+                        <span>
+                            Recebimento
+                        </span>
+
+                        <strong id="detalheData">
+                            10/08/2026 às 14:32
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================================================= -->
+            <!-- ÁREA DE APOIO -->
+            <!-- ================================================= -->
+
+            <div class="card-apoio-acompanhamento">
+
+                <div class="icone-apoio">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </div>
+
+
+                <div class="texto-apoio">
+
+                    <strong>
+                        Você não está sozinho.
+                    </strong>
+
+                    <p>
+                        Se precisar de apoio emocional ou psicológico,
+                        nossa equipe está aqui para ajudar.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="ajuda-psicologica.html"
+                    class="btn-apoio"
+                >
+
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+
+                    Acessar apoio psicológico
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================================================= -->
+        <!-- ERRO -->
+        <!-- ================================================= -->
+
+        <div
+            class="mensagem-erro-consulta"
+            id="mensagemErro"
+            style="display: none;"
+        >
+
+            <div class="icone-erro">
+
+                <i class="fa-solid fa-circle-exclamation"></i>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Denúncia não encontrada
+                </strong>
+
+                <p>
+                    Verifique se o código informado está correto
+                    e tente novamente.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================================================= -->
+        <!-- INFORMAÇÃO SOBRE O CÓDIGO -->
+        <!-- ================================================= -->
+
+        <div class="informacao-codigo">
+
+            <div class="icone-informacao">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Sobre o acompanhamento
+                </h3>
+
+                <p>
+                    O código da denúncia é utilizado para consultar
+                    o andamento do registro. Mantenha esse código
+                    em segurança e não compartilhe com terceiros.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- ================================================= -->
+<!-- RODAPÉ -->
+<!-- ================================================= -->
+
+<footer class="rodape">
+
+    <div class="rodape-conteudo">
+
+
+        <!-- LOGO -->
+
+        <div class="rodape-logo">
+
+            <img
+                src="img/logo-anchor.png"
+                alt="Logo Anchor"
+            >
+
+            <p>
+                Informação, orientação e apoio
+                para quem precisa.
+            </p>
+
+        </div>
+
+
+
+        <!-- NAVEGAÇÃO -->
+
+        <div class="rodape-coluna">
+
+            <h3>
+                Navegação
+            </h3>
+
+            <a href="index.html">
+                Início
+            </a>
+
+            <a href="denuncia.html">
+                Fazer denúncia
+            </a>
+
+            <a href="acompanhar.html">
+                Acompanhar denúncia
+            </a>
+
+            <a href="noticias.html">
+                Notícias
+            </a>
+
+        </div>
+
+
+
+        <!-- INFORMAÇÕES -->
+
+        <div class="rodape-coluna">
+
+            <h3>
+                Informações
+            </h3>
+
+            <a href="#">
+                Como denunciar
+            </a>
+
+            <a href="tipos-denuncia.html">
+                Tipos de denúncia
+            </a>
+
+            <a href="#">
+                Dicas e conteúdos
+            </a>
+
+            <a href="sobre.html">
+                Sobre nós
+            </a>
+
+        </div>
+
+
+
+        <!-- CONTATO -->
+
+        <div class="rodape-coluna contato-rodape">
+
+            <h3>
+                Entre em contato
+            </h3>
+
+            <a href="mailto:ancho.denuncias@gmail.com">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                ancho.denuncias@gmail.com
+
+            </a>
+
+
+            <a href="tel:+5511957588813">
+
+                <i class="fa-solid fa-phone"></i>
+
+                (11) 95758-8813
+
+            </a>
+
+
+            <a
+                href="#"
+                class="instagram-rodape"
+            >
+
+                <i class="fa-brands fa-instagram"></i>
+
+                Instagram
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- LINHA INFERIOR -->
+
+    <div class="rodape-inferior">
+
+        <p>
+            © 2026 Anchor. Todos os direitos reservados.
+        </p>
+
+        <p>
+            Informação também é uma forma de proteção.
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- ================================================= -->
+<!-- JAVASCRIPT -->
+<!-- ================================================= -->
+
+<script src="script.js"></script>
+
+<script src="acompanhar.js"></script>
+
+
+</body>
+
+</html>
