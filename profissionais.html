@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profissionais | Anchor</title>
+
+    <link rel="icon" type="image/png" href="img/logo-anchor.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="profissionais.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================================================= -->
+<!-- HEADER -->
+<!-- ================================================= -->
+
+<header class="header-interno">
+
+    <a href="index.html" class="logo">
+
+        <img
+            src="img/logo-anchor.png"
+            alt="Logo Anchor"
+        >
+
+    </a>
+
+
+    <nav class="menu-principal">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="denuncia.html">
+            Fazer denúncia
+        </a>
+
+        <a href="acompanhar.html">
+            Acompanhar denúncia
+        </a>
+
+        <a
+            href="ajuda-psicologica.html"
+            class="pagina-ativa"
+        >
+            Ajuda psicológica
+        </a>
+
+        <a href="#">
+            Tipos de denúncia
+        </a>
+
+        <a href="noticias.html">
+            Notícias
+        </a>
+
+        <a href="sobre.html">
+            Sobre
+        </a>
+
+        <a href="#">
+            Contato
+        </a>
+
+    </nav>
+
+</header>
+
+<!-- ================================================= -->
+<!-- VOLTAR -->
+<!-- ================================================= -->
+
+<div class="voltar-profissionais">
+
+    <a href="ajuda-psicologica.html">
+
+        <i class="fa-solid fa-arrow-left"></i>
+
+        Voltar para ajuda psicológica
+
+    </a>
+
+</div>
+
+<!-- ================================================= -->
+<!-- CONTEÚDO -->
+<!-- ================================================= -->
+
+<main class="pagina-profissionais">
+
+
+    <!-- ================================================= -->
+    <!-- CABEÇALHO -->
+    <!-- ================================================= -->
+
+    <section class="cabecalho-profissionais">
+
+        <span class="tag-profissionais">
+
+            <i class="fa-solid fa-user-doctor"></i>
+
+            Apoio psicológico
+
+        </span>
+
+
+        <h1>
+            Encontre um profissional
+        </h1>
+
+
+        <p>
+            Conheça os profissionais disponíveis e encontre
+            alguém com quem você se sinta confortável para conversar.
+        </p>
+
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- BUSCA E FILTROS -->
+    <!-- ================================================= -->
+
+    <section class="area-busca">
+
+        <div class="campo-busca">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="buscaProfissional"
+                placeholder="Buscar por nome ou especialidade..."
+            >
+
+        </div>
+
+
+        <div class="filtros">
+
+            <button
+                class="filtro ativo"
+                data-filtro="todos"
+                type="button"
+            >
+                Todos
+            </button>
+
+
+            <button
+                class="filtro"
+                data-filtro="traumas"
+                type="button"
+            >
+                Traumas e violência
+            </button>
+
+
+            <button
+                class="filtro"
+                data-filtro="ansiedade"
+                type="button"
+            >
+                Ansiedade e estresse
+            </button>
+
+
+            <button
+                class="filtro"
+                data-filtro="adolescencia"
+                type="button"
+            >
+                Adolescência
+            </button>
+
+
+            <button
+                class="filtro"
+                data-filtro="relacionamentos"
+                type="button"
+            >
+                Relacionamentos
+            </button>
+
+
+            <button
+                class="filtro"
+                data-filtro="familia"
+                type="button"
+            >
+                Família
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- PROFISSIONAIS -->
+    <!-- ================================================= -->
+
+    <section class="secao-profissionais">
+
+
+        <div class="titulo-secao">
+
+            <span class="pequeno-titulo">
+                Profissionais disponíveis
+            </span>
+
+            <h2>
+                Escolha quem você gostaria de conhecer
+            </h2>
+
+        </div>
+
+
+        <div
+            class="lista-profissionais"
+            id="listaProfissionais"
+        >
+
+
+            <!-- ========================================= -->
+            <!-- GABRIELLY -->
+            <!-- ========================================= -->
+
+            <article
+                class="card-profissional"
+                data-nome="Gabrielly Estevan Rosa"
+                data-especialidades="traumas abuso sexual violencia domestica adolescencia"
+            >
+
+                <div class="foto-profissional foto-roxa">
+
+                    <!-- Foto será adicionada posteriormente -->
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+
+                <div class="informacoes-profissional">
+
+                    <h3>
+                        Gabrielly Estevan Rosa
+                    </h3>
+
+
+                    <p class="profissao">
+                        Psicóloga
+                        <span>|</span>
+                        CRP 06/123456
+                    </p>
+
+
+                    <p class="especialidade">
+                        Especialista em Terapia
+                        Cognitivo-Comportamental
+                    </p>
+
+
+                    <div class="avaliacao">
+
+                        <i class="fa-solid fa-star"></i>
+
+                        <strong>
+                            4,9
+                        </strong>
+
+                        <span>
+                            (120 avaliações)
+                        </span>
+
+                    </div>
+
+
+                    <div class="etiquetas">
+
+                        <span>
+                            Traumas e violência
+                        </span>
+
+                        <span>
+                            Adolescência
+                        </span>
+
+                    </div>
+
+
+                    <div class="acoes-profissional">
+
+                        <a
+                            href="perfil-psicologo.html?profissional=gabrielly"
+                            class="btn-perfil"
+                        >
+                            Ver perfil
+                        </a>
+
+
+                        <a
+                            href="conversas.html?profissional=gabrielly"
+                            class="btn-conversar roxo"
+                        >
+
+                            <i class="fa-regular fa-comment"></i>
+
+                            Conversar
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- ========================================= -->
+            <!-- YUTA -->
+            <!-- ========================================= -->
+
+            <article
+                class="card-profissional"
+                data-nome="Yuta Okazaki"
+                data-especialidades="ansiedade estresse relacionamentos autoestima"
+            >
+
+                <div class="foto-profissional foto-azul">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+
+                <div class="informacoes-profissional">
+
+                    <h3>
+                        Yuta Okazaki
+                    </h3>
+
+
+                    <p class="profissao">
+                        Psicólogo
+                        <span>|</span>
+                        CRP 06/987654
+                    </p>
+
+
+                    <p class="especialidade">
+                        Especialista em Psicologia Humanista
+                    </p>
+
+
+                    <div class="avaliacao">
+
+                        <i class="fa-solid fa-star"></i>
+
+                        <strong>
+                            4,8
+                        </strong>
+
+                        <span>
+                            (98 avaliações)
+                        </span>
+
+                    </div>
+
+
+                    <div class="etiquetas">
+
+                        <span>
+                            Ansiedade e estresse
+                        </span>
+
+                        <span>
+                            Relacionamentos
+                        </span>
+
+                    </div>
+
+
+                    <div class="acoes-profissional">
+
+                        <a
+                            href="perfil-psicologo.html?profissional=yuta"
+                            class="btn-perfil"
+                        >
+                            Ver perfil
+                        </a>
+
+
+                        <a
+                            href="conversas.html?profissional=yuta"
+                            class="btn-conversar azul"
+                        >
+
+                            <i class="fa-regular fa-comment"></i>
+
+                            Conversar
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- ========================================= -->
+            <!-- CAROLINE -->
+            <!-- ========================================= -->
+
+            <article
+                class="card-profissional"
+                data-nome="Caroline Ferreira"
+                data-especialidades="familia relacionamentos violencia domestica traumas"
+            >
+
+                <div class="foto-profissional foto-rosa">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+
+                <div class="informacoes-profissional">
+
+                    <h3>
+                        Caroline Ferreira
+                    </h3>
+
+
+                    <p class="profissao">
+                        Psicóloga
+                        <span>|</span>
+                        CRP 06/456789
+                    </p>
+
+
+                    <p class="especialidade">
+                        Especialista em Terapia Sistêmica
+                    </p>
+
+
+                    <div class="avaliacao">
+
+                        <i class="fa-solid fa-star"></i>
+
+                        <strong>
+                            4,9
+                        </strong>
+
+                        <span>
+                            (76 avaliações)
+                        </span>
+
+                    </div>
+
+
+                    <div class="etiquetas">
+
+                        <span>
+                            Família
+                        </span>
+
+                        <span>
+                            Relacionamentos
+                        </span>
+
+                    </div>
+
+
+                    <div class="acoes-profissional">
+
+                        <a
+                            href="perfil-psicologo.html?profissional=caroline"
+                            class="btn-perfil"
+                        >
+                            Ver perfil
+                        </a>
+
+
+                        <a
+                            href="conversas.html?profissional=caroline"
+                            class="btn-conversar rosa"
+                        >
+
+                            <i class="fa-regular fa-comment"></i>
+
+                            Conversar
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- ========================================= -->
+            <!-- MARINA -->
+            <!-- ========================================= -->
+
+            <article
+                class="card-profissional profissional-extra"
+                data-nome="Marina Alves"
+                data-especialidades="adolescencia bullying autoestima familia"
+            >
+
+                <div class="foto-profissional foto-amarela">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+
+                <div class="informacoes-profissional">
+
+                    <h3>
+                        Marina Alves
+                    </h3>
+
+
+                    <p class="profissao">
+                        Psicóloga
+                        <span>|</span>
+                        CRP 06/789012
+                    </p>
+
+
+                    <p class="especialidade">
+                        Especialista em Psicologia
+                        Infantil e Adolescência
+                    </p>
+
+
+                    <div class="avaliacao">
+
+                        <i class="fa-solid fa-star"></i>
+
+                        <strong>
+                            4,8
+                        </strong>
+
+                        <span>
+                            (84 avaliações)
+                        </span>
+
+                    </div>
+
+
+                    <div class="etiquetas">
+
+                        <span>
+                            Adolescência
+                        </span>
+
+                        <span>
+                            Família
+                        </span>
+
+                    </div>
+
+
+                    <div class="acoes-profissional">
+
+                        <a
+                            href="perfil-psicologo.html?profissional=marina"
+                            class="btn-perfil"
+                        >
+                            Ver perfil
+                        </a>
+
+
+                        <a
+                            href="conversas.html?profissional=marina"
+                            class="btn-conversar amarelo"
+                        >
+
+                            <i class="fa-regular fa-comment"></i>
+
+                            Conversar
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- ========================================= -->
+            <!-- LUCAS -->
+            <!-- ========================================= -->
+
+            <article
+                class="card-profissional profissional-extra"
+                data-nome="Lucas Mendes"
+                data-especialidades="ansiedade estresse traumas violencia relacionamentos"
+            >
+
+                <div class="foto-profissional foto-verde">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+
+                <div class="informacoes-profissional">
+
+                    <h3>
+                        Lucas Mendes
+                    </h3>
+
+
+                    <p class="profissao">
+                        Psicólogo
+                        <span>|</span>
+                        CRP 06/345678
+                    </p>
+
+
+                    <p class="especialidade">
+                        Especialista em Ansiedade
+                        e Estresse
+                    </p>
+
+
+                    <div class="avaliacao">
+
+                        <i class="fa-solid fa-star"></i>
+
+                        <strong>
+                            4,9
+                        </strong>
+
+                        <span>
+                            (105 avaliações)
+                        </span>
+
+                    </div>
+
+
+                    <div class="etiquetas">
+
+                        <span>
+                            Ansiedade e estresse
+                        </span>
+
+                        <span>
+                            Traumas e violência
+                        </span>
+
+                    </div>
+
+
+                    <div class="acoes-profissional">
+
+                        <a
+                            href="perfil-psicologo.html?profissional=lucas"
+                            class="btn-perfil"
+                        >
+                            Ver perfil
+                        </a>
+
+
+                        <a
+                            href="conversas.html?profissional=lucas"
+                            class="btn-conversar verde"
+                        >
+
+                            <i class="fa-regular fa-comment"></i>
+
+                            Conversar
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- ========================================= -->
+            <!-- BEATRIZ -->
+            <!-- ========================================= -->
+
+            <article
+                class="card-profissional profissional-extra"
+                data-nome="Beatriz Oliveira"
+                data-especialidades="familia relacionamentos luto"
+            >
+
+                <div class="foto-profissional foto-laranja">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+
+                <div class="informacoes-profissional">
+
+                    <h3>
+                        Beatriz Oliveira
+                    </h3>
+
+
+                    <p class="profissao">
+                        Psicóloga
+                        <span>|</span>
+                        CRP 06/567890
+                    </p>
+
+
+                    <p class="especialidade">
+                        Especialista em Relações Familiares
+                    </p>
+
+
+                    <div class="avaliacao">
+
+                        <i class="fa-solid fa-star"></i>
+
+                        <strong>
+                            4,7
+                        </strong>
+
+                        <span>
+                            (69 avaliações)
+                        </span>
+
+                    </div>
+
+
+                    <div class="etiquetas">
+
+                        <span>
+                            Família
+                        </span>
+
+                        <span>
+                            Relacionamentos
+                        </span>
+
+                    </div>
+
+
+                    <div class="acoes-profissional">
+
+                        <a
+                            href="perfil-psicologo.html?profissional=beatriz"
+                            class="btn-perfil"
+                        >
+                            Ver perfil
+                        </a>
+
+
+                        <a
+                            href="conversas.html?profissional=beatriz"
+                            class="btn-conversar laranja"
+                        >
+
+                            <i class="fa-regular fa-comment"></i>
+
+                            Conversar
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+        <!-- ================================================= -->
+        <!-- VER MAIS -->
+        <!-- ================================================= -->
+
+        <button
+            id="btnVerMais"
+            class="btn-ver-mais"
+            type="button"
+        >
+
+            Ver mais profissionais
+
+            <i class="fa-solid fa-chevron-down"></i>
+
+        </button>
+
+
+        <p
+            id="nenhumResultado"
+            class="nenhum-resultado"
+        >
+            Nenhum profissional encontrado.
+        </p>
+
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- CONVERSAS -->
+    <!-- ================================================= -->
+
+    <section class="secao-conversa">
+
+
+        <div class="cabecalho-conversa">
+
+            <div>
+
+                <span class="pequeno-titulo">
+                    Precisa conversar?
+                </span>
+
+                <h2>
+                    Converse com um profissional
+                </h2>
+
+                <p>
+                    Conheça melhor o profissional antes de
+                    marcar um atendimento.
+                </p>
+
+            </div>
+
+
+            <a
+                href="conversas.html"
+                class="btn-todas-conversas"
+            >
+
+                Ver todas as conversas
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+        <div class="cards-conversa">
+
+
+            <a
+                href="conversas.html?profissional=gabrielly"
+                class="card-conversa"
+            >
+
+                <div class="avatar-conversa roxo">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+
+                <div class="info-conversa">
+
+                    <div class="nome-conversa">
+
+                        <strong>
+                            Gabrielly Estevan Rosa
+                        </strong>
+
+                        <span class="online">
+                            ●
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Psicóloga
+                    </p>
+
+                    <span class="status-conversa">
+                        Disponível para conversar
+                    </span>
+
+                </div>
+
+
+                <i class="fa-solid fa-chevron-right seta-conversa"></i>
+
+            </a>
+
+
+            <a
+                href="conversas.html?profissional=yuta"
+                class="card-conversa"
+            >
+
+                <div class="avatar-conversa azul">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+
+                <div class="info-conversa">
+
+                    <div class="nome-conversa">
+
+                        <strong>
+                            Yuta Okazaki
+                        </strong>
+
+                        <span class="online">
+                            ●
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Psicólogo
+                    </p>
+
+                    <span class="status-conversa">
+                        Disponível para conversar
+                    </span>
+
+                </div>
+
+
+                <i class="fa-solid fa-chevron-right seta-conversa"></i>
+
+            </a>
+
+
+            <a
+                href="conversas.html?profissional=caroline"
+                class="card-conversa"
+            >
+
+                <div class="avatar-conversa rosa">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+
+                <div class="info-conversa">
+
+                    <div class="nome-conversa">
+
+                        <strong>
+                            Caroline Ferreira
+                        </strong>
+
+                        <span class="online">
+                            ●
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Psicóloga
+                    </p>
+
+                    <span class="status-conversa">
+                        Disponível para conversar
+                    </span>
+
+                </div>
+
+
+                <i class="fa-solid fa-chevron-right seta-conversa"></i>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- AVISO -->
+    <!-- ================================================= -->
+
+    <section class="aviso-seguranca">
+
+        <div class="icone-seguranca">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Ambiente seguro e sigiloso
+            </h3>
+
+            <p>
+                As informações apresentadas nesta página
+                fazem parte do protótipo acadêmico do projeto Anchor.
+            </p>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<!-- ================================================= -->
+<!-- RODAPÉ -->
+<!-- ================================================= -->
+
+
+<footer class="rodape">
+
+
+<div class="rodape-conteudo">
+
+
+    <!-- COLUNA 01: LOGO -->
+    <div class="rodape-logo">
+
+
+        <img
+            src="img/logo-anchor.png"
+            alt="Logo Anchor"
+        >
+
+
+        <p>
+            Informação, orientação e apoio
+            para quem precisa.
+        </p>
+
+
+    </div>
+
+
+
+
+    <!-- COLUNA 02: NAVEGAÇÃO -->
+    <div class="rodape-coluna">
+
+
+        <h3>Navegação</h3>
+
+
+        <a href="index.html">
+            Início
+        </a>
+
+
+        <a href="denuncia.html">
+            Fazer denúncia
+        </a>
+
+
+      <a href="acompanhar.html">
+    Acompanhar denúncia
+</a>
+
+
+        <a href="#ultimas-noticias">
+            Notícias
+        </a>
+
+
+    </div>
+
+
+
+
+    <!-- COLUNA 03: INFORMAÇÕES -->
+    <div class="rodape-coluna">
+
+
+        <h3>Informações</h3>
+
+
+        <a href="#">
+            Como denunciar
+        </a>
+
+
+        <a href="#">
+            Tipos de denúncia
+        </a>
+
+
+        <a href="#">
+            Dicas e conteúdos
+        </a>
+
+
+        <a href="#">
+            Sobre nós
+        </a>
+
+
+    </div>
+
+
+
+
+    <!-- COLUNA 04: CONTATO -->
+    <div class="rodape-coluna contato-rodape">
+
+
+        <h3>Entre em contato</h3>
+
+
+        <a href="mailto:ancho.denuncias@gmail.com">
+            <i class="fa-solid fa-envelope"></i>
+            ancho.denuncias@gmail.com
+        </a>
+
+
+        <a href="tel:+5511957588813">
+            <i class="fa-solid fa-phone"></i>
+            (11) 95758-8813
+        </a>
+
+
+        <a href="#" class="instagram-rodape">
+            <i class="fa-brands fa-instagram"></i>
+            Instagram
+        </a>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+<!-- LINHA INFERIOR -->
+
+
+<div class="rodape-inferior">
+
+
+    <p>
+        © 2026 Anchor. Todos os direitos reservados.
+    </p>
+
+
+    <p>
+        Informação também é uma forma de proteção.
+    </p>
+
+
+</div>
+
+
+
+</footer>
+
+
+
+<script src="profissionais.js"></script>
+
+</body>
+
+</html>
