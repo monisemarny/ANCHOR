@@ -1,0 +1,1558 @@
+/* ==========================================================
+   ANCHOR - LOGIN
+========================================================== */
+
+
+/* ==========================================================
+   RESET
+========================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+
+    /* Cinza mais forte, como você pediu */
+    background: #e2e4e7;
+
+    color: #17365d;
+}
+
+body * {
+    font-family: inherit;
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.topo-login {
+    width: 100%;
+    height: 90px;
+
+    background: linear-gradient(
+        90deg,
+        #0d47a1,
+        #1976d2
+    );
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 5%;
+
+    gap: 55px;
+}
+
+
+/* ==========================================================
+   LOGO
+========================================================== */
+
+.logo-login {
+    display: flex;
+    align-items: center;
+
+    flex-shrink: 0;
+
+    text-decoration: none;
+}
+
+.logo-login img {
+    width: 58px;
+    height: auto;
+
+    display: block;
+}
+
+
+/* ==========================================================
+   MENU ESCRITO
+========================================================== */
+
+.menu-login {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 27px;
+}
+
+.menu-login a {
+    position: relative;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    white-space: nowrap;
+
+    transition: 0.2s ease;
+}
+
+.menu-login a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 2px;
+
+    background: #ffffff;
+
+    border-radius: 10px;
+
+    transition: 0.2s ease;
+}
+
+.menu-login a:hover {
+    color: #e5f1ff;
+}
+
+.menu-login a:hover::after {
+    width: 100%;
+}
+
+
+/* ==========================================================
+   BREADCRUMB
+========================================================== */
+
+.breadcrumb-login {
+    width: 100%;
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    padding: 20px 25px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 14px;
+}
+
+.breadcrumb-login a {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: #1559a8;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+.breadcrumb-login a:hover {
+    color: #0d47a1;
+}
+
+.divisor-breadcrumb {
+    color: #9da7b2;
+}
+
+.pagina-atual {
+    color: #8995a3;
+}
+
+
+/* ==========================================================
+   ÁREA PRINCIPAL
+========================================================== */
+
+.principal-login {
+    width: 100%;
+
+    min-height: calc(100vh - 138px);
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 25px 20px 70px;
+}
+
+
+/* ==========================================================
+   CARD DO LOGIN
+========================================================== */
+
+.card-login {
+    width: 670px;
+    max-width: 100%;
+
+    background: #ffffff;
+
+    border: 1px solid #d5dce4;
+
+    border-radius: 20px;
+
+    padding: 45px 52px 48px;
+
+    box-shadow:
+        0 10px 28px rgba(30, 55, 80, 0.10);
+}
+
+
+/* ==========================================================
+   ETIQUETA
+========================================================== */
+
+.etiqueta-login {
+    width: fit-content;
+
+    margin: 0 auto 18px;
+
+    padding: 7px 14px;
+
+    border-radius: 20px;
+
+    background: #edf5ff;
+
+    color: #1764c0;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.7px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+}
+
+.etiqueta-login i {
+    font-size: 11px;
+}
+
+
+/* ==========================================================
+   TÍTULO
+========================================================== */
+
+.card-login h1 {
+    text-align: center;
+
+    color: #123f75;
+
+    font-size: 35px;
+
+    font-weight: 700;
+
+    margin-bottom: 10px;
+}
+
+
+/* ==========================================================
+   DESCRIÇÃO
+========================================================== */
+
+.descricao-login {
+    max-width: 450px;
+
+    margin: 0 auto 35px;
+
+    text-align: center;
+
+    color: #74859a;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* ==========================================================
+   FORMULÁRIO
+========================================================== */
+
+.form-login {
+    width: 100%;
+}
+
+
+/* ==========================================================
+   CAMPOS
+========================================================== */
+
+.campo-login {
+    margin-bottom: 23px;
+}
+
+.campo-login label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #244b76;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* ==========================================================
+   INPUT
+========================================================== */
+
+.input-login {
+    width: 100%;
+    height: 55px;
+
+    border: 1px solid #d1dce8;
+
+    border-radius: 10px;
+
+    background: #f7f9fb;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 14px;
+
+    transition: 0.2s ease;
+}
+
+.input-login:focus-within {
+    border-color: #1976d2;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 3px rgba(25, 118, 210, 0.08);
+}
+
+.input-login > i {
+    color: #8ca2bd;
+
+    font-size: 15px;
+
+    margin-right: 10px;
+}
+
+.input-login input {
+    flex: 1;
+
+    width: 100%;
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #344b65;
+
+    font-size: 14px;
+}
+
+.input-login input::placeholder {
+    color: #9aabc0;
+}
+
+
+/* ==========================================================
+   MOSTRAR SENHA
+========================================================== */
+
+.btn-mostrar-senha {
+    width: 32px;
+    height: 32px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #8ca2bd;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.2s ease;
+}
+
+.btn-mostrar-senha:hover {
+    color: #1764c0;
+}
+
+
+/* ==========================================================
+   ESQUECI A SENHA
+========================================================== */
+
+.esqueci-senha {
+    display: block;
+
+    width: fit-content;
+
+    margin: -5px 0 23px auto;
+
+    color: #1764c0;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.esqueci-senha:hover {
+    text-decoration: underline;
+}
+
+
+/* ==========================================================
+   BOTÃO ENTRAR
+========================================================== */
+
+.btn-entrar {
+    width: 100%;
+    height: 54px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        90deg,
+        #0d55b5,
+        #1976d2
+    );
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    transition: 0.2s ease;
+}
+
+.btn-entrar:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 7px 17px rgba(13, 71, 161, 0.23);
+}
+
+.btn-entrar i {
+    font-size: 13px;
+}
+
+
+/* ==========================================================
+   DIVISOR
+========================================================== */
+
+.divisor-login {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    margin: 30px 0 23px;
+
+    color: #9aa9ba;
+
+    font-size: 12px;
+}
+
+.divisor-login::before,
+.divisor-login::after {
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background: #e0e5eb;
+}
+
+
+/* ==========================================================
+   LOGIN SOCIAL
+========================================================== */
+
+.login-social {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 11px;
+}
+
+
+/* ==========================================================
+   BOTÕES SOCIAIS
+========================================================== */
+
+.btn-social {
+    width: 100%;
+    height: 49px;
+
+    border: 1px solid #d7e0e9;
+
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    color: #52657b;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    transition: 0.2s ease;
+}
+
+.btn-social i {
+    font-size: 17px;
+}
+
+
+/* ==========================================================
+   GOOGLE
+========================================================== */
+
+.btn-google:hover {
+    background: #e8f4ff;
+
+    border-color: #a8cff5;
+
+    color: #1559a8;
+
+    box-shadow:
+        0 4px 12px rgba(25, 118, 210, 0.08);
+}
+
+
+/* ==========================================================
+   FACEBOOK
+========================================================== */
+
+.btn-facebook:hover {
+    background: #edf6ff;
+
+    border-color: #a8cff5;
+
+    color: #1559a8;
+}
+
+
+/* ==========================================================
+   APPLE
+========================================================== */
+
+.btn-apple:hover {
+    background: #f3f5f7;
+
+    border-color: #cbd4dd;
+
+    color: #26384d;
+}
+
+
+/* ==========================================================
+   CADASTRO
+========================================================== */
+
+.cadastro-login {
+    text-align: center;
+
+    margin-top: 29px;
+
+    color: #74859a;
+
+    font-size: 13px;
+}
+
+.cadastro-login a {
+    color: #1764c0;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+.cadastro-login a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==========================================================
+   RESPONSIVO
+========================================================== */
+
+@media (max-width: 1100px) {
+
+    .topo-login {
+        padding: 0 3%;
+        gap: 30px;
+    }
+
+    .menu-login {
+        gap: 18px;
+    }
+
+    .menu-login a {
+        font-size: 12px;
+    }
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 900px) {
+
+    .topo-login {
+        height: auto;
+        min-height: 80px;
+
+        padding: 15px 25px;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        gap: 12px;
+    }
+
+    .menu-login {
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 10px 20px;
+    }
+
+    .logo-login img {
+        width: 52px;
+    }
+
+    .card-login {
+        width: 630px;
+    }
+}
+
+
+/* ==========================================================
+   CELULAR
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .topo-login {
+        padding: 15px 18px;
+    }
+
+    .menu-login {
+        gap: 8px 15px;
+    }
+
+    .menu-login a {
+        font-size: 11px;
+    }
+
+    .breadcrumb-login {
+        padding: 16px 18px;
+    }
+
+    .principal-login {
+        padding: 15px 12px 50px;
+    }
+
+    .card-login {
+        padding: 32px 23px 35px;
+
+        border-radius: 16px;
+    }
+
+    .card-login h1 {
+        font-size: 29px;
+    }
+
+    .descricao-login {
+        font-size: 13px;
+    }
+}
+
+
+/* ==========================================================
+   CELULARES PEQUENOS
+========================================================== */
+
+@media (max-width: 430px) {
+
+    .menu-login {
+        gap: 7px 12px;
+    }
+
+    .menu-login a {
+        font-size: 10px;
+    }
+
+    .breadcrumb-login {
+        font-size: 13px;
+    }
+
+    .card-login {
+        padding: 28px 18px 30px;
+    }
+
+    .card-login h1 {
+        font-size: 27px;
+    }
+
+    .etiqueta-login {
+        font-size: 10px;
+    }
+
+    .btn-social {
+        font-size: 12px;
+    }
+}
+
+/* ==========================================================
+   ANCHOR - LOGIN
+========================================================== */
+
+
+/* ==========================================================
+   RESET
+========================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+
+    /* Cinza mais forte, como você pediu */
+    background: #e2e4e7;
+
+    color: #17365d;
+}
+
+body * {
+    font-family: inherit;
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.topo-login {
+    width: 100%;
+    height: 90px;
+
+    background: linear-gradient(
+        90deg,
+        #0d47a1,
+        #1976d2
+    );
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 5%;
+
+    gap: 55px;
+}
+
+
+/* ==========================================================
+   LOGO
+========================================================== */
+
+.logo-login {
+    display: flex;
+    align-items: center;
+
+    flex-shrink: 0;
+
+    text-decoration: none;
+}
+
+.logo-login img {
+    width: 58px;
+    height: auto;
+
+    display: block;
+}
+
+
+/* ==========================================================
+   MENU ESCRITO
+========================================================== */
+
+.menu-login {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 27px;
+}
+
+.menu-login a {
+    position: relative;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    white-space: nowrap;
+
+    transition: 0.2s ease;
+}
+
+.menu-login a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 2px;
+
+    background: #ffffff;
+
+    border-radius: 10px;
+
+    transition: 0.2s ease;
+}
+
+.menu-login a:hover {
+    color: #e5f1ff;
+}
+
+.menu-login a:hover::after {
+    width: 100%;
+}
+
+
+/* ==========================================================
+   BREADCRUMB
+========================================================== */
+
+.breadcrumb-login {
+    width: 100%;
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    padding: 20px 25px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 14px;
+}
+
+.breadcrumb-login a {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: #1559a8;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+.breadcrumb-login a:hover {
+    color: #0d47a1;
+}
+
+.divisor-breadcrumb {
+    color: #9da7b2;
+}
+
+.pagina-atual {
+    color: #8995a3;
+}
+
+
+/* ==========================================================
+   ÁREA PRINCIPAL
+========================================================== */
+
+.principal-login {
+    width: 100%;
+
+    min-height: calc(100vh - 138px);
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 25px 20px 70px;
+}
+
+
+/* ==========================================================
+   CARD DO LOGIN
+========================================================== */
+
+.card-login {
+    width: 670px;
+    max-width: 100%;
+
+    background: #ffffff;
+
+    border: 1px solid #d5dce4;
+
+    border-radius: 20px;
+
+    padding: 45px 52px 48px;
+
+    box-shadow:
+        0 10px 28px rgba(30, 55, 80, 0.10);
+}
+
+
+/* ==========================================================
+   ETIQUETA
+========================================================== */
+
+.etiqueta-login {
+    width: fit-content;
+
+    margin: 0 auto 18px;
+
+    padding: 7px 14px;
+
+    border-radius: 20px;
+
+    background: #edf5ff;
+
+    color: #1764c0;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.7px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+}
+
+.etiqueta-login i {
+    font-size: 11px;
+}
+
+
+/* ==========================================================
+   TÍTULO
+========================================================== */
+
+.card-login h1 {
+    text-align: center;
+
+    color: #123f75;
+
+    font-size: 35px;
+
+    font-weight: 700;
+
+    margin-bottom: 10px;
+}
+
+
+/* ==========================================================
+   DESCRIÇÃO
+========================================================== */
+
+.descricao-login {
+    max-width: 450px;
+
+    margin: 0 auto 35px;
+
+    text-align: center;
+
+    color: #74859a;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* ==========================================================
+   FORMULÁRIO
+========================================================== */
+
+.form-login {
+    width: 100%;
+}
+
+
+/* ==========================================================
+   CAMPOS
+========================================================== */
+
+.campo-login {
+    margin-bottom: 23px;
+}
+
+.campo-login label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #244b76;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* ==========================================================
+   INPUT
+========================================================== */
+
+.input-login {
+    width: 100%;
+    height: 55px;
+
+    border: 1px solid #d1dce8;
+
+    border-radius: 10px;
+
+    background: #f7f9fb;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 14px;
+
+    transition: 0.2s ease;
+}
+
+.input-login:focus-within {
+    border-color: #1976d2;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 3px rgba(25, 118, 210, 0.08);
+}
+
+.input-login > i {
+    color: #8ca2bd;
+
+    font-size: 15px;
+
+    margin-right: 10px;
+}
+
+.input-login input {
+    flex: 1;
+
+    width: 100%;
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #344b65;
+
+    font-size: 14px;
+}
+
+.input-login input::placeholder {
+    color: #9aabc0;
+}
+
+
+/* ==========================================================
+   MOSTRAR SENHA
+========================================================== */
+
+.btn-mostrar-senha {
+    width: 32px;
+    height: 32px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #8ca2bd;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.2s ease;
+}
+
+.btn-mostrar-senha:hover {
+    color: #1764c0;
+}
+
+
+/* ==========================================================
+   ESQUECI A SENHA
+========================================================== */
+
+.esqueci-senha {
+    display: block;
+
+    width: fit-content;
+
+    margin: -5px 0 23px auto;
+
+    color: #1764c0;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.esqueci-senha:hover {
+    text-decoration: underline;
+}
+
+
+/* ==========================================================
+   BOTÃO ENTRAR
+========================================================== */
+
+.btn-entrar {
+    width: 100%;
+    height: 54px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        90deg,
+        #0d55b5,
+        #1976d2
+    );
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    transition: 0.2s ease;
+}
+
+.btn-entrar:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 7px 17px rgba(13, 71, 161, 0.23);
+}
+
+.btn-entrar i {
+    font-size: 13px;
+}
+
+
+/* ==========================================================
+   DIVISOR
+========================================================== */
+
+.divisor-login {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    margin: 30px 0 23px;
+
+    color: #9aa9ba;
+
+    font-size: 12px;
+}
+
+.divisor-login::before,
+.divisor-login::after {
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background: #e0e5eb;
+}
+
+
+/* ==========================================================
+   LOGIN SOCIAL
+========================================================== */
+
+.login-social {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 11px;
+}
+
+
+/* ==========================================================
+   BOTÕES SOCIAIS
+========================================================== */
+
+.btn-social {
+    width: 100%;
+    height: 49px;
+
+    border: 1px solid #d7e0e9;
+
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    color: #52657b;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    transition: 0.2s ease;
+}
+
+.btn-social i {
+    font-size: 17px;
+}
+
+
+/* ==========================================================
+   GOOGLE
+========================================================== */
+
+.btn-google:hover {
+    background: #e8f4ff;
+
+    border-color: #a8cff5;
+
+    color: #1559a8;
+
+    box-shadow:
+        0 4px 12px rgba(25, 118, 210, 0.08);
+}
+
+
+/* ==========================================================
+   FACEBOOK
+========================================================== */
+
+.btn-facebook:hover {
+    background: #edf6ff;
+
+    border-color: #a8cff5;
+
+    color: #1559a8;
+}
+
+
+/* ==========================================================
+   APPLE
+========================================================== */
+
+.btn-apple:hover {
+    background: #f3f5f7;
+
+    border-color: #cbd4dd;
+
+    color: #26384d;
+}
+
+
+/* ==========================================================
+   CADASTRO
+========================================================== */
+
+.cadastro-login {
+    text-align: center;
+
+    margin-top: 29px;
+
+    color: #74859a;
+
+    font-size: 13px;
+}
+
+.cadastro-login a {
+    color: #1764c0;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+.cadastro-login a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==========================================================
+   RESPONSIVO
+========================================================== */
+
+@media (max-width: 1100px) {
+
+    .topo-login {
+        padding: 0 3%;
+        gap: 30px;
+    }
+
+    .menu-login {
+        gap: 18px;
+    }
+
+    .menu-login a {
+        font-size: 12px;
+    }
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 900px) {
+
+    .topo-login {
+        height: auto;
+        min-height: 80px;
+
+        padding: 15px 25px;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        gap: 12px;
+    }
+
+    .menu-login {
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 10px 20px;
+    }
+
+    .logo-login img {
+        width: 52px;
+    }
+
+    .card-login {
+        width: 630px;
+    }
+}
+
+
+/* ==========================================================
+   CELULAR
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .topo-login {
+        padding: 15px 18px;
+    }
+
+    .menu-login {
+        gap: 8px 15px;
+    }
+
+    .menu-login a {
+        font-size: 11px;
+    }
+
+    .breadcrumb-login {
+        padding: 16px 18px;
+    }
+
+    .principal-login {
+        padding: 15px 12px 50px;
+    }
+
+    .card-login {
+        padding: 32px 23px 35px;
+
+        border-radius: 16px;
+    }
+
+    .card-login h1 {
+        font-size: 29px;
+    }
+
+    .descricao-login {
+        font-size: 13px;
+    }
+}
+
+
+/* ==========================================================
+   CELULARES PEQUENOS
+========================================================== */
+
+@media (max-width: 430px) {
+
+    .menu-login {
+        gap: 7px 12px;
+    }
+
+    .menu-login a {
+        font-size: 10px;
+    }
+
+    .breadcrumb-login {
+        font-size: 13px;
+    }
+
+    .card-login {
+        padding: 28px 18px 30px;
+    }
+
+    .card-login h1 {
+        font-size: 27px;
+    }
+
+    .etiqueta-login {
+        font-size: 10px;
+    }
+
+    .btn-social {
+        font-size: 12px;
+    }
+}
+
+#googleButton {
+    width: 100%;
+    height: 49px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#googleButton > div {
+    width: 100% !important;
+}

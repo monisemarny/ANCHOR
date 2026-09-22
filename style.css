@@ -72,12 +72,23 @@ header img {
 
 /* ENTRAR */
 #entrar-btn {
-    width: 110px;
-    background: linear-gradient(to right, #5b9dff, #3c82f6);
+    width: 100px;
+    height: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.20);
+    border-radius: 15px;
+    background: #4a8ff0;
     color: white;
-    font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
+
 
 /* HOVER */
 #menu-btn:hover,

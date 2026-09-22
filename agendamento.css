@@ -1,0 +1,1681 @@
+/* ==========================================================
+   ANCHOR - AGENDAMENTO
+   ========================================================== */
+
+
+/* ==========================================================
+   CONFIGURAÇÕES GERAIS
+   ========================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #ffffff;
+    color: #333333;
+}
+
+button,
+input {
+    font-family: "Poppins", sans-serif;
+}
+
+
+/* ==========================================================
+   CABEÇALHO
+   ========================================================== */
+
+.topo-agendamento {
+    width: 100%;
+    height: 82px;
+
+    background: linear-gradient(90deg, #0d47a1, #1976d2);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 45px;
+
+    box-shadow: 0 3px 12px rgba(13, 71, 161, 0.20);
+}
+
+
+/* ==========================================================
+   LOGO
+   ========================================================== */
+
+.logo-area {
+    width: 90px;
+    height: 82px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    text-decoration: none;
+}
+
+.logo-area img {
+    width: 78px;
+    height: 68px;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+/* ==========================================================
+   MENU
+   ========================================================== */
+
+.menu-principal {
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+}
+
+.menu-principal a {
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: 0.2s;
+}
+
+.menu-principal a:hover {
+    opacity: 0.8;
+}
+
+
+/* ==========================================================
+   CONTEÚDO PRINCIPAL
+   ========================================================== */
+
+.pagina-agendamento {
+    width: 100%;
+
+    padding: 35px 20px 60px;
+}
+
+
+/* ==========================================================
+   BREADCRUMB
+   ========================================================== */
+
+.breadcrumb {
+    max-width: 1200px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 13px;
+
+    color: #777777;
+}
+
+.breadcrumb a {
+    color: #1976d2;
+
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb i {
+    font-size: 9px;
+
+    color: #999999;
+}
+
+
+/* ==========================================================
+   CARD PRINCIPAL
+   ========================================================== */
+
+.card-agendamento {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    background: #ffffff;
+
+    border: 2px solid #1976d2;
+
+    border-radius: 18px;
+
+    padding: 35px;
+
+    box-shadow: 0 6px 22px rgba(25, 118, 210, 0.10);
+}
+
+
+/* ==========================================================
+   CABEÇALHO DO AGENDAMENTO
+   ========================================================== */
+
+.cabecalho-agendamento {
+    margin-bottom: 28px;
+}
+
+.cabecalho-agendamento h1 {
+    font-size: 28px;
+
+    line-height: 1.3;
+
+    color: #0d47a1;
+
+    margin-bottom: 8px;
+}
+
+.cabecalho-agendamento p {
+    font-size: 14px;
+
+    color: #666666;
+}
+
+
+/* ==========================================================
+   ETAPAS
+   ========================================================== */
+
+.etapas-agendamento {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 38px;
+}
+
+.etapa {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    color: #999999;
+
+    font-size: 13px;
+
+    white-space: nowrap;
+}
+
+.numero-etapa {
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+
+    background: #edf0f3;
+
+    color: #777777;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.etapa.ativa {
+    color: #1976d2;
+
+    font-weight: 600;
+}
+
+.etapa.ativa .numero-etapa {
+    background: #1976d2;
+
+    color: #ffffff;
+}
+
+.etapa.concluida {
+    color: #1976d2;
+}
+
+.etapa.concluida .numero-etapa {
+    background: #0d47a1;
+
+    color: #ffffff;
+}
+
+.linha-etapa {
+    width: 65px;
+    height: 2px;
+
+    background: #dfe4e9;
+
+    margin: 0 9px;
+}
+
+.linha-etapa.ativa {
+    background: #1976d2;
+}
+
+
+/* ==========================================================
+   ETAPAS DO CONTEÚDO
+   ========================================================== */
+
+.conteudo-etapa {
+    display: none;
+}
+
+.conteudo-etapa.ativa {
+    display: block;
+}
+
+
+/* ==========================================================
+   TÍTULO DAS ETAPAS
+   ========================================================== */
+
+.titulo-etapa {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 12px;
+
+    margin-bottom: 24px;
+}
+
+.icone-titulo {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 9px;
+
+    background: #eaf4ff;
+
+    color: #1976d2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+.icone-titulo i {
+    font-size: 17px;
+}
+
+.titulo-etapa h2 {
+    font-size: 21px;
+
+    color: #0d47a1;
+
+    margin-bottom: 3px;
+}
+
+.titulo-etapa p {
+    font-size: 13px;
+
+    color: #777777;
+}
+
+
+/* ==========================================================
+   PROFISSIONAIS
+   ========================================================== */
+
+.bloco-profissionais {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+
+    width: 100%;
+
+    margin-bottom: 18px;
+}
+
+
+/* ==========================================================
+   CARD DO PROFISSIONAL
+   ========================================================== */
+
+.profissional-card {
+    position: relative;
+
+    min-height: 205px;
+
+    padding: 22px;
+
+    border-radius: 15px;
+
+    border: 2px solid transparent;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+
+    display: block;
+
+    overflow: hidden;
+}
+
+
+/* ==========================================================
+   CORES DOS PROFISSIONAIS
+   ========================================================== */
+
+/* Gabrielly */
+
+.profissional-card:nth-child(1) {
+    background: #eef6ff;
+
+    border-color: #cfe4fa;
+}
+
+
+/* Yurita */
+
+.profissional-card:nth-child(2) {
+    background: #f3f0ff;
+
+    border-color: #ddd6f7;
+}
+
+
+/* Caroline */
+
+.profissional-card:nth-child(3) {
+    background: #eefaf7;
+
+    border-color: #d0eee5;
+}
+
+
+/* ==========================================================
+   HOVER DOS PROFISSIONAIS
+   ========================================================== */
+
+.profissional-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 7px 18px rgba(25, 118, 210, 0.13);
+}
+
+
+/* ==========================================================
+   PROFISSIONAL SELECIONADO
+   ========================================================== */
+
+.profissional-card.selecionado {
+    border-color: #1976d2;
+
+    box-shadow: 0 6px 18px rgba(25, 118, 210, 0.16);
+}
+
+
+/* ==========================================================
+   ESCONDE RADIO ORIGINAL
+   ========================================================== */
+
+.profissional-card input {
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+/* ==========================================================
+   INFORMAÇÕES DO PROFISSIONAL
+   ========================================================== */
+
+.profissional-info {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+}
+
+
+/* ==========================================================
+   FOTO / ÍCONE DO PROFISSIONAL
+   ========================================================== */
+
+.foto-profissional {
+    width: 62px;
+    height: 62px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 23px;
+}
+
+
+/* Cor da foto 1 */
+
+.profissional-card:nth-child(1) .foto-profissional {
+    background: #d8ebff;
+
+    color: #1976d2;
+}
+
+
+/* Cor da foto 2 */
+
+.profissional-card:nth-child(2) .foto-profissional {
+    background: #e4defd;
+
+    color: #6653c7;
+}
+
+
+/* Cor da foto 3 */
+
+.profissional-card:nth-child(3) .foto-profissional {
+    background: #d9f2ea;
+
+    color: #25836b;
+}
+
+
+/* ==========================================================
+   DADOS DO PROFISSIONAL
+   ========================================================== */
+
+.dados-profissional {
+    min-width: 0;
+
+    flex: 1;
+}
+
+.dados-profissional h3 {
+    font-size: 16px;
+
+    color: #222222;
+
+    margin-bottom: 7px;
+
+    line-height: 1.3;
+}
+
+.profissao {
+    display: block;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    color: #1976d2;
+
+    margin-bottom: 4px;
+}
+
+.crp {
+    display: block;
+
+    font-size: 11px;
+
+    color: #777777;
+
+    margin-bottom: 4px;
+}
+
+.abordagem {
+    display: block;
+
+    font-size: 11px;
+
+    color: #555555;
+
+    line-height: 1.4;
+}
+
+
+/* ==========================================================
+   AVALIAÇÃO
+   ========================================================== */
+
+.avaliacao {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    margin-top: 12px;
+}
+
+.avaliacao i {
+    color: #f5b301;
+
+    font-size: 12px;
+}
+
+.avaliacao strong {
+    color: #333333;
+
+    font-size: 12px;
+}
+
+.avaliacao span {
+    color: #777777;
+
+    font-size: 11px;
+}
+
+
+/* ==========================================================
+   MARCADOR DO RADIO
+   ========================================================== */
+
+.radio-marcador {
+    position: absolute;
+
+    top: 18px;
+    right: 18px;
+
+    width: 18px;
+    height: 18px;
+
+    border: 2px solid #aeb8c2;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+}
+
+
+/* Bolinha interna quando selecionado */
+
+.profissional-card.selecionado .radio-marcador,
+.modalidade-card.selecionado .radio-marcador,
+.pagamento-card.selecionado .radio-marcador {
+    border-color: #1976d2;
+
+    box-shadow: inset 0 0 0 4px #ffffff;
+
+    background: #1976d2;
+}
+
+
+/* ==========================================================
+   PROFISSIONAIS EXTRAS
+   ========================================================== */
+
+.profissional-extra {
+    display: none;
+}
+
+.bloco-profissionais.mostrar-todos .profissional-extra {
+    display: block;
+}
+
+
+/* ==========================================================
+   BOTÃO VER MAIS
+   ========================================================== */
+
+.ver-mais-profissionais {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    width: 100%;
+
+    padding: 10px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #1976d2;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.ver-mais-profissionais:hover {
+    color: #0d47a1;
+}
+
+.ver-mais-profissionais i {
+    font-size: 11px;
+}
+
+
+/* ==========================================================
+   ÁREA DE AGENDAMENTO
+   ========================================================== */
+
+.area-agendamento {
+    display: grid;
+
+    grid-template-columns: 1.2fr 0.8fr;
+
+    gap: 25px;
+
+    margin-top: 10px;
+}
+
+
+/* ==========================================================
+   BLOCOS INTERNOS
+   ========================================================== */
+
+.bloco-calendario,
+.bloco-horarios {
+    padding: 22px;
+
+    border: 1px solid #dce7f2;
+
+    border-radius: 14px;
+
+    background: #f9fbfd;
+}
+
+.titulo-bloco {
+    margin-bottom: 18px;
+}
+
+.titulo-bloco h3 {
+    font-size: 16px;
+
+    color: #0d47a1;
+
+    margin-bottom: 4px;
+}
+
+.titulo-bloco p {
+    font-size: 12px;
+
+    color: #777777;
+}
+
+
+/* ==========================================================
+   CABEÇALHO DO CALENDÁRIO
+   ========================================================== */
+
+.cabecalho-calendario {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 15px;
+}
+
+.cabecalho-calendario h3 {
+    font-size: 15px;
+
+    color: #333333;
+}
+
+.btn-mes {
+    width: 34px;
+    height: 34px;
+
+    border: 1px solid #d4e0eb;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #1976d2;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.btn-mes:hover {
+    background: #eaf4ff;
+
+    border-color: #1976d2;
+}
+
+
+/* ==========================================================
+   DIAS DA SEMANA
+   ========================================================== */
+
+.dias-semana {
+    display: grid;
+
+    grid-template-columns: repeat(7, 1fr);
+
+    gap: 6px;
+
+    margin-bottom: 6px;
+}
+
+.dias-semana span {
+    text-align: center;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    color: #888888;
+}
+
+
+/* ==========================================================
+   CALENDÁRIO
+   ========================================================== */
+
+.calendario {
+    display: grid;
+
+    grid-template-columns: repeat(7, 1fr);
+
+    gap: 6px;
+}
+
+.dia {
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #dfe6ed;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #333333;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.dia:hover {
+    background: #eaf4ff;
+
+    border-color: #1976d2;
+}
+
+.dia.indisponivel {
+    background: #f3f3f3;
+
+    color: #cccccc;
+
+    cursor: not-allowed;
+}
+
+.dia.selecionado {
+    background: #1976d2;
+
+    border-color: #1976d2;
+
+    color: #ffffff;
+}
+
+
+/* ==========================================================
+   DATA ESCOLHIDA
+   ========================================================== */
+
+.data-escolhida,
+.horario-escolhido {
+    margin-top: 15px;
+
+    padding: 10px;
+
+    border-radius: 8px;
+
+    background: #eef6ff;
+
+    color: #1976d2;
+
+    font-size: 11px;
+
+    text-align: center;
+}
+
+
+/* ==========================================================
+   HORÁRIOS
+   ========================================================== */
+
+.lista-horarios {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 10px;
+}
+
+.horario {
+    padding: 11px;
+
+    border: 1px solid #d5e0ea;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #444444;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.horario:hover {
+    background: #eaf4ff;
+
+    border-color: #1976d2;
+}
+
+.horario.selecionado {
+    background: #1976d2;
+
+    border-color: #1976d2;
+
+    color: #ffffff;
+}
+
+
+/* ==========================================================
+   MODALIDADE
+   ========================================================== */
+
+.bloco-modalidade {
+    margin-top: 25px;
+}
+
+.opcoes-modalidade {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+.modalidade-card {
+    position: relative;
+
+    min-height: 90px;
+
+    padding: 18px;
+
+    border: 2px solid #dce5ed;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.modalidade-card:hover {
+    border-color: #1976d2;
+
+    background: #f5f9ff;
+}
+
+.modalidade-card.selecionado {
+    border-color: #1976d2;
+
+    background: #eaf4ff;
+}
+
+.modalidade-card input {
+    position: absolute;
+
+    opacity: 0;
+}
+
+.icone-modalidade {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 10px;
+
+    background: #eaf4ff;
+
+    color: #1976d2;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+.modalidade-card strong {
+    display: block;
+
+    font-size: 13px;
+
+    margin-bottom: 4px;
+}
+
+.modalidade-card span {
+    display: block;
+
+    font-size: 11px;
+
+    color: #777777;
+
+    line-height: 1.4;
+}
+
+
+/* ==========================================================
+   AÇÕES
+   ========================================================== */
+
+.acoes-etapa {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 30px;
+}
+
+.btn-continuar,
+.btn-voltar {
+    padding: 11px 22px;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.btn-continuar {
+    border: none;
+
+    background: #1976d2;
+
+    color: #ffffff;
+}
+
+.btn-continuar:hover {
+    background: #0d47a1;
+
+    transform: translateY(-1px);
+}
+
+.btn-voltar {
+    border: 1px solid #d5dce4;
+
+    background: #ffffff;
+
+    color: #555555;
+}
+
+.btn-voltar:hover {
+    background: #f5f5f5;
+
+    border-color: #bfc9d3;
+}
+
+
+/* ==========================================================
+   CONFIRMAÇÃO
+   ========================================================== */
+
+.confirmacao-container {
+    max-width: 850px;
+
+    margin: 0 auto;
+}
+
+.resumo-agendamento {
+    border: 1px solid #d7e4ef;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    background: #ffffff;
+}
+
+.resumo-item {
+    min-height: 72px;
+
+    padding: 14px 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    border-bottom: 1px solid #e7edf2;
+}
+
+.resumo-item:last-child {
+    border-bottom: none;
+}
+
+.resumo-icone {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 9px;
+
+    background: #eaf4ff;
+
+    color: #1976d2;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+.resumo-item div:last-child {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.resumo-item span {
+    font-size: 11px;
+
+    color: #888888;
+}
+
+.resumo-item strong {
+    font-size: 13px;
+
+    color: #333333;
+}
+
+.resumo-item.valor strong {
+    color: #1976d2;
+
+    font-size: 16px;
+}
+
+
+/* ==========================================================
+   AVISO DE SEGURANÇA
+   ========================================================== */
+
+.aviso-seguranca {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    margin-top: 20px;
+
+    padding: 16px;
+
+    border-radius: 10px;
+
+    background: #f5f9ff;
+
+    border-left: 4px solid #1976d2;
+}
+
+.aviso-seguranca > i {
+    color: #1976d2;
+
+    margin-top: 2px;
+}
+
+.aviso-seguranca strong {
+    display: block;
+
+    font-size: 12px;
+
+    margin-bottom: 4px;
+}
+
+.aviso-seguranca p {
+    font-size: 11px;
+
+    color: #777777;
+
+    line-height: 1.5;
+}
+
+
+/* ==========================================================
+   PAGAMENTO
+   ========================================================== */
+
+.pagamento-simulacao {
+    max-width: 850px;
+
+    margin: 0 auto;
+}
+
+.valor-pagamento {
+    padding: 20px;
+
+    border-radius: 12px;
+
+    background: #f5f9ff;
+
+    border: 1px solid #d5e4f2;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+.valor-pagamento span {
+    font-size: 13px;
+
+    color: #666666;
+}
+
+.valor-pagamento strong {
+    font-size: 22px;
+
+    color: #1976d2;
+}
+
+
+/* ==========================================================
+   OPÇÕES DE PAGAMENTO
+   ========================================================== */
+
+.opcoes-pagamento {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.pagamento-card {
+    position: relative;
+
+    min-height: 115px;
+
+    padding: 20px;
+
+    border: 2px solid #dce5ed;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.pagamento-card:hover {
+    border-color: #1976d2;
+
+    background: #f5f9ff;
+}
+
+.pagamento-card.selecionado {
+    border-color: #1976d2;
+
+    background: #eaf4ff;
+}
+
+.pagamento-card input {
+    position: absolute;
+
+    opacity: 0;
+}
+
+.pagamento-card > i {
+    font-size: 23px;
+
+    color: #1976d2;
+
+    margin-bottom: 10px;
+}
+
+.pagamento-card strong {
+    display: block;
+
+    font-size: 13px;
+
+    margin-bottom: 3px;
+}
+
+.pagamento-card span {
+    display: block;
+
+    font-size: 11px;
+
+    color: #777777;
+}
+
+
+/* ==========================================================
+   AVISO DE PAGAMENTO
+   ========================================================== */
+
+.aviso-pagamento {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border-radius: 9px;
+
+    background: #fff8e1;
+
+    border: 1px solid #f1df9b;
+
+    color: #806b19;
+}
+
+.aviso-pagamento > i {
+    margin-top: 2px;
+}
+
+.aviso-pagamento strong {
+    display: block;
+
+    font-size: 12px;
+
+    margin-bottom: 4px;
+}
+
+.aviso-pagamento p {
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+
+/* ==========================================================
+   ETAPA FINAL
+   ========================================================== */
+
+.etapa-final {
+    text-align: center;
+}
+
+.sucesso-agendamento {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    padding: 25px 10px;
+}
+
+.icone-sucesso {
+    width: 78px;
+    height: 78px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background: #e4f7ef;
+
+    color: #219653;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 34px;
+}
+
+.sucesso-agendamento h2 {
+    font-size: 25px;
+
+    color: #0d47a1;
+
+    margin-bottom: 8px;
+}
+
+.sucesso-agendamento > p {
+    font-size: 13px;
+
+    color: #777777;
+}
+
+
+/* ==========================================================
+   CÓDIGO DO AGENDAMENTO
+   ========================================================== */
+
+.codigo-agendamento {
+    display: inline-flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    margin: 22px 0;
+
+    padding: 15px 25px;
+
+    border-radius: 10px;
+
+    background: #f5f9ff;
+
+    border: 1px solid #cfe1f5;
+}
+
+.codigo-agendamento span {
+    font-size: 10px;
+
+    color: #777777;
+}
+
+.codigo-agendamento strong {
+    font-size: 18px;
+
+    letter-spacing: 1px;
+
+    color: #1976d2;
+}
+
+
+/* ==========================================================
+   RESUMO FINAL
+   ========================================================== */
+
+.resumo-final {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+
+    margin-top: 15px;
+}
+
+.resumo-final > div {
+    padding: 13px;
+
+    border: 1px solid #e0e7ee;
+
+    border-radius: 9px;
+
+    background: #ffffff;
+}
+
+.resumo-final span {
+    display: block;
+
+    font-size: 10px;
+
+    color: #888888;
+
+    margin-bottom: 3px;
+}
+
+.resumo-final strong {
+    display: block;
+
+    font-size: 12px;
+
+    color: #333333;
+}
+
+
+/* ==========================================================
+   MENSAGEM FINAL
+   ========================================================== */
+
+.mensagem-final {
+    margin-top: 20px !important;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    background: #f5f9ff;
+
+    color: #666666 !important;
+
+    font-size: 11px !important;
+}
+
+.mensagem-final i {
+    color: #1976d2;
+}
+
+
+/* ==========================================================
+   BOTÃO VOLTAR AO INÍCIO
+   ========================================================== */
+
+.btn-voltar-inicio {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 20px;
+
+    padding: 12px 20px;
+
+    border-radius: 8px;
+
+    background: #1976d2;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.btn-voltar-inicio:hover {
+    background: #0d47a1;
+
+    transform: translateY(-1px);
+}
+
+
+/* ==========================================================
+   RESPONSIVIDADE
+   ========================================================== */
+
+@media (max-width: 1050px) {
+
+    .topo-agendamento {
+        padding: 0 25px;
+    }
+
+    .menu-principal {
+        gap: 16px;
+    }
+
+    .menu-principal a {
+        font-size: 12px;
+    }
+
+    .bloco-profissionais {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .area-agendamento {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (max-width: 750px) {
+
+    .topo-agendamento {
+        height: auto;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 18px 20px;
+    }
+
+    .menu-principal {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 10px 15px;
+    }
+
+    .card-agendamento {
+        padding: 25px;
+    }
+
+    .etapas-agendamento {
+        overflow-x: auto;
+
+        justify-content: flex-start;
+
+        padding-bottom: 10px;
+    }
+
+    .bloco-profissionais {
+        grid-template-columns: 1fr;
+    }
+
+    .opcoes-modalidade {
+        grid-template-columns: 1fr;
+    }
+
+    .opcoes-pagamento {
+        grid-template-columns: 1fr;
+    }
+
+    .resumo-final {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ==========================================================
+   CELULAR
+   ========================================================== */
+
+@media (max-width: 500px) {
+
+    .pagina-agendamento {
+        padding: 20px 12px 40px;
+    }
+
+    .card-agendamento {
+        padding: 20px;
+
+        border-radius: 14px;
+    }
+
+    .cabecalho-agendamento h1 {
+        font-size: 22px;
+    }
+
+    .titulo-etapa h2 {
+        font-size: 18px;
+    }
+
+    .profissional-card {
+        min-height: 180px;
+
+        padding: 18px;
+    }
+
+    .foto-profissional {
+        width: 55px;
+        height: 55px;
+    }
+
+    .acoes-etapa {
+        flex-direction: column-reverse;
+
+        gap: 12px;
+    }
+
+    .btn-continuar,
+    .btn-voltar {
+        width: 100%;
+    }
+
+    .lista-horarios {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .resumo-item {
+        padding: 12px;
+    }
+}

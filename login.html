@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Entrar | Anchor</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/logo-anchor.png">
+
+    <!-- Fonte Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="login.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="topo-login">
+
+        <!-- Logo -->
+
+        <a href="index.html" class="logo-login">
+
+            <img
+                src="img/logo-anchor.png"
+                alt="Logo Anchor"
+            >
+
+        </a>
+
+
+        <!-- Menu escrito -->
+
+        <nav class="menu-login">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="denuncia.html">
+                Denúncias
+            </a>
+
+            <a href="acompanhar.html">
+                Acompanhar
+            </a>
+
+            <a href="noticias.html">
+                Notícias
+            </a>
+
+            <a href="perfil.html">
+                Perfil
+            </a>
+
+            <a href="informacoes.html">
+                Informações
+            </a>
+
+            <a href="contato.html">
+                Contato
+            </a>
+
+            <a href="sobre.html">
+                Sobre nós
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =====================================================
+         BREADCRUMB
+    ====================================================== -->
+
+    <div class="breadcrumb-login">
+
+        <a href="index.html">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Voltar para Home
+
+        </a>
+
+        <span class="divisor-breadcrumb">
+            |
+        </span>
+
+        <span class="pagina-atual">
+            Conta
+        </span>
+
+    </div>
+
+
+    <!-- =====================================================
+         CONTEÚDO PRINCIPAL
+    ====================================================== -->
+
+    <main class="principal-login">
+
+        <section class="card-login">
+
+
+            <!-- =================================================
+                 ETIQUETA
+            ================================================== -->
+
+            <div class="etiqueta-login">
+
+                <i class="fa-solid fa-user"></i>
+
+                <span>
+                    CONTA ANCHOR
+                </span>
+
+            </div>
+
+
+            <!-- =================================================
+                 TÍTULO
+            ================================================== -->
+
+            <h1>
+                Conecte-se
+            </h1>
+
+
+            <!-- =================================================
+                 DESCRIÇÃO
+            ================================================== -->
+
+            <p class="descricao-login">
+
+                Entre na sua conta para acessar seus recursos
+                e acompanhar sua jornada no Anchor.
+
+            </p>
+
+
+            <!-- =================================================
+                 FORMULÁRIO
+            ================================================== -->
+
+            <form
+                id="formLogin"
+                class="form-login"
+            >
+
+
+                <!-- E-mail -->
+
+                <div class="campo-login">
+
+                    <label for="email">
+                        E-mail
+                    </label>
+
+                    <div class="input-login">
+
+                        <i class="fa-regular fa-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Digite seu e-mail"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- Senha -->
+
+                <div class="campo-login">
+
+                    <label for="senha">
+                        Senha
+                    </label>
+
+                    <div class="input-login">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            type="password"
+                            id="senha"
+                            name="senha"
+                            placeholder="Digite sua senha"
+                            autocomplete="current-password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="btn-mostrar-senha"
+                            id="mostrarSenha"
+                            aria-label="Mostrar senha"
+                        >
+
+                            <i class="fa-regular fa-eye"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Esqueci a senha -->
+
+                <a
+                    href="recuperar-senha.html"
+                    class="esqueci-senha"
+                >
+                    Esqueci minha senha
+                </a>
+
+
+                <!-- Botão Entrar -->
+
+                <button
+                    type="submit"
+                    class="btn-entrar"
+                >
+
+                    <span>
+                        Entrar
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </form>
+
+
+            <!-- =================================================
+                 DIVISOR
+            ================================================== -->
+
+            <div class="divisor-login">
+
+                <span>
+                    ou
+                </span>
+
+            </div>
+
+
+            <!-- =================================================
+                 LOGIN COM REDES
+            ================================================== -->
+
+            <div class="login-social">
+
+
+                <!-- Google -->
+
+               <div id="googleButton" class="google-button"></div>
+
+
+                <!-- Facebook -->
+
+                <button
+                    type="button"
+                    class="btn-social btn-facebook"
+                    id="btnFacebook"
+                >
+
+                    <i class="fa-brands fa-facebook-f"></i>
+
+                    <span>
+                        Continuar com o Facebook
+                    </span>
+
+                </button>
+
+
+                <!-- Apple -->
+
+                <button
+                    type="button"
+                    class="btn-social btn-apple"
+                    id="btnApple"
+                >
+
+                    <i class="fa-brands fa-apple"></i>
+
+                    <span>
+                        Continuar com o Apple
+                    </span>
+
+                </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 CADASTRO
+            ================================================== -->
+
+            <p class="cadastro-login">
+
+                Ainda não tem uma conta?
+
+                <a href="cadastro.html">
+                    Criar conta
+                </a>
+
+            </p>
+
+        </section>
+
+    </main>
+
+    <script src="login.js"></script>
+</body>
+
+
+</html>

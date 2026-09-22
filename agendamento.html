@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Agendar atendimento | Anchor</title>
+
+    <link rel="icon" href="img/logo-anchor.png">
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- FONT AWESOME -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="agendamento.css">
+</head>
+
+<body>
+
+    <!-- =========================================================
+     CABEÇALHO
+========================================================== -->
+
+<header class="topo-agendamento">
+
+    <a href="index.html" class="logo-area">
+        <img src="img/logo-anchor.png" alt="Logo Anchor">
+    </a>
+
+    <nav class="menu-principal">
+
+        <a href="ajuda-psicologica.html">
+            Ajuda psicológica
+        </a>
+
+        <a href="denuncias.html">
+            Denúncias
+        </a>
+
+        <a href="acompanhar.html">
+            Acompanhar
+        </a>
+
+        <a href="noticias.html">
+            Notícias
+        </a>
+
+        <a href="perfil.html">
+            Perfil
+        </a>
+
+        <a href="informacoes.html">
+            Informações
+        </a>
+
+        <a href="contato.html">
+            Contato
+        </a>
+
+        <a href="sobre.html">
+            Sobre nós
+        </a>
+
+    </nav>
+
+</header>
+
+    <!-- =========================================================
+         CONTEÚDO PRINCIPAL
+    ========================================================== -->
+
+    <main class="pagina-agendamento">
+
+        <!-- BREADCRUMB -->
+
+        <div class="breadcrumb">
+
+            <a href="index.html">Home</a>
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+            <span>Agendar atendimento</span>
+
+        </div>
+
+
+        <!-- =====================================================
+             CARD PRINCIPAL
+        ====================================================== -->
+
+        <section class="card-agendamento">
+
+            <!-- CABEÇALHO -->
+
+            <div class="cabecalho-agendamento">
+
+                <div>
+                    <h1>Agendar atendimento psicológico</h1>
+
+                    <p>
+                        Escolha o profissional, o horário e a modalidade
+                        do atendimento.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 ETAPAS
+            ================================================== -->
+
+            <div class="etapas-agendamento">
+
+                <div class="etapa ativa" data-etapa-indicador="1">
+
+                    <div class="numero-etapa">
+                        1
+                    </div>
+
+                    <span>Profissional</span>
+
+                </div>
+
+
+                <div class="linha-etapa"></div>
+
+
+                <div class="etapa" data-etapa-indicador="2">
+
+                    <div class="numero-etapa">
+                        2
+                    </div>
+
+                    <span>Data e horário</span>
+
+                </div>
+
+
+                <div class="linha-etapa"></div>
+
+
+                <div class="etapa" data-etapa-indicador="3">
+
+                    <div class="numero-etapa">
+                        3
+                    </div>
+
+                    <span>Confirmação</span>
+
+                </div>
+
+
+                <div class="linha-etapa"></div>
+
+
+                <div class="etapa" data-etapa-indicador="4">
+
+                    <div class="numero-etapa">
+                        4
+                    </div>
+
+                    <span>Pagamento</span>
+
+                </div>
+
+
+                <div class="linha-etapa"></div>
+
+
+                <div class="etapa" data-etapa-indicador="5">
+
+                    <div class="numero-etapa">
+                        5
+                    </div>
+
+                    <span>Agendado!</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 ETAPA 1
+                 PROFISSIONAL
+            ================================================== -->
+
+            <div class="conteudo-etapa ativa" data-etapa="1">
+
+                <div class="titulo-etapa">
+
+                    <span class="icone-titulo">
+                        <i class="fa-solid fa-user-doctor"></i>
+                    </span>
+
+                    <div>
+                        <h2>Escolha um profissional</h2>
+
+                        <p>
+                            Selecione o profissional que deseja para o atendimento.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="bloco-profissionais">
+
+                    <!-- PROFISSIONAL 1 -->
+
+                    <label class="profissional-card selecionado">
+
+                        <input
+                            type="radio"
+                            name="profissional"
+                            value="Gabrielly Estevan Rosa"
+                            data-especialidade="Psicóloga"
+                            data-crp="CRP 06/123456"
+                            data-abordagem="TCC"
+                            data-avaliacao="4.9"
+                            data-avaliacoes="120 avaliações"
+                            checked
+                        >
+
+                        <div class="profissional-info">
+
+                            <div class="foto-profissional">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+
+                            <div class="dados-profissional">
+
+                                <h3>Gabrielly Estevan Rosa</h3>
+
+                                <span class="profissao">
+                                    Psicóloga
+                                </span>
+
+                                <span class="crp">
+                                    CRP 06/123456
+                                </span>
+
+                                <span class="abordagem">
+                                    TCC
+                                </span>
+
+                                <div class="avaliacao">
+
+                                    <i class="fa-solid fa-star"></i>
+
+                                    <strong>4.9</strong>
+
+                                    <span>
+                                        (120 avaliações)
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="radio-marcador"></div>
+
+                    </label>
+
+
+                    <!-- PROFISSIONAL 2 -->
+
+                    <label class="profissional-card">
+
+                        <input
+                            type="radio"
+                            name="profissional"
+                            value="Yurita Okazaki"
+                            data-especialidade="Psicólogo"
+                            data-crp="CRP 06/987654"
+                            data-abordagem="Psicologia Humanista"
+                            data-avaliacao="4.8"
+                            data-avaliacoes="98 avaliações"
+                        >
+
+                        <div class="profissional-info">
+
+                            <div class="foto-profissional">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+
+                            <div class="dados-profissional">
+
+                                <h3>Yurita Okazaki</h3>
+
+                                <span class="profissao">
+                                    Psicólogo
+                                </span>
+
+                                <span class="crp">
+                                    CRP 06/987654
+                                </span>
+
+                                <span class="abordagem">
+                                    Psicologia Humanista
+                                </span>
+
+                                <div class="avaliacao">
+
+                                    <i class="fa-solid fa-star"></i>
+
+                                    <strong>4.8</strong>
+
+                                    <span>
+                                        (98 avaliações)
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="radio-marcador"></div>
+
+                    </label>
+
+
+                    <!-- PROFISSIONAL 3 -->
+
+                    <label class="profissional-card">
+
+                        <input
+                            type="radio"
+                            name="profissional"
+                            value="Caroline Ferreira"
+                            data-especialidade="Psicóloga"
+                            data-crp="CRP 06/456789"
+                            data-abordagem="Terapia Sistêmica"
+                            data-avaliacao="4.7"
+                            data-avaliacoes="76 avaliações"
+                        >
+
+                        <div class="profissional-info">
+
+                            <div class="foto-profissional">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+
+                            <div class="dados-profissional">
+
+                                <h3>Caroline Ferreira</h3>
+
+                                <span class="profissao">
+                                    Psicóloga
+                                </span>
+
+                                <span class="crp">
+                                    CRP 06/456789
+                                </span>
+
+                                <span class="abordagem">
+                                    Terapia Sistêmica
+                                </span>
+
+                                <div class="avaliacao">
+
+                                    <i class="fa-solid fa-star"></i>
+
+                                    <strong>4.7</strong>
+
+                                    <span>
+                                        (76 avaliações)
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="radio-marcador"></div>
+
+                    </label>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="ver-mais-profissionais"
+                >
+                    Ver mais profissionais
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+
+
+                <div class="acoes-etapa">
+
+                    <button
+                        type="button"
+                        class="btn-continuar"
+                        id="btnEtapa1"
+                    >
+                        Continuar
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 ETAPA 2
+                 DATA / HORÁRIO / MODALIDADE
+            ================================================== -->
+
+            <div class="conteudo-etapa" data-etapa="2">
+
+                <div class="titulo-etapa">
+
+                    <span class="icone-titulo">
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </span>
+
+                    <div>
+                        <h2>Escolha a data e o horário</h2>
+
+                        <p>
+                            Selecione um dia, horário e modalidade para o atendimento.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="area-agendamento">
+
+                    <!-- CALENDÁRIO -->
+
+                    <div class="bloco-calendario">
+
+                        <div class="titulo-bloco">
+
+                            <h3>Data do atendimento</h3>
+
+                        </div>
+
+
+                        <div class="cabecalho-calendario">
+
+                            <button
+                                type="button"
+                                id="mesAnterior"
+                                class="btn-mes"
+                            >
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+
+                            <h3 id="mesAno"></h3>
+
+                            <button
+                                type="button"
+                                id="mesProximo"
+                                class="btn-mes"
+                            >
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
+                        </div>
+
+
+                        <div class="dias-semana">
+
+                            <span>Dom</span>
+                            <span>Seg</span>
+                            <span>Ter</span>
+                            <span>Qua</span>
+                            <span>Qui</span>
+                            <span>Sex</span>
+                            <span>Sáb</span>
+
+                        </div>
+
+
+                        <div
+                            class="calendario"
+                            id="calendario"
+                        ></div>
+
+
+                        <p class="data-escolhida" id="dataEscolhida">
+                            Nenhuma data selecionada.
+                        </p>
+
+                    </div>
+
+
+                    <!-- HORÁRIOS -->
+
+                    <div class="bloco-horarios">
+
+                        <div class="titulo-bloco">
+
+                            <h3>Horário disponível</h3>
+
+                            <p>
+                                Escolha um dos horários abaixo.
+                            </p>
+
+                        </div>
+
+
+                        <div class="lista-horarios">
+
+                            <button type="button" class="horario">
+                                08:00
+                            </button>
+
+                            <button type="button" class="horario">
+                                09:00
+                            </button>
+
+                            <button type="button" class="horario">
+                                10:00
+                            </button>
+
+                            <button type="button" class="horario">
+                                11:00
+                            </button>
+
+                            <button type="button" class="horario">
+                                12:00
+                            </button>
+
+                            <button type="button" class="horario">
+                                13:00
+                            </button>
+
+                            <button type="button" class="horario">
+                                14:00
+                            </button>
+
+                            <button type="button" class="horario">
+                                15:00
+                            </button>
+
+                        </div>
+
+
+                        <p class="horario-escolhido" id="horarioEscolhido">
+                            Nenhum horário selecionado.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MODALIDADE -->
+
+                <div class="bloco-modalidade">
+
+                    <div class="titulo-bloco">
+
+                        <h3>Modalidade do atendimento</h3>
+
+                        <p>
+                            Escolha como deseja realizar a consulta.
+                        </p>
+
+                    </div>
+
+
+                    <div class="opcoes-modalidade">
+
+                        <label class="modalidade-card selecionado">
+
+                            <input
+                                type="radio"
+                                name="modalidade"
+                                value="Online"
+                                checked
+                            >
+
+                            <div class="icone-modalidade">
+                                <i class="fa-solid fa-video"></i>
+                            </div>
+
+                            <div>
+                                <strong>Online</strong>
+
+                                <span>
+                                    Atendimento por chamada de vídeo
+                                </span>
+                            </div>
+
+                            <div class="radio-marcador"></div>
+
+                        </label>
+
+
+                        <label class="modalidade-card">
+
+                            <input
+                                type="radio"
+                                name="modalidade"
+                                value="Presencial"
+                            >
+
+                            <div class="icone-modalidade">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+
+                            <div>
+                                <strong>Presencial</strong>
+
+                                <span>
+                                    Atendimento em local cadastrado
+                                </span>
+                            </div>
+
+                            <div class="radio-marcador"></div>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <div class="acoes-etapa">
+
+                    <button
+                        type="button"
+                        class="btn-voltar"
+                        id="btnVoltar2"
+                    >
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Voltar
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="btn-continuar"
+                        id="btnEtapa2"
+                    >
+                        Continuar
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 ETAPA 3
+                 CONFIRMAÇÃO
+            ================================================== -->
+
+            <div class="conteudo-etapa" data-etapa="3">
+
+                <div class="titulo-etapa">
+
+                    <span class="icone-titulo">
+                        <i class="fa-solid fa-clipboard-check"></i>
+                    </span>
+
+                    <div>
+                        <h2>Confira seu agendamento</h2>
+
+                        <p>
+                            Verifique as informações antes de continuar.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="confirmacao-container">
+
+                    <div class="resumo-agendamento">
+
+                        <div class="resumo-item">
+
+                            <div class="resumo-icone">
+                                <i class="fa-solid fa-user-doctor"></i>
+                            </div>
+
+                            <div>
+                                <span>Profissional</span>
+                                <strong id="confirmacaoProfissional">
+                                    Gabrielly Estevan Rosa
+                                </strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="resumo-item">
+
+                            <div class="resumo-icone">
+                                <i class="fa-solid fa-calendar"></i>
+                            </div>
+
+                            <div>
+                                <span>Data</span>
+                                <strong id="confirmacaoData">
+                                    Não selecionada
+                                </strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="resumo-item">
+
+                            <div class="resumo-icone">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+
+                            <div>
+                                <span>Horário</span>
+                                <strong id="confirmacaoHorario">
+                                    Não selecionado
+                                </strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="resumo-item">
+
+                            <div class="resumo-icone">
+                                <i class="fa-solid fa-video"></i>
+                            </div>
+
+                            <div>
+                                <span>Modalidade</span>
+                                <strong id="confirmacaoModalidade">
+                                    Online
+                                </strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="resumo-item">
+
+                            <div class="resumo-icone">
+                                <i class="fa-solid fa-stopwatch"></i>
+                            </div>
+
+                            <div>
+                                <span>Duração</span>
+                                <strong>50 minutos</strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="resumo-item valor">
+
+                            <div class="resumo-icone">
+                                <i class="fa-solid fa-wallet"></i>
+                            </div>
+
+                            <div>
+                                <span>Valor</span>
+                                <strong>R$ 80,00</strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="aviso-seguranca">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        <div>
+
+                            <strong>Seus dados estão protegidos</strong>
+
+                            <p>
+                                As informações do seu agendamento são
+                                utilizadas somente para o funcionamento
+                                da plataforma Anchor.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="acoes-etapa">
+
+                    <button
+                        type="button"
+                        class="btn-voltar"
+                        id="btnVoltar3"
+                    >
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Voltar
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="btn-continuar"
+                        id="btnEtapa3"
+                    >
+                        Confirmar agendamento
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 ETAPA 4
+                 PAGAMENTO SIMULADO
+            ================================================== -->
+
+            <div class="conteudo-etapa" data-etapa="4">
+
+                <div class="titulo-etapa">
+
+                    <span class="icone-titulo">
+                        <i class="fa-solid fa-credit-card"></i>
+                    </span>
+
+                    <div>
+
+                        <h2>Pagamento</h2>
+
+                        <p>
+                            Escolha uma forma de pagamento para a simulação.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="pagamento-simulacao">
+
+                    <div class="valor-pagamento">
+
+                        <span>Valor do atendimento</span>
+
+                        <strong>R$ 80,00</strong>
+
+                    </div>
+
+
+                    <div class="opcoes-pagamento">
+
+                        <label class="pagamento-card selecionado">
+
+                            <input
+                                type="radio"
+                                name="pagamento"
+                                value="pix"
+                                checked
+                            >
+
+                            <i class="fa-brands fa-pix"></i>
+
+                            <div>
+                                <strong>PIX</strong>
+
+                                <span>
+                                    Pagamento instantâneo
+                                </span>
+                            </div>
+
+                            <div class="radio-marcador"></div>
+
+                        </label>
+
+
+                        <label class="pagamento-card">
+
+                            <input
+                                type="radio"
+                                name="pagamento"
+                                value="cartao"
+                            >
+
+                            <i class="fa-solid fa-credit-card"></i>
+
+                            <div>
+                                <strong>Cartão</strong>
+
+                                <span>
+                                    Crédito ou débito
+                                </span>
+                            </div>
+
+                            <div class="radio-marcador"></div>
+
+                        </label>
+
+
+                        <label class="pagamento-card">
+
+                            <input
+                                type="radio"
+                                name="pagamento"
+                                value="boleto"
+                            >
+
+                            <i class="fa-solid fa-barcode"></i>
+
+                            <div>
+                                <strong>Boleto</strong>
+
+                                <span>
+                                    Pagamento por boleto
+                                </span>
+                            </div>
+
+                            <div class="radio-marcador"></div>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="aviso-pagamento">
+
+                        <i class="fa-solid fa-circle-info"></i>
+
+                        <div>
+
+                            <strong>Pagamento demonstrativo</strong>
+
+                            <p>
+                                Esta etapa é apenas uma simulação para
+                                apresentação do projeto Anchor.
+                                Nenhuma cobrança real será realizada.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="acoes-etapa">
+
+                    <button
+                        type="button"
+                        class="btn-voltar"
+                        id="btnVoltar4"
+                    >
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Voltar
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="btn-continuar"
+                        id="btnPagamento"
+                    >
+                        Simular pagamento
+                        <i class="fa-solid fa-check"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 ETAPA 5
+                 AGENDADO
+            ================================================== -->
+
+            <div class="conteudo-etapa etapa-final" data-etapa="5">
+
+                <div class="sucesso-agendamento">
+
+                    <div class="icone-sucesso">
+
+                        <i class="fa-solid fa-check"></i>
+
+                    </div>
+
+
+                    <h2>Agendamento realizado!</h2>
+
+
+                    <p>
+                        Seu atendimento psicológico foi agendado
+                        com sucesso.
+                    </p>
+
+
+                    <div class="codigo-agendamento">
+
+                        <span>Código do agendamento</span>
+
+                        <strong id="codigoAgendamento">
+                            ANC-000000
+                        </strong>
+
+                    </div>
+
+
+                    <div class="resumo-final">
+
+                        <div>
+                            <span>Profissional</span>
+                            <strong id="finalProfissional">
+                                Gabrielly Estevan Rosa
+                            </strong>
+                        </div>
+
+                        <div>
+                            <span>Data</span>
+                            <strong id="finalData">
+                                -
+                            </strong>
+                        </div>
+
+                        <div>
+                            <span>Horário</span>
+                            <strong id="finalHorario">
+                                -
+                            </strong>
+                        </div>
+
+                        <div>
+                            <span>Modalidade</span>
+                            <strong id="finalModalidade">
+                                Online
+                            </strong>
+                        </div>
+
+                    </div>
+
+
+                    <p class="mensagem-final">
+
+                        <i class="fa-solid fa-circle-info"></i>
+
+                        Este agendamento faz parte da demonstração
+                        do projeto Anchor.
+
+                    </p>
+
+
+                    <a
+                        href="index.html"
+                        class="btn-voltar-inicio"
+                    >
+                        <i class="fa-solid fa-house"></i>
+                        Voltar para o início
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================== -->
+
+    <script src="agendamento.js"></script>
+
+</body>
+
+</html>
