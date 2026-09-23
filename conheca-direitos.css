@@ -1,0 +1,808 @@
+/* ==========================================================
+   ANCHOR - CONHEÇA SEUS DIREITOS
+========================================================== */
+
+
+/* ==========================================================
+   RESET
+========================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f6f8fc;
+    color: #172033;
+}
+
+
+/* ==========================================================
+   CABEÇALHO
+========================================================== */
+
+.topo-direitos {
+    width: 100%;
+    height: 82px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    background: linear-gradient(
+        135deg,
+        #0d47a1,
+        #1976d2
+    );
+
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+
+    position: relative;
+    z-index: 10;
+}
+
+
+/* LOGO */
+
+.logo-area {
+    display: flex;
+    align-items: center;
+}
+
+.logo-area img {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+}
+
+
+/* MENU */
+
+.menu-principal {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.menu-principal a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.menu-principal a:hover {
+    opacity: 0.75;
+}
+
+.menu-principal a.ativo {
+    font-weight: 700;
+}
+
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.hero-direitos {
+    min-height: 440px;
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        #0d47a1,
+        #1976d2
+    );
+
+    color: white;
+}
+
+
+/* MANCHAS */
+
+.mancha-hero {
+    position: absolute;
+    border-radius: 50%;
+
+    filter: blur(2px);
+
+    opacity: 0.15;
+}
+
+.mancha-hero-1 {
+    width: 350px;
+    height: 350px;
+
+    background: #ffffff;
+
+    top: -170px;
+    right: 8%;
+}
+
+.mancha-hero-2 {
+    width: 260px;
+    height: 260px;
+
+    background: #64b5f6;
+
+    bottom: -130px;
+    left: 8%;
+}
+
+.mancha-hero-3 {
+    width: 180px;
+    height: 180px;
+
+    background: #ffffff;
+
+    top: 25%;
+    right: 28%;
+}
+
+
+/* CONTEÚDO */
+
+.hero-conteudo {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    position: relative;
+    z-index: 2;
+}
+
+.hero-mini-titulo {
+    display: block;
+
+    margin-bottom: 15px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    opacity: 0.85;
+}
+
+.hero-conteudo h1 {
+    max-width: 760px;
+
+    font-size: 52px;
+    line-height: 1.15;
+
+    margin-bottom: 20px;
+}
+
+.hero-conteudo h1 span {
+    color: #90caf9;
+}
+
+.hero-conteudo p {
+    max-width: 700px;
+
+    font-size: 16px;
+    line-height: 1.8;
+
+    color: rgba(255, 255, 255, 0.9);
+
+    margin-bottom: 30px;
+}
+
+
+/* BOTÃO EXPLORAR */
+
+.btn-explorar {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 13px 22px;
+
+    background: white;
+    color: #0d47a1;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.btn-explorar:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ==========================================================
+   CONTEÚDO
+========================================================== */
+
+.conteudo-direitos {
+    width: 90%;
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    padding: 75px 0;
+}
+
+
+/* ==========================================================
+   BOTÃO VOLTAR
+========================================================== */
+
+.voltar-informacoes {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 30px;
+
+    color: #1976d2;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.voltar-informacoes:hover {
+    color: #0d47a1;
+
+    transform: translateX(-3px);
+}
+
+
+/* ==========================================================
+   MATÉRIA
+========================================================== */
+
+.materia-direito {
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 45px;
+
+    box-shadow:
+        0 8px 30px rgba(15, 23, 42, 0.07);
+
+    border: 1px solid #edf0f5;
+
+    animation: aparecerMateria 0.5s ease;
+}
+
+
+/* ==========================================================
+   CABEÇALHO DA MATÉRIA
+========================================================== */
+
+#materiaCategoria {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: #1976d2;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+
+#materiaIcone {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+    border-radius: 16px;
+
+    background: #eef5ff;
+
+    color: #1976d2;
+
+    font-size: 23px;
+}
+
+
+#materiaTitulo {
+    color: #172033;
+
+    font-size: 34px;
+    line-height: 1.3;
+
+    margin-bottom: 15px;
+}
+
+
+#materiaIntroducao {
+    max-width: 850px;
+
+    color: #667085;
+
+    font-size: 15px;
+    line-height: 1.8;
+
+    padding-bottom: 28px;
+
+    border-bottom: 1px solid #e7ebf0;
+}
+
+
+/* ==========================================================
+   TEXTO DA MATÉRIA
+========================================================== */
+
+#materiaTexto {
+    padding-top: 30px;
+}
+
+
+#materiaTexto h2 {
+    color: #0d47a1;
+
+    font-size: 24px;
+
+    line-height: 1.4;
+
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+
+#materiaTexto h3 {
+    color: #1976d2;
+
+    font-size: 19px;
+
+    margin-top: 28px;
+    margin-bottom: 12px;
+}
+
+
+#materiaTexto p {
+    color: #4b5563;
+
+    font-size: 15px;
+    line-height: 1.85;
+
+    margin-bottom: 17px;
+}
+
+
+#materiaTexto ul {
+    margin: 12px 0 22px 25px;
+}
+
+
+#materiaTexto li {
+    color: #4b5563;
+
+    font-size: 15px;
+    line-height: 1.8;
+
+    margin-bottom: 9px;
+}
+
+
+#materiaTexto strong {
+    color: #172033;
+}
+
+
+/* ==========================================================
+   BLOCO DE DESTAQUE
+========================================================== */
+
+.bloco-destaque {
+    margin: 28px 0;
+
+    padding: 20px 22px;
+
+    background: #eef5ff;
+
+    border-left: 4px solid #1976d2;
+
+    border-radius: 10px;
+}
+
+
+.bloco-destaque p {
+    margin-bottom: 0 !important;
+
+    color: #174a7e !important;
+
+    font-weight: 600;
+}
+
+
+/* ==========================================================
+   FONTES
+========================================================== */
+
+.fontes-materia {
+    margin-top: 45px;
+
+    padding-top: 30px;
+
+    border-top: 1px solid #e7ebf0;
+}
+
+
+.fontes-materia h2 {
+    color: #0d47a1;
+
+    font-size: 22px;
+
+    margin-bottom: 17px;
+}
+
+
+#listaFontes {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+#listaFontes a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    width: fit-content;
+
+    color: #1976d2;
+
+    font-size: 14px;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+
+#listaFontes a:hover {
+    color: #0d47a1;
+
+    text-decoration: underline;
+}
+
+
+/* ==========================================================
+   ÁREA DE AJUDA
+========================================================== */
+
+.area-ajuda {
+    margin-top: 55px;
+
+    padding: 45px;
+
+    border-radius: 24px;
+
+    background: linear-gradient(
+        135deg,
+        #0d47a1,
+        #1976d2
+    );
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+
+.ajuda-texto {
+    max-width: 650px;
+}
+
+
+.ajuda-texto > span {
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    opacity: 0.8;
+}
+
+
+.ajuda-texto h2 {
+    font-size: 27px;
+
+    line-height: 1.35;
+
+    margin: 10px 0 12px;
+}
+
+
+.ajuda-texto p {
+    font-size: 14px;
+    line-height: 1.7;
+
+    color: rgba(255, 255, 255, 0.85);
+}
+
+
+/* ==========================================================
+   BOTÕES DE AJUDA
+========================================================== */
+
+.ajuda-botoes {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    min-width: 250px;
+}
+
+
+.btn-ajuda {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 13px 20px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.btn-ajuda:hover {
+    transform: translateY(-2px);
+}
+
+
+.btn-ajuda.principal {
+    background: white;
+
+    color: #0d47a1;
+}
+
+
+.btn-ajuda.secundario {
+    background: rgba(255, 255, 255, 0.12);
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    color: white;
+}
+
+
+/* ==========================================================
+   ANIMAÇÃO
+========================================================== */
+
+@keyframes aparecerMateria {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ==========================================================
+   RESPONSIVO
+========================================================== */
+
+@media (max-width: 1000px) {
+
+    .menu-principal {
+        gap: 15px;
+    }
+
+    .menu-principal a {
+        font-size: 11px;
+    }
+
+    .hero-conteudo h1 {
+        font-size: 44px;
+    }
+
+}
+
+
+@media (max-width: 750px) {
+
+    .topo-direitos {
+        height: auto;
+
+        padding: 15px 5%;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .menu-principal {
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 10px 15px;
+    }
+
+
+    .hero-direitos {
+        min-height: 430px;
+    }
+
+
+    .hero-conteudo h1 {
+        font-size: 38px;
+    }
+
+
+    .hero-conteudo p {
+        font-size: 14px;
+    }
+
+
+    .materia-direito {
+        padding: 30px;
+    }
+
+
+    #materiaTitulo {
+        font-size: 29px;
+    }
+
+
+    #materiaTexto h2 {
+        font-size: 21px;
+    }
+
+
+    #materiaTexto h3 {
+        font-size: 18px;
+    }
+
+
+    #materiaTexto p,
+    #materiaTexto li {
+        font-size: 14px;
+    }
+
+
+    .area-ajuda {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 30px;
+    }
+
+
+    .ajuda-botoes {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    .conteudo-direitos {
+        width: 92%;
+
+        padding: 55px 0;
+    }
+
+
+    .hero-conteudo h1 {
+        font-size: 32px;
+    }
+
+
+    .materia-direito {
+        padding: 25px 20px;
+
+        border-radius: 16px;
+    }
+
+
+    #materiaIcone {
+        width: 52px;
+        height: 52px;
+
+        font-size: 20px;
+    }
+
+
+    #materiaTitulo {
+        font-size: 26px;
+    }
+
+
+    #materiaIntroducao {
+        font-size: 14px;
+    }
+
+
+    #materiaTexto h2 {
+        font-size: 20px;
+    }
+
+
+    #materiaTexto p,
+    #materiaTexto li {
+        font-size: 14px;
+    }
+
+
+    .area-ajuda {
+        margin-top: 40px;
+
+        padding: 28px 22px;
+    }
+
+
+    .ajuda-texto h2 {
+        font-size: 22px;
+    }
+
+
+    .btn-ajuda {
+        width: 100%;
+    }
+
+}

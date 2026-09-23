@@ -1,0 +1,710 @@
+/* ==========================================================
+   ANCHOR - CONHEÇA SAÚDE
+========================================================== */
+
+
+/* ==========================================================
+   CONFIGURAÇÕES GERAIS
+========================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f7f9fc;
+    color: #263238;
+}
+
+
+/* ==========================================================
+   CABEÇALHO
+========================================================== */
+
+.topo-saude {
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: #ffffff;
+
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+
+    position: relative;
+    z-index: 10;
+}
+
+
+/* LOGO */
+
+.logo-area img {
+    width: 145px;
+    display: block;
+}
+
+
+/* MENU */
+
+.menu-principal {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.menu-principal a {
+    text-decoration: none;
+
+    color: #455a64;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.menu-principal a:hover {
+    color: #1976d2;
+}
+
+.menu-principal a.ativo {
+    color: #1976d2;
+    font-weight: 600;
+}
+
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.hero-saude {
+    min-height: 430px;
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        #e3f2fd,
+        #f8fbff
+    );
+}
+
+
+/* MANCHAS DECORATIVAS */
+
+.mancha-hero {
+    position: absolute;
+
+    border-radius: 50%;
+
+    opacity: 0.45;
+
+    filter: blur(1px);
+}
+
+.mancha-1 {
+    width: 280px;
+    height: 280px;
+
+    background: #bbdefb;
+
+    top: -100px;
+    right: 8%;
+}
+
+.mancha-2 {
+    width: 180px;
+    height: 180px;
+
+    background: #c8e6c9;
+
+    bottom: -70px;
+    right: 28%;
+}
+
+.mancha-3 {
+    width: 140px;
+    height: 140px;
+
+    background: #b3e5fc;
+
+    top: 90px;
+    right: 42%;
+}
+
+
+/* CONTEÚDO DO HERO */
+
+.hero-conteudo {
+    width: 86%;
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    position: relative;
+    z-index: 2;
+}
+
+.hero-mini-titulo {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #1976d2;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+.hero-conteudo h1 {
+    font-size: 54px;
+    line-height: 1.1;
+
+    color: #0d47a1;
+
+    margin-bottom: 18px;
+}
+
+.hero-conteudo p {
+    max-width: 620px;
+
+    font-size: 18px;
+    line-height: 1.7;
+
+    color: #546e7a;
+
+    margin-bottom: 30px;
+}
+
+
+/* BOTÃO */
+
+.btn-explorar {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 13px 24px;
+
+    background: #1976d2;
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s;
+
+    box-shadow: 0 7px 18px rgba(25, 118, 210, 0.18);
+}
+
+.btn-explorar:hover {
+    background: #0d47a1;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 10px 24px rgba(25, 118, 210, 0.25);
+}
+
+
+/* ==========================================================
+   CONTEÚDO PRINCIPAL
+========================================================== */
+
+.conteudo-saude {
+    width: 86%;
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    padding: 55px 0 80px;
+}
+
+
+/* ==========================================================
+   VOLTAR
+========================================================== */
+
+.voltar-informacoes {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    margin-bottom: 30px;
+
+    color: #607d8b;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.voltar-informacoes:hover {
+    color: #1976d2;
+
+    transform: translateX(-3px);
+}
+
+
+/* ==========================================================
+   MATÉRIA
+========================================================== */
+
+.materia-saude {
+    background: #ffffff;
+
+    border: 1px solid #e5edf5;
+
+    border-radius: 18px;
+
+    padding: 45px;
+
+    box-shadow: 0 8px 30px rgba(30, 60, 90, 0.07);
+
+    animation: aparecerMateria 0.5s ease;
+}
+
+
+/* CABEÇALHO DA MATÉRIA */
+
+.materia-cabecalho {
+    position: relative;
+
+    padding-bottom: 25px;
+
+    margin-bottom: 28px;
+
+    border-bottom: 1px solid #edf2f7;
+}
+
+.materia-cabecalho > span {
+    display: inline-block;
+
+    padding: 6px 12px;
+
+    margin-bottom: 15px;
+
+    border-radius: 20px;
+
+    background: #e3f2fd;
+
+    color: #1976d2;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+}
+
+
+/* ÍCONE */
+
+.materia-icone {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+    border-radius: 14px;
+
+    background: #e8f5e9;
+
+    color: #43a047;
+
+    font-size: 23px;
+}
+
+.materia-cabecalho h2 {
+    color: #0d47a1;
+
+    font-size: 34px;
+    line-height: 1.2;
+
+    font-weight: 700;
+}
+
+
+/* INTRODUÇÃO */
+
+.materia-introducao {
+    color: #455a64;
+
+    font-size: 17px;
+    line-height: 1.8;
+
+    margin-bottom: 32px;
+}
+
+
+/* ==========================================================
+   TEXTO DA MATÉRIA
+========================================================== */
+
+.materia-texto {
+    color: #455a64;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+.materia-texto h3 {
+    color: #0d47a1;
+
+    font-size: 21px;
+    font-weight: 600;
+
+    margin-top: 30px;
+    margin-bottom: 12px;
+}
+
+.materia-texto h3:first-child {
+    margin-top: 0;
+}
+
+.materia-texto p {
+    margin-bottom: 18px;
+}
+
+.materia-texto ul {
+    margin: 15px 0 25px 22px;
+}
+
+.materia-texto li {
+    margin-bottom: 9px;
+
+    padding-left: 5px;
+}
+
+.materia-texto strong {
+    color: #263238;
+}
+
+
+/* ==========================================================
+   BLOCO DE DESTAQUE
+========================================================== */
+
+.bloco-destaque {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+
+    margin-top: 30px;
+
+    padding: 20px 22px;
+
+    border-radius: 12px;
+
+    background: #f1f8e9;
+
+    border-left: 4px solid #66bb6a;
+}
+
+.bloco-destaque i {
+    color: #43a047;
+
+    font-size: 20px;
+
+    margin-top: 3px;
+}
+
+.bloco-destaque p {
+    margin: 0;
+
+    color: #455a64;
+}
+
+
+/* ==========================================================
+   FONTES
+========================================================== */
+
+.fontes-materia {
+    margin-top: 40px;
+
+    padding-top: 30px;
+
+    border-top: 1px solid #edf2f7;
+}
+
+.fontes-materia h3 {
+    color: #0d47a1;
+
+    font-size: 19px;
+
+    margin-bottom: 15px;
+}
+
+.fontes-materia ul {
+    margin-left: 20px;
+}
+
+.fontes-materia li {
+    margin-bottom: 7px;
+
+    color: #607d8b;
+
+    font-size: 14px;
+}
+
+
+/* ==========================================================
+   ÁREA DE AJUDA
+========================================================== */
+
+.area-ajuda {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+    margin-top: 45px;
+
+    padding: 40px;
+
+    border-radius: 18px;
+
+    background: linear-gradient(
+        135deg,
+        #e3f2fd,
+        #f1f8ff
+    );
+
+    border: 1px solid #d8e8f7;
+}
+
+.ajuda-texto {
+    max-width: 620px;
+}
+
+.ajuda-texto > span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #1976d2;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+}
+
+.ajuda-texto h2 {
+    color: #0d47a1;
+
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+.ajuda-texto p {
+    color: #546e7a;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* BOTÕES DE AJUDA */
+
+.ajuda-botoes {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+.btn-ajuda {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 12px 18px;
+
+    background: #1976d2;
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border-radius: 9px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition: 0.3s;
+}
+
+.btn-ajuda:hover {
+    background: #0d47a1;
+
+    transform: translateY(-2px);
+}
+
+.btn-ajuda i {
+    font-size: 14px;
+}
+
+
+/* ==========================================================
+   ANIMAÇÃO
+========================================================== */
+
+@keyframes aparecerMateria {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ==========================================================
+   RESPONSIVIDADE
+========================================================== */
+
+@media (max-width: 900px) {
+
+    .topo-saude {
+        padding: 0 5%;
+    }
+
+    .menu-principal {
+        gap: 18px;
+    }
+
+    .menu-principal a {
+        font-size: 13px;
+    }
+
+    .hero-conteudo {
+        width: 90%;
+    }
+
+    .hero-conteudo h1 {
+        font-size: 45px;
+    }
+
+    .conteudo-saude {
+        width: 90%;
+    }
+
+    .area-ajuda {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .topo-saude {
+        height: auto;
+
+        padding: 18px 5%;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .menu-principal {
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 12px 18px;
+    }
+
+    .hero-saude {
+        min-height: 390px;
+    }
+
+    .hero-conteudo h1 {
+        font-size: 38px;
+    }
+
+    .hero-conteudo p {
+        font-size: 16px;
+    }
+
+    .conteudo-saude {
+        padding-top: 35px;
+    }
+
+    .materia-saude {
+        padding: 28px 22px;
+
+        border-radius: 14px;
+    }
+
+    .materia-cabecalho h2 {
+        font-size: 27px;
+    }
+
+    .materia-introducao {
+        font-size: 16px;
+    }
+
+    .area-ajuda {
+        padding: 28px 22px;
+    }
+
+    .ajuda-texto h2 {
+        font-size: 22px;
+    }
+
+    .ajuda-botoes {
+        width: 100%;
+
+        flex-direction: column;
+    }
+
+    .btn-ajuda {
+        justify-content: center;
+
+        width: 100%;
+    }
+
+}
