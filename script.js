@@ -1,6 +1,121 @@
 console.log("Anchor iniciado!");
 
+// ==========================================================
+// ANCHOR - CONTROLE DE LOGIN
+// ==========================================================
 
+document.addEventListener("DOMContentLoaded", function () {
+
+    const usuarioLogado =
+        localStorage.getItem("usuarioLogado");
+
+    const entrarBtn =
+        document.getElementById("entrar-btn");
+
+    const perfilBtn =
+        document.getElementById("perfil-btn");
+
+
+    // ======================================================
+    // USUÁRIO LOGADO
+    // ======================================================
+
+    if (usuarioLogado === "true") {
+
+        // Esconde o botão "Entrar"
+        entrarBtn.style.display = "none";
+
+        // Mostra o botão de perfil
+        perfilBtn.style.display = "flex";
+
+    }
+
+
+});
+// ==========================================================
+// ANCHOR - CONTROLE DE LOGIN E MENU DO PERFIL
+// ==========================================================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const usuarioLogado =
+        localStorage.getItem("usuarioLogado");
+
+    const entrarBtn =
+        document.getElementById("entrar-btn");
+
+    const perfilArea =
+        document.getElementById("perfil-area");
+
+    const perfilBtn =
+        document.getElementById("perfil-btn");
+
+    const perfilMenu =
+        document.getElementById("perfil-menu");
+
+    const btnSair =
+        document.getElementById("btn-sair");
+
+
+    // ======================================================
+    // VERIFICA SE O USUÁRIO ESTÁ LOGADO
+    // ======================================================
+
+    if (
+        usuarioLogado === "true" &&
+        entrarBtn &&
+        perfilArea
+    ) {
+
+        entrarBtn.style.display = "none";
+        perfilArea.style.display = "flex";
+
+    }
+
+
+    // ======================================================
+    // ABRIR E FECHAR MENU DO PERFIL
+    // ======================================================
+
+    if (perfilBtn && perfilMenu) {
+
+        perfilBtn.addEventListener("click", function (event) {
+
+            event.stopPropagation();
+
+            perfilMenu.classList.toggle("ativo");
+
+        });
+
+
+        // Fecha quando clicar fora
+
+        document.addEventListener("click", function () {
+
+            perfilMenu.classList.remove("ativo");
+
+        });
+
+    }
+
+
+    // ======================================================
+    // SAIR DA CONTA
+    // ======================================================
+
+    if (btnSair) {
+
+        btnSair.addEventListener("click", function () {
+
+            localStorage.removeItem("usuarioLogado");
+
+            window.location.href = "index.html";
+
+        });
+
+    }
+
+});
 
 // =================================================
 // MENU LATERAL

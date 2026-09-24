@@ -6,12 +6,55 @@ window.addEventListener("load", function () {
 
 
     // ==========================================================
+    // FUNÇÃO PARA ENTRAR NA CONTA
+    // ==========================================================
+
+    function entrarNaConta() {
+
+        // Salva no navegador que existe uma sessão ativa
+        localStorage.setItem("usuarioLogado", "true");
+
+        // Vai para a página inicial
+        window.location.href = "index.html";
+
+    }
+
+
+    // ==========================================================
+    // LOGIN NORMAL
+    // ==========================================================
+
+    const formLogin =
+        document.querySelector(".card-login form");
+
+
+    if (formLogin) {
+
+        formLogin.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+
+            // Aqui futuramente vamos validar
+            // o e-mail e a senha no banco de dados.
+
+            console.log("Login realizado!");
+
+
+            entrarNaConta();
+
+        });
+
+    }
+
+
+    // ==========================================================
     // GOOGLE
     // ==========================================================
 
     google.accounts.id.initialize({
 
-        // COLOQUE SEU CLIENT ID ENTRE AS ASPAS
+        // Client ID do Google
         client_id: "142909672089-sblg6u21smjgde4jrlal8nbinf0lg6r7.apps.googleusercontent.com",
 
         // Função executada depois que a pessoa escolher
@@ -21,19 +64,30 @@ window.addEventListener("load", function () {
     });
 
 
-    // Cria o botão oficial do Google
-google.accounts.id.renderButton(
-    document.getElementById("googleButton"),
-    {
-        type: "standard",
-        theme: "outline",
-        size: "large",
-        text: "continue_with",
-        shape: "rectangular",
-        width: 400,
-        logo_alignment: "left"
-    }
-);
+    // ==========================================================
+    // BOTÃO DO GOOGLE
+    // ==========================================================
+
+    const googleButton =
+        document.getElementById("googleButton");
+
+
+    google.accounts.id.renderButton(
+        googleButton,
+        {
+            type: "standard",
+            theme: "outline",
+            size: "large",
+            text: "continue_with",
+            shape: "rectangular",
+
+            // Tamanho do botão
+            width: 400,
+
+            // Ícone do Google no lado esquerdo
+            logo_alignment: "left"
+        }
+    );
 
 
     // ==========================================================
@@ -51,7 +105,9 @@ google.accounts.id.renderButton(
         console.log(response.credential);
 
 
-        alert("Conta Google selecionada com sucesso!");
+        // Marca a pessoa como logada
+        entrarNaConta();
+
     }
 
 
@@ -62,9 +118,14 @@ google.accounts.id.renderButton(
     const btnFacebook =
         document.getElementById("btnFacebook");
 
+
     btnFacebook.addEventListener("click", function () {
 
-        alert("Login com Facebook selecionado!");
+        console.log("Login com Facebook selecionado!");
+
+
+        // Simulação de login
+        entrarNaConta();
 
     });
 
@@ -76,9 +137,14 @@ google.accounts.id.renderButton(
     const btnApple =
         document.getElementById("btnApple");
 
+
     btnApple.addEventListener("click", function () {
 
-        alert("Login com Apple selecionado!");
+        console.log("Login com Apple selecionado!");
+
+
+        // Simulação de login
+        entrarNaConta();
 
     });
 

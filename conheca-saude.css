@@ -23,7 +23,6 @@ body {
     color: #263238;
 }
 
-
 /* ==========================================================
    CABEÇALHO
 ========================================================== */
@@ -36,52 +35,108 @@ body {
     align-items: center;
     justify-content: space-between;
 
-    padding: 0 7%;
+    padding: 0 3.8%;
 
-    background: #ffffff;
+    background: linear-gradient(
+        135deg,
+        #0d47a1,
+        #1976d2
+    );
 
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 3px 12px rgba(13, 71, 161, 0.18);
 
     position: relative;
     z-index: 10;
 }
 
 
-/* LOGO */
+/* ==========================================================
+   LOGO
+========================================================== */
+
+.logo-area {
+    display: flex;
+    align-items: center;
+}
+
+.logo-area a {
+    display: flex;
+    align-items: center;
+}
 
 .logo-area img {
-    width: 145px;
+    width: 48px;
+    height: auto;
+
     display: block;
 }
 
 
-/* MENU */
+/* ==========================================================
+   MENU
+========================================================== */
 
 .menu-principal {
     display: flex;
     align-items: center;
-    gap: 32px;
+
+    gap: 28px;
 }
 
 .menu-principal a {
+    position: relative;
+
+    padding: 30px 0 25px;
+
+    color: #ffffff;
+
     text-decoration: none;
 
-    color: #455a64;
-
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
+
+    white-space: nowrap;
 
     transition: 0.3s;
 }
 
 .menu-principal a:hover {
-    color: #1976d2;
+    color: #e3f2fd;
 }
 
+
+/* ITEM ATIVO */
+
 .menu-principal a.ativo {
-    color: #1976d2;
-    font-weight: 600;
+    color: #ffffff;
 }
+
+
+/* BARRINHA DO ITEM ATIVO */
+
+.menu-principal a.ativo::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 18px;
+
+    height: 2px;
+
+    background: #ffffff;
+
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
 
 
 /* ==========================================================

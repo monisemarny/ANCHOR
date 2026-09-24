@@ -1,0 +1,927 @@
+/* ==========================================================
+   ANCHOR - CADASTRO
+========================================================== */
+
+
+/* ==========================================================
+   RESET
+========================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+
+    background: #e2e4e7;
+
+    color: #17365d;
+}
+
+body * {
+    font-family: inherit;
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.topo-cadastro {
+    width: 100%;
+    height: 90px;
+
+    background: linear-gradient(
+        90deg,
+        #0d47a1,
+        #1976d2
+    );
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 5%;
+
+    gap: 55px;
+}
+
+
+/* ==========================================================
+   LOGO
+========================================================== */
+
+.logo-cadastro {
+    display: flex;
+    align-items: center;
+
+    flex-shrink: 0;
+
+    text-decoration: none;
+}
+
+.logo-cadastro img {
+    width: 58px;
+    height: auto;
+
+    display: block;
+}
+
+
+/* ==========================================================
+   MENU
+========================================================== */
+
+.menu-cadastro {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 27px;
+}
+
+.menu-cadastro a {
+    position: relative;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    white-space: nowrap;
+
+    transition: 0.2s ease;
+}
+
+.menu-cadastro a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 2px;
+
+    background: #ffffff;
+
+    border-radius: 10px;
+
+    transition: 0.2s ease;
+}
+
+.menu-cadastro a:hover {
+    color: #e5f1ff;
+}
+
+.menu-cadastro a:hover::after {
+    width: 100%;
+}
+
+
+/* ==========================================================
+   BREADCRUMB
+========================================================== */
+
+.breadcrumb-cadastro {
+    width: 100%;
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    padding: 20px 25px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 14px;
+}
+
+.breadcrumb-cadastro a {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: #1559a8;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+.breadcrumb-cadastro a:hover {
+    color: #0d47a1;
+}
+
+.divisor-breadcrumb {
+    color: #9da7b2;
+}
+
+.pagina-atual {
+    color: #8995a3;
+}
+
+
+/* ==========================================================
+   ÁREA PRINCIPAL
+========================================================== */
+
+.principal-cadastro {
+    width: 100%;
+
+    min-height: calc(100vh - 138px);
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 25px 20px 70px;
+}
+
+
+/* ==========================================================
+   CARD
+========================================================== */
+
+.card-cadastro {
+    width: 670px;
+    max-width: 100%;
+
+    background: #ffffff;
+
+    border: 1px solid #d5dce4;
+
+    border-radius: 20px;
+
+    padding: 45px 52px 48px;
+
+    box-shadow:
+        0 10px 28px rgba(30, 55, 80, 0.10);
+}
+
+
+/* ==========================================================
+   ETIQUETA
+========================================================== */
+
+.etiqueta-cadastro {
+    width: fit-content;
+
+    margin: 0 auto 18px;
+
+    padding: 7px 14px;
+
+    border-radius: 20px;
+
+    background: #edf5ff;
+
+    color: #1764c0;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.7px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+}
+
+.etiqueta-cadastro i {
+    font-size: 11px;
+}
+
+
+/* ==========================================================
+   TÍTULO
+========================================================== */
+
+.card-cadastro h1 {
+    text-align: center;
+
+    color: #123f75;
+
+    font-size: 35px;
+
+    font-weight: 700;
+
+    margin-bottom: 10px;
+}
+
+
+/* ==========================================================
+   DESCRIÇÃO
+========================================================== */
+
+.descricao-cadastro {
+    max-width: 450px;
+
+    margin: 0 auto 30px;
+
+    text-align: center;
+
+    color: #74859a;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* ==========================================================
+   ESCOLHA DO TIPO DE CONTA
+========================================================== */
+
+.escolha-conta {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 13px;
+}
+
+
+/* ==========================================================
+   CARDS DE TIPO DE CONTA
+========================================================== */
+
+.tipo-conta {
+    width: 100%;
+    min-height: 82px;
+
+    border: 1px solid #d7e0e9;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    padding: 14px 17px;
+
+    display: flex;
+    align-items: center;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.tipo-conta:hover {
+    border-color: #1976d2;
+
+    background: #f8fbff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 16px rgba(25, 118, 210, 0.10);
+}
+
+
+/* ==========================================================
+   ÍCONE DO TIPO
+========================================================== */
+
+.icone-tipo-conta {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    background: #edf5ff;
+
+    color: #1764c0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+}
+
+
+/* ==========================================================
+   TEXTO DO TIPO
+========================================================== */
+
+.texto-tipo-conta {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 14px;
+
+    gap: 3px;
+}
+
+.texto-tipo-conta strong {
+    color: #244b76;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+.texto-tipo-conta span {
+    color: #7b8da1;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* ==========================================================
+   SETA
+========================================================== */
+
+.seta-tipo {
+    color: #9aabc0;
+
+    font-size: 13px;
+
+    margin-left: 12px;
+
+    transition: 0.2s ease;
+}
+
+.tipo-conta:hover .seta-tipo {
+    color: #1764c0;
+
+    transform: translateX(3px);
+}
+
+
+/* ==========================================================
+   ÁREA DO FORMULÁRIO
+========================================================== */
+
+.area-formulario {
+    width: 100%;
+}
+
+
+/* ==========================================================
+   BOTÃO VOLTAR
+========================================================== */
+
+.btn-voltar-tipo {
+    border: none;
+
+    background: transparent;
+
+    color: #1764c0;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 20px;
+
+    padding: 0;
+}
+
+.btn-voltar-tipo:hover {
+    color: #0d47a1;
+
+    text-decoration: underline;
+}
+
+
+/* ==========================================================
+   TIPO ESCOLHIDO
+========================================================== */
+
+.tipo-escolhido {
+    width: 100%;
+
+    padding: 11px 14px;
+
+    margin-bottom: 25px;
+
+    border-radius: 9px;
+
+    background: #edf5ff;
+
+    color: #1764c0;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* ==========================================================
+   TÍTULO DO FORMULÁRIO
+========================================================== */
+
+.titulo-formulario {
+    margin-bottom: 27px;
+}
+
+.titulo-formulario h2 {
+    color: #123f75;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    margin-bottom: 5px;
+}
+
+.titulo-formulario p {
+    color: #74859a;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* ==========================================================
+   FORMULÁRIO
+========================================================== */
+
+.form-cadastro {
+    width: 100%;
+}
+
+
+/* ==========================================================
+   CAMPOS
+========================================================== */
+
+.campo-cadastro {
+    margin-bottom: 21px;
+}
+
+.campo-cadastro label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #244b76;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* ==========================================================
+   INPUT
+========================================================== */
+
+.input-cadastro {
+    width: 100%;
+    height: 55px;
+
+    border: 1px solid #d1dce8;
+
+    border-radius: 10px;
+
+    background: #f7f9fb;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 14px;
+
+    transition: 0.2s ease;
+}
+
+.input-cadastro:focus-within {
+    border-color: #1976d2;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 3px rgba(25, 118, 210, 0.08);
+}
+
+.input-cadastro > i {
+    color: #8ca2bd;
+
+    font-size: 15px;
+
+    margin-right: 10px;
+}
+
+.input-cadastro input {
+    flex: 1;
+
+    width: 100%;
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #344b65;
+
+    font-size: 14px;
+}
+
+.input-cadastro input::placeholder {
+    color: #9aabc0;
+}
+
+
+/* ==========================================================
+   BOTÃO MOSTRAR SENHA
+========================================================== */
+
+.btn-mostrar-senha {
+    width: 32px;
+    height: 32px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #8ca2bd;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.2s ease;
+}
+
+.btn-mostrar-senha:hover {
+    color: #1764c0;
+}
+
+
+/* ==========================================================
+   TERMOS
+========================================================== */
+
+.termos-cadastro {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 9px;
+
+    margin: 5px 0 24px;
+
+    color: #74859a;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    cursor: pointer;
+}
+
+.termos-cadastro input {
+    width: 16px;
+    height: 16px;
+
+    margin-top: 2px;
+
+    accent-color: #1976d2;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+}
+
+.termos-cadastro a {
+    color: #1764c0;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.termos-cadastro a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==========================================================
+   BOTÃO CADASTRAR
+========================================================== */
+
+.btn-cadastrar {
+    width: 100%;
+    height: 54px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        90deg,
+        #0d55b5,
+        #1976d2
+    );
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    transition: 0.2s ease;
+}
+
+.btn-cadastrar:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 7px 17px rgba(13, 71, 161, 0.23);
+}
+
+.btn-cadastrar i {
+    font-size: 13px;
+}
+
+
+/* ==========================================================
+   JÁ TENHO CONTA
+========================================================== */
+
+.ja-tenho-conta {
+    text-align: center;
+
+    margin-top: 29px;
+
+    color: #74859a;
+
+    font-size: 13px;
+}
+
+.ja-tenho-conta a {
+    color: #1764c0;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+.ja-tenho-conta a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==========================================================
+   RESPONSIVO
+========================================================== */
+
+@media (max-width: 1100px) {
+
+    .topo-cadastro {
+        padding: 0 3%;
+
+        gap: 30px;
+    }
+
+    .menu-cadastro {
+        gap: 18px;
+    }
+
+    .menu-cadastro a {
+        font-size: 12px;
+    }
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 900px) {
+
+    .topo-cadastro {
+        height: auto;
+        min-height: 80px;
+
+        padding: 15px 25px;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        gap: 12px;
+    }
+
+    .menu-cadastro {
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 10px 20px;
+    }
+
+    .logo-cadastro img {
+        width: 52px;
+    }
+
+    .card-cadastro {
+        width: 630px;
+    }
+}
+
+
+/* ==========================================================
+   CELULAR
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .topo-cadastro {
+        padding: 15px 18px;
+    }
+
+    .menu-cadastro {
+        gap: 8px 15px;
+    }
+
+    .menu-cadastro a {
+        font-size: 11px;
+    }
+
+    .breadcrumb-cadastro {
+        padding: 16px 18px;
+    }
+
+    .principal-cadastro {
+        padding: 15px 12px 50px;
+    }
+
+    .card-cadastro {
+        padding: 32px 23px 35px;
+
+        border-radius: 16px;
+    }
+
+    .card-cadastro h1 {
+        font-size: 29px;
+    }
+
+    .descricao-cadastro {
+        font-size: 13px;
+    }
+
+    .tipo-conta {
+        min-height: 76px;
+
+        padding: 12px;
+    }
+
+    .icone-tipo-conta {
+        width: 43px;
+        height: 43px;
+
+        font-size: 16px;
+    }
+
+    .texto-tipo-conta {
+        margin-left: 11px;
+    }
+}
+
+
+/* ==========================================================
+   CELULARES PEQUENOS
+========================================================== */
+
+@media (max-width: 430px) {
+
+    .menu-cadastro {
+        gap: 7px 12px;
+    }
+
+    .menu-cadastro a {
+        font-size: 10px;
+    }
+
+    .breadcrumb-cadastro {
+        font-size: 13px;
+    }
+
+    .card-cadastro {
+        padding: 28px 18px 30px;
+    }
+
+    .card-cadastro h1 {
+        font-size: 27px;
+    }
+
+    .etiqueta-cadastro {
+        font-size: 10px;
+    }
+
+    .tipo-conta {
+        min-height: 72px;
+    }
+
+    .texto-tipo-conta strong {
+        font-size: 13px;
+    }
+
+    .texto-tipo-conta span {
+        font-size: 11px;
+    }
+
+    .btn-cadastrar {
+        font-size: 13px;
+    }
+}

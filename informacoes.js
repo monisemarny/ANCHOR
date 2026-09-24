@@ -316,9 +316,11 @@ cardsCategoria.forEach(function (card) {
 
     card.addEventListener("click", function () {
 
-        const categoriaSelecionada = card.dataset.categoria;
+        const categoriaSelecionada =
+            card.dataset.categoria;
 
-        const dados = categorias[categoriaSelecionada];
+        const dados =
+            categorias[categoriaSelecionada];
 
         if (!dados) {
             return;
@@ -376,7 +378,6 @@ cardsCategoria.forEach(function (card) {
 
             // ==================================================
             // CATEGORIA DIREITOS
-            // OS 4 ITENS ABREM A PÁGINA CORRESPONDENTE
             // ==================================================
 
             if (categoriaSelecionada === "direitos") {
@@ -387,12 +388,37 @@ cardsCategoria.forEach(function (card) {
                 item.addEventListener("click", function () {
 
                     window.location.href =
-                        "conheca-direitos.html?topico=" + (index + 1);
+                        "conheca-direitos.html?topico=" +
+                        (index + 1);
 
                 });
 
             }
 
+
+            // ==================================================
+            // CATEGORIA SAÚDE
+            // ==================================================
+
+            if (categoriaSelecionada === "saude") {
+
+                item.classList.add("clicavel");
+
+
+                item.addEventListener("click", function () {
+
+                    window.location.href =
+                        "conheca-saude.html?topico=" +
+                        (index + 1);
+
+                });
+
+            }
+
+
+            // ==================================================
+            // ADICIONA O ITEM NA LISTA
+            // ==================================================
 
             listaConteudos.appendChild(item);
 
@@ -403,9 +429,12 @@ cardsCategoria.forEach(function (card) {
         // MOSTRA A ÁREA DE DETALHES
         // ==================================================
 
-        categoriaVazia.style.display = "none";
+        categoriaVazia.style.display =
+            "none";
 
-        categoriaDetalhes.classList.add("visivel");
+        categoriaDetalhes.classList.add(
+            "visivel"
+        );
 
 
         // ==================================================

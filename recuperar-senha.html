@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Recuperar senha | Anchor</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <!-- CSS -->
+    <link
+        rel="stylesheet"
+        href="recuperar-senha.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==================================================
+         CABEÇALHO
+    =================================================== -->
+
+    <header class="topo-recuperar">
+
+        <a
+            href="index.html"
+            class="logo-recuperar"
+        >
+
+            <img
+                src="img/logo-anchor.png"
+                alt="Logo Anchor"
+            >
+
+        </a>
+
+
+        <nav class="menu-recuperar">
+
+            <a href="index.html">Home</a>
+
+            <a href="denuncias.html">Denúncias</a>
+
+            <a href="acompanhar.html">Acompanhar</a>
+
+            <a href="noticias.html">Notícias</a>
+
+            <a href="perfil.html">Perfil</a>
+
+            <a href="informacoes.html">Informações</a>
+
+            <a href="contato.html">Contato</a>
+
+            <a href="sobre.html">Sobre nós</a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ==================================================
+         CAMINHO DA PÁGINA
+    =================================================== -->
+
+    <div class="breadcrumb-recuperar">
+
+        <a href="login.html">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Voltar para o login
+
+        </a>
+
+        <span class="divisor-breadcrumb">/</span>
+
+        <span class="pagina-atual">
+            Recuperar senha
+        </span>
+
+    </div>
+
+
+
+    <!-- ==================================================
+         CONTEÚDO PRINCIPAL
+    =================================================== -->
+
+    <main class="principal-recuperar">
+
+
+        <section class="card-recuperar">
+
+
+            <!-- ==================================================
+                 ETAPA 1
+            =================================================== -->
+
+            <div
+                class="etapa-recuperacao"
+                id="etapaIdentificacao"
+            >
+
+                <div class="etiqueta-recuperar">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    SEGURANÇA DA CONTA
+
+                </div>
+
+
+                <h1>
+                    Esqueceu sua senha?
+                </h1>
+
+
+                <p class="descricao-recuperar">
+
+                    Não se preocupe. Informe os dados da sua
+                    conta e enviaremos um código para você
+                    recuperar o acesso.
+
+                </p>
+
+
+                <form id="formIdentificacao">
+
+
+                    <div class="campo-recuperar">
+
+                        <label for="identificacao">
+
+                            E-mail, telefone ou usuário
+
+                        </label>
+
+
+                        <div class="input-recuperar">
+
+                            <i class="fa-solid fa-user"></i>
+
+                            <input
+                                type="text"
+                                id="identificacao"
+                                placeholder="Digite seu e-mail, telefone ou usuário"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn-recuperar"
+                    >
+
+                        <i class="fa-solid fa-paper-plane"></i>
+
+                        Enviar código
+
+                    </button>
+
+
+                </form>
+
+
+                <p class="voltar-login">
+
+                    Lembrou sua senha?
+
+                    <a href="login.html">
+                        Entrar na conta
+                    </a>
+
+                </p>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 ETAPA 2
+            =================================================== -->
+
+            <div
+                class="etapa-recuperacao"
+                id="etapaCodigo"
+                style="display: none;"
+            >
+
+                <div class="icone-etapa">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </div>
+
+
+                <h1>
+                    Confira seu código
+                </h1>
+
+
+                <p class="descricao-recuperar">
+
+                    Enviamos um código de recuperação para
+                    o contato informado anteriormente.
+
+                </p>
+
+
+                <form id="formCodigo">
+
+
+                    <div class="campo-recuperar">
+
+                        <label for="codigoRecuperacao">
+
+                            Código de recuperação
+
+                        </label>
+
+
+                        <div class="input-recuperar">
+
+                            <i class="fa-solid fa-key"></i>
+
+                            <input
+                                type="text"
+                                id="codigoRecuperacao"
+                                placeholder="Digite o código de 6 números"
+                                maxlength="6"
+                                inputmode="numeric"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn-recuperar"
+                    >
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        Confirmar código
+
+                    </button>
+
+
+                </form>
+
+
+                <button
+                    type="button"
+                    class="btn-voltar-etapa"
+                    id="btnVoltarIdentificacao"
+                >
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Voltar
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 ETAPA 3
+            =================================================== -->
+
+            <div
+                class="etapa-recuperacao"
+                id="etapaNovaSenha"
+                style="display: none;"
+            >
+
+                <div class="icone-etapa">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                </div>
+
+
+                <h1>
+                    Crie uma nova senha
+                </h1>
+
+
+                <p class="descricao-recuperar">
+
+                    Crie uma nova senha para proteger sua
+                    conta e voltar a utilizar o Anchor.
+
+                </p>
+
+
+                <form id="formNovaSenha">
+
+
+                    <div class="campo-recuperar">
+
+                        <label for="novaSenha">
+
+                            Nova senha
+
+                        </label>
+
+
+                        <div class="input-recuperar">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="novaSenha"
+                                placeholder="Digite sua nova senha"
+                                required
+                            >
+
+
+                            <button
+                                type="button"
+                                class="btn-mostrar-senha"
+                                data-target="novaSenha"
+                            >
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="campo-recuperar">
+
+                        <label for="confirmarNovaSenha">
+
+                            Confirmar nova senha
+
+                        </label>
+
+
+                        <div class="input-recuperar">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="confirmarNovaSenha"
+                                placeholder="Digite a senha novamente"
+                                required
+                            >
+
+
+                            <button
+                                type="button"
+                                class="btn-mostrar-senha"
+                                data-target="confirmarNovaSenha"
+                            >
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <button
+                        type="submit"
+                        class="btn-recuperar"
+                    >
+
+                        <i class="fa-solid fa-key"></i>
+
+                        Criar nova senha
+
+                    </button>
+
+
+                </form>
+
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 ETAPA 4
+                 CONCLUSÃO
+            =================================================== -->
+
+            <div
+                class="etapa-recuperacao"
+                id="etapaConcluida"
+                style="display: none;"
+            >
+
+                <div class="icone-sucesso">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                </div>
+
+
+                <h1>
+                    Senha alterada!
+                </h1>
+
+
+                <p class="descricao-recuperar">
+
+                    Sua nova senha foi criada com sucesso.
+                    Agora você já pode acessar sua conta
+                    novamente.
+
+                </p>
+
+
+                <div class="acoes-conclusao">
+
+
+                    <a
+                        href="login.html"
+                        class="btn-recuperar"
+                    >
+
+                        <i class="fa-solid fa-right-to-bracket"></i>
+
+                        Entrar na conta
+
+                    </a>
+
+
+                    <a
+                        href="index.html"
+                        class="btn-secundario-recuperar"
+                    >
+
+                        Voltar para o início
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ==================================================
+         JAVASCRIPT
+    =================================================== -->
+
+    <script src="recuperar-senha.js"></script>
+
+
+</body>
+
+</html>
