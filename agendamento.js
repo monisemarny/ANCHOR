@@ -28,7 +28,12 @@ document.addEventListener("DOMContentLoaded", function () {
             'input[name="profissional"]'
         );
 
+    // VER MAIS PROFISSIONAIS
 
+const btnVerMaisProfissionais =
+    document.getElementById(
+        "btnVerMaisProfissionais"
+    );
     // MODALIDADE
 
     const modalidades =
@@ -269,7 +274,342 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
+// ======================================================
+// VER MAIS PROFISSIONAIS
+// ======================================================
 
+if (btnVerMaisProfissionais) {
+
+    btnVerMaisProfissionais.addEventListener(
+        "click",
+        function () {
+
+            const bloco =
+                document.querySelector(
+                    ".bloco-profissionais"
+                );
+
+
+            // Verifica se os profissionais extras
+            // já foram adicionados
+
+            if (
+                document.querySelector(
+                    ".profissionais-extras"
+                )
+            ) {
+
+                const extras =
+                    document.querySelector(
+                        ".profissionais-extras"
+                    );
+
+
+                const estaAberto =
+                    extras.classList.contains(
+                        "visivel"
+                    );
+
+
+                if (estaAberto) {
+
+                    extras.classList.remove(
+                        "visivel"
+                    );
+
+                    btnVerMaisProfissionais.innerHTML =
+                        `
+                        Ver mais profissionais
+                        <i class="fa-solid fa-chevron-down"></i>
+                        `;
+
+                } else {
+
+                    extras.classList.add(
+                        "visivel"
+                    );
+
+                    btnVerMaisProfissionais.innerHTML =
+                        `
+                        Mostrar menos
+                        <i class="fa-solid fa-chevron-up"></i>
+                        `;
+
+                }
+
+                return;
+
+            }
+
+
+            // Cria os profissionais extras
+
+            const extras =
+                document.createElement("div");
+
+            extras.classList.add(
+                "profissionais-extras"
+            );
+
+
+            extras.innerHTML = `
+
+                <!-- PROFISSIONAL 4 -->
+
+                <label class="profissional-card">
+
+                    <input
+                        type="radio"
+                        name="profissional"
+                        value="Mariana Oliveira"
+                        data-especialidade="Psicóloga"
+                        data-crp="CRP 06/321654"
+                        data-abordagem="Psicanálise"
+                        data-avaliacao="4.9"
+                        data-avaliacoes="105 avaliações"
+                    >
+
+                    <div class="profissional-info">
+
+                        <div class="foto-profissional">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                        <div class="dados-profissional">
+
+                            <h3>Mariana Oliveira</h3>
+
+                            <span class="profissao">
+                                Psicóloga
+                            </span>
+
+                            <span class="crp">
+                                CRP 06/321654
+                            </span>
+
+                            <span class="abordagem">
+                                Psicanálise
+                            </span>
+
+                            <div class="avaliacao">
+
+                                <i class="fa-solid fa-star"></i>
+
+                                <strong>4.9</strong>
+
+                                <span>
+                                    (105 avaliações)
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="radio-marcador"></div>
+
+                </label>
+
+
+                <!-- PROFISSIONAL 5 -->
+
+                <label class="profissional-card">
+
+                    <input
+                        type="radio"
+                        name="profissional"
+                        value="Lucas Almeida"
+                        data-especialidade="Psicólogo"
+                        data-crp="CRP 06/654321"
+                        data-abordagem="Terapia Cognitivo-Comportamental"
+                        data-avaliacao="4.8"
+                        data-avaliacoes="87 avaliações"
+                    >
+
+                    <div class="profissional-info">
+
+                        <div class="foto-profissional">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                        <div class="dados-profissional">
+
+                            <h3>Lucas Almeida</h3>
+
+                            <span class="profissao">
+                                Psicólogo
+                            </span>
+
+                            <span class="crp">
+                                CRP 06/654321
+                            </span>
+
+                            <span class="abordagem">
+                                Terapia Cognitivo-Comportamental
+                            </span>
+
+                            <div class="avaliacao">
+
+                                <i class="fa-solid fa-star"></i>
+
+                                <strong>4.8</strong>
+
+                                <span>
+                                    (87 avaliações)
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="radio-marcador"></div>
+
+                </label>
+
+
+                <!-- PROFISSIONAL 6 -->
+
+                <label class="profissional-card">
+
+                    <input
+                        type="radio"
+                        name="profissional"
+                        value="Beatriz Martins"
+                        data-especialidade="Psicóloga"
+                        data-crp="CRP 06/741258"
+                        data-abordagem="Terapia Sistêmica"
+                        data-avaliacao="4.7"
+                        data-avaliacoes="64 avaliações"
+                    >
+
+                    <div class="profissional-info">
+
+                        <div class="foto-profissional">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                        <div class="dados-profissional">
+
+                            <h3>Beatriz Martins</h3>
+
+                            <span class="profissao">
+                                Psicóloga
+                            </span>
+
+                            <span class="crp">
+                                CRP 06/741258
+                            </span>
+
+                            <span class="abordagem">
+                                Terapia Sistêmica
+                            </span>
+
+                            <div class="avaliacao">
+
+                                <i class="fa-solid fa-star"></i>
+
+                                <strong>4.7</strong>
+
+                                <span>
+                                    (64 avaliações)
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="radio-marcador"></div>
+
+                </label>
+
+            `;
+
+
+            bloco.appendChild(extras);
+
+
+            // Ativa os novos profissionais
+
+            const novosProfissionais =
+                extras.querySelectorAll(
+                    'input[name="profissional"]'
+                );
+
+
+            novosProfissionais.forEach(
+                function (profissional) {
+
+                    profissional.addEventListener(
+                        "change",
+                        function () {
+
+                            document
+                                .querySelectorAll(
+                                    ".profissional-card"
+                                )
+                                .forEach(
+                                    function (card) {
+
+                                        card.classList.remove(
+                                            "selecionado"
+                                        );
+
+                                    }
+                                );
+
+
+                            const card =
+                                profissional.closest(
+                                    ".profissional-card"
+                                );
+
+
+                            if (card) {
+
+                                card.classList.add(
+                                    "selecionado"
+                                );
+
+                            }
+
+                        }
+                    );
+
+                }
+            );
+
+
+            // Mostra os profissionais
+
+            setTimeout(
+                function () {
+
+                    extras.classList.add(
+                        "visivel"
+                    );
+
+                },
+                10
+            );
+
+
+            // Muda o botão
+
+            btnVerMaisProfissionais.innerHTML =
+                `
+                Mostrar menos
+                <i class="fa-solid fa-chevron-up"></i>
+                `;
+
+        }
+    );
+
+}
     // ======================================================
     // MODALIDADES
     // ======================================================

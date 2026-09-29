@@ -1678,4 +1678,32 @@ input {
     .resumo-item {
         padding: 12px;
     }
+             .profissionais-extras {
+        grid-template-columns: repeat(2, 1fr);
+    }
+        .profissionais-extras {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================================
+   PROFISSIONAIS EXTRAS
+========================================================= */
+
+.profissionais-extras {
+    display: none;
+
+    /* ocupa as 3 colunas do grid principal */
+    grid-column: 1 / -1;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+
+    width: 100%;
+    margin-top: 0;
+}
+
+.profissionais-extras.visivel {
+    display: grid;
 }

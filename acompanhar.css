@@ -579,9 +579,6 @@
     padding-left: 20px;
 }
 
-
-/* LINHA VERTICAL */
-
 .linha-tempo::before {
     content: "";
 
@@ -1079,9 +1076,6 @@
 /* RESPONSIVIDADE */
 /* ================================================= */
 
-
-/* TABLETS */
-
 @media (max-width: 900px) {
 
     .conteudo-acompanhamento {
@@ -1096,8 +1090,6 @@
 
 }
 
-
-/* TABLET MENOR */
 
 @media (max-width: 700px) {
 
@@ -1164,8 +1156,6 @@
 
 }
 
-
-/* CELULAR */
 
 @media (max-width: 500px) {
 
@@ -1234,6 +1224,11 @@
 
 }
 
+
+/* ================================================= */
+/* BOTÃO VOLTAR */
+/* ================================================= */
+
 .voltar-acompanhar {
     width: 100%;
     max-width: 1180px;
@@ -1262,9 +1257,10 @@
     font-size: 14px;
 }
 
-/* ==========================================================
-   DETALHES DA DENÚNCIA
-   ========================================================== */
+
+/* ========================================================== */
+/* DETALHES DA DENÚNCIA */
+/* ========================================================== */
 
 .detalhes-denuncia {
     display: none;
@@ -1289,9 +1285,10 @@
 
 }
 
-/* ==========================================================
-   MENSAGEM DE DENÚNCIA CONCLUÍDA
-   ========================================================== */
+
+/* ========================================================== */
+/* MENSAGEM DE DENÚNCIA CONCLUÍDA */
+/* ========================================================== */
 
 .mensagem-concluida {
     display: none;
@@ -1354,6 +1351,601 @@
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+
+}
+
+
+/* ================================================= */
+/* FOOTER - ANCHOR */
+/* ================================================= */
+
+.rodape {
+    width: 100%;
+    background: linear-gradient(to right, #0d47a1, #1976d2);
+    color: white;
+    padding: 55px 50px 20px;
+    box-sizing: border-box;
+}
+
+
+/* ================================================= */
+/* CONTEÚDO PRINCIPAL DO FOOTER */
+/* ================================================= */
+
+.rodape-conteudo {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1.6fr 1.3fr 1fr 1.2fr;
+
+    gap: 55px;
+    align-items: start;
+}
+
+
+/* ================================================= */
+/* LOGO */
+/* ================================================= */
+
+.rodape-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.rodape-logo img {
+    width: 58px;
+    height: auto;
+    display: block;
+    margin-bottom: 14px;
+
+    filter: drop-shadow(
+        0 4px 8px rgba(0, 0, 0, 0.20)
+    );
+}
+
+.rodape-logo p {
+    max-width: 250px;
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+/* ================================================= */
+/* COLUNAS */
+/* ================================================= */
+
+.rodape-coluna {
+    display: flex;
+    flex-direction: column;
+}
+
+.rodape-coluna h3 {
+    margin: 0 0 18px;
+
+    color: white;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+/* ================================================= */
+/* NAVEGAÇÃO EM DUAS FILEIRAS */
+/* ================================================= */
+
+.rodape-navegacao {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 30px;
+    row-gap: 0;
+}
+
+
+/* ================================================= */
+/* LINKS */
+/* ================================================= */
+
+.rodape-coluna a {
+    display: block;
+    width: fit-content;
+
+    margin-bottom: 10px;
+    padding: 0;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 400;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.rodape-coluna a:hover {
+    color: white;
+    text-decoration: none;
+    transform: translateX(4px);
+}
+
+
+/* ================================================= */
+/* CONTATO */
+/* ================================================= */
+
+.contato-rodape a {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    width: auto;
+
+    margin-bottom: 13px;
+
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.contato-rodape a:hover {
+    color: white;
+    transform: translateX(3px);
+}
+
+.contato-rodape i {
+    width: 18px;
+
+    color: #b9d8ff;
+
+    font-size: 14px;
+
+    text-align: center;
+}
+
+
+/* ================================================= */
+/* INSTAGRAM */
+/* ================================================= */
+
+.instagram-rodape {
+    margin-top: 2px;
+}
+
+
+/* ================================================= */
+/* LINHA INFERIOR */
+/* ================================================= */
+
+.rodape-inferior {
+    width: 100%;
+    max-width: 1150px;
+
+    margin: 42px auto 0;
+
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.rodape-inferior p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+
+/* ================================================= */
+/* FOOTER RESPONSIVO */
+/* ================================================= */
+
+@media (max-width: 900px) {
+
+    .rodape-conteudo {
+        grid-template-columns: 1.3fr 1.5fr;
+        gap: 40px;
+    }
+
+    .rodape-logo {
+        grid-row: span 2;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .rodape {
+        padding: 45px 25px 20px;
+    }
+
+    .rodape-conteudo {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .rodape-logo {
+        grid-row: auto;
+    }
+
+    .rodape-navegacao {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 25px;
+    }
+
+    .rodape-inferior {
+        flex-direction: column;
+        align-items: flex-start;
+
+        margin-top: 30px;
+    }
+
+}
+
+
+@media (max-width: 430px) {
+
+    .rodape {
+        padding: 40px 20px 18px;
+    }
+
+    .rodape-navegacao {
+        grid-template-columns: 1fr;
+    }
+
+    .rodape-inferior {
+        gap: 8px;
+    }
+
+}
+
+/* ================================================= */
+/* FOOTER */
+/* ================================================= */
+
+.rodape {
+    width: 100%;
+
+    background: linear-gradient(
+        to right,
+        #0d47a1,
+        #1976d2
+    );
+
+    color: white;
+
+    padding: 55px 50px 20px;
+
+    box-sizing: border-box;
+}
+
+
+/* ================================================= */
+/* CONTEÚDO PRINCIPAL */
+/* ================================================= */
+
+.rodape-conteudo {
+    width: 100%;
+
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.6fr
+        1fr
+        1fr
+        1.2fr;
+
+    gap: 55px;
+
+    align-items: start;
+}
+
+
+/* ================================================= */
+/* LOGO */
+/* ================================================= */
+
+.rodape-logo {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+
+.rodape-logo img {
+    width: 58px;
+
+    height: auto;
+
+    display: block;
+
+    margin-bottom: 14px;
+
+    filter:
+        drop-shadow(
+            0 4px 8px rgba(0, 0, 0, 0.20)
+        );
+}
+
+
+.rodape-logo p {
+    max-width: 250px;
+
+    margin: 0;
+
+    color:
+        rgba(255, 255, 255, 0.78);
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* ================================================= */
+/* COLUNAS */
+/* ================================================= */
+
+.rodape-coluna {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.rodape-coluna h3 {
+    margin: 0 0 18px;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+/* ================================================= */
+/* LINKS */
+/* ================================================= */
+
+.rodape-coluna a {
+    display: block;
+
+    width: fit-content;
+
+    margin-bottom: 10px;
+
+    padding: 0;
+
+    color:
+        rgba(255, 255, 255, 0.72);
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 400;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.rodape-coluna a:hover {
+    color: white;
+
+    text-decoration: none;
+
+    transform: translateX(4px);
+}
+
+
+/* ================================================= */
+/* CONTATO */
+/* ================================================= */
+
+.contato-rodape a {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    width: auto;
+
+    margin-bottom: 13px;
+
+    color:
+        rgba(255, 255, 255, 0.78);
+}
+
+
+.contato-rodape a:hover {
+    color: white;
+
+    transform: translateX(3px);
+}
+
+
+.contato-rodape i {
+    width: 18px;
+
+    color: #b9d8ff;
+
+    font-size: 14px;
+
+    text-align: center;
+}
+
+
+/* ================================================= */
+/* INSTAGRAM */
+/* ================================================= */
+
+.instagram-rodape {
+    margin-top: 2px;
+}
+
+
+/* ================================================= */
+/* LINHA INFERIOR */
+/* ================================================= */
+
+.rodape-inferior {
+    width: 100%;
+
+    max-width: 1150px;
+
+    margin: 42px auto 0;
+
+    padding-top: 18px;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.15);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+.rodape-inferior p {
+    margin: 0;
+
+    color:
+        rgba(255, 255, 255, 0.55);
+
+    font-size: 10px;
+
+    line-height: 1.5;
+}
+
+
+/* ================================================= */
+/* RESPONSIVIDADE */
+/* ================================================= */
+
+@media (max-width: 900px) {
+
+    .rodape-conteudo {
+        grid-template-columns:
+            1.3fr
+            1fr
+            1fr;
+
+        gap: 35px;
+    }
+
+    .rodape-logo {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .rodape {
+        padding: 40px 25px 20px;
+    }
+
+    .rodape-conteudo {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 30px 25px;
+    }
+
+    .rodape-logo {
+        grid-column: 1 / -1;
+    }
+
+    .rodape-inferior {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 8px;
+
+        margin-top: 30px;
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .rodape-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .rodape-logo {
+        grid-column: auto;
+    }
+
+}
+
+
+/* ================================================= */
+/* RESPONSIVIDADE */
+/* ================================================= */
+
+@media (max-width: 900px) {
+
+    .rodape-conteudo {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .rodape {
+        padding: 45px 25px 20px;
+    }
+
+    .rodape-conteudo {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .rodape-inferior {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
     }
 
 }

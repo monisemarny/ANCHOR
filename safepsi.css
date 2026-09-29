@@ -1,0 +1,799 @@
+/* ==========================================================
+   ANCHOR - SAFEPSI
+========================================================== */
+
+
+/* ==========================================================
+   RESET
+========================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f5f7fb;
+    color: #222;
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.topo-anchor {
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 35px;
+
+    background: linear-gradient(
+        90deg,
+        #0d47a1,
+        #1976d2
+    );
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    position: relative;
+    z-index: 20;
+}
+
+
+.logo-anchor {
+    display: flex;
+    align-items: center;
+
+    text-decoration: none;
+}
+
+
+.logo-anchor img {
+    width: 42px;
+    height: 42px;
+
+    object-fit: contain;
+}
+
+
+.menu-anchor {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 30px;
+}
+
+
+.menu-anchor a {
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    transition: 0.2s ease;
+}
+
+
+.menu-anchor a:hover {
+    opacity: 0.75;
+}
+
+
+/* ==========================================================
+   PÁGINA
+========================================================== */
+
+.pagina-safepsi {
+    width: min(1180px, 92%);
+
+    margin: 0 auto;
+
+    padding: 35px 0 50px;
+}
+
+
+/* ==========================================================
+   CABEÇALHO DA CONVERSA
+========================================================== */
+
+.cabecalho-safepsi {
+    display: flex;
+    align-items: center;
+
+    min-height: 80px;
+
+    position: relative;
+
+    margin-bottom: 25px;
+}
+
+
+.btn-voltar {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #333;
+
+    text-decoration: none;
+
+    font-size: 20px;
+
+    transition: 0.2s ease;
+}
+
+
+.btn-voltar:hover {
+    color: #1769c2;
+}
+
+
+.titulo-safepsi {
+    margin-left: 110px;
+}
+
+
+.titulo-safepsi h1 {
+    font-size: 24px;
+    font-weight: 600;
+
+    color: #222;
+}
+
+
+.titulo-safepsi p {
+    margin-top: 4px;
+
+    font-size: 12px;
+
+    color: #aaa;
+}
+
+
+.btn-encerrar {
+    margin-left: auto;
+
+    height: 38px;
+
+    padding: 0 17px;
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    background: #fff;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    color: #d62828;
+
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+
+    transition: 0.2s ease;
+}
+
+
+.btn-encerrar:hover {
+    background: #fff5f5;
+}
+
+
+/* ==========================================================
+   ÁREA DA CONVERSA
+========================================================== */
+
+.area-conversa {
+    display: grid;
+
+    grid-template-columns: 180px 1fr;
+
+    gap: 18px;
+
+    min-height: 570px;
+}
+
+
+/* ==========================================================
+   PAINEL LATERAL
+========================================================== */
+
+.painel-safepsi {
+    background: #fff;
+
+    border: 1px solid #e5e8ee;
+
+    border-radius: 10px;
+
+    padding: 18px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+
+/* ==========================================================
+   PERFIL SAFEPSI
+========================================================== */
+
+.perfil-safepsi {
+    text-align: center;
+
+    padding-bottom: 18px;
+}
+
+
+.avatar-safepsi {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    background: #e8e4ff;
+
+    border-radius: 50%;
+
+    color: #6654d9;
+
+    font-size: 30px;
+}
+
+
+.brilho-avatar {
+    position: absolute;
+
+    width: 9px;
+    height: 9px;
+
+    right: 3px;
+    bottom: 8px;
+
+    background: #35b946;
+
+    border: 2px solid #fff;
+
+    border-radius: 50%;
+}
+
+
+.perfil-safepsi h2 {
+    font-size: 17px;
+    font-weight: 600;
+
+    color: #222;
+}
+
+
+.perfil-safepsi p {
+    margin-top: 2px;
+
+    font-size: 10px;
+
+    color: #888;
+}
+
+
+.tipo-ia {
+    display: inline-block;
+
+    margin-top: 2px;
+
+    font-size: 9px;
+
+    color: #888;
+}
+
+
+.status-online {
+    width: fit-content;
+
+    margin: 9px auto 0;
+
+    padding: 5px 10px;
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    background: #e5f8df;
+
+    border-radius: 20px;
+
+    color: #35a629;
+
+    font-size: 9px;
+    font-weight: 600;
+}
+
+
+.status-online span {
+    width: 6px;
+    height: 6px;
+
+    background: #35b946;
+
+    border-radius: 50%;
+}
+
+
+/* ==========================================================
+   INFORMAÇÕES
+========================================================== */
+
+.info-safepsi {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 10px;
+
+    padding: 12px;
+
+    margin-top: 10px;
+
+    border-radius: 8px;
+}
+
+
+.info-safepsi.ambiente {
+    background: #f0e6ff;
+}
+
+
+.info-safepsi.horario {
+    background: #e7f0ff;
+}
+
+
+.icone-info {
+    min-width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    color: #6654d9;
+
+    font-size: 12px;
+}
+
+
+.horario .icone-info {
+    color: #3778d4;
+}
+
+
+.info-safepsi span {
+    display: block;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    color: #555;
+}
+
+
+.info-safepsi p {
+    margin-top: 3px;
+
+    font-size: 8px;
+    line-height: 1.5;
+
+    color: #777;
+}
+
+
+/* ==========================================================
+   PRIVACIDADE
+========================================================== */
+
+.privacidade-safepsi {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 8px;
+
+    margin-top: 18px;
+
+    padding: 5px 3px;
+}
+
+
+.privacidade-safepsi i {
+    margin-top: 2px;
+
+    color: #aaa;
+
+    font-size: 11px;
+}
+
+
+.privacidade-safepsi p {
+    font-size: 8px;
+
+    line-height: 1.5;
+
+    color: #999;
+}
+
+
+/* ==========================================================
+   CHAT
+========================================================== */
+
+.chat-safepsi {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #fff;
+
+    border: 1px solid #e5e8ee;
+
+    border-radius: 10px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+
+    overflow: hidden;
+}
+
+
+/* ==========================================================
+   MENSAGENS
+========================================================== */
+
+.mensagens {
+    flex: 1;
+
+    padding: 25px 28px;
+
+    overflow-y: auto;
+}
+
+
+.mensagem {
+    display: flex;
+
+    gap: 9px;
+
+    margin-bottom: 20px;
+
+    max-width: 75%;
+}
+
+
+.mensagem-safepsi {
+    align-items: flex-start;
+}
+
+
+.mensagem-usuario {
+    margin-left: auto;
+
+    justify-content: flex-end;
+}
+
+
+.mini-avatar {
+    width: 27px;
+    height: 27px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e8e4ff;
+
+    border-radius: 50%;
+
+    color: #6654d9;
+
+    font-size: 12px;
+}
+
+
+.conteudo-mensagem {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.nome-mensagem {
+    margin-bottom: 4px;
+
+    font-size: 8px;
+
+    color: #aaa;
+}
+
+
+.balao-mensagem {
+    padding: 9px 12px;
+
+    border-radius: 10px;
+
+    background: #f1f3f8;
+}
+
+
+.balao-mensagem p {
+    font-size: 10px;
+
+    line-height: 1.6;
+
+    color: #555;
+}
+
+
+/* ==========================================================
+   MENSAGEM DO USUÁRIO
+========================================================== */
+
+.mensagem-usuario .conteudo-mensagem {
+    align-items: flex-end;
+}
+
+
+.mensagem-usuario .balao-mensagem {
+    background: #5c8fdf;
+
+    border-radius: 10px 10px 2px 10px;
+}
+
+
+.mensagem-usuario .balao-mensagem p {
+    color: #fff;
+}
+
+
+.mensagem-usuario .nome-mensagem {
+    display: none;
+}
+
+
+/* ==========================================================
+   ÁREA DE DIGITAÇÃO
+========================================================== */
+
+.area-digitacao {
+    height: 58px;
+
+    margin: 0 25px;
+
+    padding: 0 8px;
+
+    display: flex;
+    align-items: center;
+
+    border: 1px solid #ddd;
+
+    border-radius: 9px;
+
+    background: #fff;
+}
+
+
+.btn-anexo {
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    background: transparent;
+
+    color: #999;
+
+    cursor: pointer;
+
+    font-size: 15px;
+}
+
+
+.area-digitacao input {
+    flex: 1;
+
+    height: 100%;
+
+    padding: 0 8px;
+
+    border: none;
+    outline: none;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    color: #444;
+}
+
+
+.area-digitacao input::placeholder {
+    color: #aaa;
+}
+
+
+.btn-enviar {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #3977d1;
+
+    color: #fff;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition: 0.2s ease;
+}
+
+
+.btn-enviar:hover {
+    background: #2864bd;
+}
+
+
+/* ==========================================================
+   AVISO
+========================================================== */
+
+.aviso-chat {
+    min-height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    color: #aaa;
+
+    font-size: 8px;
+}
+
+
+.aviso-chat i {
+    font-size: 8px;
+}
+
+
+/* ==========================================================
+   RESPONSIVO
+========================================================== */
+
+@media (max-width: 900px) {
+
+    .menu-anchor {
+        gap: 14px;
+    }
+
+
+    .menu-anchor a {
+        font-size: 10px;
+    }
+
+
+    .titulo-safepsi {
+        margin-left: 35px;
+    }
+
+
+    .area-conversa {
+        grid-template-columns: 1fr;
+    }
+
+
+    .painel-safepsi {
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .topo-anchor {
+        padding: 0 18px;
+    }
+
+
+    .menu-anchor {
+        display: none;
+    }
+
+
+    .pagina-safepsi {
+        width: 94%;
+
+        padding-top: 20px;
+    }
+
+
+    .titulo-safepsi {
+        margin-left: 10px;
+    }
+
+
+    .titulo-safepsi h1 {
+        font-size: 18px;
+    }
+
+
+    .titulo-safepsi p {
+        font-size: 10px;
+    }
+
+
+    .btn-encerrar {
+        padding: 0 10px;
+
+        font-size: 9px;
+    }
+
+
+    .mensagens {
+        padding: 18px;
+    }
+
+
+    .mensagem {
+        max-width: 90%;
+    }
+
+
+    .area-digitacao {
+        margin: 0 15px;
+    }
+
+}

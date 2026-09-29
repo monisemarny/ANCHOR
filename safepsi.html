@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>SafePsi | Anchor</title>
+
+    <link
+        rel="icon"
+        href="img/logo-anchor.png"
+    >
+
+
+    <!-- =========================================================
+         GOOGLE FONT
+    ========================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- =========================================================
+         CSS
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="safepsi.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         HEADER
+    ========================================================== -->
+
+    <header class="topo-anchor">
+
+        <a
+            href="index.html"
+            class="logo-anchor"
+        >
+
+            <img
+                src="img/logo-anchor.png"
+                alt="Logo Anchor"
+            >
+
+        </a>
+
+
+        <nav class="menu-anchor">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="denuncia.html">
+                Fazer denúncia
+            </a>
+
+            <a href="acompanhar.html">
+                Acompanhar denúncia
+            </a>
+
+            <a href="ajuda-psicologica.html">
+                Ajuda Psicológica
+            </a>
+
+            <a href="tipos-denuncia.html">
+                Tipos de denúncias
+            </a>
+
+            <a href="sobre.html">
+                Sobre
+            </a>
+
+            <a href="contato.html">
+                Contato
+            </a>
+
+            <a href="perfil.html">
+                Perfil
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================================================
+         CONTEÚDO PRINCIPAL
+    ========================================================== -->
+
+    <main class="pagina-safepsi">
+
+
+        <!-- =====================================================
+             CABEÇALHO DA CONVERSA
+        ====================================================== -->
+
+        <section class="cabecalho-safepsi">
+
+            <a
+                href="ajuda-psicologica.html"
+                class="btn-voltar"
+                aria-label="Voltar"
+            >
+
+                <i class="fa-solid fa-chevron-left"></i>
+
+            </a>
+
+
+            <div class="titulo-safepsi">
+
+                <h1>
+                    Conversa Online Com o SafePsi
+                </h1>
+
+                <p>
+                    Você não está sozinho. Estamos aqui para ouvir.
+                </p>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="btn-encerrar"
+                id="btnEncerrar"
+            >
+
+                <i class="fa-regular fa-square"></i>
+
+                Encerrar Conversa
+
+            </button>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             ÁREA DA CONVERSA
+        ====================================================== -->
+
+        <section class="area-conversa">
+
+
+            <!-- =================================================
+                 PAINEL LATERAL
+            ================================================== -->
+
+            <aside class="painel-safepsi">
+
+
+                <!-- =================================================
+                     PERFIL DO SAFEPSI
+                ================================================== -->
+
+                <div class="perfil-safepsi">
+
+                    <div class="avatar-safepsi">
+
+                        <span class="brilho-avatar"></span>
+
+                        <i class="fa-solid fa-robot"></i>
+
+                    </div>
+
+
+                    <h2>
+                        SafePsi
+                    </h2>
+
+
+                    <p>
+                        Assistente Psicológico
+                    </p>
+
+
+                    <span class="tipo-ia">
+                        IA
+                    </span>
+
+
+                    <div class="status-online">
+
+                        <span></span>
+
+                        Online Agora
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     AMBIENTE SEGURO
+                ================================================== -->
+
+                <div class="info-safepsi ambiente">
+
+                    <div class="icone-info">
+
+                        <i class="fa-regular fa-heart"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Ambiente Seguro
+                        </span>
+
+                        <p>
+                            Você está em um espaço
+                            confidencial e sigiloso.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     HORÁRIO
+                ================================================== -->
+
+                <div class="info-safepsi horario">
+
+                    <div class="icone-info">
+
+                        <i class="fa-regular fa-clock"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Horário De Atendimento
+                        </span>
+
+                        <p>
+                            Segunda a Segunda<br>
+                            24h
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     PRIVACIDADE
+                ================================================== -->
+
+                <div class="privacidade-safepsi">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <p>
+                        Suas informações estão
+                        protegidas e não são
+                        compartilhadas.
+                    </p>
+
+                </div>
+
+            </aside>
+
+
+
+            <!-- =================================================
+                 CHAT
+            ================================================== -->
+
+            <section class="chat-safepsi">
+
+
+                <!-- =================================================
+                     MENSAGENS
+                ================================================== -->
+
+                <div
+                    class="mensagens"
+                    id="mensagens"
+                >
+
+
+                    <!-- MENSAGEM DO SAFEPSI -->
+
+                    <div class="mensagem mensagem-safepsi">
+
+                        <div class="mini-avatar">
+
+                            <i class="fa-solid fa-robot"></i>
+
+                        </div>
+
+
+                        <div class="conteudo-mensagem">
+
+                            <span class="nome-mensagem">
+                                SafePsi
+                            </span>
+
+                            <div class="balao-mensagem">
+
+                                <p>
+                                    Olá! Seja bem-vindo(a).
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- MENSAGEM DO SAFEPSI -->
+
+                    <div class="mensagem mensagem-safepsi">
+
+                        <div class="mini-avatar">
+
+                            <i class="fa-solid fa-robot"></i>
+
+                        </div>
+
+
+                        <div class="conteudo-mensagem">
+
+                            <span class="nome-mensagem">
+                                SafePsi
+                            </span>
+
+                            <div class="balao-mensagem">
+
+                                <p>
+                                    Como você está se sentindo hoje?
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     ÁREA DE DIGITAÇÃO
+                ================================================== -->
+
+                <div class="area-digitacao">
+
+
+                    <button
+                        type="button"
+                        class="btn-anexo"
+                        id="btnAnexo"
+                        aria-label="Anexar arquivo"
+                    >
+
+                        <i class="fa-solid fa-paperclip"></i>
+
+                    </button>
+
+
+                    <input
+                        type="text"
+                        id="campoMensagem"
+                        placeholder="Digite sua mensagem..."
+                        autocomplete="off"
+                    >
+
+
+                    <button
+                        type="button"
+                        class="btn-enviar"
+                        id="btnEnviar"
+                        aria-label="Enviar mensagem"
+                    >
+
+                        <i class="fa-solid fa-paper-plane"></i>
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     AVISO DO CHAT
+                ================================================== -->
+
+                <div class="aviso-chat">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <span>
+                        Esta conversa é confidencial e protegida.
+                        Você pode encerrar quando quiser.
+                    </span>
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================== -->
+
+    <script src="safepsi.js"></script>
+
+</body>
+
+</html>

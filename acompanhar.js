@@ -798,118 +798,31 @@ if (btnAtualizar) {
 
    
 
+// ======================================================
+// BOTÃO VER DETALHES
+// ======================================================
 
-    // ======================================================
-    // BOTÃO VER DETALHES
-    // ======================================================
+if (btnDetalhes) {
 
-    if (btnDetalhes) {
+    btnDetalhes.addEventListener(
+        "click",
+        function () {
 
-        btnDetalhes.addEventListener(
-            "click",
-            function () {
-
-                if (!detalhesDenuncia) {
-                    return;
-                }
-
-
-                const aberto =
-                    detalhesDenuncia.classList.contains(
-                        "aberto"
-                    );
+            const codigo =
+                codigoExibido
+                    ? codigoExibido.textContent
+                        .replace("#", "")
+                        .trim()
+                    : "A12345";
 
 
-                if (aberto) {
+            window.location.href =
+                "detalhes-denuncia.html?codigo=" + codigo;
 
-                    detalhesDenuncia.classList.remove(
-                        "aberto"
-                    );
+        }
+    );
 
-                    btnDetalhes.classList.remove(
-                        "ativo"
-                    );
+}
 
-
-                    const strong =
-                        btnDetalhes.querySelector(
-                            ".texto-acao strong"
-                        );
-
-                    const seta =
-                        btnDetalhes.querySelector(
-                            ".seta-acao"
-                        );
-
-
-                    if (strong) {
-
-                        strong.textContent =
-                            "Ver detalhes da denúncia";
-
-                    }
-
-
-                    if (seta) {
-
-                        seta.className =
-                            "fa-solid fa-chevron-right seta-acao";
-
-                    }
-
-                }
-                else {
-
-                    detalhesDenuncia.classList.add(
-                        "aberto"
-                    );
-
-                    btnDetalhes.classList.add(
-                        "ativo"
-                    );
-
-
-                    const strong =
-                        btnDetalhes.querySelector(
-                            ".texto-acao strong"
-                        );
-
-                    const seta =
-                        btnDetalhes.querySelector(
-                            ".seta-acao"
-                        );
-
-
-                    if (strong) {
-
-                        strong.textContent =
-                            "Ocultar detalhes da denúncia";
-
-                    }
-
-
-                    if (seta) {
-
-                        seta.className =
-                            "fa-solid fa-chevron-up seta-acao";
-
-                    }
-
-
-                    detalhesDenuncia.scrollIntoView({
-
-                        behavior: "smooth",
-
-                        block: "nearest"
-
-                    });
-
-                }
-
-            }
-        );
-
-    }
-
-
-});
+} ); 
+    
