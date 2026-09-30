@@ -1315,24 +1315,30 @@ body * {
 }
 
 
-/* =========================================================
-   FOOTER
-========================================================= */
+/* ================================================= */
+/* FOOTER */
+/* ================================================= */
 
 .rodape {
     width: 100%;
 
-    background:
-        linear-gradient(
-            90deg,
-            #0d47a1,
-            #1976d2
-        );
+    background: linear-gradient(
+        to right,
+        #0d47a1,
+        #1976d2
+    );
 
-    color: #fff;
+    color: white;
 
     padding: 55px 50px 20px;
+
+    box-sizing: border-box;
 }
+
+
+/* ================================================= */
+/* CONTEÚDO PRINCIPAL */
+/* ================================================= */
 
 .rodape-conteudo {
     width: 100%;
@@ -1344,12 +1350,20 @@ body * {
     display: grid;
 
     grid-template-columns:
-        1.6fr 1fr 1fr 1.2fr;
+        1.6fr
+        1fr
+        1fr
+        1.2fr;
 
     gap: 55px;
 
     align-items: start;
 }
+
+
+/* ================================================= */
+/* LOGO */
+/* ================================================= */
 
 .rodape-logo {
     display: flex;
@@ -1358,6 +1372,7 @@ body * {
 
     align-items: flex-start;
 }
+
 
 .rodape-logo img {
     width: 58px;
@@ -1374,6 +1389,7 @@ body * {
         );
 }
 
+
 .rodape-logo p {
     max-width: 250px;
 
@@ -1387,21 +1403,32 @@ body * {
     line-height: 1.7;
 }
 
+
+/* ================================================= */
+/* COLUNAS */
+/* ================================================= */
+
 .rodape-coluna {
     display: flex;
 
     flex-direction: column;
 }
 
+
 .rodape-coluna h3 {
     margin: 0 0 18px;
 
-    color: #fff;
+    color: white;
 
     font-size: 14px;
 
     font-weight: 700;
 }
+
+
+/* ================================================= */
+/* LINKS */
+/* ================================================= */
 
 .rodape-coluna a {
     display: block;
@@ -1410,6 +1437,8 @@ body * {
 
     margin-bottom: 10px;
 
+    padding: 0;
+
     color:
         rgba(255, 255, 255, 0.72);
 
@@ -1417,16 +1446,26 @@ body * {
 
     font-size: 12px;
 
+    font-weight: 400;
+
     transition:
         color 0.25s ease,
         transform 0.25s ease;
 }
 
+
 .rodape-coluna a:hover {
-    color: #fff;
+    color: white;
+
+    text-decoration: none;
 
     transform: translateX(4px);
 }
+
+
+/* ================================================= */
+/* CONTATO */
+/* ================================================= */
 
 .contato-rodape a {
     display: flex;
@@ -1438,7 +1477,18 @@ body * {
     width: auto;
 
     margin-bottom: 13px;
+
+    color:
+        rgba(255, 255, 255, 0.78);
 }
+
+
+.contato-rodape a:hover {
+    color: white;
+
+    transform: translateX(3px);
+}
+
 
 .contato-rodape i {
     width: 18px;
@@ -1450,6 +1500,20 @@ body * {
     text-align: center;
 }
 
+
+/* ================================================= */
+/* INSTAGRAM */
+/* ================================================= */
+
+.instagram-rodape {
+    margin-top: 2px;
+}
+
+
+/* ================================================= */
+/* LINHA INFERIOR */
+/* ================================================= */
+
 .rodape-inferior {
     width: 100%;
 
@@ -1460,7 +1524,8 @@ body * {
     padding-top: 18px;
 
     border-top:
-        1px solid rgba(255, 255, 255, 0.15);
+        1px solid
+        rgba(255, 255, 255, 0.15);
 
     display: flex;
 
@@ -1470,6 +1535,7 @@ body * {
 
     gap: 20px;
 }
+
 
 .rodape-inferior p {
     margin: 0;
@@ -1481,6 +1547,8 @@ body * {
 
     line-height: 1.5;
 }
+
+
 
 
 /* =========================================================
