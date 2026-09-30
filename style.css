@@ -2799,3 +2799,176 @@ body {
 body * {
     font-family: inherit;
 }
+
+/* ================================================= */
+/* BARRA DE PESQUISA - RESULTADOS */
+/* ================================================= */
+
+.pesquisa {
+    position: relative;
+}
+
+.pesquisa-resultados {
+    position: absolute;
+
+    top: calc(100% + 10px);
+    left: 0;
+    right: 0;
+
+    max-height: 400px;
+    overflow-y: auto;
+
+    padding: 8px;
+
+    background: #ffffff;
+
+    border-radius: 16px;
+
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+
+    display: none;
+
+    z-index: 5000;
+}
+
+.pesquisa-resultados.aberto {
+    display: block;
+}
+
+.pesquisa-titulo {
+    padding: 8px 12px 6px;
+
+    color: #8a9bb2;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+}
+
+.pesquisa-item {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 10px 12px;
+
+    border-radius: 11px;
+
+    text-decoration: none;
+
+    transition: background 0.15s ease;
+}
+
+.pesquisa-item:hover,
+.pesquisa-item.ativo {
+    background: #eef5ff;
+}
+
+.pesquisa-icone {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    background: #e7f1ff;
+
+    color: #287be5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 15px;
+}
+
+.pesquisa-texto {
+    flex: 1;
+
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+.pesquisa-texto strong {
+    color: #174a87;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pesquisa-texto small {
+    color: #71819a;
+
+    font-size: 11px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pesquisa-grupo {
+    flex-shrink: 0;
+
+    padding: 3px 9px;
+
+    border-radius: 20px;
+
+    background: #f1f5fa;
+
+    color: #6b7d95;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+}
+
+.pesquisa-vazio {
+    padding: 26px 20px;
+
+    text-align: center;
+}
+
+.pesquisa-vazio i {
+    margin-bottom: 10px;
+
+    color: #9eb0c7;
+
+    font-size: 28px;
+}
+
+.pesquisa-vazio p {
+    margin: 0 0 4px;
+
+    color: #174a87;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.pesquisa-vazio small {
+    color: #71819a;
+
+    font-size: 11px;
+}
+
+@media (max-width: 700px) {
+
+    .pesquisa-grupo {
+        display: none;
+    }
+
+}

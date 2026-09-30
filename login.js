@@ -6,15 +6,26 @@ window.addEventListener("load", function () {
 
 
     // ==========================================================
+    // CONFIGURAÇÕES
+    // ==========================================================
+
+    // Cole aqui o App ID do Facebook quando criar o app.
+    // Enquanto estiver vazio, o botão funciona em modo demonstração.
+    const FACEBOOK_APP_ID = "";
+
+
+    // ==========================================================
     // FUNÇÃO PARA ENTRAR NA CONTA
     // ==========================================================
 
-    function entrarNaConta() {
+    function entrarNaConta(nome) {
 
-        // Salva no navegador que existe uma sessão ativa
         localStorage.setItem("usuarioLogado", "true");
 
-        // Vai para a página inicial
+        if (nome) {
+            localStorage.setItem("nomeUsuario", nome);
+        }
+
         window.location.href = "index.html";
 
     }
@@ -24,9 +35,7 @@ window.addEventListener("load", function () {
     // LOGIN NORMAL
     // ==========================================================
 
-    const formLogin =
-        document.querySelector(".card-login form");
-
+    const formLogin = document.querySelector(".card-login form");
 
     if (formLogin) {
 
@@ -34,14 +43,33 @@ window.addEventListener("load", function () {
 
             event.preventDefault();
 
-
-            // Aqui futuramente vamos validar
-            // o e-mail e a senha no banco de dados.
-
             console.log("Login realizado!");
 
-
             entrarNaConta();
+
+        });
+
+    }
+
+
+    // ==========================================================
+    // MOSTRAR / ESCONDER SENHA
+    // ==========================================================
+
+    const mostrarSenha = document.getElementById("mostrarSenha");
+    const campoSenha = document.getElementById("senha");
+
+    if (mostrarSenha && campoSenha) {
+
+        mostrarSenha.addEventListener("click", function () {
+
+            const escondida = campoSenha.type === "password";
+
+            campoSenha.type = escondida ? "text" : "password";
+
+            mostrarSenha.innerHTML = escondida
+                ? '<i class="fa-regular fa-eye-slash"></i>'
+                : '<i class="fa-regular fa-eye"></i>';
 
         });
 
@@ -52,61 +80,34 @@ window.addEventListener("load", function () {
     // GOOGLE
     // ==========================================================
 
-    google.accounts.id.initialize({
-
-        // Client ID do Google
-        client_id: "142909672089-sblg6u21smjgde4jrlal8nbinf0lg6r7.apps.googleusercontent.com",
-
-        // Função executada depois que a pessoa escolher
-        // uma conta do Google
-        callback: handleGoogleLogin
-
-    });
-
-
-    // ==========================================================
-    // BOTÃO DO GOOGLE
-    // ==========================================================
-
-    const googleButton =
-        document.getElementById("googleButton");
-
-
-    google.accounts.id.renderButton(
-        googleButton,
-        {
-            type: "standard",
-            theme: "outline",
-            size: "large",
-            text: "continue_with",
-            shape: "rectangular",
-
-            // Tamanho do botão
-            width: 400,
-
-            // Ícone do Google no lado esquerdo
-            logo_alignment: "left"
-        }
-    );
-
-
-    // ==========================================================
-    // RESPOSTA DO GOOGLE
-    // ==========================================================
-
     function handleGoogleLogin(response) {
 
         console.log("Login com Google realizado!");
-
-        console.log("Resposta recebida do Google:");
         console.log(response);
 
-        console.log("ID Token:");
-        console.log(response.credential);
-
-
-        // Marca a pessoa como logada
         entrarNaConta();
+
+    }
+
+    if (window.google && google.accounts) {
+
+        google.accounts.id.initialize({
+            client_id: "142909672089-sblg6u21smjgde4jrlal8nbinf0lg6r7.apps.googleusercontent.com",
+            callback: handleGoogleLogin
+        });
+
+        google.accounts.id.renderButton(
+            document.getElementById("googleButton"),
+            {
+                type: "standard",
+                theme: "outline",
+                size: "large",
+                text: "continue_with",
+                shape: "rectangular",
+                width: 400,
+                logo_alignment: "left"
+            }
+        );
 
     }
 
@@ -115,37 +116,95 @@ window.addEventListener("load", function () {
     // FACEBOOK
     // ==========================================================
 
-    const btnFacebook =
-        document.getElementById("btnFacebook");
+    // Carrega o SDK do Facebook só se existir App ID
+    if (FACEBOOK_APP_ID) {
+
+        window.fbAsyncInit = function () {
+
+            FB.init({
+                appId: FACEBOOK_APP_ID,
+                cookie: true,
+                xfbml: false,
+                // use a versão que aparece no painel da Meta
+                version: "v21.0"
+            });
+
+        };
+
+        const scriptFacebook = document.createElement("script");
+        scriptFacebook.src = "https://connect.facebook.net/pt_BR/sdk.js";
+        scriptFacebook.async = true;
+        scriptFacebook.defer = true;
+        scriptFacebook.crossOrigin = "anonymous";
+
+        document.body.appendChild(scriptFacebook);
+
+    }
 
 
-    btnFacebook.addEventListener("click", function () {
+    const btnFacebook = document.getElementById("btnFacebook");
 
-        console.log("Login com Facebook selecionado!");
+    if (btnFacebook) {
 
+        btnFacebook.addEventListener("click", function () {
 
-        // Simulação de login
-        entrarNaConta();
+            // MODO DEMONSTRAÇÃO (sem App ID)
+            if (!FACEBOOK_APP_ID || typeof FB === "undefined") {
 
-    });
+                console.log("Login com Facebook (demonstração)");
+
+                entrarNaConta("Usuário Facebook");
+
+                return;
+
+            }
+
+            // MODO REAL
+            FB.login(function (resposta) {
+
+                if (!resposta.authResponse) {
+
+                    console.log("Login com Facebook cancelado.");
+
+                    return;
+
+                }
+
+                FB.api("/me", { fields: "name,email" }, function (usuario) {
+
+                    console.log("Login com Facebook realizado!");
+                    console.log(usuario);
+
+                    entrarNaConta(usuario.name);
+
+                });
+
+            }, { scope: "public_profile,email" });
+
+        });
+
+    }
 
 
     // ==========================================================
-    // APPLE
+    // APPLE (DEMONSTRAÇÃO)
     // ==========================================================
 
-    const btnApple =
-        document.getElementById("btnApple");
+    // O login real da Apple exige conta de desenvolvedor paga
+    // e domínio com HTTPS. Aqui é apenas uma demonstração.
 
+    const btnApple = document.getElementById("btnApple");
 
-    btnApple.addEventListener("click", function () {
+    if (btnApple) {
 
-        console.log("Login com Apple selecionado!");
+        btnApple.addEventListener("click", function () {
 
+            console.log("Login com Apple (demonstração)");
 
-        // Simulação de login
-        entrarNaConta();
+            entrarNaConta("Usuário Apple");
 
-    });
+        });
+
+    }
 
 });

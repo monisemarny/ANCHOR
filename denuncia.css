@@ -1478,3 +1478,12 @@
     }
 
 }
+
+/* espaço entre o campo "Outro tipo" e o bloco seguinte */
+#campoOutroTipo {
+    margin-top: 0;
+    margin-bottom: 28px;
+    padding-bottom: 28px;
+
+    border-bottom: 1px solid #edf1f5;
+}

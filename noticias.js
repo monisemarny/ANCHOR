@@ -308,35 +308,16 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
 
-    const carrossel =
-        document.getElementById("carrossel");
-
-    const btnAnterior =
-        document.getElementById("btnAnterior");
-
-    const btnProxima =
-        document.getElementById("btnProxima");
-
-    const indicadores =
-        document.getElementById("indicadores");
-
-    const areaCarrossel =
-        document.getElementById("areaCarrossel");
-
-    const categorias =
-        document.querySelectorAll(".categoria-btn");
-
-    const materiaCompleta =
-        document.getElementById("materiaCompleta");
-
-    const catalogoNoticias =
-        document.getElementById("catalogoNoticias");
-
-    const btnVoltar =
-        document.getElementById("btnVoltar");
-
-    const conteudoMateria =
-        document.getElementById("conteudoMateria");
+    const carrossel = document.getElementById("carrossel");
+    const btnAnterior = document.getElementById("btnAnterior");
+    const btnProxima = document.getElementById("btnProxima");
+    const indicadores = document.getElementById("indicadores");
+    const areaCarrossel = document.getElementById("areaCarrossel");
+    const categorias = document.querySelectorAll(".categoria-btn");
+    const materiaCompleta = document.getElementById("materiaCompleta");
+    const catalogoNoticias = document.getElementById("catalogoNoticias");
+    const btnVoltar = document.getElementById("btnVoltar");
+    const conteudoMateria = document.getElementById("conteudoMateria");
 
 
     let noticiasFiltradas = [...noticias];
@@ -354,11 +335,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         noticiasFiltradas.forEach(function (noticia) {
 
-            const card =
-                document.createElement("article");
+            const card = document.createElement("article");
 
-            card.className =
-                "card-noticia";
+            card.className = "card-noticia";
 
             card.innerHTML = `
 
@@ -428,26 +407,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function adicionarEventosCards() {
 
-        const botoes =
-            document.querySelectorAll(
-                ".btn-ler-noticia"
-            );
+        const botoes = document.querySelectorAll(".btn-ler-noticia");
 
         botoes.forEach(function (botao) {
 
-            botao.addEventListener(
-                "click",
-                function () {
+            botao.addEventListener("click", function () {
 
-                    const id =
-                        Number(
-                            this.dataset.id
-                        );
+                const id = Number(this.dataset.id);
 
-                    abrirMateria(id);
+                abrirMateria(id);
 
-                }
-            );
+            });
 
         });
 
@@ -456,23 +426,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function atualizarCarrossel() {
 
-        const cards =
-            document.querySelectorAll(
-                ".card-noticia"
-            );
+        const cards = document.querySelectorAll(".card-noticia");
 
         if (!cards.length) return;
 
-        const totalPaginas =
-            Math.ceil(
-                noticiasFiltradas.length /
-                noticiasPorPagina
-            );
+        const totalPaginas = Math.ceil(
+            noticiasFiltradas.length / noticiasPorPagina
+        );
 
         if (paginaAtual < 0) {
 
-            paginaAtual =
-                totalPaginas - 1;
+            paginaAtual = totalPaginas - 1;
 
         }
 
@@ -484,26 +448,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
         cards.forEach(function (card, index) {
 
-            const inicio =
-                paginaAtual *
-                noticiasPorPagina;
+            const inicio = paginaAtual * noticiasPorPagina;
 
-            const fim =
-                inicio +
-                noticiasPorPagina;
+            const fim = inicio + noticiasPorPagina;
 
-            if (
-                index >= inicio &&
-                index < fim
-            ) {
+            if (index >= inicio && index < fim) {
 
-                card.style.display =
-                    "flex";
+                card.style.display = "flex";
 
             } else {
 
-                card.style.display =
-                    "none";
+                card.style.display = "none";
 
             }
 
@@ -520,47 +475,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
         indicadores.innerHTML = "";
 
-        const totalPaginas =
-            Math.ceil(
-                noticiasFiltradas.length /
-                noticiasPorPagina
-            );
+        const totalPaginas = Math.ceil(
+            noticiasFiltradas.length / noticiasPorPagina
+        );
 
-        for (
-            let i = 0;
-            i < totalPaginas;
-            i++
-        ) {
+        for (let i = 0; i < totalPaginas; i++) {
 
-            const indicador =
-                document.createElement("button");
+            const indicador = document.createElement("button");
 
-            indicador.className =
-                "indicador";
+            indicador.className = "indicador";
 
-            indicador.type =
-                "button";
+            indicador.type = "button";
 
-            indicador.dataset.pagina =
-                i;
+            indicador.dataset.pagina = i;
 
-            indicador.addEventListener(
-                "click",
-                function () {
+            indicador.addEventListener("click", function () {
 
-                    paginaAtual =
-                        Number(
-                            this.dataset.pagina
-                        );
+                paginaAtual = Number(this.dataset.pagina);
 
-                    atualizarCarrossel();
+                atualizarCarrossel();
 
-                }
-            );
+            });
 
-            indicadores.appendChild(
-                indicador
-            );
+            indicadores.appendChild(indicador);
 
         }
 
@@ -569,197 +506,134 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function atualizarIndicadores() {
 
-        const indicadoresAtuais =
-            document.querySelectorAll(
-                ".indicador"
-            );
+        const indicadoresAtuais = document.querySelectorAll(".indicador");
 
-        indicadoresAtuais.forEach(
-            function (indicador, index) {
+        indicadoresAtuais.forEach(function (indicador, index) {
 
-                indicador.classList.toggle(
-                    "ativo",
-                    index === paginaAtual
-                );
+            indicador.classList.toggle("ativo", index === paginaAtual);
 
-            }
-        );
+        });
 
     }
 
 
     if (btnAnterior) {
 
-        btnAnterior.addEventListener(
-            "click",
-            function () {
+        btnAnterior.addEventListener("click", function () {
 
-                paginaAtual--;
+            paginaAtual--;
 
-                atualizarCarrossel();
+            atualizarCarrossel();
 
-            }
-        );
+        });
 
     }
 
 
     if (btnProxima) {
 
-        btnProxima.addEventListener(
-            "click",
-            function () {
+        btnProxima.addEventListener("click", function () {
 
-                paginaAtual++;
+            paginaAtual++;
 
-                atualizarCarrossel();
+            atualizarCarrossel();
 
-            }
-        );
+        });
 
     }
 
 
     categorias.forEach(function (botao) {
 
-        botao.addEventListener(
-            "click",
-            function () {
+        botao.addEventListener("click", function () {
 
-                categorias.forEach(
-                    function (item) {
+            categorias.forEach(function (item) {
 
-                        item.classList.remove(
-                            "ativa"
-                        );
+                item.classList.remove("ativa");
 
-                    }
-                );
+            });
 
-                this.classList.add(
-                    "ativa"
-                );
+            this.classList.add("ativa");
 
-                const categoria =
-                    this.dataset.categoria;
+            const categoria = this.dataset.categoria;
 
-                if (
-                    categoria === "todas"
-                ) {
+            if (categoria === "todas") {
 
-                    noticiasFiltradas =
-                        [...noticias];
+                noticiasFiltradas = [...noticias];
 
-                } else {
+            } else {
 
-                    noticiasFiltradas =
-                        noticias.filter(
-                            function (noticia) {
+                noticiasFiltradas = noticias.filter(function (noticia) {
 
-                                return (
-                                    noticia.categoria ===
-                                    categoria
-                                );
+                    return noticia.categoria === categoria;
 
-                            }
-                        );
-
-                }
-
-                paginaAtual = 0;
-
-                criarCards();
+                });
 
             }
-        );
+
+            paginaAtual = 0;
+
+            criarCards();
+
+        });
 
     });
 
 
     function abrirMateria(id) {
 
-        const noticia =
-            noticias.find(
-                function (item) {
+        const noticia = noticias.find(function (item) {
 
-                    return item.id === id;
+            return item.id === id;
 
-                }
-            );
+        });
 
         if (!noticia) return;
 
 
-        /*
-         * Esconde o catálogo de notícias
-         */
-
+        // Esconde o catálogo de notícias
         if (catalogoNoticias) {
 
-            catalogoNoticias.style.display =
-                "none";
+            catalogoNoticias.style.display = "none";
 
         }
 
 
-        /*
-         * Esconde os filtros
-         */
-
-        const categoriasArea =
-            document.getElementById(
-                "categorias"
-            );
+        // Esconde os filtros
+        const categoriasArea = document.getElementById("categorias");
 
         if (categoriasArea) {
 
-            categoriasArea.style.display =
-                "none";
+            categoriasArea.style.display = "none";
 
         }
 
 
-        /*
-         * Esconde o carrossel
-         */
-
+        // Esconde o carrossel
         if (areaCarrossel) {
 
-            areaCarrossel.style.display =
-                "none";
+            areaCarrossel.style.display = "none";
 
         }
 
 
-        /*
-         * Esconde os indicadores
-         */
-
+        // Esconde os indicadores
         if (indicadores) {
 
-            indicadores.style.display =
-                "none";
+            indicadores.style.display = "none";
 
         }
 
 
-        /*
-         * Mostra a área da matéria
-         */
-
+        // Mostra a área da matéria
         if (materiaCompleta) {
 
-            materiaCompleta.style.display =
-                "block";
+            materiaCompleta.style.display = "block";
 
         }
 
 
-        /*
-         * Coloca TODA a matéria dentro
-         * do elemento conteudoMateria
-         */
-
+        // Coloca toda a matéria dentro do conteudoMateria
         if (conteudoMateria) {
 
             conteudoMateria.innerHTML = `
@@ -803,10 +677,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     ${noticia.texto
                         .trim()
-                        .replace(
-                            /\n\s*\n/g,
-                            "<br><br>"
-                        )}
+                        .replace(/\n\s*\n/g, "<br><br>")}
 
                 </div>
 
@@ -824,22 +695,15 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        /*
-         * Coloca a notícia na URL
-         */
-
+        // Coloca a notícia na URL
         history.pushState(
             {},
             "",
-            "noticias.html?noticia=" +
-            noticia.id
+            "noticias.html?noticia=" + noticia.id
         );
 
 
-        /*
-         * Volta para o topo da matéria
-         */
-
+        // Volta para o topo da matéria
         window.scrollTo({
             top: 0,
             behavior: "smooth"
@@ -850,160 +714,99 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (btnVoltar) {
 
-        btnVoltar.addEventListener(
-            "click",
-            function () {
+        btnVoltar.addEventListener("click", function () {
 
-                /*
-                 * Mostra novamente o catálogo
-                 */
+            // Mostra novamente o catálogo
+            if (catalogoNoticias) {
 
-                if (catalogoNoticias) {
-
-                    catalogoNoticias.style.display =
-                        "block";
-
-                }
-
-
-                /*
-                 * Mostra novamente os filtros
-                 */
-
-                const categoriasArea =
-                    document.getElementById(
-                        "categorias"
-                    );
-
-                if (categoriasArea) {
-
-                    categoriasArea.style.display =
-                        "flex";
-
-                }
-
-
-                /*
-                 * Mostra novamente o carrossel
-                 */
-
-                if (areaCarrossel) {
-
-                    areaCarrossel.style.display =
-                        "flex";
-
-                }
-
-
-                /*
-                 * Mostra novamente os indicadores
-                 */
-
-                if (indicadores) {
-
-                    indicadores.style.display =
-                        "flex";
-
-                }
-
-
-                /*
-                 * Esconde a matéria
-                 */
-
-                if (materiaCompleta) {
-
-                    materiaCompleta.style.display =
-                        "none";
-
-                }
-
-
-                /*
-                 * Limpa a URL
-                 */
-
-                history.pushState(
-                    {},
-                    "",
-                    "noticias.html"
-                );
-
-
-                window.scrollTo({
-                    top: 0,
-                    behavior: "smooth"
-                });
+                catalogoNoticias.style.display = "block";
 
             }
-        );
+
+
+            // Mostra novamente os filtros
+            const categoriasArea = document.getElementById("categorias");
+
+            if (categoriasArea) {
+
+                categoriasArea.style.display = "flex";
+
+            }
+
+
+            // Mostra novamente o carrossel
+            if (areaCarrossel) {
+
+                areaCarrossel.style.display = "flex";
+
+            }
+
+
+            // Mostra novamente os indicadores
+            if (indicadores) {
+
+                indicadores.style.display = "flex";
+
+            }
+
+
+            // Esconde a matéria
+            if (materiaCompleta) {
+
+                materiaCompleta.style.display = "none";
+
+            }
+
+
+            // Limpa a URL
+            history.pushState({}, "", "noticias.html");
+
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        });
 
     }
 
 
-    /*
-     * Verifica se uma notícia foi aberta
-     * diretamente pela URL
-     */
+    // ==========================================================
+    // ABRIR NOTÍCIA DIRETO PELA URL (?noticia=1)
+    // O carrossel é sempre criado, para o botão "Voltar" funcionar
+    // ==========================================================
 
-    const parametros =
-        new URLSearchParams(
-            window.location.search
-        );
+    const parametros = new URLSearchParams(window.location.search);
 
-    const noticiaURL =
-        parametros.get("noticia");
+    const noticiaURL = parametros.get("noticia");
 
+    criarCards();
 
     if (noticiaURL) {
 
-        abrirMateria(
-            Number(noticiaURL)
-        );
-
-    } else {
-
-        criarCards();
+        abrirMateria(Number(noticiaURL));
 
     }
 
 
-    /*
-     * PERFIL / LOGIN
-     */
+    // ==========================================================
+    // PERFIL / LOGIN
+    // ==========================================================
 
-    const usuarioLogado =
-        localStorage.getItem(
-            "usuarioLogado"
-        );
+    const usuarioLogado = localStorage.getItem("usuarioLogado");
 
-    const perfilArea =
-        document.getElementById(
-            "perfil-area"
-        );
-
-    const perfilBtn =
-        document.getElementById(
-            "perfil-btn"
-        );
-
-    const perfilMenu =
-        document.getElementById(
-            "perfil-menu"
-        );
-
-    const btnSair =
-        document.getElementById(
-            "btn-sair"
-        );
+    const perfilArea = document.getElementById("perfil-area");
+    const perfilBtn = document.getElementById("perfil-btn");
+    const perfilMenu = document.getElementById("perfil-menu");
+    const btnSair = document.getElementById("btn-sair");
 
 
     if (usuarioLogado === "true") {
 
         if (perfilArea) {
 
-            perfilArea.style.display =
-                "block";
+            perfilArea.style.display = "block";
 
         }
 
@@ -1012,53 +815,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (perfilBtn && perfilMenu) {
 
-        perfilBtn.addEventListener(
-            "click",
-            function (evento) {
+        perfilBtn.addEventListener("click", function (evento) {
 
-                evento.stopPropagation();
+            evento.stopPropagation();
 
-                perfilMenu.classList.toggle(
-                    "ativo"
-                );
+            perfilMenu.classList.toggle("ativo");
 
-            }
-        );
+        });
 
     }
 
 
-    document.addEventListener(
-        "click",
-        function () {
+    document.addEventListener("click", function () {
 
-            if (perfilMenu) {
+        if (perfilMenu) {
 
-                perfilMenu.classList.remove(
-                    "ativo"
-                );
-
-            }
+            perfilMenu.classList.remove("ativo");
 
         }
-    );
+
+    });
 
 
     if (btnSair) {
 
-        btnSair.addEventListener(
-            "click",
-            function () {
+        btnSair.addEventListener("click", function () {
 
-                localStorage.removeItem(
-                    "usuarioLogado"
-                );
+            localStorage.removeItem("usuarioLogado");
 
-                window.location.href =
-                    "index.html";
+            window.location.href = "index.html";
 
-            }
-        );
+        });
 
     }
 

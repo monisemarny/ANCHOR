@@ -11,155 +11,45 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet"
-    >
-
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <link rel="stylesheet" href="perfil.css">
 </head>
 
 <body>
 
-    <!-- =====================================================
-         HEADER
-    ====================================================== -->
+    <!-- ========================= -->
+    <!-- HEADER 2 -->
+    <!-- ========================= -->
 
-    <header>
+    <header class="header-interno">
 
-        <a href="index.html" class="logo">
-            <img
-                src="img/logo-anchor.png"
-                alt="Logo Anchor"
-            >
-        </a>
-
-        <div class="pesquisa">
-
-            <span class="lupa">
-                ⌕
-            </span>
-
-            <input
-                type="text"
-                placeholder="Como podemos ajudar?"
-            >
-
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo-anchor.png" alt="Logo Anchor">
+            </a>
         </div>
 
-        <div class="acoes">
-
-            <button
-                id="menu-btn"
-                aria-label="Abrir menu"
-            >
-                ☰
-            </button>
-
-            <div class="perfil-area">
-
-                <button
-                    id="perfil-btn"
-                    class="perfil-btn"
-                    title="Meu perfil"
-                >
-                    <i class="fa-solid fa-circle-user"></i>
-                </button>
-
-                <div
-                    id="perfil-menu"
-                    class="perfil-menu"
-                >
-
-                    <a href="perfil.html">
-                        <i class="fa-solid fa-user"></i>
-                        Ver perfil
-                    </a>
-
-                    <a href="conversas.html">
-                        <i class="fa-solid fa-comments"></i>
-                        Conversas
-                    </a>
-
-                    <button id="btn-sair">
-                        <i class="fa-solid fa-right-from-bracket"></i>
-                        Sair da conta
-                    </button>
-
-                </div>
-
-            </div>
-
-        </div>
+        <nav class="menu-principal">
+            <a href="index.html">Home</a>
+            <a href="denuncia.html">Fazer denúncia</a>
+            <a href="acompanhar.html">Acompanhar denúncia</a>
+            <a href="ajuda-psicologica.html">Ajuda Psicológica</a>
+            <a href="informacoes.html">Informações</a>
+            <a href="noticias.html">Notícias</a>
+            <a href="tipos-denuncia.html">Tipos de denúncia</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="contato.html">Contato</a>
+        </nav>
 
     </header>
 
 
-    <!-- =====================================================
-         MENU LATERAL
-    ====================================================== -->
-
-    <div
-        id="menu-lateral"
-        class="menu-lateral"
-    >
-
-        <div class="faixa-azul"></div>
-
-        <div class="conteudo-menu">
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="denuncia.html">
-                Denúncias
-            </a>
-
-            <a href="acompanhar.html">
-                Acompanhar
-            </a>
-
-            <a href="noticias.html">
-                Notícias
-            </a>
-
-            <a href="perfil.html">
-                Perfil
-            </a>
-
-            <hr>
-
-            <a href="informacoes.html">
-                Informações
-            </a>
-
-            <a href="contato.html">
-                Contato
-            </a>
-
-            <a href="sobre.html">
-                Sobre nós
-            </a>
-
-        </div>
-
-    </div>
-
-
-    <!-- =====================================================
-         PERFIL
-    ====================================================== -->
-
     <main>
 
-        <!-- CABEÇALHO DO PERFIL -->
+        <!-- ===================== TOPO DO PERFIL ===================== -->
 
         <section class="perfil-topo">
 
@@ -167,23 +57,40 @@
 
                 <div class="perfil-identidade">
 
-                    <div class="foto-perfil">
-                        <i class="fa-solid fa-user"></i>
+                    <div class="avatar-area">
+
+                        <div class="foto-perfil" id="fotoPerfil">
+                            <i class="fa-solid fa-user" id="fotoIcone"></i>
+                            <span id="fotoIniciais" hidden></span>
+                            <img id="fotoImg" alt="Sua foto de perfil" hidden>
+                        </div>
+
+                        <button class="btn-camera" id="btn-foto" type="button" title="Alterar foto">
+                            <i class="fa-solid fa-camera"></i>
+                        </button>
+
+                        <input type="file" id="inputFoto" accept="image/*" hidden>
+
                     </div>
 
                     <div class="dados-basicos">
 
-                        <span class="saudacao">
-                            Olá!
-                        </span>
+                        <span class="saudacao" id="saudacao">Olá!</span>
 
-                        <h1 id="nomePerfil">
-                            Username...
-                        </h1>
+                        <h1 id="nomePerfil">Seu nome</h1>
 
-                        <p id="emailPerfil">
-                            usuário@anchor.com
-                        </p>
+                        <p id="emailPerfil">seu@email.com</p>
+
+                        <div class="selos">
+                            <span class="selo">
+                                <i class="fa-solid fa-anchor"></i>
+                                Conta Anchor
+                            </span>
+                            <span class="selo" id="membroDesde">
+                                <i class="fa-regular fa-calendar"></i>
+                                Membro desde hoje
+                            </span>
+                        </div>
 
                     </div>
 
@@ -191,21 +98,14 @@
 
                 <div class="acoes-perfil">
 
-                    <button
-                        class="icone-topo"
-                        id="btn-notificacoes"
-                        title="Notificações"
-                    >
+                    <button class="icone-topo" id="btn-notificacoes" type="button" title="Notificações">
                         <i class="fa-solid fa-bell"></i>
                         <span class="ponto-notificacao"></span>
                     </button>
 
-                    <button
-                        class="icone-topo"
-                        id="btn-editar"
-                        title="Editar perfil"
-                    >
+                    <button class="btn-editar-perfil" id="btn-editar" type="button">
                         <i class="fa-solid fa-pen"></i>
+                        Editar perfil
                     </button>
 
                 </div>
@@ -215,143 +115,46 @@
         </section>
 
 
-        <!-- =================================================
-             ATALHOS
-        ================================================== -->
+        <!-- ===================== ATALHOS ===================== -->
 
         <section class="atalhos">
 
             <div class="atalhos-grid">
 
-                <!-- CHAT IA -->
-
-                <button
-                    class="atalho-card"
-                    data-acao="chat"
-                >
-
-                    <div class="icone-atalho azul">
-                        <i class="fa-solid fa-message"></i>
-                    </div>
-
-                    <h3>
-                        Chat com IA
-                    </h3>
-
-                    <p>
-                        Converse com o assistente do Anchor.
-                    </p>
-
+                <button class="atalho-card" data-acao="chat" type="button">
+                    <div class="icone-atalho azul"><i class="fa-solid fa-message"></i></div>
+                    <h3>Apoio emocional</h3>
+                    <p>Converse com o SafePsi, o assistente do Anchor.</p>
                 </button>
 
-
-                <!-- CONVERSAS -->
-
-                <button
-                    class="atalho-card"
-                    data-acao="conversas"
-                >
-
-                    <div class="icone-atalho roxo">
-                        <i class="fa-solid fa-comments"></i>
-                    </div>
-
-                    <h3>
-                        Conversas
-                    </h3>
-
-                    <p>
-                        Acesse suas conversas com profissionais.
-                    </p>
-
+                <button class="atalho-card" data-acao="conversas" type="button">
+                    <div class="icone-atalho roxo"><i class="fa-solid fa-comments"></i></div>
+                    <h3>Conversas</h3>
+                    <p>Acesse suas conversas com profissionais.</p>
                 </button>
 
-
-                <!-- AGENDAMENTOS -->
-
-                <button
-                    class="atalho-card"
-                    data-acao="agendamentos"
-                >
-
-                    <div class="icone-atalho verde">
-                        <i class="fa-solid fa-calendar-days"></i>
-                    </div>
-
-                    <h3>
-                        Agendamentos
-                    </h3>
-
-                    <p>
-                        Veja seus próximos atendimentos.
-                    </p>
-
+                <button class="atalho-card" data-acao="agendamentos" type="button">
+                    <div class="icone-atalho verde"><i class="fa-solid fa-calendar-days"></i></div>
+                    <h3>Agendamentos</h3>
+                    <p>Veja seus próximos atendimentos.</p>
                 </button>
 
-
-                <!-- PSICÓLOGO -->
-
-                <button
-                    class="atalho-card"
-                    data-acao="psicologo"
-                >
-
-                    <div class="icone-atalho azul-claro">
-                        <i class="fa-solid fa-user-doctor"></i>
-                    </div>
-
-                    <h3>
-                        Meu psicólogo
-                    </h3>
-
-                    <p>
-                        Consulte seu profissional de referência.
-                    </p>
-
+                <button class="atalho-card" data-acao="psicologo" type="button">
+                    <div class="icone-atalho azul-claro"><i class="fa-solid fa-user-doctor"></i></div>
+                    <h3>Meu psicólogo</h3>
+                    <p>Consulte seu profissional de referência.</p>
                 </button>
 
-
-                <!-- ACOMPANHAR -->
-
-                <button
-                    class="atalho-card"
-                    data-acao="acompanhar"
-                >
-
-                    <div class="icone-atalho laranja">
-                        <i class="fa-solid fa-clock-rotate-left"></i>
-                    </div>
-
-                    <h3>
-                        Acompanhar denúncia
-                    </h3>
-
-                    <p>
-                        Consulte o andamento de suas denúncias.
-                    </p>
-
+                <button class="atalho-card" data-acao="acompanhar" type="button">
+                    <div class="icone-atalho laranja"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                    <h3>Acompanhar denúncia</h3>
+                    <p>Consulte o andamento de suas denúncias.</p>
                 </button>
 
-
-                <!-- HISTÓRICO -->
-
-                <button
-                    class="atalho-card"
-                    data-acao="historico"
-                >
-
-                    <div class="icone-atalho cinza">
-                        <i class="fa-solid fa-clock"></i>
-                    </div>
-
-                    <h3>
-                        Histórico
-                    </h3>
-
-                    <p>
-                        Veja seus atendimentos e atividades.
-                    </p>
-
+                <button class="atalho-card" data-acao="historico" type="button">
+                    <div class="icone-atalho cinza"><i class="fa-solid fa-clock"></i></div>
+                    <h3>Histórico</h3>
+                    <p>Veja seus atendimentos e atividades.</p>
                 </button>
 
             </div>
@@ -359,34 +162,21 @@
         </section>
 
 
-        <!-- =================================================
-             PRÓXIMO AGENDAMENTO
-        ================================================== -->
+        <!-- ===================== PRÓXIMO AGENDAMENTO ===================== -->
 
         <section class="secao-conteudo">
 
             <div class="titulo-secao">
-
                 <div>
-                    <span>
-                        SEU ATENDIMENTO
-                    </span>
-
-                    <h2>
-                        Próximo agendamento
-                    </h2>
+                    <span>SEU ATENDIMENTO</span>
+                    <h2>Próximo agendamento</h2>
                 </div>
 
-                <button
-                    class="link-secao"
-                    data-acao="agendamentos"
-                >
+                <button class="link-secao" data-acao="agendamentos" type="button">
                     Ver todos
                     <i class="fa-solid fa-arrow-right"></i>
                 </button>
-
             </div>
-
 
             <div class="agendamento-card">
 
@@ -395,37 +185,17 @@
                 </div>
 
                 <div class="agendamento-info">
-
-                    <span class="status-agendamento">
-                        AGENDADO
-                    </span>
-
-                    <h3>
-                        Atendimento psicológico
-                    </h3>
-
-                    <p>
-                        Seu próximo atendimento está marcado.
-                    </p>
-
+                    <span class="status-agendamento">AGENDADO</span>
+                    <h3>Atendimento psicológico</h3>
+                    <p>Seu próximo atendimento está marcado.</p>
                 </div>
 
                 <div class="agendamento-data">
-
-                    <strong>
-                        15
-                    </strong>
-
-                    <span>
-                        OUT
-                    </span>
-
+                    <strong>15</strong>
+                    <span>OUT</span>
                 </div>
 
-                <button
-                    class="btn-detalhes"
-                    data-acao="agendamentos"
-                >
+                <button class="btn-detalhes" data-acao="agendamentos" type="button">
                     Ver detalhes
                 </button>
 
@@ -434,26 +204,16 @@
         </section>
 
 
-        <!-- =================================================
-             MEU PSICÓLOGO
-        ================================================== -->
+        <!-- ===================== MEU PSICÓLOGO ===================== -->
 
         <section class="secao-conteudo">
 
             <div class="titulo-secao">
-
                 <div>
-                    <span>
-                        ATENDIMENTO
-                    </span>
-
-                    <h2>
-                        Meu psicólogo
-                    </h2>
+                    <span>ATENDIMENTO</span>
+                    <h2>Meu psicólogo</h2>
                 </div>
-
             </div>
-
 
             <div class="psicologo-card">
 
@@ -462,26 +222,15 @@
                 </div>
 
                 <div class="dados-psicologo">
-
-                    <span>
-                        PROFISSIONAL DE REFERÊNCIA
-                    </span>
-
-                    <h3>
-                        Seu profissional
-                    </h3>
-
+                    <span>PROFISSIONAL DE REFERÊNCIA</span>
+                    <h3>Seu profissional</h3>
                     <p>
                         Informações do profissional aparecerão
                         aqui após o atendimento.
                     </p>
-
                 </div>
 
-                <button
-                    class="btn-principal"
-                    data-acao="conversas"
-                >
+                <button class="btn-principal" data-acao="conversas" type="button">
                     Ver conversa
                 </button>
 
@@ -490,78 +239,42 @@
         </section>
 
 
-        <!-- =================================================
-             INFORMAÇÕES DA CONTA
-        ================================================== -->
+        <!-- ===================== INFORMAÇÕES DA CONTA ===================== -->
 
         <section class="secao-conteudo">
 
             <div class="titulo-secao">
-
                 <div>
-                    <span>
-                        SUA CONTA
-                    </span>
-
-                    <h2>
-                        Informações da conta
-                    </h2>
+                    <span>SUA CONTA</span>
+                    <h2>Informações da conta</h2>
                 </div>
 
+                <button class="link-secao" id="btn-editar-conta" type="button">
+                    Editar
+                    <i class="fa-solid fa-pen"></i>
+                </button>
             </div>
-
 
             <div class="informacoes-card">
 
                 <div class="campo-info">
-
-                    <span>
-                        Nome de usuário
-                    </span>
-
-                    <strong id="nomeUsuario">
-                        Username...
-                    </strong>
-
+                    <span><i class="fa-solid fa-user"></i> Nome</span>
+                    <strong id="nomeUsuario">Não informado</strong>
                 </div>
 
-
                 <div class="campo-info">
-
-                    <span>
-                        Telefone
-                    </span>
-
-                    <strong id="telefoneUsuario">
-                        Não informado
-                    </strong>
-
+                    <span><i class="fa-solid fa-phone"></i> Telefone</span>
+                    <strong id="telefoneUsuario">Não informado</strong>
                 </div>
 
-
                 <div class="campo-info">
-
-                    <span>
-                        E-mail
-                    </span>
-
-                    <strong id="emailUsuario">
-                        usuário@anchor.com
-                    </strong>
-
+                    <span><i class="fa-solid fa-envelope"></i> E-mail</span>
+                    <strong id="emailUsuario">Não informado</strong>
                 </div>
 
-
                 <div class="campo-info">
-
-                    <span>
-                        Redes sociais
-                    </span>
-
-                    <strong id="redesUsuario">
-                        Não informado
-                    </strong>
-
+                    <span><i class="fa-brands fa-instagram"></i> Redes sociais</span>
+                    <strong id="redesUsuario">Não informado</strong>
                 </div>
 
             </div>
@@ -569,89 +282,44 @@
         </section>
 
 
-        <!-- =================================================
-             PREFERÊNCIAS
-        ================================================== -->
+        <!-- ===================== PREFERÊNCIAS ===================== -->
 
         <section class="secao-conteudo">
 
             <div class="titulo-secao">
-
                 <div>
-                    <span>
-                        CONFIGURAÇÕES
-                    </span>
-
-                    <h2>
-                        Preferências
-                    </h2>
+                    <span>CONFIGURAÇÕES</span>
+                    <h2>Preferências</h2>
                 </div>
-
             </div>
-
 
             <div class="preferencias-card">
 
-                <button class="preferencia-item">
-
-                    <div class="preferencia-icone azul">
-                        <i class="fa-solid fa-bell"></i>
-                    </div>
-
+                <button class="preferencia-item" type="button">
+                    <div class="preferencia-icone azul"><i class="fa-solid fa-bell"></i></div>
                     <div>
-                        <strong>
-                            Notificações
-                        </strong>
-
-                        <span>
-                            Receber atualizações sobre sua conta.
-                        </span>
+                        <strong>Notificações</strong>
+                        <span>Receber atualizações sobre sua conta.</span>
                     </div>
-
                     <i class="fa-solid fa-chevron-right seta"></i>
-
                 </button>
 
-
-                <button class="preferencia-item">
-
-                    <div class="preferencia-icone verde">
-                        <i class="fa-solid fa-shield-halved"></i>
-                    </div>
-
+                <button class="preferencia-item" type="button">
+                    <div class="preferencia-icone verde"><i class="fa-solid fa-shield-halved"></i></div>
                     <div>
-                        <strong>
-                            Privacidade
-                        </strong>
-
-                        <span>
-                            Gerencie suas informações e segurança.
-                        </span>
+                        <strong>Privacidade</strong>
+                        <span>Gerencie suas informações e segurança.</span>
                     </div>
-
                     <i class="fa-solid fa-chevron-right seta"></i>
-
                 </button>
 
-
-                <button class="preferencia-item">
-
-                    <div class="preferencia-icone roxo">
-                        <i class="fa-solid fa-gear"></i>
-                    </div>
-
+                <button class="preferencia-item" type="button">
+                    <div class="preferencia-icone roxo"><i class="fa-solid fa-gear"></i></div>
                     <div>
-                        <strong>
-                            Configurações
-                        </strong>
-
-                        <span>
-                            Personalize sua experiência no Anchor.
-                        </span>
+                        <strong>Configurações</strong>
+                        <span>Personalize sua experiência no Anchor.</span>
                     </div>
-
                     <i class="fa-solid fa-chevron-right seta"></i>
-
                 </button>
 
             </div>
@@ -659,18 +327,13 @@
         </section>
 
 
-        <!-- =================================================
-             SAIR
-        ================================================== -->
+        <!-- ===================== SAIR ===================== -->
 
         <section class="sair-conta">
 
-            <button id="btn-sair-conta">
-
+            <button id="btn-sair-conta" type="button">
                 <i class="fa-solid fa-right-from-bracket"></i>
-
                 Sair da conta
-
             </button>
 
         </section>
@@ -678,108 +341,71 @@
     </main>
 
 
-    <!-- =====================================================
-         FOOTER
-    ====================================================== -->
+    <!-- ===================== FAIXA FINAL ===================== -->
 
-    <footer class="rodape">
-
-        <div class="rodape-conteudo">
-
-            <div class="rodape-logo">
-
-                <img
-                    src="img/logo-anchor.png"
-                    alt="Logo Anchor"
-                >
-
-                <p>
-                    Informação, acolhimento e apoio para quem precisa.
-                </p>
-
-            </div>
+    <div class="faixa-final">
+        <p>© 2026 Anchor · Informação também é uma forma de proteção.</p>
+    </div>
 
 
-            <div class="rodape-coluna">
+    <!-- ===================== MODAL EDITAR PERFIL ===================== -->
 
-                <h3>
-                    Anchor
-                </h3>
+    <div class="modal-fundo" id="modalEditar" aria-hidden="true">
 
-                <a href="index.html">
-                    Home
-                </a>
+        <div class="modal-caixa" role="dialog" aria-modal="true" aria-labelledby="tituloModal">
 
-                <a href="denuncia.html">
-                    Denúncias
-                </a>
+            <button class="modal-fechar" id="fecharModal" type="button" aria-label="Fechar">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
 
-                <a href="noticias.html">
-                    Notícias
-                </a>
+            <span class="modal-etiqueta">SEU PERFIL</span>
+            <h2 id="tituloModal">Editar perfil</h2>
+            <p class="modal-descricao">Atualize seus dados. Eles ficam salvos neste navegador.</p>
 
-                <a href="sobre.html">
-                    Sobre nós
-                </a>
+            <form id="formEditar">
 
-            </div>
+                <div class="campo-form">
+                    <label for="campoNome">Nome</label>
+                    <input type="text" id="campoNome" maxlength="40" placeholder="Como você quer ser chamado(a)?" autocomplete="name">
+                </div>
 
+                <div class="campo-form">
+                    <label for="campoEmail">E-mail</label>
+                    <input type="email" id="campoEmail" placeholder="seu@email.com" autocomplete="email">
+                </div>
 
-            <div class="rodape-coluna">
+                <div class="campo-form">
+                    <label for="campoTelefone">Telefone</label>
+                    <input type="tel" id="campoTelefone" maxlength="15" placeholder="(11) 99999-9999" autocomplete="tel">
+                </div>
 
-                <h3>
-                    Informações
-                </h3>
+                <div class="campo-form">
+                    <label for="campoRedes">Redes sociais</label>
+                    <input type="text" id="campoRedes" maxlength="40" placeholder="@seuusuario">
+                </div>
 
-                <a href="informacoes.html">
-                    Informações
-                </a>
+                <button class="btn-remover-foto" id="btn-remover-foto" type="button">
+                    <i class="fa-regular fa-trash-can"></i>
+                    Remover foto de perfil
+                </button>
 
-                <a href="acompanhar.html">
-                    Acompanhar denúncia
-                </a>
+                <div class="modal-acoes">
+                    <button class="btn-cancelar" id="btn-cancelar" type="button">Cancelar</button>
+                    <button class="btn-salvar" type="submit">
+                        <i class="fa-solid fa-check"></i>
+                        Salvar
+                    </button>
+                </div>
 
-                <a href="perfil.html">
-                    Meu perfil
-                </a>
-
-            </div>
-
-
-            <div class="rodape-coluna contato-rodape">
-
-                <h3>
-                    Contato
-                </h3>
-
-                <a href="contato.html">
-                    <i class="fa-solid fa-envelope"></i>
-                    Fale com a gente
-                </a>
-
-                <a href="#">
-                    <i class="fa-brands fa-instagram"></i>
-                    Instagram
-                </a>
-
-            </div>
+            </form>
 
         </div>
 
+    </div>
 
-        <div class="rodape-inferior">
 
-            <p>
-                © 2026 Anchor. Todos os direitos reservados.
-            </p>
-
-            <p>
-                Projeto acadêmico.
-            </p>
-
-        </div>
-
-    </footer>
+    <!-- AVISO -->
+    <div class="toast" id="toast" role="status"></div>
 
 
     <script src="perfil.js"></script>

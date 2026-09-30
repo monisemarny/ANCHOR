@@ -822,3 +822,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 });
+
+const parametrosTipo = new URLSearchParams(window.location.search);
+const tipoSelecionado = parametrosTipo.get("tipo");
+
+if (tipoSelecionado) {
+    const cardTipo = document.querySelector(
+        '.card-denuncia[data-tipo="' + tipoSelecionado + '"]'
+    );
+
+    if (cardTipo) {
+        cardTipo.click();
+    }
+}

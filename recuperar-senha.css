@@ -28,75 +28,75 @@ body * {
 }
 
 
-/* ==========================================================
-   CABEÇALHO
-========================================================== */
+/* =========================================================
+   HEADER 2
+========================================================= */
 
-.topo-recuperar {
+.header-interno {
     width: 100%;
-    height: 90px;
-    background: linear-gradient(
-        90deg,
-        #0d47a1,
-        #1976d2
-    );
+    height: 82px;
+
+    background: linear-gradient(90deg, #0d47a1, #1976d2);
+
     display: flex;
     align-items: center;
-    padding: 0 5%;
-    gap: 55px;
+
+    padding: 0 45px;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+
+    position: relative;
+    z-index: 1000;
 }
 
-.logo-recuperar {
+.header-interno .logo {
     display: flex;
     align-items: center;
     flex-shrink: 0;
-    text-decoration: none;
 }
 
-.logo-recuperar img {
-    width: 58px;
+.header-interno .logo a {
+    display: flex;
+    align-items: center;
+}
+
+.header-interno .logo img {
+    width: 62px;
     height: auto;
     display: block;
 }
 
-.menu-recuperar {
+.header-interno .menu-principal {
     flex: 1;
+
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
     gap: 27px;
+
+    margin-left: 40px;
 }
 
-.menu-recuperar a {
+.header-interno .menu-principal a {
     position: relative;
+
     color: #ffffff;
     text-decoration: none;
+
     font-size: 13px;
     font-weight: 500;
+
+    padding: 8px 0;
+
     white-space: nowrap;
+
     transition: 0.2s ease;
 }
 
-.menu-recuperar a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -7px;
-    width: 0;
-    height: 2px;
-    background: #ffffff;
-    border-radius: 10px;
-    transition: 0.2s ease;
+.header-interno .menu-principal a:hover {
+    opacity: 0.8;
 }
-
-.menu-recuperar a:hover {
-    color: #e5f1ff;
-}
-
-.menu-recuperar a:hover::after {
-    width: 100%;
-}
-
 
 /* ==========================================================
    BREADCRUMB

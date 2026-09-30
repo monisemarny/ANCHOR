@@ -33,63 +33,68 @@
 
 <body>
 
-    <!-- =====================================================
-         HEADER
-    ====================================================== -->
+     <!-- ========================= -->
+<!-- HEADER 2 -->
+<!-- ========================= -->
 
-    <header class="topo-login">
+<header class="header-interno">
 
-        <!-- Logo -->
-
-        <a href="index.html" class="logo-login">
-
+    <!-- LOGO -->
+    <div class="logo">
+        <a href="index.html">
             <img
                 src="img/logo-anchor.png"
                 alt="Logo Anchor"
             >
+        </a>
+    </div>
 
+
+    <!-- MENU PRINCIPAL -->
+    <nav class="menu-principal">
+
+        <a href="index.html">
+            Home
         </a>
 
+        <a href="denuncia.html">
+            Fazer denúncia
+        </a>
 
-        <!-- Menu escrito -->
+        <a href="acompanhar.html">
+            Acompanhar denúncia
+        </a>
 
-        <nav class="menu-login">
+        <a
+            href="ajuda-psicologica.html"
+        >
+            Ajuda Psicológica
+        </a>
 
-            <a href="index.html">
-                Home
-            </a>
+        <a href="informacoes.html">
+            Informações
+        </a>
 
-            <a href="denuncia.html">
-                Denúncias
-            </a>
+        <a href="noticias.html">
+            Notícias
+        </a>
 
-            <a href="acompanhar.html">
-                Acompanhar
-            </a>
+        <a href="tipos-denuncia.html">
+            Tipos de denúncia
+        </a>
 
-            <a href="noticias.html">
-                Notícias
-            </a>
+        <a href="sobre.html">
+            Sobre
+        </a>
 
-            <a href="perfil.html">
-                Perfil
-            </a>
+        <a href="contato.html">
+            Contato
+        </a>
 
-            <a href="informacoes.html">
-                Informações
-            </a>
+    </nav>
 
-            <a href="contato.html">
-                Contato
-            </a>
+</header>
 
-            <a href="sobre.html">
-                Sobre nós
-            </a>
-
-        </nav>
-
-    </header>
 
 
     <!-- =====================================================
@@ -285,7 +290,16 @@
 
                 <!-- Google -->
 
-               <div id="googleButton" class="google-button"></div>
+               <div class="google-wrapper">
+
+    <button type="button" class="btn-social btn-google">
+        <i class="fa-brands fa-google"></i>
+        <span>Continuar com o Google</span>
+    </button>
+
+    <div id="googleButton" class="google-overlay"></div>
+
+</div>
 
 
                 <!-- Facebook -->
