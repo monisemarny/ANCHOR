@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Painel do Profissional | Anchor</title>
+
+    <link rel="icon" type="image/png" href="img/logo-anchor.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="painel-profissional.css">
+</head>
+
+<body>
+
+    <!-- ========================= -->
+    <!-- HEADER DO PROFISSIONAL -->
+    <!-- ========================= -->
+
+    <header class="header-interno">
+
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo-anchor.png" alt="Logo Anchor">
+            </a>
+        </div>
+
+        <span class="selo-area">
+            <i class="fa-solid fa-user-doctor"></i>
+            Área do profissional
+        </span>
+
+        <nav class="menu-principal">
+            <button type="button" class="aba ativa" data-aba="visao">Painel</button>
+            <button type="button" class="aba" data-aba="agenda">Agenda</button>
+            <button type="button" class="aba" data-aba="pacientes">Pacientes</button>
+            <button type="button" class="aba" data-aba="disponibilidade">Disponibilidade</button>
+            <a href="conversas.html">Conversas</a>
+            <a href="perfil.html">Perfil</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- ===================== TOPO ===================== -->
+
+        <section class="topo-painel">
+
+            <div class="topo-conteudo">
+
+                <div class="ident">
+
+                    <div class="avatar" id="avatarPro">GR</div>
+
+                    <div>
+                        <span class="saudacao" id="saudacaoPro">Olá!</span>
+                        <h1 id="nomePro">Profissional</h1>
+                        <p id="dadosPro">Psicóloga · CRP 06/123456</p>
+                        <p class="data-hoje" id="dataHoje"></p>
+                    </div>
+
+                </div>
+
+                <label class="switch-novos" for="switchNovos">
+                    <input type="checkbox" id="switchNovos" checked>
+                    <span class="trilho"><span class="bolinha"></span></span>
+                    <span class="texto-switch" id="textoSwitch">Aceitando novos pacientes</span>
+                </label>
+
+            </div>
+
+        </section>
+
+
+        <!-- ===================== RESUMO ===================== -->
+
+        <section class="resumo-grid">
+
+            <div class="stat">
+                <div class="stat-icone azul"><i class="fa-solid fa-calendar-day"></i></div>
+                <div>
+                    <strong id="statHoje">0</strong>
+                    <span>Consultas hoje</span>
+                </div>
+            </div>
+
+            <div class="stat">
+                <div class="stat-icone verde"><i class="fa-solid fa-users"></i></div>
+                <div>
+                    <strong id="statPacientes">0</strong>
+                    <span>Pacientes</span>
+                </div>
+            </div>
+
+            <div class="stat">
+                <div class="stat-icone laranja"><i class="fa-solid fa-hourglass-half"></i></div>
+                <div>
+                    <strong id="statPendentes">0</strong>
+                    <span>Aguardando resposta</span>
+                </div>
+            </div>
+
+            <div class="stat">
+                <div class="stat-icone roxo"><i class="fa-solid fa-calendar-week"></i></div>
+                <div>
+                    <strong id="statSemana">0</strong>
+                    <span>Consultas nos próximos 7 dias</span>
+                </div>
+            </div>
+
+        </section>
+
+
+        <div class="conteudo">
+
+            <!-- ===================== ABA: PAINEL ===================== -->
+
+            <section class="aba-conteudo ativa" id="aba-visao">
+
+                <div class="grid-visao">
+
+                    <div class="coluna">
+
+                        <article class="card">
+                            <header class="card-topo">
+                                <div>
+                                    <span class="rotulo">HOJE</span>
+                                    <h2>Agenda de hoje</h2>
+                                </div>
+                                <button type="button" class="link" data-ir="agenda">
+                                    Ver agenda <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </header>
+
+                            <div id="listaHoje"></div>
+                        </article>
+
+                        <article class="card">
+                            <header class="card-topo">
+                                <div>
+                                    <span class="rotulo">SOLICITAÇÕES</span>
+                                    <h2>Aguardando sua resposta</h2>
+                                </div>
+                                <span class="contador" id="contPendentes">0</span>
+                            </header>
+
+                            <div id="listaPendentes"></div>
+                        </article>
+
+                    </div>
+
+                    <div class="coluna">
+
+                        <article class="card destaque" id="cardProxima"></article>
+
+                        <article class="card">
+                            <header class="card-topo">
+                                <div>
+                                    <span class="rotulo">SEMANA</span>
+                                    <h2>Consultas por dia</h2>
+                                </div>
+                            </header>
+
+                            <div class="barras" id="barras"></div>
+                        </article>
+
+                        <article class="card">
+                            <header class="card-topo">
+                                <div>
+                                    <span class="rotulo">MENSAGENS</span>
+                                    <h2>Conversas recentes</h2>
+                                </div>
+                                <a href="conversas.html" class="link">
+                                    Abrir <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </header>
+
+                            <a href="conversas.html" class="mensagem">
+                                <div class="avatar-peq">LA</div>
+                                <div>
+                                    <strong>Lucas Almeida</strong>
+                                    <small>Posso remarcar para quinta-feira?</small>
+                                </div>
+                                <span class="hora-msg">12 min</span>
+                            </a>
+
+                            <a href="conversas.html" class="mensagem">
+                                <div class="avatar-peq">MC</div>
+                                <div>
+                                    <strong>Marina Costa</strong>
+                                    <small>Obrigada pela consulta de hoje.</small>
+                                </div>
+                                <span class="hora-msg">1 h</span>
+                            </a>
+
+                            <a href="conversas.html" class="mensagem">
+                                <div class="avatar-peq">RS</div>
+                                <div>
+                                    <strong>Rafael Souza</strong>
+                                    <small>Confirmo presença na próxima sessão.</small>
+                                </div>
+                                <span class="hora-msg">ontem</span>
+                            </a>
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ===================== ABA: AGENDA ===================== -->
+
+            <section class="aba-conteudo" id="aba-agenda">
+
+                <article class="card">
+
+                    <header class="card-topo">
+                        <div>
+                            <span class="rotulo">PRÓXIMOS DIAS</span>
+                            <h2>Sua agenda</h2>
+                        </div>
+                    </header>
+
+                    <div class="dias-chips" id="diasChips"></div>
+
+                    <div id="listaAgenda"></div>
+
+                </article>
+
+            </section>
+
+
+            <!-- ===================== ABA: PACIENTES ===================== -->
+
+            <section class="aba-conteudo" id="aba-pacientes">
+
+                <article class="card">
+
+                    <header class="card-topo">
+                        <div>
+                            <span class="rotulo">ACOMPANHAMENTO</span>
+                            <h2>Seus pacientes</h2>
+                        </div>
+                    </header>
+
+                    <div class="ferramentas">
+
+                        <div class="busca">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" id="buscaPac" placeholder="Buscar paciente pelo nome..." autocomplete="off">
+                        </div>
+
+                        <select id="filtroPac">
+                            <option value="todos">Todos</option>
+                            <option value="ativo">Em acompanhamento</option>
+                            <option value="novo">Novos</option>
+                        </select>
+
+                    </div>
+
+                    <div id="listaPacientes"></div>
+
+                </article>
+
+            </section>
+
+
+            <!-- ===================== ABA: DISPONIBILIDADE ===================== -->
+
+            <section class="aba-conteudo" id="aba-disponibilidade">
+
+                <article class="card">
+
+                    <header class="card-topo">
+                        <div>
+                            <span class="rotulo">HORÁRIOS</span>
+                            <h2>Sua disponibilidade</h2>
+                        </div>
+                    </header>
+
+                    <p class="texto-ajuda">
+                        Clique nos horários para ativar ou desativar. Os horários ativos
+                        ficam disponíveis para os pacientes agendarem.
+                    </p>
+
+                    <div id="gradeDisp"></div>
+
+                    <div class="config">
+
+                        <div class="campo">
+                            <label for="cfgDuracao">Duração da sessão</label>
+                            <select id="cfgDuracao">
+                                <option value="30">30 minutos</option>
+                                <option value="50">50 minutos</option>
+                                <option value="60">60 minutos</option>
+                            </select>
+                        </div>
+
+                        <div class="campo">
+                            <label for="cfgValor">Valor da sessão (R$)</label>
+                            <input type="number" id="cfgValor" min="0" step="5">
+                        </div>
+
+                        <button type="button" class="btn" id="salvarDisp">
+                            <i class="fa-solid fa-check"></i>
+                            Salvar disponibilidade
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- FAIXA FINAL -->
+
+    <div class="faixa-final">
+        <p>© 2026 Anchor · Área do profissional · Dados de demonstração.</p>
+    </div>
+
+
+    <!-- ===================== MODAL: FICHA DO PACIENTE ===================== -->
+
+    <div class="modal-fundo" id="modalPaciente" aria-hidden="true"> 
+
+        <div class="modal-caixa" role="dialog" aria-modal="true">
+
+            <button type="button" class="modal-fechar" id="fecharModal" aria-label="Fechar">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="modal-cab">
+                <div class="avatar-peq grande" id="mpAvatar"></div>
+                <div>
+                    <h2 id="mpNome"></h2>
+                    <p id="mpSub"></p>
+                </div>
+            </div>
+
+            <div class="modal-info">
+                <div><span>Telefone</span><strong id="mpTel"></strong></div>
+                <div><span>Em acompanhamento desde</span><strong id="mpDesde"></strong></div>
+                <div><span>Sessões realizadas</span><strong id="mpSessoes"></strong></div>
+                <div><span>Próxima consulta</span><strong id="mpProxima"></strong></div>
+            </div>
+
+            <label for="mpNotas">Anotações privadas</label>
+            <textarea id="mpNotas" rows="5" placeholder="Escreva aqui suas anotações sobre o paciente..."></textarea>
+
+            <p class="aviso">
+                <i class="fa-solid fa-lock"></i>
+                As anotações ficam salvas apenas neste navegador (protótipo).
+            </p>
+
+            <div class="modal-acoes">
+                <a href="conversas.html" class="btn-sec">
+                    <i class="fa-solid fa-comments"></i>
+                    Abrir conversa
+                </a>
+                <button type="button" class="btn" id="mpSalvar">
+                    <i class="fa-solid fa-check"></i>
+                    Salvar anotações
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="toast" id="toast" role="status"></div>
+
+    <script src="painel-profissional.js"></script>
+
+</body>
+
+</html>
