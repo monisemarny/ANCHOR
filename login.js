@@ -13,20 +13,86 @@ window.addEventListener("load", function () {
     // Enquanto estiver vazio, o botão funciona em modo demonstração.
     const FACEBOOK_APP_ID = "";
 
+    const CHAVE_CONTAS = "anchorContas";
+
 
     // ==========================================================
-    // FUNÇÃO PARA ENTRAR NA CONTA
+    // CONTAS E SESSÃO
     // ==========================================================
 
-    function entrarNaConta(nome) {
+    function lerContas() {
 
-        localStorage.setItem("usuarioLogado", "true");
-
-        if (nome) {
-            localStorage.setItem("nomeUsuario", nome);
+        try {
+            return JSON.parse(localStorage.getItem(CHAVE_CONTAS)) || [];
+        } catch (erro) {
+            return [];
         }
 
-        window.location.href = "index.html";
+    }
+
+    function iniciarSessao(dados) {
+
+        try {
+
+            // se for outra conta, limpa foto e redes da anterior
+            const anterior = localStorage.getItem("usuarioEmail");
+
+            if (dados.email && anterior && anterior !== dados.email) {
+                localStorage.removeItem("usuarioFoto");
+                localStorage.removeItem("usuarioRedes");
+            }
+
+            localStorage.setItem("usuarioLogado", "true");
+            localStorage.setItem("usuarioTipo", dados.tipo);
+
+            if (dados.nome) {
+                localStorage.setItem("usuarioNome", dados.nome);
+            }
+
+            if (dados.email) {
+                localStorage.setItem("usuarioEmail", dados.email);
+            }
+
+            localStorage.setItem("usuarioTelefone", dados.telefone || "");
+
+            if (dados.tipo === "profissional") {
+
+                localStorage.setItem("usuarioCRP", dados.crp || "");
+                localStorage.setItem("usuarioUF", dados.uf || "");
+                localStorage.setItem("usuarioEspecialidade", dados.especialidade || "");
+
+            } else {
+
+                localStorage.removeItem("usuarioCRP");
+                localStorage.removeItem("usuarioUF");
+                localStorage.removeItem("usuarioEspecialidade");
+
+            }
+
+        } catch (erro) {
+            console.log("Não foi possível salvar a sessão.", erro);
+        }
+
+    }
+
+    function irParaInicio(tipo) {
+
+        window.location.href = tipo === "profissional"
+            ? "painel-profissional.html"
+            : "index.html";
+
+    }
+
+    // Login por rede social: entra como usuário comum
+    function entrarPorRede(nome, email) {
+
+        iniciarSessao({
+            tipo: "usuario",
+            nome: nome,
+            email: email || ""
+        });
+
+        irParaInicio("usuario");
 
     }
 
@@ -43,9 +109,29 @@ window.addEventListener("load", function () {
 
             event.preventDefault();
 
+            const email = document.getElementById("email").value.trim().toLowerCase();
+            const senha = document.getElementById("senha").value;
+
+            const conta = lerContas().find(function (item) {
+                return item.email === email && item.senha === senha;
+            });
+
+            if (!conta) {
+
+                alert(
+                    'E-mail ou senha incorretos.\n\n' +
+                    'Se você ainda não tem conta, clique em "Criar conta".'
+                );
+
+                return;
+
+            }
+
             console.log("Login realizado!");
 
-            entrarNaConta();
+            iniciarSessao(conta);
+
+            irParaInicio(conta.tipo);
 
         });
 
@@ -80,12 +166,43 @@ window.addEventListener("load", function () {
     // GOOGLE
     // ==========================================================
 
+    // Lê nome e e-mail de dentro do token que o Google devolve
+    function lerTokenGoogle(token) {
+
+        try {
+
+            const base64 = token
+                .split(".")[1]
+                .replace(/-/g, "+")
+                .replace(/_/g, "/");
+
+            const json = decodeURIComponent(
+                atob(base64)
+                    .split("")
+                    .map(function (c) {
+                        return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
+                    })
+                    .join("")
+            );
+
+            return JSON.parse(json);
+
+        } catch (erro) {
+            return null;
+        }
+
+    }
+
     function handleGoogleLogin(response) {
 
         console.log("Login com Google realizado!");
-        console.log(response);
 
-        entrarNaConta();
+        const dados = lerTokenGoogle(response.credential);
+
+        entrarPorRede(
+            dados && dados.name ? dados.name : "Usuário Google",
+            dados && dados.email ? dados.email.toLowerCase() : ""
+        );
 
     }
 
@@ -153,7 +270,7 @@ window.addEventListener("load", function () {
 
                 console.log("Login com Facebook (demonstração)");
 
-                entrarNaConta("Usuário Facebook");
+                entrarPorRede("Usuário Facebook");
 
                 return;
 
@@ -173,9 +290,8 @@ window.addEventListener("load", function () {
                 FB.api("/me", { fields: "name,email" }, function (usuario) {
 
                     console.log("Login com Facebook realizado!");
-                    console.log(usuario);
 
-                    entrarNaConta(usuario.name);
+                    entrarPorRede(usuario.name, usuario.email);
 
                 });
 
@@ -201,7 +317,7 @@ window.addEventListener("load", function () {
 
             console.log("Login com Apple (demonstração)");
 
-            entrarNaConta("Usuário Apple");
+            entrarPorRede("Usuário Apple");
 
         });
 

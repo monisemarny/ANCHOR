@@ -2,135 +2,66 @@
 <html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Informações e direitos | Anchor</title>
 
     <link rel="icon" href="img/logo-anchor.png">
 
-
-    <!-- =====================================================
-         FONTES
-    ====================================================== -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
-    >
-
-
-    <!-- =====================================================
-         FONT AWESOME
-    ====================================================== -->
-
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    >
-
-
-    <!-- =====================================================
-         CSS
-    ====================================================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <link rel="stylesheet" href="conheca-direitos.css">
-
 </head>
-
 
 <body>
 
+    <!-- ========================= -->
+    <!-- HEADER 2 -->
+    <!-- ========================= -->
 
-    <!-- =====================================================
-         CABEÇALHO
-    ====================================================== -->
+    <header class="header-interno">
 
-    <header class="topo-direitos">
-
-        <a href="index.html" class="logo-area">
-
-            <img
-                src="img/logo-anchor.png"
-                alt="Logo Anchor"
-            >
-
-        </a>
-
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo-anchor.png" alt="Logo Anchor">
+            </a>
+        </div>
 
         <nav class="menu-principal">
-
-            <a href="ajuda-psicologica.html">
-                Ajuda psicológica
-            </a>
-
-            <a href="denuncias.html">
-                Denúncias
-            </a>
-
-            <a href="acompanhar.html">
-                Acompanhar
-            </a>
-
-            <a href="noticias.html">
-                Notícias
-            </a>
-
-            <a href="perfil.html">
-                Perfil
-            </a>
-
-            <a
-                href="informacoes.html"
-                class="ativo"
-            >
-                Informações
-            </a>
-
-            <a href="contato.html">
-                Contato
-            </a>
-
-            <a href="sobre.html">
-                Sobre nós
-            </a>
-
+            <a href="index.html">Home</a>
+            <a href="denuncia.html">Fazer denúncia</a>
+            <a href="acompanhar.html">Acompanhar denúncia</a>
+            <a href="ajuda-psicologica.html">Ajuda Psicológica</a>
+            <a href="informacoes.html" class="pagina-ativa">Informações</a>
+            <a href="noticias.html">Notícias</a>
+            <a href="tipos-denuncia.html">Tipos de denúncia</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="contato.html">Contato</a>
         </nav>
 
     </header>
 
 
-
-    <!-- =====================================================
-         HERO
-    ====================================================== -->
+    <!-- ===================== HERO ===================== -->
 
     <section class="hero-direitos">
 
         <div class="mancha-hero mancha-hero-1"></div>
-
         <div class="mancha-hero mancha-hero-2"></div>
-
         <div class="mancha-hero mancha-hero-3"></div>
-
 
         <div class="hero-conteudo">
 
-            <span class="hero-mini-titulo">
-                INFORMAÇÃO E PROTEÇÃO
-            </span>
-
+            <span class="hero-mini-titulo">INFORMAÇÃO E PROTEÇÃO</span>
 
             <h1 id="tituloHero">
                 Conheça seus <span>direitos</span>
             </h1>
-
 
             <p id="descricaoHero">
                 Informação para compreender direitos,
@@ -139,16 +70,9 @@
                 onde procurar orientação.
             </p>
 
-
-            <a
-                href="#materia"
-                class="btn-explorar"
-            >
-
+            <a href="#materia" class="btn-explorar">
                 Ler matéria
-
                 <i class="fa-solid fa-arrow-down"></i>
-
             </a>
 
         </div>
@@ -156,107 +80,45 @@
     </section>
 
 
-
-    <!-- =====================================================
-         CONTEÚDO PRINCIPAL
-    ====================================================== -->
+    <!-- ===================== CONTEÚDO ===================== -->
 
     <main class="conteudo-direitos">
 
-
-        <!-- =================================================
-             VOLTAR
-        ================================================== -->
-
-        <div class="voltar-informacoes">
-
-            <a href="informacoes.html">
-
-                <i class="fa-solid fa-arrow-left"></i>
-
-                Voltar para informações
-
-            </a>
-
-        </div>
+        <a href="informacoes.html" class="voltar-informacoes">
+            <i class="fa-solid fa-arrow-left"></i>
+            Voltar para informações
+        </a>
 
 
+        <article class="materia-direito" id="materia">
 
-        <!-- =================================================
-             ÁREA DA MATÉRIA
-        ================================================== -->
-
-        <article
-            class="materia-direito"
-            id="materia"
-        >
-
-
-            <!-- =================================================
-                 CABEÇALHO DA MATÉRIA
-            ================================================== -->
+            <!-- CABEÇALHO DA MATÉRIA -->
 
             <div class="materia-cabecalho">
 
-                <span
-                    class="materia-categoria"
-                    id="materiaCategoria"
-                >
-                    DIREITOS
-                </span>
+                <span class="materia-categoria" id="materiaCategoria">DIREITOS</span>
 
-
-                <div
-                    class="materia-icone"
-                    id="materiaIcone"
-                >
-
+                <div class="materia-icone" id="materiaIcone">
                     <i class="fa-solid fa-scale-balanced"></i>
-
                 </div>
 
-
-                <h2 id="materiaTitulo">
-                    Conheça seus direitos
-                </h2>
-
+                <h2 id="materiaTitulo">Conheça seus direitos</h2>
 
                 <p id="materiaIntroducao">
-
-                    Conhecer seus direitos é um passo
-                    importante para reconhecer situações
-                    em que eles podem estar sendo
-                    desrespeitados e saber onde procurar
-                    orientação.
-
+                    Conhecer seus direitos é um passo importante para
+                    reconhecer situações em que eles podem estar sendo
+                    desrespeitados e saber onde procurar orientação.
                 </p>
 
             </div>
 
 
+            <!-- TEXTO (preenchido pelo JavaScript) -->
 
-            <!-- =================================================
-                 TEXTO DA MATÉRIA
-            ================================================== -->
-
-            <div
-                class="materia-texto"
-                id="materiaTexto"
-            >
+            <div class="materia-texto" id="materiaTexto"></div>
 
 
-                <!-- =============================================
-                     CONTEÚDO SERÁ INSERIDO PELO JAVASCRIPT
-                ============================================== -->
-
-
-            </div>
-
-
-
-            <!-- =================================================
-                 FONTES
-            ================================================== -->
+            <!-- FONTES -->
 
             <section class="fontes-materia">
 
@@ -265,119 +127,104 @@
                     <i class="fa-solid fa-book"></i>
 
                     <div>
-
-                        <span>
-                            FONTES E REFERÊNCIAS
-                        </span>
-
-                        <h3>
-                            Saiba mais
-                        </h3>
-
+                        <span>FONTES E REFERÊNCIAS</span>
+                        <h3>Saiba mais</h3>
                     </div>
 
                 </div>
 
-
                 <p>
-                    As informações apresentadas pelo Anchor
-                    têm finalidade educativa e informativa.
-                    Para consultar o texto completo das leis
-                    e informações oficiais, utilize as fontes
-                    indicadas.
+                    As informações apresentadas pelo Anchor têm finalidade
+                    educativa e informativa. Para consultar o texto completo
+                    das leis e informações oficiais, utilize as fontes indicadas.
                 </p>
 
+                <div class="lista-fontes" id="listaFontes"></div>
 
-                <div
-                    class="lista-fontes"
-                    id="listaFontes"
-                >
+            </section>
 
-                    <!--
-                        O JavaScript colocará aqui
-                        as fontes relacionadas à matéria.
-                    -->
+
+            <!-- CONTINUE LENDO -->
+
+            <section class="outros-topicos">
+
+                <span class="rotulo">CONTINUE LENDO</span>
+
+                <h3>Outros temas sobre direitos</h3>
+
+                <div class="topicos-grid">
+
+                    <a href="conheca-direitos.html?topico=1" class="topico-link">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                        <span>Conheça seus direitos</span>
+                    </a>
+
+                    <a href="conheca-direitos.html?topico=2" class="topico-link">
+                        <i class="fa-solid fa-people-arrows"></i>
+                        <span>Igualdade e respeito</span>
+                    </a>
+
+                    <a href="conheca-direitos.html?topico=3" class="topico-link">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span>Situações de violência</span>
+                    </a>
+
+                    <a href="conheca-direitos.html?topico=4" class="topico-link">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Onde procurar orientação</span>
+                    </a>
 
                 </div>
 
             </section>
 
 
-
-            <!-- =================================================
-                 ÁREA DE APOIO
-            ================================================== -->
+            <!-- ÁREA DE APOIO -->
 
             <section class="area-ajuda">
 
-
                 <div class="ajuda-texto">
 
-                    <span>
-                        PRECISA DE APOIO?
-                    </span>
+                    <span>PRECISA DE APOIO?</span>
 
-
-                    <h2>
-                        Você não precisa enfrentar uma
-                        situação difícil sozinho.
-                    </h2>
-
+                    <h2>Você não precisa enfrentar uma situação difícil sozinho.</h2>
 
                     <p>
-                        Encontre caminhos para buscar ajuda,
-                        realizar uma denúncia ou conversar
-                        com um profissional.
+                        Encontre caminhos para buscar ajuda, realizar uma
+                        denúncia ou conversar com um profissional.
                     </p>
 
                 </div>
 
-
-
                 <div class="ajuda-botoes">
 
-                    <a
-                        href="denuncias.html"
-                        class="btn-ajuda principal"
-                    >
-
+                    <a href="denuncia.html" class="btn-ajuda principal">
                         Fazer uma denúncia
-
                         <i class="fa-solid fa-arrow-right"></i>
-
                     </a>
 
-
-                    <a
-                        href="ajuda-psicologica.html"
-                        class="btn-ajuda secundario"
-                    >
-
+                    <a href="ajuda-psicologica.html" class="btn-ajuda secundario">
                         Buscar apoio psicológico
-
                         <i class="fa-solid fa-heart"></i>
-
                     </a>
 
                 </div>
 
-
             </section>
 
-
         </article>
-
 
     </main>
 
 
+    <!-- FAIXA FINAL -->
 
-    <!-- =====================================================
-         JAVASCRIPT
-    ====================================================== -->
+    <div class="faixa-final">
+        <p>© 2026 Anchor · Informação também é uma forma de proteção.</p>
+    </div>
+
 
     <script src="conheca-direitos.js"></script>
-
 
 </body>
 

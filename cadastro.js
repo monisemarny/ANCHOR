@@ -31,32 +31,134 @@ document.addEventListener("DOMContentLoaded", function () {
     const nascimentoUsuario = document.getElementById("nascimentoUsuario");
     const telefoneUsuario = document.getElementById("telefoneUsuario");
     const senhaUsuario = document.getElementById("senhaUsuario");
-    const confirmarSenhaUsuario =
-        document.getElementById("confirmarSenhaUsuario");
+    const confirmarSenhaUsuario = document.getElementById("confirmarSenhaUsuario");
 
-    const nomeProfissional =
-        document.getElementById("nomeProfissional");
+    const nomeProfissional = document.getElementById("nomeProfissional");
+    const emailProfissional = document.getElementById("emailProfissional");
+    const crpProfissional = document.getElementById("crpProfissional");
+    const estadoProfissional = document.getElementById("estadoProfissional");
+    const especialidadeProfissional = document.getElementById("especialidadeProfissional");
+    const telefoneProfissional = document.getElementById("telefoneProfissional");
+    const senhaProfissional = document.getElementById("senhaProfissional");
+    const confirmarSenhaProfissional = document.getElementById("confirmarSenhaProfissional");
 
-    const emailProfissional =
-        document.getElementById("emailProfissional");
 
-    const crpProfissional =
-        document.getElementById("crpProfissional");
+    // ======================================================
+    // CONTAS (ficam salvas só neste navegador)
+    // PROTÓTIPO: num sistema real, isso fica num servidor
+    // e a senha NUNCA é guardada em texto puro.
+    // ======================================================
 
-    const estadoProfissional =
-        document.getElementById("estadoProfissional");
+    const CHAVE_CONTAS = "anchorContas";
 
-    const especialidadeProfissional =
-        document.getElementById("especialidadeProfissional");
+    function lerContas() {
 
-    const telefoneProfissional =
-        document.getElementById("telefoneProfissional");
+        try {
+            return JSON.parse(localStorage.getItem(CHAVE_CONTAS)) || [];
+        } catch (erro) {
+            return [];
+        }
 
-    const senhaProfissional =
-        document.getElementById("senhaProfissional");
+    }
 
-    const confirmarSenhaProfissional =
-        document.getElementById("confirmarSenhaProfissional");
+    function salvarContas(contas) {
+
+        try {
+            localStorage.setItem(CHAVE_CONTAS, JSON.stringify(contas));
+            return true;
+        } catch (erro) {
+            return false;
+        }
+
+    }
+
+    function emailJaCadastrado(email) {
+
+        const procurado = email.trim().toLowerCase();
+
+        return lerContas().some(function (conta) {
+            return conta.email === procurado;
+        });
+
+    }
+
+    function iniciarSessao(conta) {
+
+        try {
+
+            // se for outra conta, limpa foto e redes da anterior
+            const anterior = localStorage.getItem("usuarioEmail");
+
+            if (anterior && anterior !== conta.email) {
+                localStorage.removeItem("usuarioFoto");
+                localStorage.removeItem("usuarioRedes");
+            }
+
+            localStorage.setItem("usuarioLogado", "true");
+            localStorage.setItem("usuarioTipo", conta.tipo);
+            localStorage.setItem("usuarioNome", conta.nome);
+            localStorage.setItem("usuarioEmail", conta.email);
+            localStorage.setItem("usuarioTelefone", conta.telefone || "");
+
+            if (conta.tipo === "profissional") {
+
+                localStorage.setItem("usuarioCRP", conta.crp);
+                localStorage.setItem("usuarioUF", conta.uf);
+                localStorage.setItem("usuarioEspecialidade", conta.especialidade);
+
+            } else {
+
+                localStorage.removeItem("usuarioCRP");
+                localStorage.removeItem("usuarioUF");
+                localStorage.removeItem("usuarioEspecialidade");
+
+            }
+
+        } catch (erro) {
+            console.log("Não foi possível salvar a sessão.", erro);
+        }
+
+    }
+
+
+    // ======================================================
+    // MÁSCARA DE TELEFONE: (11) 99999-9999
+    // ======================================================
+
+    function aplicarMascaraTelefone(campo) {
+
+        campo.setAttribute("maxlength", "15");
+
+        campo.addEventListener("input", function () {
+
+            let numeros = campo.value.replace(/\D/g, "").slice(0, 11);
+
+            if (numeros.length > 6) {
+                numeros = "(" + numeros.slice(0, 2) + ") " +
+                    numeros.slice(2, 7) + "-" + numeros.slice(7);
+            } else if (numeros.length > 2) {
+                numeros = "(" + numeros.slice(0, 2) + ") " + numeros.slice(2);
+            } else if (numeros.length > 0) {
+                numeros = "(" + numeros;
+            }
+
+            campo.value = numeros;
+
+        });
+
+    }
+
+    aplicarMascaraTelefone(telefoneUsuario);
+    aplicarMascaraTelefone(telefoneProfissional);
+
+    // UF sempre em maiúsculas, só letras
+    estadoProfissional.addEventListener("input", function () {
+
+        estadoProfissional.value = estadoProfissional.value
+            .replace(/[^a-zA-Z]/g, "")
+            .toUpperCase();
+
+    });
 
 
     // ======================================================
@@ -110,9 +212,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // MOSTRAR / OCULTAR SENHA
     // ======================================================
 
-    const botoesSenha =
-        document.querySelectorAll(".btn-mostrar-senha");
-
+    const botoesSenha = document.querySelectorAll(".btn-mostrar-senha");
 
     botoesSenha.forEach(function (botao) {
 
@@ -125,15 +225,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 campoSenha.type = "text";
 
-                botao.innerHTML =
-                    '<i class="fa-solid fa-eye-slash"></i>';
+                botao.innerHTML = '<i class="fa-solid fa-eye-slash"></i>';
 
             } else {
 
                 campoSenha.type = "password";
 
-                botao.innerHTML =
-                    '<i class="fa-solid fa-eye"></i>';
+                botao.innerHTML = '<i class="fa-solid fa-eye"></i>';
 
             }
 
@@ -150,60 +248,66 @@ document.addEventListener("DOMContentLoaded", function () {
 
         event.preventDefault();
 
+        const nome = nomeUsuario.value.trim();
+        const email = emailUsuario.value.trim().toLowerCase();
 
-        // Verifica se as senhas são iguais
-
-        if (senhaUsuario.value !== confirmarSenhaUsuario.value) {
-
-            alert("As senhas não coincidem.");
-
-            confirmarSenhaUsuario.focus();
-
+        if (nome.length < 3) {
+            alert("Digite seu nome completo.");
+            nomeUsuario.focus();
             return;
-
         }
 
+        if (email === "") {
+            alert("Digite seu e-mail.");
+            emailUsuario.focus();
+            return;
+        }
 
-        // Verifica tamanho mínimo da senha
+        if (emailJaCadastrado(email)) {
+            alert("Já existe uma conta com esse e-mail. Use a opção Entrar.");
+            emailUsuario.focus();
+            return;
+        }
 
         if (senhaUsuario.value.length < 6) {
-
             alert("A senha precisa ter pelo menos 6 caracteres.");
-
             senhaUsuario.focus();
-
             return;
-
         }
 
+        if (senhaUsuario.value !== confirmarSenhaUsuario.value) {
+            alert("As senhas não coincidem.");
+            confirmarSenhaUsuario.focus();
+            return;
+        }
 
-        // Verifica termos
-
-        const termosUsuario =
-            document.getElementById("termosUsuario");
-
-        if (!termosUsuario.checked) {
-
+        if (!document.getElementById("termosUsuario").checked) {
             alert("Você precisa aceitar os termos de uso.");
-
             return;
-
         }
 
+        const conta = {
+            tipo: "usuario",
+            nome: nome,
+            email: email,
+            nascimento: nascimentoUsuario.value,
+            telefone: telefoneUsuario.value.trim(),
+            senha: senhaUsuario.value
+        };
 
-        // Cadastro provisório
+        const contas = lerContas();
+        contas.push(conta);
 
-        alert("Cadastro de usuário realizado com sucesso!");
+        if (!salvarContas(contas)) {
+            alert("Não foi possível salvar a conta neste navegador.");
+            return;
+        }
 
+        iniciarSessao(conta);
 
-        console.log("Cadastro de usuário:");
-        console.log("Nome:", nomeUsuario.value);
-        console.log("E-mail:", emailUsuario.value);
-        console.log("Nascimento:", nascimentoUsuario.value);
-        console.log("Telefone:", telefoneUsuario.value);
+        alert("Conta criada com sucesso! Bem-vindo(a) ao Anchor.");
 
-
-        formUsuario.reset();
+        window.location.href = "index.html";
 
     });
 
@@ -216,70 +320,97 @@ document.addEventListener("DOMContentLoaded", function () {
 
         event.preventDefault();
 
+        const nome = nomeProfissional.value.trim();
+        const email = emailProfissional.value.trim().toLowerCase();
 
-        // Verifica se as senhas são iguais
+        // aceita "CRP 06/123456" ou só "06/123456"
+        const crp = crpProfissional.value
+            .replace(/^\s*crp\s*/i, "")
+            .replace(/\s+/g, "");
 
-        if (senhaProfissional.value !==
-            confirmarSenhaProfissional.value) {
+        const uf = estadoProfissional.value.trim().toUpperCase();
+        const especialidade = especialidadeProfissional.value.trim();
 
-            alert("As senhas não coincidem.");
-
-            confirmarSenhaProfissional.focus();
-
+        if (nome.length < 3) {
+            alert("Digite seu nome completo.");
+            nomeProfissional.focus();
             return;
-
         }
 
+        if (email === "") {
+            alert("Digite seu e-mail profissional.");
+            emailProfissional.focus();
+            return;
+        }
 
-        // Verifica tamanho mínimo da senha
+        if (emailJaCadastrado(email)) {
+            alert("Já existe uma conta com esse e-mail. Use a opção Entrar.");
+            emailProfissional.focus();
+            return;
+        }
+
+        if (!/^\d{1,2}\/\d{3,7}$/.test(crp)) {
+            alert("Digite o CRP no formato 06/123456.");
+            crpProfissional.focus();
+            return;
+        }
+
+        if (!/^[A-Z]{2}$/.test(uf)) {
+            alert("Digite a UF com 2 letras. Ex.: SP");
+            estadoProfissional.focus();
+            return;
+        }
+
+        if (especialidade === "") {
+            alert("Informe sua especialidade.");
+            especialidadeProfissional.focus();
+            return;
+        }
 
         if (senhaProfissional.value.length < 6) {
-
             alert("A senha precisa ter pelo menos 6 caracteres.");
-
             senhaProfissional.focus();
-
             return;
-
         }
 
+        if (senhaProfissional.value !== confirmarSenhaProfissional.value) {
+            alert("As senhas não coincidem.");
+            confirmarSenhaProfissional.focus();
+            return;
+        }
 
-        // Verifica termos
-
-        const termosProfissional =
-            document.getElementById("termosProfissional");
-
-        if (!termosProfissional.checked) {
-
+        if (!document.getElementById("termosProfissional").checked) {
             alert("Você precisa aceitar os termos de uso.");
-
             return;
-
         }
 
+        const conta = {
+            tipo: "profissional",
+            nome: nome,
+            email: email,
+            crp: crp,
+            uf: uf,
+            especialidade: especialidade,
+            telefone: telefoneProfissional.value.trim(),
+            senha: senhaProfissional.value
+        };
 
-        // Cadastro provisório
+        const contas = lerContas();
+        contas.push(conta);
 
-        alert("Cadastro de profissional realizado com sucesso!");
+        if (!salvarContas(contas)) {
+            alert("Não foi possível salvar a conta neste navegador.");
+            return;
+        }
 
+        iniciarSessao(conta);
 
-        console.log("Cadastro de profissional:");
-        console.log("Nome:", nomeProfissional.value);
-        console.log("E-mail:", emailProfissional.value);
-        console.log("CRP:", crpProfissional.value);
-        console.log("Estado:", estadoProfissional.value);
-        console.log("Especialidade:", especialidadeProfissional.value);
-        console.log("Telefone:", telefoneProfissional.value);
+        alert("Conta profissional criada com sucesso! Vamos para o seu painel.");
 
-
-        formProfissional.reset();
+        window.location.href = "painel-profissional.html";
 
     });
 
-
-    // ======================================================
-    // MENSAGEM INICIAL NO CONSOLE
-    // ======================================================
 
     console.log("Página de cadastro iniciada!");
 
